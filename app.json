@@ -1,6 +1,9 @@
 {
-  "name": "PHP Getting Started",
-  "description": "A barebones PHP app that makes use of the Silex web framework",
-  "repository": "https://github.com/ehinger/thesis.git",
-  "addons": []
+	{
+	      "title": "Thing",
+	      "caption": "This is a thing",
+	      "imgurl": "http://i.imgur.com/FYOZjkA.jpg",
+	      "ingredients": "This is a thing",
+	      "instructions": "This is a thing"
+	   }
 }
