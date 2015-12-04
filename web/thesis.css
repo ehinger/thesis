@@ -64,6 +64,7 @@ ul li a {
 Content Page
 
 ************************************************************************************/
+
 .hackSelectionFrame1 {
   left: 0;
   width: 100%;
@@ -119,10 +120,9 @@ Content Page
   color: black;
 }
 
-
 .hackSelectionButton {
   margin: 0;
-  top: 5%;
+  top: 50%;
   left: 10%;
   position: absolute;
   width: 40%;
@@ -136,7 +136,7 @@ Content Page
   top: 50%;
   text-align: center;
   position: absolute;
-  font-size: 6em;
+  font-size: 3em;
   color: black;
   z-index: 0;
 }
