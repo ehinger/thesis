@@ -69,7 +69,7 @@ Content Page
   left: 0;
   width: 100%;
   height: 100%;
-  position: relative;
+  position: absolute;
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
   -ms-transition: 0.3s;
@@ -77,14 +77,15 @@ Content Page
   transition: 0.3s; 
 }
 
-.hackSelectionFrame1 div {
-  position: absolute;
+.hackSelectionFrame1 div:not(.hackSelectionButton) {
+  position: relative;
   top: 10%; 
   left: 0; 
   padding: 0;
   width: 100%;
   height: 85%;
   overflow: hidden;
+  float: left;
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
   -ms-transition: 0.3s;
@@ -96,7 +97,6 @@ Content Page
   width: auto;
   height: 100%;
   position: absolute;
-  display: block;
   margin-left: auto;
   margin-right: auto;
   z-index: -2;
@@ -106,7 +106,7 @@ Content Page
 .hackSelectionFrame1 div h1 {
   margin-left: 10%;
   margin-top: 12%;
-  position: absolute;
+  position: relative;
   font-size: 8em;
   color: black;
 }
@@ -115,7 +115,7 @@ Content Page
   margin-left: 10%;
   margin-right: 10%;
   margin-top: 12%;
-  position: absolute;
+  position: relative;
   font-size: 5em;
   color: black;
 }
@@ -124,7 +124,7 @@ Content Page
   margin: 0;
   top: 50%;
   left: 10%;
-  position: absolute;
+  position: relative;
   width: 40%;
   height: 10%;
   background: white;
@@ -135,7 +135,7 @@ Content Page
   line-height: 10%;
   top: 50%;
   text-align: center;
-  position: absolute;
+  position: relative;
   font-size: 3em;
   color: black;
   z-index: 0;
