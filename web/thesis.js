@@ -20,7 +20,7 @@ $('a').on('click', function(){
 
 //calls json file then creates two empty variables for the html that creates each recipe selection and the recipe screen.
 //also creates 3 arrays to store secific json data in and converts the stored cookie into a new array.
-$.getJSON('https://api.myjson.com/bins/186ob', function (data) {
+$.getJSON('https://s3-ap-southeast-2.amazonaws.com/elasticbeanstalk-ap-southeast-2-002364806998/json/hacks.json', function (data) {
 	var hackTabHtml = "";
 	var hackInstructionsHtml = "";
 	var htitle = [];
