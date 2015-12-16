@@ -5,5 +5,13 @@
 		"imgurl": "http://i.imgur.com/FYOZjkA.jpg",
 		"ingredients": "apple",
 		"instructions": "This is a thing"
+	},
+	
+	"apple": {
+		"title": "Thing",
+		"caption": "This is a thing",
+		"imgurl": "http://i.imgur.com/FYOZjkA.jpg",
+		"ingredients": "apple",
+		"instructions": "This is a thing"
 	}
 }
