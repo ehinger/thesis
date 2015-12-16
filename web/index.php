@@ -1,63 +1,27 @@
-<!DOCTYPE html>
+<?php
+require('vendor/autoload.php');
+// this will simply read AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY from env vars
+$s3 = Aws\S3\S3Client::factory();
+$bucket = getenv('S3_BUCKET')?: die('No "S3_BUCKET" config var in found in env!');
+?>
 <html>
-<head>
-	<meta charset="utf-8"/>
-	<title>hacks</title>
-	<link rel="stylesheet" type="text/css" href="thesis.css">
-	<script type="text/javascript" src="jquery-2.1.4.min.js"></script>
-	<script>
-		$(document).bind('mobileinit',function(){
-		    $.mobile.changePage.defaults.changeHash = false;
-		    $.mobile.hashListeningEnabled = false;
-		    $.mobile.pushStateEnabled = false;
-		});
-	</script>
-	<script type="text/javascript" src="jquery.mobile-1.4.5.min.js"></script>
-	
-</head>
-<body>
-
-<!-- /************************************************************************************
-
-Navigation Bar
-
-************************************************************************************/ -->
-
-<div class="navbutton"></div>
-
-<nav>
-	<ul>
-		<li><a href="" id="selected">page 1</a></li>
-		<li><a href="" id="selected">page 2</a></li>
-	</ul>
-	<div id="navButton">
-
-	</div>
-</nav>
-
-<!-- /************************************************************************************
-
-Content Page
-
-************************************************************************************/ -->
-
-<!-- <div class="hackSelectionFrame1">
-	<img src="http://i.imgur.com/FYOZjkA.jpg">
-	<h1>Thing</h1>
-	<p>This is a thing</p>
-	<div class="hackSelectionButton">
-		<h1>Enter</h1>
-	</div>
-</div> -->
-
-<div class="hackSelectionFrame1">
-
-</div> <!-- hackSelectionFrame1 -->
-
-<div id="instructions">
-
-</div>
-
-<script src="thesis.js" type="text/javascript" ></script>
-</body>
+    <head><meta charset="UTF-8"></head>
+    <body>
+        <h1>S3 upload example</h1>
+<?php
+if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['userfile']) && $_FILES['userfile']['error'] == UPLOAD_ERR_OK && is_uploaded_file($_FILES['userfile']['tmp_name'])) {
+    // FIXME: add more validation, e.g. using ext/fileinfo
+    try {
+        // FIXME: do not use 'name' for upload (that's the original filename from the user's computer)
+        $upload = $s3->upload($bucket, $_FILES['userfile']['name'], fopen($_FILES['userfile']['tmp_name'], 'rb'), 'public-read');
+?>
+        <p>Upload <a href="<?=htmlspecialchars($upload->get('ObjectURL'))?>">successful</a> :)</p>
+<?php } catch(Exception $e) { ?>
+        <p>Upload error :(</p>
+<?php } } ?>
+        <h2>Upload a file</h2>
+        <form enctype="multipart/form-data" action="<?=$_SERVER['PHP_SELF']?>" method="POST">
+            <input name="userfile" type="file"><input type="submit" value="Upload">
+        </form>
+    </body>
 </html>
