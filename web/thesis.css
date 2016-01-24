@@ -3,7 +3,8 @@ html, body, div {
   width: 100%;
   margin: 0;
   padding: 0;
-  border: 0; }
+  border: 0; 
+}
 
 /************************************************************************************
 
@@ -17,16 +18,39 @@ Navigation Bar
   top: 0;
   left: 0;
   position: fixed;
-  background: white;
+  background: black;
   margin: 0;
   z-index: 2;
-  border-bottom: 3px solid black;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s; 
+}
+
+.menuBar {
+  width: 100%;
+  height: 10%;
+  top: -100%;
+  left: 0;
+  position: fixed;
+  background: black;
+  margin: 0;
+  z-index: 2;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s; 
 }
 
 .offset {
   top: 0; 
 }
 
+.offset3 {
+  top: 90%; 
+}
 
 nav {
   width: 100%;
@@ -36,48 +60,21 @@ nav {
   margin: 0;
   top: -100%;
   left: 0;
+  z-index: 1;
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
   -ms-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s; 
-}
-
-ul {
-  color: black;
-  list-style: none; 
-}
-
-ul li {
-  padding: 30% 0 10% 0;
-  font-size: 5em;
-  text-align: center;
-}
-    
-ul li a {
-  text-decoration: none;
-  color: black;
 }
 
 /************************************************************************************
 
-Content Page
+Hack selection
 
 ************************************************************************************/
 
-.hackSelectionFrame1 {
-  left: 0;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  -webkit-transition: 0.3s;
-  -moz-transition: 0.3s;
-  -ms-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s; 
-}
-
-.hackSelectionFrame1 div:not(.hackSelectionButton) {
+.hackSelectionFrame {
   position: relative;
   top: 10%; 
   left: 0; 
@@ -93,18 +90,17 @@ Content Page
   transition: 0.3s; 
 }
 
-.hackSelectionFrame1 div img {
+.hackHeroImage {
   width: auto;
   height: 100%;
   top: 0;
   position: absolute;
   margin-left: auto;
   margin-right: auto;
-  z-index: -2;
   overflow: hidden;
 }
 
-.hackSelectionFrame1 div h1 {
+.hackTitle {
   margin-left: 10%;
   margin-top: 12%;
   position: relative;
@@ -112,7 +108,7 @@ Content Page
   color: black;
 }
 
-.hackSelectionFrame1 div p {
+.hackShortDesc {
   margin-left: 10%;
   margin-right: 10%;
   margin-top: 12%;
@@ -131,24 +127,129 @@ Content Page
   background: white;
 }
 
-.hackSelectionButton h1 {
+.hackButtonText {
   margin: auto;
   line-height: 10%;
   top: 50%;
   text-align: center;
   position: relative;
-  font-size: 3em;
+  font-size: 5em;
   color: black;
-  z-index: 0;
 }
 
+/************************************************************************************
+
+Post a hack
+
+************************************************************************************/
+
+
+.newHackFrame {
+  margin: 0;
+  bottom: 5%;
+  right: 10%;
+  position: fixed;
+  width: 250px;
+  height: 250px;
+  background: white;
+  z-index: 2;
+  border-radius: 100%;
+  overflow: hidden;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.newHackFrame h1 {
+  margin-left: 10%;
+  margin-top: 12%;
+  position: relative;
+  font-size: 8em;
+  color: black;
+}
+
+.newHackFrame * {
+  opacity: 0;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.offset6 {
+  opacity: 1;
+  -webkit-transition: 0.1s;
+  -moz-transition: 0.1s;
+  -ms-transition: 0.1s;
+  -o-transition: 0.1s;
+  transition: 0.1s;
+}
+
+input, textarea, label {
+  float: left;
+  margin-left: 10%;
+  margin-top: 12%;
+  background: transparent;
+  font-size: 3em;
+  border: none;
+  border-bottom: solid;
+  border-color: black;
+  outline: none; 
+}
+input:nth-child(2n+1), textarea:nth-child(2n+1), label:nth-child(2n+1) {
+  clear: left; 
+}
+
+.newHackClose {
+  right: 0;
+  top: 0;
+  width: 25%;
+  height: 10%;
+  position: absolute;
+  background: blue;
+}
+
+.offset5 {
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  border-radius: 0;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+/************************************************************************************
+
+Instructions
+
+************************************************************************************/
+
 #instructions {
-  background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(255,255,255,1) 34%, rgba(255,255,255,1) 99%);
-  background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 34%,rgba(255,255,255,1) 99%);
-  background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 34%,rgba(255,255,255,1) 99%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 );
   width: 100%;
   height: 100%;
+  position: fixed;
+  top: 100%;
+  left: 0;
+  margin: 0;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.insframe {
+  background: white;
+  width: 100%;
+  height: 55%;
   position: fixed;
   top: 100%;
   left: 0;
@@ -161,16 +262,6 @@ Content Page
   transition: 0.3s;
 }
 
-.insframe {
-  width: 100%;
-  height: 65%;
-  position: fixed;
-  top: 100%;
-  left: 0;
-  margin: 0;
-  overflow-y: scroll;
-}
-
 .insframe p {
   margin-left: 10%;
   margin-right: 10%;
@@ -181,18 +272,34 @@ Content Page
 }
 
 .close {
-  z-index: 5;
   right: 0;
-  top: 5%;
+  top: 100%;
   width: 25%;
   height: 10%;
   position: fixed;
   background: black;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .offset2 {
   top: 100%; 
+  z-index: -1;
+  overflow: hidden;
 }
+
+.offset4 {
+  overflow: hidden;
+}
+
+/************************************************************************************
+
+keeps jquery mobile from messing the layout up
+
+************************************************************************************/
 
 .ui-loading .ui-loader { 
   display: block; 

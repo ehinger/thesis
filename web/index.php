@@ -10,7 +10,9 @@ try {
     die();
 }
 
-var_dump($db);
+$results = $db->query('select * from test_table');
+
+var_dump($results);
 
 ?>
 
@@ -41,16 +43,31 @@ Navigation Bar
 ************************************************************************************/ -->
 
 <div class="navbutton"></div>
-
+<div class="menuBar"></div>
 <nav>
-	<ul>
-		<li><a href="" id="selected">page 1</a></li>
-		<li><a href="" id="selected">page 2</a></li>
-	</ul>
-	<div id="navButton">
 
-	</div>
 </nav>
+
+<!-- /************************************************************************************
+
+Post a hack
+
+************************************************************************************/ -->
+
+<div class="newHackFrame">
+	<div class="newHackClose"></div>
+	<form class="recipeCreator">
+		<label for="rT">title:</label>
+		<input id="rT" type="text">
+		<label for="rC">caption:</label>
+		<input id="rC" type="text">
+		<label for="rI">ingredients:</label>
+		<input id="rI" type="text">
+		<label for="rR">instructions:</label>
+		<textarea id="rR"></textarea>
+		<input type="submit" value="enter">
+	</form>
+</div>
 
 <!-- /************************************************************************************
 
@@ -58,22 +75,56 @@ Content Page
 
 ************************************************************************************/ -->
 
-<!-- <div class="hackSelectionFrame1">
-	<img src="http://i.imgur.com/FYOZjkA.jpg">
-	<h1>Thing</h1>
-	<p>This is a thing</p>
+<div class="hackSelectionFrame">
+	<img class="hackHeroImage" src="http://fillmurray.com/425/640">
+	<h1 class="hackTitle">Thing</h1>
+	<p class="hackShortDesc">This is a thing</p>
 	<div class="hackSelectionButton">
-		<h1>Enter</h1>
+		<h1 class="hackButtonText">Enter</h1>
 	</div>
-</div> -->
+</div>
 
-<div class="hackSelectionFrame1">
+<div class="hackSelectionFrame">
+	<img class="hackHeroImage" src="http://fillmurray.com/425/640">
+	<h1 class="hackTitle">Thing</h1>
+	<p class="hackShortDesc">This is a thing</p>
+	<div class="hackSelectionButton">
+		<h1 class="hackButtonText">Enter</h1>
+	</div>
+</div>
 
-</div> <!-- hackSelectionFrame1 -->
+<div class="hackSelectionFrame">
+	<img class="hackHeroImage" src="http://fillmurray.com/425/640">
+	<h1 class="hackTitle">Thing</h1>
+	<p class="hackShortDesc">This is a thing</p>
+	<div class="hackSelectionButton">
+		<h1 class="hackButtonText">Enter</h1>
+	</div>
+</div>
+
+<div class="hackSelectionFrame">
+	<img class="hackHeroImage" src="http://fillmurray.com/425/640">
+	<h1 class="hackTitle">Thing</h1>
+	<p class="hackShortDesc">This is a thing</p>
+	<div class="hackSelectionButton">
+		<h1 class="hackButtonText">Enter</h1>
+	</div>
+</div>
+
+<!-- /************************************************************************************
+
+Instructions
+
+************************************************************************************/ -->
 
 <div id="instructions">
-
+	<div class="close">
+	</div>
+	<div class="insframe">
+		<p>This is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thing</p>
+	</div>
 </div>
+
 
 <script src="thesis.js" type="text/javascript" ></script>
 </body>
