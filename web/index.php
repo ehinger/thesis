@@ -12,13 +12,12 @@ try {
 
 try {
 	$results = $db->query('select * from test_table');
-	echo "<pre>";
-	var_dump($results->fetchAll());
-	echo "</pre>";
 } catch (Exception $e) {
     echo $e->getMessage();
     die();
 }
+
+$hacks = $results-fetchAll(PDO::FETCH_ASSOC);
 
 ?>
 
@@ -83,7 +82,7 @@ Content Page
 
 <div class="hackSelectionFrame">
 	<img class="hackHeroImage" src="http://fillmurray.com/425/640">
-	<h1 class="hackTitle">Thing</h1>
+	<?php echo "<h1 class='hackTitle'>".$hacks['name']."</h1>"?>
 	<p class="hackShortDesc">This is a thing</p>
 	<div class="hackSelectionButton">
 		<h1 class="hackButtonText">Enter</h1>
