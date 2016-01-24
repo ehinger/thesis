@@ -17,7 +17,7 @@ try {
     die();
 }
 
-$hacks = $results-fetchAll(PDO::FETCH_ASSOC);
+$hacks = $results->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
 
