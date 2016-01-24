@@ -15,7 +15,6 @@ try {
 	echo "<pre>";
 	var_dump($results->fetchAll());
 	echo "</pre>";
-	die();
 } catch (Exception $e) {
     echo $e->getMessage();
     die();
