@@ -10,12 +10,13 @@ try {
     die();
 }
 
+$test = pg_escape_string($_POST['rT']); 
+
 try {
 	$results = $db->query('select * from test_table');
-	$sql = "INSERT INTO test_table (id, name) VALUES ('2', 'Doe')";
+	$sql = "INSERT INTO test_table (id, name) VALUES ('2', '" . $test . "')";
     // use exec() because no results are returned
     $db->exec($sql);
-    echo "New record created successfully";
 	// echo '<pre>';
 	// var_dump($results->fetchAll());
 	// echo '</pre>';
@@ -68,18 +69,21 @@ Post a hack
 ************************************************************************************/ -->
 
 <div class='newHackFrame'>
+
 	<div class='newHackClose'></div>
-	<form class='recipeCreator'>
+
+	<form class='recipeCreator' action="index.php" method="post">
 		<label for='rT'>title:</label>
-		<input id='rT' type='text'>
-		<label for='rC'>caption:</label>
-		<input id='rC' type='text'>
-		<label for='rI'>ingredients:</label>
-		<input id='rI' type='text'>
-		<label for='rR'>instructions:</label>
-		<textarea id='rR'></textarea>
+		<input name="rT" type='text'>
 		<input type='submit' value='enter'>
 	</form>
+
+	<?php 
+		foreach ($hacks as $hack) {
+			echo '<h1 class="hackTitle">'.$hack["name"].'</h1>';
+		}
+	?>
+
 </div>
 
 <!-- /************************************************************************************
@@ -90,11 +94,7 @@ Content Page
 
 <div class='hackSelectionFrame'>
 	<img class='hackHeroImage' src='http://fillmurray.com/425/640'>
-	<?php 
-		foreach ($hacks as $hack) {
-			echo '<h1 class="hackTitle">'.$hack["name"].'</h1>';
-		}
-	?>
+	<h1 class='hackTitle'>Thing</h1>
 	<p class='hackShortDesc'>This is a thing</p>
 	<div class='hackSelectionButton'>
 		<h1 class='hackButtonText'>Enter</h1>
