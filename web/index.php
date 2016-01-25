@@ -12,10 +12,14 @@ try {
 
 try {
 	$results = $db->query('select * from test_table');
+	$sql = "INSERT INTO test_table (id, name) VALUES ('2', 'Doe')";
+    // use exec() because no results are returned
+    $db->exec($sql);
+    echo "New record created successfully";
 	// echo '<pre>';
 	// var_dump($results->fetchAll());
 	// echo '</pre>';
-	// die();
+	die();
 } catch (Exception $e) {
     echo $e->getMessage();
     die();
@@ -99,9 +103,7 @@ Content Page
 
 <div class='hackSelectionFrame'>
 	<img class='hackHeroImage' src='http://fillmurray.com/425/640'>
-	<?php 
-		echo '<h1 class="hackTitle">'.$hacks["name"].'</h1>';
-	?>
+	<h1 class='hackTitle'>Thing</h1>
 	<p class='hackShortDesc'>This is a thing</p>
 	<div class='hackSelectionButton'>
 		<h1 class='hackButtonText'>Enter</h1>
