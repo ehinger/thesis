@@ -11,8 +11,9 @@ try {
 }
 
 try {
+	$results = $db->query('select * from test_table');
 	if (isset($_POST['push'])){
-		$test = pg_escape_string($_POST['hackTitle']); 
+		$test = pg_escape_string($_POST['rT']); 
 		$sql = "INSERT INTO test_table (id, name) VALUES ('2', '" . $test . "')";
 	    // use exec() because no results are returned
 	    $db->exec($sql);	
@@ -74,7 +75,7 @@ Post a hack
 
 	<form class='recipeCreator' action="index.php" method="post">
 		<label for='hackTitle'>title:</label>
-		<input name="hackTitle" type='text'>
+		<input name="rT" type='text'>
 		<input type='submit' name="push" value='enter'>
 	</form>
 
