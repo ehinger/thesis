@@ -78,12 +78,6 @@ Post a hack
 		<input type='submit' value='enter'>
 	</form>
 
-	<?php 
-		foreach ($hacks as $hack) {
-			echo '<h1 class="hackTitle">'.$hack["name"].'</h1>';
-		}
-	?>
-
 </div>
 
 <!-- /************************************************************************************
@@ -91,34 +85,19 @@ Post a hack
 Content Page
 
 ************************************************************************************/ -->
-
-<div class='hackSelectionFrame'>
-	<img class='hackHeroImage' src='http://fillmurray.com/425/640'>
-	<h1 class='hackTitle'>Thing</h1>
-	<p class='hackShortDesc'>This is a thing</p>
-	<div class='hackSelectionButton'>
-		<h1 class='hackButtonText'>Enter</h1>
-	</div>
-</div>
-
-<div class='hackSelectionFrame'>
-	<img class='hackHeroImage' src='http://fillmurray.com/425/640'>
-	<h1 class='hackTitle'>Thing</h1>
-	<p class='hackShortDesc'>This is a thing</p>
-	<div class='hackSelectionButton'>
-		<h1 class='hackButtonText'>Enter</h1>
-	</div>
-</div>
-
-<div class='hackSelectionFrame'>
-	<img class='hackHeroImage' src='http://fillmurray.com/425/640'>
-	<h1 class='hackTitle'>Thing</h1>
-	<p class='hackShortDesc'>This is a thing</p>
-	<div class='hackSelectionButton'>
-		<h1 class='hackButtonText'>Enter</h1>
-	</div>
-</div>
-
+<?php 
+	foreach ($hacks as $hack) {
+		echo '<h1 class="hackTitle">'.$hack["name"].'</h1>';
+		echo "<div class='hackSelectionFrame'>";
+			echo "<img class='hackHeroImage' src='http://fillmurray.com/425/640'>";
+			echo "<h1 class='hackTitle'>Thing</h1>";
+			echo "<p class='hackShortDesc'>This is a thing</p>";
+			echo "<div class='hackSelectionButton'>";
+				echo "<h1 class='hackButtonText'>Enter</h1>";
+			echo "</div>";
+		echo "</div>";
+	}
+?>
 <div class='hackSelectionFrame'>
 	<img class='hackHeroImage' src='http://fillmurray.com/425/640'>
 	<h1 class='hackTitle'>Thing</h1>
