@@ -93,17 +93,39 @@ Content Page
 ************************************************************************************/ -->
 
 <div class='hackSelectionFrame'>
-	<?php 
-		foreach ($hacks as $hack) {
-			echo '<h1 class="hackTitle">'.$hack["name"].'</h1>';
-			echo "<img class='hackHeroImage' src='http://fillmurray.com/425/640'>"
-			echo "<h1 class='hackTitle'>Thing</h1>"
-			echo "<p class='hackShortDesc'>This is a thing</p>"
-			echo "<div class='hackSelectionButton'>"
-				echo "<h1 class='hackButtonText'>Enter</h1>"
-			echo "</div>"
-		}
-	?>
+	<img class='hackHeroImage' src='http://fillmurray.com/425/640'>
+	<h1 class='hackTitle'>Thing</h1>
+	<p class='hackShortDesc'>This is a thing</p>
+	<div class='hackSelectionButton'>
+		<h1 class='hackButtonText'>Enter</h1>
+	</div>
+</div>
+
+<div class='hackSelectionFrame'>
+	<img class='hackHeroImage' src='http://fillmurray.com/425/640'>
+	<h1 class='hackTitle'>Thing</h1>
+	<p class='hackShortDesc'>This is a thing</p>
+	<div class='hackSelectionButton'>
+		<h1 class='hackButtonText'>Enter</h1>
+	</div>
+</div>
+
+<div class='hackSelectionFrame'>
+	<img class='hackHeroImage' src='http://fillmurray.com/425/640'>
+	<h1 class='hackTitle'>Thing</h1>
+	<p class='hackShortDesc'>This is a thing</p>
+	<div class='hackSelectionButton'>
+		<h1 class='hackButtonText'>Enter</h1>
+	</div>
+</div>
+
+<div class='hackSelectionFrame'>
+	<img class='hackHeroImage' src='http://fillmurray.com/425/640'>
+	<h1 class='hackTitle'>Thing</h1>
+	<p class='hackShortDesc'>This is a thing</p>
+	<div class='hackSelectionButton'>
+		<h1 class='hackButtonText'>Enter</h1>
+	</div>
 </div>
 
 <!-- /************************************************************************************
