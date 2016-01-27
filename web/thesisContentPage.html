@@ -35,20 +35,49 @@ Post a hack
 
 ************************************************************************************/ -->
 
-<div class="newHackFrame">
-	<div class="newHackClose"></div>
-	<form class="recipeCreator">
-		<label for="rT">title:</label>
-		<input id="rT" type="text">
-		<label for="rC">caption:</label>
-		<input id="rC" type="text">
-		<label for="rI">ingredients:</label>
-		<input id="rI" type="text">
-		<label for="rR">instructions:</label>
-		<textarea id="rR"></textarea>
-		<input type="submit" value="enter">
+<div class='newHackFrame'>
+
+	<div class='newHackClose'></div>
+
+	<form class='recipeCreator' action="index.php" method="post">
+
+		<label>Title:</label>
+		<input name="hackTitle" type='text'>
+
+		<label>Ability:</label>
+		<input name="hackAbility" type='text'>
+
+		<label>Type:</label>
+		<input name="hackType" type='text'>	
+
+		<select name="hackType">
+		    <option value="nutrition">Nutrition</option>
+		    <option value="fitness">Fitness</option>
+		    <option value="personalCare">Personal Care</option>
+		    <option value="communication">Communication</option>
+		</select>
+
+		<label>Tags:</label>
+		<input name="hackTags" type='text'>	
+
+		<label>Tags:</label>
+		<textarea name="hackDesc" rows="10" cols="30">
+		</textarea>
+
+		<div class="ingredient">		
+			<label>Ingredients:</label>
+			<input type="number" name="ingredientsQuantity">
+			<input name="hackIngredients" type='text'>	
+		</div>
+
+		<input type="button" onclick="ingredientSelection()" value="Add another">
+
+		<input type="button" onclick="" value="Add new step">
+
 	</form>
+
 </div>
+
 
 <!-- /************************************************************************************
 

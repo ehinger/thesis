@@ -13,7 +13,7 @@ try {
 try {
 	$results = $db->query('select * from test_table');
 	if (isset($_POST['push'])){
-		$test = pg_escape_string($_POST['rT']); 
+		$test = pg_escape_string($_POST['hackTitle']); 
 		$sql = "INSERT INTO test_table (id, name) VALUES ('2', '" . $test . "')";
 	    // use exec() because no results are returned
 	    $db->exec($sql);	
@@ -74,9 +74,40 @@ Post a hack
 	<div class='newHackClose'></div>
 
 	<form class='recipeCreator' action="index.php" method="post">
-		<label for='hackTitle'>title:</label>
-		<input name="rT" type='text'>
-		<input type='submit' name="push" value='enter'>
+
+		<label>Title:</label>
+		<input name="hackTitle" type='text'>
+
+		<label>Ability:</label>
+		<input name="hackAbility" type='text'>
+
+		<label>Type:</label>
+		<input name="hackType" type='text'>	
+
+		<select name="hackType">
+		    <option value="nutrition">Nutrition</option>
+		    <option value="fitness">Fitness</option>
+		    <option value="personalCare">Personal Care</option>
+		    <option value="communication">Communication</option>
+		</select>
+
+		<label>Tags:</label>
+		<input name="hackTags" type='text'>	
+
+		<label>Tags:</label>
+		<textarea name="hackDesc" rows="10" cols="30">
+		</textarea>
+
+		<div class="ingredient">		
+			<label>Ingredients:</label>
+			<input type="number" name="ingredientsQuantity">
+			<input name="hackIngredients" type='text'>	
+		</div>
+
+		<input type="button" onclick="ingredientSelection()" value="Add another">
+
+		<input type="button" onclick="" value="Add new step">
+
 	</form>
 
 </div>

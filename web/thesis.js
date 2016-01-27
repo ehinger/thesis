@@ -27,17 +27,32 @@ $(window).load(function(){
 	});
 
 	$(".newHackFrame").on('click', function() {
+		console.log("opening");
 		$(".newHackFrame").addClass( "offset5" );
 		$(".newHackFrame *").addClass( "offset6" );
 		// $(".newHackFrame").toggleClass( "offset5" );
 		// $(".newHackFrame *").toggleClass( "offset6" );
+		$("body").addClass( "offset4" );
 	});
 
-	$(".newHackClose").on('click', function() {
+	$(".newHackClose").on('click', function(event) {
+    	event.stopPropagation();
+		console.log("closing");
 		$(".newHackFrame").removeClass( "offset5" );
 		$(".newHackFrame *").removeClass( "offset6" );
+		$("body").removeClass( "offset4" );
 	});
 
+	function ingredientSelection() {
+		var selection = "";
+		selection += "<input type='number' name='ingredientsQuantity'>";
+		selection += "<input name='hackIngredients' type='text'>";
+		$('.ingredient').html(selection);
+	}
+
+	function hackSteps() {
+
+	}
 
 	// Bind the swipeleftHandler callback function to the swipe event on div.box
 	// $( ".hackSelectionFrame1" ).on( "swipeleft", function() {

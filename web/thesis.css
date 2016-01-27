@@ -154,7 +154,7 @@ Post a hack
   background: white;
   z-index: 2;
   border-radius: 100%;
-  overflow: hidden;
+  overflow-y: scroll;
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
   -ms-transition: 0.3s;
@@ -188,7 +188,7 @@ Post a hack
   transition: 0.1s;
 }
 
-input, textarea, label {
+/*input, textarea, label {
   float: left;
   margin-left: 10%;
   margin-top: 12%;
@@ -201,7 +201,7 @@ input, textarea, label {
 }
 input:nth-child(2n+1), textarea:nth-child(2n+1), label:nth-child(2n+1) {
   clear: left; 
-}
+}*/
 
 .newHackClose {
   right: 0;
@@ -225,6 +225,7 @@ input:nth-child(2n+1), textarea:nth-child(2n+1), label:nth-child(2n+1) {
   -o-transition: 0.3s;
   transition: 0.3s;
 }
+
 
 /************************************************************************************
 
