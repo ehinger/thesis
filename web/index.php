@@ -31,7 +31,10 @@ try {
     try {
         // FIXME: do not use 'name' for upload (that's the original filename from the user's computer)
         $upload = $s3->upload($bucket, $_FILES['pic']['name'], fopen($_FILES['pic']['tmp_name'], 'rb'), 'public-read');
-    }
+    } catch (Exception $e) {
+	    echo $e->getMessage();
+	    die();
+	}
     }
 
 	// echo '<pre>';
