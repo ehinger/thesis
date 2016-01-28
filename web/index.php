@@ -2,8 +2,6 @@
 // remove before flight
 ini_set('display_errors', 'On');
 
-require('vendor/autoload.php');
-
 $s3 = Aws\S3\S3Client::factory();
 
 $bucket = getenv('S3_BUCKET')?: 
