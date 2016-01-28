@@ -39,7 +39,7 @@ Post a hack
 
 	<div class='newHackClose'></div>
 
-	<form class='recipeCreator' action="index.php" method="post">
+	<form enctype="multipart/form-data" class='recipeCreator' action="index.php" method="post">
 
 		<label>Title:</label>
 		<input name="hackTitle" type='text'>
@@ -48,8 +48,6 @@ Post a hack
 		<input name="hackAbility" type='text'>
 
 		<label>Type:</label>
-		<input name="hackType" type='text'>	
-
 		<select name="hackType">
 		    <option value="nutrition">Nutrition</option>
 		    <option value="fitness">Fitness</option>
@@ -58,21 +56,21 @@ Post a hack
 		</select>
 
 		<label>Tags:</label>
-		<input name="hackTags" type='text'>	
-
-		<label>Tags:</label>
 		<textarea name="hackDesc" rows="10" cols="30">
 		</textarea>
 
 		<div class="ingredient">		
 			<label>Ingredients:</label>
-			<input type="number" name="ingredientsQuantity">
+			<input type="number" name="ingredientsQuantity" min="1">
 			<input name="hackIngredients" type='text'>	
 		</div>
 
 		<input type="button" onclick="ingredientSelection()" value="Add another">
 
-		<input type="button" onclick="" value="Add new step">
+		<div class="steps">		
+		</div>
+
+		<input type="button" onclick="hackSteps()" value="Add new step">
 
 	</form>
 

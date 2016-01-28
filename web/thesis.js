@@ -43,22 +43,31 @@ $(window).load(function(){
 		$("body").removeClass( "offset4" );
 	});
 
-	function ingredientSelection() {
-		var selection = "";
-		selection += "<input type='number' name='ingredientsQuantity'>";
-		selection += "<input name='hackIngredients' type='text'>";
-		$('.ingredient').html(selection);
-	}
-
-	function hackSteps() {
-
-	}
-
 	// Bind the swipeleftHandler callback function to the swipe event on div.box
 	// $( ".hackSelectionFrame1" ).on( "swipeleft", function() {
 
 	// });
 });
+
+var selection = "";
+
+function ingredientSelection() {
+	selection += "<input type='number' name='ingredientsQuantity' min='1'>";
+	selection += "<input name='hackIngredients' type='text'>";
+	$('.ingredient').append(selection);
+}
+
+var steps = "";
+
+var i = 1;
+
+function hackSteps() {
+	steps += "<h1>step " + i++ + "</h1>";
+	steps += "<select name='stepIngredients'></select>";
+	steps += "<input type='file' name='pic' accept='image/*'>";
+	steps += "<textarea name='hackDesc' rows='10' cols='30'></textarea>";
+	$('.steps').html(steps);
+}
 
 // $('a').on('click', function(){
 // 	a = $(this).attr("class");

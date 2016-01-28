@@ -2,6 +2,13 @@
 // remove before flight
 ini_set('display_errors', 'On');
 
+require('vendor/autoload.php');
+
+$s3 = Aws\S3\S3Client::factory();
+
+$bucket = getenv('S3_BUCKET')?: 
+die('No "S3_BUCKET" config var in found in env!');
+
 try {
     $db = new PDO('pgsql:host=ec2-54-204-41-175.compute-1.amazonaws.com;port=5432;dbname=d6jmmjm506o0h9;user=ggamcflhqstetx;password=1jc95h0WehE3P8hvgnrQrx9rBT');  
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -18,6 +25,15 @@ try {
 	    // use exec() because no results are returned
 	    $db->exec($sql);	
 	}
+
+	if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['pic']) && $_FILES['pic']['error'] == UPLOAD_ERR_OK && is_uploaded_file($_FILES['pic']['tmp_name'])) {
+    // FIXME: add more validation, e.g. using ext/fileinfo
+    try {
+        // FIXME: do not use 'name' for upload (that's the original filename from the user's computer)
+        $upload = $s3->upload($bucket, $_FILES['pic']['name'], fopen($_FILES['pic']['tmp_name'], 'rb'), 'public-read');
+    }
+    }
+
 	// echo '<pre>';
 	// var_dump($results->fetchAll());
 	// echo '</pre>';
@@ -73,7 +89,7 @@ Post a hack
 
 	<div class='newHackClose'></div>
 
-	<form class='recipeCreator' action="index.php" method="post">
+	<form enctype="multipart/form-data" class='recipeCreator' action="index.php" method="post">
 
 		<label>Title:</label>
 		<input name="hackTitle" type='text'>
@@ -82,8 +98,6 @@ Post a hack
 		<input name="hackAbility" type='text'>
 
 		<label>Type:</label>
-		<input name="hackType" type='text'>	
-
 		<select name="hackType">
 		    <option value="nutrition">Nutrition</option>
 		    <option value="fitness">Fitness</option>
@@ -92,21 +106,21 @@ Post a hack
 		</select>
 
 		<label>Tags:</label>
-		<input name="hackTags" type='text'>	
-
-		<label>Tags:</label>
 		<textarea name="hackDesc" rows="10" cols="30">
 		</textarea>
 
 		<div class="ingredient">		
 			<label>Ingredients:</label>
-			<input type="number" name="ingredientsQuantity">
+			<input type="number" name="ingredientsQuantity" min="1">
 			<input name="hackIngredients" type='text'>	
 		</div>
 
 		<input type="button" onclick="ingredientSelection()" value="Add another">
 
-		<input type="button" onclick="" value="Add new step">
+		<div class="steps">		
+		</div>
+
+		<input type="button" onclick="hackSteps()" value="Add new step">
 
 	</form>
 
@@ -141,7 +155,12 @@ Instructions
 	<div class='close'>
 	</div>
 	<div class='insframe'>
-		<p>This is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thing</p>
+		<p>This is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thing
+		This is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thing
+		This is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thing
+		This is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thing
+		This is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thing
+		This is a thingThis is a thingThis is a thingThis is a thingThis is a thing</p>
 	</div>
 </div>
 
