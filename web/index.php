@@ -4,7 +4,14 @@ ini_set('display_errors', 'On');
 
 require('../vendor/autoload.php');
 
-$s3 = Aws\S3\S3Client::factory();
+use Aws\S3\S3Client;
+
+$options = [
+    'region'            => 'ap-southeast-2',
+    'version'           => 'latest',
+];
+
+$s3 = new S3Client($options);
 
 $bucket = getenv('S3_BUCKET')?: 
 die('No "S3_BUCKET" config var in found in env!');
