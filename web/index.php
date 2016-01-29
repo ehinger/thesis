@@ -99,7 +99,7 @@ Post a hack
 
 	<div class='newHackClose'></div>
 
-	<form class='recipeCreator' action="index.php" method="post">
+	<form enctype="multipart/form-data" class='recipeCreator' action="index.php" method="post">
 
 		<label>Title:</label>
 		<input name="hackTitle" type='text'>
