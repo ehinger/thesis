@@ -31,7 +31,7 @@ try {
 		$sql = "INSERT INTO test_table (id, name) VALUES ('2', '" . $test . "')";
 	    // use exec() because no results are returned
 	    $db->exec($sql);
-	    
+
 	    if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['pic']) && $_FILES['pic']['error'] == UPLOAD_ERR_OK && is_uploaded_file($_FILES['pic']['tmp_name'])) {
 		    // FIXME: add more validation, e.g. using ext/fileinfo
 		    try {
@@ -131,7 +131,9 @@ Post a hack
 		<div class="steps">		
 		</div>
 
-		<input type="button" onclick="hackSteps()" value="Add new step">
+		<input type='file' name='pic' accept='image/*'>
+		
+<!-- 		<input type="button" onclick="hackSteps()" value="Add new step"> -->
 
 		<input type="submit" value="Submit" name="push">
 
