@@ -125,12 +125,12 @@ Post a hack
 			<input name="hackIngredients" type='text'>	
 		</div>
 
-		<input type="button" onclick="ingredientSelection()" value="Add another">
+<!-- 		<input type="button" onclick="ingredientSelection()" value="Add another"> -->
 
 		<div class="steps">		
 		</div>
 
-		<input type="button" onclick="hackSteps()" value="Add new step">
+<!-- 		<input type="button" onclick="hackSteps()" value="Add new step"> -->
 
 		<input type="submit" value="push">
 
