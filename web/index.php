@@ -131,7 +131,7 @@ Post a hack
 		<div class="steps">		
 		</div>
 
-<!-- 		<input type="button" onclick="hackSteps()" value="Add new step"> -->
+		<input type="button" onclick="hackSteps()" value="Add new step">
 
 		<input type="submit" value="Submit" name="push">
 
