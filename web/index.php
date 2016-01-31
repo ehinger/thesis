@@ -98,7 +98,7 @@ Post a hack
 
 	<div class='newHackClose'></div>
 
-	<form enctype="multipart/form-data" class='recipeCreator' action="index.php" method="post">
+	<form enctype="multipart/form-data" id='recipeCreator' action="index.php" method="post">
 
 		<label>Title:</label>
 		<input name="hackTitle" type='text'>
@@ -131,7 +131,7 @@ Post a hack
 
 <!-- 		<input type="button" onclick="hackSteps()" value="Add new step"> -->
 
-		<input type="submit" value="push">
+		<input type="submit" value="Submit" name="push">
 
 	</form>
 
