@@ -133,7 +133,7 @@ Post a hack
         <div class="steps">     
         </div>
 
-        <input type='file' name='pic' accept='image/*'>
+        <input type='file' name='pic'>
         
 <!--        <input type="button" onclick="hackSteps()" value="Add new step"> -->
 
