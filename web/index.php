@@ -100,7 +100,7 @@ Post a hack
 
 	<div class='newHackClose'></div>
 
-	<form enctype="multipart/form-data" id='recipeCreator' action="index.php" method="post">
+	<form enctype="multipart/form-data" id='recipeCreator' action="<?=$_SERVER['PHP_SELF']?>" method="post">
 
 		<label>Title:</label>
 		<input name="hackTitle" type='text'>
