@@ -85,11 +85,22 @@ Post a hack
 
 ************************************************************************************/ -->
 
-
+<?php
+    if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['pic']) && $_FILES['pic']['error'] == UPLOAD_ERR_OK && is_uploaded_file($_FILES['pic']['tmp_name'])) {
+                // FIXME: add more validation, e.g. using ext/fileinfo
+                try {
+                    // FIXME: do not use 'name' for upload (that's the original filename from the user's computer)
+                    $upload = $s3->upload($bucket, $_FILES['pic']['name'], fopen($_FILES['pic']['tmp_name'], 'rb'), 'public-read');
+                } catch (Exception $e) {
+                    echo $e->getMessage();
+                    die();
+                }
+            }  
+?> 
 
 <div class='newHackFrame'>
 
-<!--     <div class='newHackClose'></div>
+    <div class='newHackClose'></div>
 
     <form enctype="multipart/form-data" id='recipeCreator' action="<?=$_SERVER['PHP_SELF']?>" method="post">
 
@@ -119,16 +130,18 @@ Post a hack
 
 <!--        <input type="button" onclick="ingredientSelection()" value="Add another"> -->
 
-<!--         <div class="steps">     
+        <div class="steps">     
         </div>
 
-        <input type='file' name='pic'> -->
+        <input type='file' name='pic'>
+
+        <input type="submit" value="Upload">
         
 <!--        <input type="button" onclick="hackSteps()" value="Add new step"> -->
 
-<!--         <input type="submit" value="Submit" name="push"> -->
-<!-- 
-    </form>  -->
+        <input type="submit" value="Submit" name="push">
+
+    </form>
 
 </div>
 
@@ -137,22 +150,6 @@ Post a hack
 Content Page
 
 ************************************************************************************/ -->
-<?php
-if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['userfile']) && $_FILES['userfile']['error'] == UPLOAD_ERR_OK && is_uploaded_file($_FILES['userfile']['tmp_name'])) {
-    // FIXME: add more validation, e.g. using ext/fileinfo
-    try {
-        // FIXME: do not use 'name' for upload (that's the original filename from the user's computer)
-        $upload = $s3->upload($bucket, $_FILES['userfile']['name'], fopen($_FILES['userfile']['tmp_name'], 'rb'), 'public-read');
-?>
-        <p>Upload <a href="<?=htmlspecialchars($upload->get('ObjectURL'))?>">successful</a> :)</p>
-<?php } catch(Exception $e) { ?>
-        <p>Upload error :(</p>
-<?php } } ?>
-        <h2>Upload a file</h2>
-        <form enctype="multipart/form-data" action="<?=$_SERVER['PHP_SELF']?>" method="POST">
-            <input name="userfile" type="file"><input type="submit" value="Upload">
-        </form>
-
 
 <?php 
     foreach ($hacks as $hack) {
