@@ -24,6 +24,12 @@ try {
     die();
 }
 
+$identification = '';
+for ($i = 0; $i<7; $i++) 
+{
+    $identification .= mt_rand(0,9);
+}
+
 try {
     $results1 = $db->query('select * from hacksdesc');
     $results2 = $db->query('select * from hacksingredients');
@@ -33,7 +39,7 @@ try {
         $title = pg_escape_string($_POST['hackTitle']); 
         $ability = pg_escape_string($_POST['hackAbility']); 
         $type = pg_escape_string($_POST['hackType']); 
-        $sql = "INSERT INTO hacksdesc (id, title, ability, type) VALUES ('2', '" . $title . "', '" . $ability . "', '" . $type . "')";
+        $sql = "INSERT INTO hacksdesc (id, title, ability, type) VALUES ('" . $title . $identification . "', '" . $title . "', '" . $ability . "', '" . $type . "')";
         // use exec() because no results are returned
         $db->exec($sql);
     }
@@ -160,7 +166,7 @@ Content Page
     foreach ($hacks as $hack) {
         echo "<div class='hackSelectionFrame'>";
             echo "<img class='hackHeroImage' src='http://fillmurray.com/425/640'>";
-            echo '<h1 class="hackTitle">'.$hack["title"].'</h1>';
+            echo '<h1 class="hackTitle">'.$hack["title"].$hack["id"].'</h1>';
             echo "<p class='hackShortDesc'>This hack can be used by people with a ".$hack["ability"]." ability level for ".$hack["type"]."</p>";
             echo "<div class='hackSelectionButton'>";
                 echo "<h1 class='hackButtonText'>Enter</h1>";
