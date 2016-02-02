@@ -192,3 +192,24 @@ Instructions
 <script src='thesis.js' type='text/javascript' ></script>
 </body>
 </html>
+
+<!-- heroku-postgres-dd0c9417::BLACK=> create table hacksDesc (id text, title text, ability text, type text);
+CREATE TABLE
+heroku-postgres-dd0c9417::BLACK=> create table hacks tags (id text, tag1 text);
+ERROR:  syntax error at or near "tags"
+LINE 1: create table hacks tags (id text, tag1 text);
+                           ^
+heroku-postgres-dd0c9417::BLACK=> create table hackstags (id text, tag1 text);
+CREATE TABLE
+heroku-postgres-dd0c9417::BLACK=> create table hacksingredients (id text, quantity1 integer, ingredient1 text);
+CREATE TABLE
+heroku-postgres-dd0c9417::BLACK=> create table hackssteps (id text, stepno integer, desc text);
+ERROR:  syntax error at or near "desc"
+LINE 1: create table hackssteps (id text, stepno integer, desc text)...
+                                                          ^
+heroku-postgres-dd0c9417::BLACK=> create table hackssteps (id text, stepno integer, desc text);
+ERROR:  syntax error at or near "desc"
+LINE 1: create table hackssteps (id text, stepno integer, desc text)...
+                                                          ^
+heroku-postgres-dd0c9417::BLACK=> create table hackssteps (id text, stepno integer, descrption text);
+CREATE TABLE -->
