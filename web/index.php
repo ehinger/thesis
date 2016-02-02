@@ -114,6 +114,10 @@ Post a hack
             }  
 ?> 
 
+        <input type='file' name='pic'>
+
+        <input type="submit" value="Upload">
+
 <div class='newHackFrame'>
 
     <div class='newHackClose'></div>
@@ -149,9 +153,7 @@ Post a hack
         <div class="steps">     
         </div>
 
-        <input type='file' name='pic'>
 
-        <input type="submit" value="Upload">
         
        <input type="button" onclick="hackSteps()" value="Add new step">
 
