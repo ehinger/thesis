@@ -166,9 +166,9 @@ Content Page
     foreach ($hacks as $hack) {
         echo "<div class='hackSelectionFrame'>";
             echo "<img class='hackHeroImage' src='http://fillmurray.com/425/640'>";
-            echo '<h1 class="hackTitle">'.$hack["title"].$hack["id"].'</h1>';
+            echo '<h1 class="hackTitle">'.$hack["title"].'</h1>';
             echo "<p class='hackShortDesc'>This hack can be used by people with a ".$hack["ability"]." ability level for ".$hack["type"]."</p>";
-            echo "<div class='hackSelectionButton'>";
+            echo "<div class='hackSelectionButton ".$hack["id"]."'>";
                 echo "<h1 class='hackButtonText'>Enter</h1>";
             echo "</div>";
         echo "</div>";
