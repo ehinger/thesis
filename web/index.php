@@ -25,10 +25,15 @@ try {
 }
 
 try {
-    $results = $db->query('select * from test_table');
+    $results1 = $db->query('select * from hacksdesc');
+    $results2 = $db->query('select * from hacksingredients');
+    $results3 = $db->query('select * from hackssteps ');
+    $results4 = $db->query('select * from hackstags');
     if (isset($_POST['push'])){
-        $test = pg_escape_string($_POST['hackTitle']); 
-        $sql = "INSERT INTO test_table (id, name) VALUES ('2', '" . $test . "')";
+        $title = pg_escape_string($_POST['hackTitle']); 
+        $ability = pg_escape_string($_POST['hackAbility']); 
+        $type = pg_escape_string($_POST['hackType']); 
+        $sql = "INSERT INTO hacksdesc (id, title, ability, type) VALUES ('2', '" . $title . "', '" . $ability . "', '" . $type . "')";
         // use exec() because no results are returned
         $db->exec($sql);
     }
@@ -43,7 +48,7 @@ try {
 
 
 
-$hacks = $results->fetchAll(PDO::FETCH_ASSOC);
+$hacks = $results1->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
 
@@ -155,8 +160,8 @@ Content Page
     foreach ($hacks as $hack) {
         echo "<div class='hackSelectionFrame'>";
             echo "<img class='hackHeroImage' src='http://fillmurray.com/425/640'>";
-            echo '<h1 class="hackTitle">'.$hack["name"].'</h1>';
-            echo "<p class='hackShortDesc'>This is a thing</p>";
+            echo '<h1 class="hackTitle">'.$hack["title"].'</h1>';
+            echo "<p class='hackShortDesc'>This hack can be used by people with a ".$hack["ability"]." ability level for ".$hack["type"]."</p>";
             echo "<div class='hackSelectionButton'>";
                 echo "<h1 class='hackButtonText'>Enter</h1>";
             echo "</div>";
