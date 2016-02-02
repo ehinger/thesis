@@ -2,6 +2,11 @@
 // remove before flight
 ini_set('display_errors', 'On');
 
+$domFile = new simple_html_dom();
+$domFile->load_file('https://thesis-tom.herokuapp.com/');
+
+$idCheck = $domFile->find('div[id='.$hack["id"].']',0);
+
 require('../vendor/autoload.php');
 
 use Aws\S3\S3Client;
@@ -139,7 +144,7 @@ Post a hack
             <input name="hackIngredients" type='text'>  
         </div>
 
-<!--        <input type="button" onclick="ingredientSelection()" value="Add another"> -->
+       <input type="button" onclick="ingredientSelection()" value="Add another">
 
         <div class="steps">     
         </div>
@@ -148,7 +153,7 @@ Post a hack
 
         <input type="submit" value="Upload">
         
-<!--        <input type="button" onclick="hackSteps()" value="Add new step"> -->
+       <input type="button" onclick="hackSteps()" value="Add new step">
 
         <input type="submit" value="Submit" name="push">
 
