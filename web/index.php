@@ -2,10 +2,10 @@
 // remove before flight
 ini_set('display_errors', 'On');
 
-$domFile = new simple_html_dom();
-$domFile->load_file('https://thesis-tom.herokuapp.com/');
+// $domFile = new simple_html_dom();
+// $domFile->load_file('https://thesis-tom.herokuapp.com/');
 
-$idCheck = $domFile->find('div[id='.$hack["id"].']',0);
+// $idCheck = $domFile->find('div[id='.$hack["id"].']',0);
 
 require('../vendor/autoload.php');
 
