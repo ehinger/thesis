@@ -101,24 +101,22 @@ Post a hack
 
 ************************************************************************************/ -->
 
-<?php
-    if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['pic']) && $_FILES['pic']['error'] == UPLOAD_ERR_OK && is_uploaded_file($_FILES['pic']['tmp_name'])) {
-                // FIXME: add more validation, e.g. using ext/fileinfo
-                try {
-                    // FIXME: do not use 'name' for upload (that's the original filename from the user's computer)
-                    $upload = $s3->upload($bucket, $_FILES['pic']['name'], fopen($_FILES['pic']['tmp_name'], 'rb'), 'public-read');
-                } catch (Exception $e) {
-                    echo $e->getMessage();
-                    die();
-                }
-            }  
-?> 
-
-        <input type='file' name='pic'>
-
-        <input type="submit" value="Upload">
 
 <div class='newHackFrame'>
+
+
+	<?php
+	    if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['pic']) && $_FILES['pic']['error'] == UPLOAD_ERR_OK && is_uploaded_file($_FILES['pic']['tmp_name'])) {
+	                // FIXME: add more validation, e.g. using ext/fileinfo
+	                try {
+	                    // FIXME: do not use 'name' for upload (that's the original filename from the user's computer)
+	                    $upload = $s3->upload($bucket, $_FILES['pic']['name'], fopen($_FILES['pic']['tmp_name'], 'rb'), 'public-read');
+	                } catch (Exception $e) {
+	                    echo $e->getMessage();
+	                    die();
+	                }
+	            }  
+	?> 
 
     <div class='newHackClose'></div>
 
@@ -153,7 +151,9 @@ Post a hack
         <div class="steps">     
         </div>
 
+        <input type='file' name='pic'>
 
+        <input type="submit" value="Upload">
         
        <input type="button" onclick="hackSteps()" value="Add new step">
 
