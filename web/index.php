@@ -43,11 +43,9 @@ try {
         // use exec() because no results are returned
         $db->exec($sql);
 
-        echo '$(".newHackClose").on("click", function(event) {';
 		echo 	'$(".newHackFrame").removeClass( "offset5" );';
 		echo 	'$(".newHackFrame *").removeClass( "offset6" );';
 		echo 	'$("body").removeClass( "offset4" );';
-		echo '}';
     }
     // echo '<pre>';
     // var_dump($results->fetchAll());
