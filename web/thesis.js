@@ -47,6 +47,10 @@ $(window).load(function(){
 	// });
 });
 
+$.ajax({
+        async: true
+ });
+
 function closeHackFrame() {
 	$(".newHackFrame").removeClass( "offset5" );
 	$(".newHackFrame *").removeClass( "offset6" );
