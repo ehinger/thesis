@@ -57,11 +57,11 @@ if (isset($_POST['push'])){
     // use exec() because no results are returned
     $db->exec($sql);
 
-    echo '<script type="text/javascript">';
-	echo 	'$(".newHackFrame").removeClass( "offset5" );';
-	echo 	'$(".newHackFrame *").removeClass( "offset6" );';
-	echo 	'$("body").removeClass( "offset4" );';
-	echo '</script>';
+ //    echo '<script type="text/javascript">';
+	// echo 	'$(".newHackFrame").removeClass( "offset5" );';
+	// echo 	'$(".newHackFrame *").removeClass( "offset6" );';
+	// echo 	'$("body").removeClass( "offset4" );';
+	// echo '</script>';
 }
 
 try {
@@ -123,7 +123,7 @@ Post a hack
 
     <div class='newHackClose'></div>
 
-    <form enctype="multipart/form-data" id='recipeCreator' action="<?=$_SERVER['PHP_SELF']?>" method="post">
+    <form enctype="multipart/form-data" id='recipeCreator' action="<?=$_SERVER['PHP_SELF']?>" onsubmit="close()" method="post">
 
         <label>Title:</label>
         <input name="hackTitle" type='text'>
