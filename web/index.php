@@ -2,11 +2,6 @@
 // remove before flight
 ini_set('display_errors', 'On');
 
-// $domFile = new simple_html_dom();
-// $domFile->load_file('https://thesis-tom.herokuapp.com/');
-
-// $idCheck = $domFile->find('div[id='.$hack["id"].']',0);
-
 require('../vendor/autoload.php');
 
 use Aws\S3\S3Client;
@@ -48,12 +43,11 @@ try {
         // use exec() because no results are returned
         $db->exec($sql);
 
-  //       echo '$(".newHackClose").on("click", function(event) {';
-		// echo 	'$(".newHackFrame").removeClass( "offset5" );';
-		// echo 	'$(".newHackFrame *").removeClass( "offset6" );';
-		// echo 	'$("body").removeClass( "offset4" );';
-		// echo '}';
-	});
+        echo '$(".newHackClose").on("click", function(event) {';
+		echo 	'$(".newHackFrame").removeClass( "offset5" );';
+		echo 	'$(".newHackFrame *").removeClass( "offset6" );';
+		echo 	'$("body").removeClass( "offset4" );';
+		echo '}';
     }
     // echo '<pre>';
     // var_dump($results->fetchAll());
