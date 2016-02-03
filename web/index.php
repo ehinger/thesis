@@ -1,3 +1,22 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset='utf-8'/>
+    <title>hacks</title>
+    <link rel='stylesheet' type='text/css' href='thesis.css'>
+    <script type='text/javascript' src='jquery-2.1.4.min.js'></script>
+    <script>
+        $(document).bind('mobileinit',function(){
+            $.mobile.changePage.defaults.changeHash = false;
+            $.mobile.hashListeningEnabled = false;
+            $.mobile.pushStateEnabled = false;
+        });
+    </script>
+    <script type='text/javascript' src='jquery.mobile-1.4.5.min.js'></script>
+    
+</head>
+
 <?php
 // remove before flight
 ini_set('display_errors', 'On');
@@ -64,24 +83,6 @@ $hacks = $results1->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
 
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta charset='utf-8'/>
-    <title>hacks</title>
-    <link rel='stylesheet' type='text/css' href='thesis.css'>
-    <script type='text/javascript' src='jquery-2.1.4.min.js'></script>
-    <script>
-        $(document).bind('mobileinit',function(){
-            $.mobile.changePage.defaults.changeHash = false;
-            $.mobile.hashListeningEnabled = false;
-            $.mobile.pushStateEnabled = false;
-        });
-    </script>
-    <script type='text/javascript' src='jquery.mobile-1.4.5.min.js'></script>
-    
-</head>
 <body>
 
 <!-- /************************************************************************************
