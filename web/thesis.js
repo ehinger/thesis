@@ -47,10 +47,11 @@ $(window).load(function(){
 	// });
 });
 
-function close() {
+function closeHackFrame() {
 	$(".newHackFrame").removeClass( "offset5" );
 	$(".newHackFrame *").removeClass( "offset6" );
 	$("body").removeClass( "offset4" );
+	console.log("submit")
 }
 
 var selection = "";
