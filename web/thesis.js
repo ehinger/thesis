@@ -30,8 +30,6 @@ $(window).load(function(){
 		console.log("opening");
 		$(".newHackFrame").addClass( "offset5" );
 		$(".newHackFrame *").addClass( "offset6" );
-		// $(".newHackFrame").toggleClass( "offset5" );
-		// $(".newHackFrame *").toggleClass( "offset6" );
 		$("body").addClass( "offset4" );
 	});
 
@@ -48,6 +46,12 @@ $(window).load(function(){
 
 	// });
 });
+
+function close() {
+	$(".newHackFrame").removeClass( "offset5" );
+	$(".newHackFrame *").removeClass( "offset6" );
+	$("body").removeClass( "offset4" );
+}
 
 var selection = "";
 
