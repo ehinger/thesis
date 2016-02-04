@@ -73,12 +73,12 @@ if (isset($_POST['push'])){
     // use exec() because no results are returned
     $db->exec($sql);
 
-// } elseif (isset($_POST['action'])) {
-// 	switch ($_POST['action']) {
-//         case $hacks["id"]:
-//             echo "The select function is called.";
-//             break;
-//         }
+} elseif (isset($_POST['action'])) {
+	switch ($_POST['action']) {
+        case $hacks["id"]:
+            echo "The select function is called.";
+            break;
+        }
 }
 
 ?>
