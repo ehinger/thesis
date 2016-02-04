@@ -74,13 +74,13 @@ if (isset($_POST['push'])){
     $db->exec($sql);
 
 } elseif (isset($_POST['action'])) {
-	foreach ($hacks as $hack) {
+	// foreach ($hacks as $hack) {
 		switch ($_POST['action']) {
 	        case $hacks["id"]:
-	            echo "The select function is called.";
+	            echo "<h1>The select function is called.</h1>";
 	            break;
 	        }
-    }
+    // }
 }
 
 ?>
