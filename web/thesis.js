@@ -21,8 +21,8 @@ $(window).load(function(){
 		$("body").addClass( "offset4" );
 		$(".newHackFrame").addClass( "offset2" );
 		hackID = $(this).attr("id");
-		ajaxurl = 'index.php',
-		data =  {'action': hackID};
+		ajaxurl = 'index.php';
+		// data =  {'action': hackID};
         // $.post(ajaxurl, data, function (response) {
         //     // Response div goes here.
         //     alert("action performed successfully");
