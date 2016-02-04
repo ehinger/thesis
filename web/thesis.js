@@ -25,7 +25,6 @@ $(window).load(function(){
 		data =  {'action': hackID};
         $.post(ajaxurl, data, function (response) {
             // Response div goes here.
-            alert("action performed successfully");
         });
 	});
 

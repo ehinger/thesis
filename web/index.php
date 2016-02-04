@@ -74,11 +74,13 @@ if (isset($_POST['push'])){
     $db->exec($sql);
 
 } elseif (isset($_POST['action'])) {
-	switch ($_POST['action']) {
-        case $hacks["id"]:
-            echo "The select function is called.";
-            break;
-        }
+	// foreach ($hacks as $hack) {
+		switch ($_POST['action']) {
+	        case $hacks["id"]:
+	            echo "The select function is called.";
+	            break;
+	        }
+    // }
 }
 
 ?>
@@ -177,7 +179,7 @@ Content Page
             echo "<img class='hackHeroImage' src='http://fillmurray.com/425/640'>";
             echo '<h1 class="hackTitle">'.$hack["title"].'</h1>';
             echo "<p class='hackShortDesc'>This hack can be used by people with a ".$hack["ability"]." ability level for ".$hack["type"]."</p>";
-            echo "<div class='hackSelectionButton ".$hack["id"]."'>";
+            echo "<div class='hackSelectionButton' id=".$hack['id'].">";
                 echo "<h1 class='hackButtonText'>Enter</h1>";
             echo "</div>";
         echo "</div>";
