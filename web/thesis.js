@@ -23,10 +23,10 @@ $(window).load(function(){
 		hackID = $(this).attr("id");
 		ajaxurl = 'index.php',
 		data =  {'action': hackID};
-        $.post(ajaxurl, data, function (response) {
-            // Response div goes here.
-            alert("action performed successfully");
-        });
+        // $.post(ajaxurl, data, function (response) {
+        //     // Response div goes here.
+        //     alert("action performed successfully");
+        // });
 	});
 
 	$(".close").on('click', function() {
