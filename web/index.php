@@ -49,21 +49,6 @@ for ($i = 0; $i<7; $i++)
     $identification .= mt_rand(0,9);
 }
 
-if (isset($_POST['push'])){
-    $title = pg_escape_string($_POST['hackTitle']); 
-    $ability = pg_escape_string($_POST['hackAbility']); 
-    $type = pg_escape_string($_POST['hackType']); 
-    $sql = "INSERT INTO hacksdesc (id, title, ability, type) VALUES ('" . $title . $identification . "', '" . $title . "', '" . $ability . "', '" . $type . "')";
-    // use exec() because no results are returned
-    $db->exec($sql);
-
- //    echo '<script type="text/javascript">';
-	// echo 	'$(".newHackFrame").removeClass( "offset5" );';
-	// echo 	'$(".newHackFrame *").removeClass( "offset6" );';
-	// echo 	'$("body").removeClass( "offset4" );';
-	// echo '</script>';
-}
-
 try {
     $results1 = $db->query('select * from hacksdesc');
     $results2 = $db->query('select * from hacksingredients');
@@ -78,9 +63,29 @@ try {
     die();
 }
 
-
-
 $hacks = $results1->fetchAll(PDO::FETCH_ASSOC);
+
+if (isset($_POST['push'])){
+    $title = pg_escape_string($_POST['hackTitle']); 
+    $ability = pg_escape_string($_POST['hackAbility']); 
+    $type = pg_escape_string($_POST['hackType']); 
+    $sql = "INSERT INTO hacksdesc (id, title, ability, type) VALUES ('" . $title . $identification . "', '" . $title . "', '" . $ability . "', '" . $type . "')";
+    // use exec() because no results are returned
+    $db->exec($sql);
+
+} elseif (isset($_POST['action'])) {
+	switch ($_POST['action']) {
+        case $hacks["id"]:
+            echo "The select function is called.";
+            break;
+        }
+}
+ //    echo '<script type="text/javascript">';
+	// echo 	'$(".newHackFrame").removeClass( "offset5" );';
+	// echo 	'$(".newHackFrame *").removeClass( "offset6" );';
+	// echo 	'$("body").removeClass( "offset4" );';
+	// echo '</script>';
+}
 
 ?>
 

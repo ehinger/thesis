@@ -1,3 +1,7 @@
+var hackID;
+
+var ajaxurl;
+
 $(window).load(function(){
 	$(".navbutton").on('click', function() {
 		$("nav").toggleClass( "offset" );
@@ -16,6 +20,13 @@ $(window).load(function(){
 		$(".close").css("top", "10%");
 		$("body").addClass( "offset4" );
 		$(".newHackFrame").addClass( "offset2" );
+		hackID = $(this).attr("id");
+		ajaxurl = 'index.php',
+		data =  {'action': hackID};
+        $.post(ajaxurl, data, function (response) {
+            // Response div goes here.
+            alert("action performed successfully");
+        });
 	});
 
 	$(".close").on('click', function() {
@@ -41,15 +52,21 @@ $(window).load(function(){
 		$("body").removeClass( "offset4" );
 	});
 
+	$('.button').click(function(){
+        var clickBtnValue = $(this).val();
+        var ajaxurl = 'ajax.php',
+        data =  {'action': clickBtnValue};
+        $.post(ajaxurl, data, function (response) {
+            // Response div goes here.
+            alert("action performed successfully");
+        });
+    });
+
 	// Bind the swipeleftHandler callback function to the swipe event on div.box
 	// $( ".hackSelectionFrame1" ).on( "swipeleft", function() {
 
 	// });
 });
-
-$.ajax({
-        async: true
- });
 
 function closeHackFrame() {
 	$(".newHackFrame").removeClass( "offset5" );
