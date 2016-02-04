@@ -80,12 +80,6 @@ if (isset($_POST['push'])){
 //             break;
 //         }
 }
- //    echo '<script type="text/javascript">';
-	// echo 	'$(".newHackFrame").removeClass( "offset5" );';
-	// echo 	'$(".newHackFrame *").removeClass( "offset6" );';
-	// echo 	'$("body").removeClass( "offset4" );';
-	// echo '</script>';
-}
 
 ?>
 
