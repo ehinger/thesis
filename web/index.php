@@ -87,6 +87,12 @@ if (isset($_POST['push'])){
 
 <body>
 
+<script>
+$(document).ready(function(){
+    $(document.body).html('<script type="text/javascript" src="/json.js" async="async"></script>');
+});
+</script>
+
 <!-- /************************************************************************************
 
 Navigation Bar
