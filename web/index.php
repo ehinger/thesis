@@ -5,7 +5,7 @@
     <meta charset='utf-8'/>
     <title>hacks</title>
     <link rel='stylesheet' type='text/css' href='thesis.css'>
-    <script type='text/javascript' src='jquery-2.1.4.min.js'></script>
+    <script type='text/javascript' src='jquery-2.2.0.min.js'></script>
     <script>
         $(document).bind('mobileinit',function(){
             $.mobile.changePage.defaults.changeHash = false;
