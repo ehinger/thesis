@@ -87,12 +87,6 @@ if (isset($_POST['push'])){
 
 <body>
 
-<script>
-$(document).ready(function(){
-    $(document.body).html('<script type="text/javascript" src="/json.js" async="async"><\/script>');
-});
-</script>
-
 <!-- /************************************************************************************
 
 Navigation Bar
@@ -182,7 +176,7 @@ Content Page
 <?php 
     foreach ($hacks as $hack) {
         echo "<div class='hackSelectionFrame'>";
-            echo "<img class='hackHeroImage' src=''>";
+            echo "<img class='hackHeroImage' src='http://fillmurray.com/425/640'>";
             echo '<h1 class="hackTitle">'.$hack["title"].'</h1>';
             echo "<p class='hackShortDesc'>This hack can be used by people with a ".$hack["ability"]." ability level for ".$hack["type"]."</p>";
             echo "<div class='hackSelectionButton' id=".$hack['id'].">";
