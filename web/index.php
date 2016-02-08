@@ -89,7 +89,7 @@ if (isset($_POST['push'])){
 
 <script>
 $(document).ready(function(){
-    $(document.body).html('<script type="text/javascript" src="/json.js" async="async"></script>');
+    $(document.body).html('<script type="text/javascript" src="/json.js" async="async"><\/script>');
 });
 </script>
 
