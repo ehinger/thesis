@@ -75,15 +75,19 @@ if (isset($_POST['push'])){
 
 } 
 
-if (isset($_GET['hackI'])) {
+// if (isset($_GET['hackI'])) {
+//     echo "<script>console.log('yay for stuff');</script>";
+// }
+
+if (isset($_POST['hackID'])) {
     echo "<script>console.log('yay for stuff');</script>";
 	// foreach ($hacks as $hack) {
-	// 	switch ($_GET['action']) {
+	// 	switch ($_POST['action']) {
 	//         case $hack["id"]:
 	//             echo "<script>console.log('yay for stuff');</script>";
 	//             break;
 	//         }
-    // }
+ //    }
 }
 
 ?>
