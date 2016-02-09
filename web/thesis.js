@@ -22,7 +22,7 @@ $(window).load(function(){
 		$(".newHackFrame").addClass( "offset2" );
 		hackID = $(this).attr("id");
 		ajaxurl = 'index.php';
-		window.location.href = "index.php?hackI=" + hackID + "#";
+		window.location.href = "#index.php?hackI=" + hackID;
         // $.post(ajaxurl, hackID, function (response) {
         //     // Response div goes here.
         //     console.log(hackID);
