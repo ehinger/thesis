@@ -201,8 +201,7 @@ Instructions
 
 ************************************************************************************/ -->
 
-<?php 
-    // foreach ($hacks2 as $hack) {
+<!--     // foreach ($hacks2 as $hack) {
     //     echo "<div id='instructions'>"
     //         echo "<div class='close'>"
     //         echo "</div>"
@@ -210,8 +209,7 @@ Instructions
     //             echo "<p></p>"
     //         echo "</div>"
     //     echo "</div>"
-    // }
-?>
+    // } -->
 
 <div id="instructions">
     <div class="close">
