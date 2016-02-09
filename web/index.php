@@ -78,7 +78,7 @@ if (isset($_POST['push'])){
 
 if (isset($_GET['hackI'])) {
     $hackI = $_GET['hackI'];
-    echo "<script>console.log(" . $hackI . ");</script>";
+    echo "<script>console.log($hackI);</script>";
 }
 
 // if (isset($_POST['hackID'])) {
@@ -202,15 +202,15 @@ Instructions
 ************************************************************************************/ -->
 
 <?php 
-    foreach ($hacks2 as $hack) {
-        echo "<div id='instructions'>"
-            echo "<div class='close'>"
-            echo "</div>"
-            echo "<div class='insframe'>"
-                echo "<p></p>"
-            echo "</div>"
-        echo "</div>"
-    }
+    // foreach ($hacks2 as $hack) {
+    //     echo "<div id='instructions'>"
+    //         echo "<div class='close'>"
+    //         echo "</div>"
+    //         echo "<div class='insframe'>"
+    //             echo "<p></p>"
+    //         echo "</div>"
+    //     echo "</div>"
+    // }
 ?>
 
 <script src='thesis.js' type='text/javascript' ></script>
