@@ -213,6 +213,14 @@ Instructions
     // }
 ?>
 
+<div id="instructions">
+    <div class="close">
+    </div>
+    <div class="insframe">
+        <p>This is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thing</p>
+    </div>
+</div>
+
 <script src='thesis.js' type='text/javascript' ></script>
 </body>
 </html>
