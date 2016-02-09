@@ -78,7 +78,7 @@ if (isset($_POST['push'])){
 
 if (isset($_GET['hackI'])) {
     $hackI = $_GET['hackI'];
-    echo "<script>console.log($hackI);</script>";
+    echo "<script>console.log(" . $hackI . ");</script>";
 }
 
 // if (isset($_POST['hackID'])) {
