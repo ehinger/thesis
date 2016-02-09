@@ -63,7 +63,8 @@ try {
     die();
 }
 
-$hacks = $results1->fetchAll(PDO::FETCH_ASSOC);
+$hacks1 = $results1->fetchAll(PDO::FETCH_ASSOC);
+$hacks2 = $results2->fetchAll(PDO::FETCH_ASSOC);
 
 if (isset($_POST['push'])){
     $title = pg_escape_string($_POST['hackTitle']); 
@@ -76,7 +77,8 @@ if (isset($_POST['push'])){
 } 
 
 if (isset($_GET['hackI'])) {
-    echo "<script>console.log('yay for stuff');</script>";
+    $hackI = $_GET['hackI'];
+    echo "<script>console.log(" . $hackI . ");</script>";
 }
 
 // if (isset($_POST['hackID'])) {
@@ -181,7 +183,7 @@ Content Page
 ************************************************************************************/ -->
 
 <?php 
-    foreach ($hacks as $hack) {
+    foreach ($hacks1 as $hack) {
         echo "<div class='hackSelectionFrame'>";
             echo "<img class='hackHeroImage' src='http://fillmurray.com/425/640'>";
             echo '<h1 class="hackTitle">'.$hack["title"].'</h1>';
@@ -199,19 +201,17 @@ Instructions
 
 ************************************************************************************/ -->
 
-<div id='instructions'>
-    <div class='close'>
-    </div>
-    <div class='insframe'>
-        <p>This is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thing
-        This is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thing
-        This is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thing
-        This is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thing
-        This is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thing
-        This is a thingThis is a thingThis is a thingThis is a thingThis is a thing</p>
-    </div>
-</div>
-
+<?php 
+    foreach ($hacks2 as $hack) {
+        echo "<div id='instructions'>"
+            echo "<div class='close'>"
+            echo "</div>"
+            echo "<div class='insframe'>"
+                echo "<p></p>"
+            echo "</div>"
+        echo "</div>"
+    }
+?>
 
 <script src='thesis.js' type='text/javascript' ></script>
 </body>
