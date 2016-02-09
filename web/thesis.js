@@ -52,15 +52,15 @@ $(window).load(function(){
 		$("body").removeClass( "offset4" );
 	});
 
-	$('.button').click(function(){
-        var clickBtnValue = $(this).val();
-        var ajaxurl = 'ajax.php',
-        data =  {'action': clickBtnValue};
-        $.post(ajaxurl, data, function (response) {
-            // Response div goes here.
-            alert("action performed successfully");
-        });
-    });
+	// $('.button').click(function(){
+ //        var clickBtnValue = $(this).val();
+ //        var ajaxurl = 'ajax.php',
+ //        data =  {'action': clickBtnValue};
+ //        $.post(ajaxurl, data, function (response) {
+ //            // Response div goes here.
+ //            alert("action performed successfully");
+ //        });
+ //    });
 
 	// Bind the swipeleftHandler callback function to the swipe event on div.box
 	// $( ".hackSelectionFrame1" ).on( "swipeleft", function() {
@@ -72,6 +72,7 @@ function closeHackFrame() {
 	$(".newHackFrame").removeClass( "offset5" );
 	$(".newHackFrame *").removeClass( "offset6" );
 	$("body").removeClass( "offset4" );
+	location.reload();
 	console.log("submit")
 }
 
