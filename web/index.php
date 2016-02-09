@@ -77,7 +77,7 @@ if (isset($_POST['push'])){
 } 
 
 if (isset($_GET['hackI'])) {
-    $hackI = $_GET['hackI'];
+    $hackI = pg_escape_string($_GET['hackI']);
     echo "<script>console.log(" . $hackI . ");</script>";
 }
 
