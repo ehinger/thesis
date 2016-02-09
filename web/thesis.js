@@ -73,7 +73,7 @@ function closeHackFrame() {
 	$(".newHackFrame *").removeClass( "offset6" );
 	$("body").removeClass( "offset4" );
 	location.reload(true);
-	console.log("submit")
+	console.log("submit");
 }
 
 var selection = "";
