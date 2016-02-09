@@ -72,7 +72,9 @@ function closeHackFrame() {
 	$(".newHackFrame").removeClass( "offset5" );
 	$(".newHackFrame *").removeClass( "offset6" );
 	$("body").removeClass( "offset4" );
-	location.reload(true);
+	setTimeout(function () {
+		location.reload(true);
+	}, 1000);
 	console.log("submit")
 }
 
