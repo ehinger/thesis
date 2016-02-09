@@ -21,11 +21,10 @@ $(window).load(function(){
 		$("body").addClass( "offset4" );
 		$(".newHackFrame").addClass( "offset2" );
 		hackID = $(this).attr("id");
-		ajaxurl = 'index.php',
-		data =  {'action': hackID};
-        $.post(ajaxurl, data, function (response) {
+		ajaxurl = 'index.php';
+        $.post(ajaxurl, hackID, function (response) {
             // Response div goes here.
-            console.log("action performed successfully");
+            console.log(hackID);
         });
 	});
 
