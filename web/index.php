@@ -73,14 +73,17 @@ if (isset($_POST['push'])){
     // use exec() because no results are returned
     $db->exec($sql);
 
-} elseif (isset($_GET['action'])) {
-	foreach ($hacks as $hack) {
-		switch ($_GET['action']) {
-	        case $hack["id"]:
-	            echo "<script>console.log('yay for stuff');</script>";
-	            break;
-	        }
-    }
+} 
+
+if (isset($_GET['action'])) {
+    echo "<script>console.log('yay for stuff');</script>";
+	// foreach ($hacks as $hack) {
+	// 	switch ($_GET['action']) {
+	//         case $hack["id"]:
+	//             echo "<script>console.log('yay for stuff');</script>";
+	//             break;
+	//         }
+    // }
 }
 
 ?>
