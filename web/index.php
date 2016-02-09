@@ -75,7 +75,7 @@ if (isset($_POST['push'])){
 
 } 
 
-if (isset($_POST['action'])) {
+if (isset($_GET['hackI'])) {
     echo "<script>console.log('yay for stuff');</script>";
 	// foreach ($hacks as $hack) {
 	// 	switch ($_GET['action']) {
