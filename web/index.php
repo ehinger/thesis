@@ -40,7 +40,7 @@ $s3 = new S3Client($options);
 $bucket = getenv('S3_BUCKET')?:
 die('No "S3_BUCKET" config var in found in env!');
 
-$files = $_FILES['pic']['name'];
+$files = $_FILES['pic']['tmp_name'];
 
 
 // if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['pic']) && $_FILES['pic']['error'] == UPLOAD_ERR_OK && is_uploaded_file($_FILES['pic']['tmp_name'])) {
