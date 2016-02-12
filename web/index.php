@@ -37,14 +37,8 @@ $options = [
 
 $s3 = new S3Client($options);
 
-$key2 = getenv('AWS_ACCESS_KEY_ID')?: 
-$key1 = getenv('AWS_SECRET_ACCESS_KEY')?:
 $bucket = getenv('S3_BUCKET')?:
 die('No "S3_BUCKET" config var in found in env!');
-
-// $sdk = new Aws\Sdk($options);
-
-// $s3Client = $sdk->createS3();
 
 $files = $_FILES['pic']['name'];
 
@@ -99,10 +93,10 @@ if (isset($_POST['push'])){
     $sql = "INSERT INTO hacksdesc (id, title, ability, type) VALUES ('" . $title . $identification . "', '" . $title . "', '" . $ability . "', '" . $type . "')";
     // use exec() because no results are returned
     $db->exec($sql);
-    $s3Client->putObject([
-        'Bucket' => $bucket,
-        'Key'    => $files
-    ]);
+    $s3->getCommand('PutObject', [
+            'Bucket' => $bucket,
+            'Key'    => $files
+        ]);
 } 
 
 if (isset($_GET['hackI'])) {
