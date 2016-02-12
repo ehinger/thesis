@@ -23,32 +23,28 @@ ini_set('display_errors', 'On');
 
 require('../vendor/autoload.php');
 
+use Aws\S3\S3Client;
+
+$options = [
+    'region'            => 'ap-southeast-2',
+    'version'           => 'latest'
+];
+
 // $s3 = new Aws\S3\S3Client([
 //     'region'            => 'ap-southeast-2',
 //     'version'           => 'latest',
 // ]);
 
-// use Aws\S3\S3Client;
-
-// $s3 = new S3Client($options);
+$s3 = new S3Client($options);
 
 $key2 = getenv('AWS_ACCESS_KEY_ID')?: 
 $key1 = getenv('AWS_SECRET_ACCESS_KEY')?:
 $bucket = getenv('S3_BUCKET')?:
 die('No "S3_BUCKET" config var in found in env!');
 
-$options = [
-    'region'            => 'ap-southeast-2',
-    'version'           => 'latest',
-    'credentials' => [
-        'key'    => $key2,
-        'secret' => $key1
-    ]
-];
+// $sdk = new Aws\Sdk($options);
 
-$sdk = new Aws\Sdk($options);
-
-$s3Client = $sdk->createS3();
+// $s3Client = $sdk->createS3();
 
 $files = $_FILES['pic']['name'];
 
