@@ -23,17 +23,47 @@ ini_set('display_errors', 'On');
 
 require('../vendor/autoload.php');
 
-use Aws\S3\S3Client;
+// $s3 = new Aws\S3\S3Client([
+//     'region'            => 'ap-southeast-2',
+//     'version'           => 'latest',
+// ]);
+
+// use Aws\S3\S3Client;
+
+// $s3 = new S3Client($options);
+
+$key2 = getenv('AWS_ACCESS_KEY_ID')?: 
+$key1 = getenv('AWS_SECRET_ACCESS_KEY')?:
+$bucket = getenv('S3_BUCKET')?:
+die('No "S3_BUCKET" config var in found in env!');
 
 $options = [
     'region'            => 'ap-southeast-2',
     'version'           => 'latest',
+    'credentials' => [
+        'key'    => $key2,
+        'secret' => $key1
+    ]
 ];
 
-$s3 = new S3Client($options);
+$sdk = new Aws\Sdk($options);
 
-$bucket = getenv('S3_BUCKET')?: 
-die('No "S3_BUCKET" config var in found in env!');
+$s3Client = $sdk->createS3();
+
+$files = $_FILES['pic']['name'];
+
+
+// if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['pic']) && $_FILES['pic']['error'] == UPLOAD_ERR_OK && is_uploaded_file($_FILES['pic']['tmp_name'])) {
+//             // FIXME: add more validation, e.g. using ext/fileinfo
+//     try {
+//         // FIXME: do not use 'name' for upload (that's the original filename from the user's computer)
+//         $upload = $s3->upload($bucket, $_FILES['pic']['name'], fopen($_FILES['pic']['tmp_name'], 'rb'), 'public-read');
+//     } catch (Exception $e) {
+//         echo $e->getMessage();
+//         die();
+//     }
+// }
+
 
 try {
     $db = new PDO('pgsql:host=ec2-54-204-41-175.compute-1.amazonaws.com;port=5432;dbname=d6jmmjm506o0h9;user=ggamcflhqstetx;password=1jc95h0WehE3P8hvgnrQrx9rBT');  
@@ -73,7 +103,10 @@ if (isset($_POST['push'])){
     $sql = "INSERT INTO hacksdesc (id, title, ability, type) VALUES ('" . $title . $identification . "', '" . $title . "', '" . $ability . "', '" . $type . "')";
     // use exec() because no results are returned
     $db->exec($sql);
-
+    $s3Client->putObject([
+        'Bucket' => $bucket,
+        'Key'    => $files
+    ]);
 } 
 
 if (isset($_GET['hackI'])) {
@@ -116,20 +149,6 @@ Post a hack
 
 
 <div class='newHackFrame'>
-
-
-	<?php
-	    if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['pic']) && $_FILES['pic']['error'] == UPLOAD_ERR_OK && is_uploaded_file($_FILES['pic']['tmp_name'])) {
-	                // FIXME: add more validation, e.g. using ext/fileinfo
-	                try {
-	                    // FIXME: do not use 'name' for upload (that's the original filename from the user's computer)
-	                    $upload = $s3->upload($bucket, $_FILES['pic']['name'], fopen($_FILES['pic']['tmp_name'], 'rb'), 'public-read');
-	                } catch (Exception $e) {
-	                    echo $e->getMessage();
-	                    die();
-	                }
-	            }  
-	?> 
 
     <div class='newHackClose'></div>
 
