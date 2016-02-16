@@ -80,17 +80,17 @@ try {
     die();
 }
 
-// $hacks1 = $results1->fetchAll(PDO::FETCH_ASSOC);
-// $hacks2 = $results2->fetchAll(PDO::FETCH_ASSOC);
+$hacks1 = $results1->fetchAll(PDO::FETCH_ASSOC);
+$hacks2 = $results2->fetchAll(PDO::FETCH_ASSOC);
 
-// if (isset($_POST['push'])){
-//     $title = pg_escape_string($_POST['hackTitle']); 
-//     $ability = pg_escape_string($_POST['hackAbility']); 
-//     $type = pg_escape_string($_POST['hackType']); 
-//     $sql = "INSERT INTO hacksdesc (id, title, ability, type) VALUES ('" . $title . $identification . "', '" . $title . "', '" . $ability . "', '" . $type . "')";
-//     // use exec() because no results are returned
-//     $db->exec($sql);
-// } 
+if (isset($_POST['push'])){
+    $title = pg_escape_string($_POST['hackTitle']); 
+    $ability = pg_escape_string($_POST['hackAbility']); 
+    $type = pg_escape_string($_POST['hackType']); 
+    $sql = "INSERT INTO hacksdesc (id, title, ability, type) VALUES ('" . $title . $identification . "', '" . $title . "', '" . $ability . "', '" . $type . "')";
+    // use exec() because no results are returned
+    $db->exec($sql);
+} 
 
 // if (isset($_GET['hackI'])) {
 //     $hackI = pg_escape_string($_GET['hackI']);
