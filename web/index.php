@@ -201,16 +201,16 @@ Content Page
 ************************************************************************************/ -->
 
 <?php 
-    // foreach ($hacks1 as $hack) {
-    //     echo "<div class='hackSelectionFrame'>";
-    //         echo "<img class='hackHeroImage' src='http://fillmurray.com/425/640'>";
-    //         echo '<h1 class="hackTitle">'.$hack["title"].'</h1>';
-    //         echo "<p class='hackShortDesc'>This hack can be used by people with a ".$hack["ability"]." ability level for ".$hack["type"]."</p>";
-    //         echo "<div class='hackSelectionButton' id=".$hack['id'].">";
-    //             echo "<h1 class='hackButtonText'>Enter</h1>";
-    //         echo "</div>";
-    //     echo "</div>";
-    // }
+    foreach ($hacks1 as $hack) {
+        echo "<div class='hackSelectionFrame'>";
+            echo "<img class='hackHeroImage' src='http://fillmurray.com/425/640'>";
+            echo '<h1 class="hackTitle">'.$hack["title"].'</h1>';
+            echo "<p class='hackShortDesc'>This hack can be used by people with a ".$hack["ability"]." ability level for ".$hack["type"]."</p>";
+            echo "<div class='hackSelectionButton' id=".$hack['id'].">";
+                echo "<h1 class='hackButtonText'>Enter</h1>";
+            echo "</div>";
+        echo "</div>";
+    }
 ?>
 
 <!-- /************************************************************************************
