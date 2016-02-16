@@ -6,14 +6,6 @@
     <title>hacks</title>
     <link rel='stylesheet' type='text/css' href='thesis.css'>
     <script type='text/javascript' src='jquery-2.2.0.min.js'></script>
-    <script>
-        $(document).bind('mobileinit',function(){
-            $.mobile.changePage.defaults.changeHash = false;
-            $.mobile.hashListeningEnabled = false;
-            $.mobile.pushStateEnabled = false;
-        });
-    </script>
-    <script type='text/javascript' src='jquery.mobile-1.4.5.min.js'></script>
     
 </head>
 
@@ -130,7 +122,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['userfile']) && $_FILES
 
     <div class='newHackClose'></div>
 
-    <form enctype="multipart/form-data" id='recipeCreator' action="<?=$_SERVER['PHP_SELF']?>" onsubmit="closeHackFrame()" method="post">
+    <form enctype="multipart/form-data" id='recipeCreator' action="<?=$_SERVER['PHP_SELF']?>" method="post">
 
         <label>Title:</label>
         <input name="hackTitle" type='text'>
