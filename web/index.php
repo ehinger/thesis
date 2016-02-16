@@ -2,7 +2,7 @@
 
 <html>
 <head>
-    <meta charset='utf-8'/>
+    <meta charset='utf-8'>
     <title>hacks</title>
     <link rel='stylesheet' type='text/css' href='thesis.css'>
     <script type='text/javascript' src='jquery-2.2.0.min.js'></script>
