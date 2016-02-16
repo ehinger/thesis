@@ -60,53 +60,53 @@ try {
     die();
 }
 
-// $identification = '';
-// for ($i = 0; $i<7; $i++) 
-// {
-//     $identification .= mt_rand(0,9);
-// }
+$identification = '';
+for ($i = 0; $i<7; $i++) 
+{
+    $identification .= mt_rand(0,9);
+}
 
-// try {
-//     $results1 = $db->query('select * from hacksdesc');
-//     $results2 = $db->query('select * from hacksingredients');
-//     $results3 = $db->query('select * from hackssteps ');
-//     $results4 = $db->query('select * from hackstags');
-//     // echo '<pre>';
-//     // var_dump($results->fetchAll());
-//     // echo '</pre>';
-//     // die();
-// } catch (Exception $e) {
-//     echo $e->getMessage();
-//     die();
-// }
+try {
+    $results1 = $db->query('select * from hacksdesc');
+    $results2 = $db->query('select * from hacksingredients');
+    $results3 = $db->query('select * from hackssteps ');
+    $results4 = $db->query('select * from hackstags');
+    // echo '<pre>';
+    // var_dump($results->fetchAll());
+    // echo '</pre>';
+    // die();
+} catch (Exception $e) {
+    echo $e->getMessage();
+    die();
+}
 
-// $hacks1 = $results1->fetchAll(PDO::FETCH_ASSOC);
-// $hacks2 = $results2->fetchAll(PDO::FETCH_ASSOC);
+$hacks1 = $results1->fetchAll(PDO::FETCH_ASSOC);
+$hacks2 = $results2->fetchAll(PDO::FETCH_ASSOC);
 
-// if (isset($_POST['push'])){
-//     $title = pg_escape_string($_POST['hackTitle']); 
-//     $ability = pg_escape_string($_POST['hackAbility']); 
-//     $type = pg_escape_string($_POST['hackType']); 
-//     $sql = "INSERT INTO hacksdesc (id, title, ability, type) VALUES ('" . $title . $identification . "', '" . $title . "', '" . $ability . "', '" . $type . "')";
-//     // use exec() because no results are returned
-//     $db->exec($sql);
-// } 
+if (isset($_POST['push'])){
+    $title = pg_escape_string($_POST['hackTitle']); 
+    $ability = pg_escape_string($_POST['hackAbility']); 
+    $type = pg_escape_string($_POST['hackType']); 
+    $sql = "INSERT INTO hacksdesc (id, title, ability, type) VALUES ('" . $title . $identification . "', '" . $title . "', '" . $ability . "', '" . $type . "')";
+    // use exec() because no results are returned
+    $db->exec($sql);
+} 
 
-// if (isset($_GET['hackI'])) {
-//     $hackI = pg_escape_string($_GET['hackI']);
-//     echo "<script>console.log('id is ');</script>";
-// }
+if (isset($_GET['hackI'])) {
+    $hackI = pg_escape_string($_GET['hackI']);
+    echo "<script>console.log('id is ');</script>";
+}
 
-// if (isset($_POST['hackID'])) {
-//     echo "<script>console.log('yay for stuff');</script>";
-    // foreach ($hacks as $hack) {
-    //  switch ($_POST['action']) {
-    //         case $hack["id"]:
-    //             echo "<script>console.log('yay for stuff');</script>";
-    //             break;
-    //         }
- //    }
-// }
+if (isset($_POST['hackID'])) {
+    echo "<script>console.log('yay for stuff');</script>";
+    foreach ($hacks as $hack) {
+     switch ($_POST['action']) {
+            case $hack["id"]:
+                echo "<script>console.log('yay for stuff');</script>";
+                break;
+            }
+    }
+}
 
 ?>
 
@@ -147,7 +147,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['userfile']) && $_FILES
             <input name="userfile" type="file"><input type="submit" value="Upload">
         </form>
 
-<!-- <div class='newHackFrame'>
+<div class='newHackFrame'>
 
     <div class='newHackClose'></div>
 
@@ -193,7 +193,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['userfile']) && $_FILES
     </form>
 
 </div>
- -->
+
 <!-- /************************************************************************************
 
 Content Page
@@ -201,16 +201,16 @@ Content Page
 ************************************************************************************/ -->
 
 <?php 
-    // foreach ($hacks1 as $hack) {
-    //     echo "<div class='hackSelectionFrame'>";
-    //         echo "<img class='hackHeroImage' src='http://fillmurray.com/425/640'>";
-    //         echo '<h1 class="hackTitle">'.$hack["title"].'</h1>';
-    //         echo "<p class='hackShortDesc'>This hack can be used by people with a ".$hack["ability"]." ability level for ".$hack["type"]."</p>";
-    //         echo "<div class='hackSelectionButton' id=".$hack['id'].">";
-    //             echo "<h1 class='hackButtonText'>Enter</h1>";
-    //         echo "</div>";
-    //     echo "</div>";
-    // }
+    foreach ($hacks1 as $hack) {
+        echo "<div class='hackSelectionFrame'>";
+            echo "<img class='hackHeroImage' src='http://fillmurray.com/425/640'>";
+            echo '<h1 class="hackTitle">'.$hack["title"].'</h1>';
+            echo "<p class='hackShortDesc'>This hack can be used by people with a ".$hack["ability"]." ability level for ".$hack["type"]."</p>";
+            echo "<div class='hackSelectionButton' id=".$hack['id'].">";
+                echo "<h1 class='hackButtonText'>Enter</h1>";
+            echo "</div>";
+        echo "</div>";
+    }
 ?>
 
 <!-- /************************************************************************************
