@@ -13,7 +13,7 @@
             $.mobile.pushStateEnabled = false;
         });
     </script>
-<!--     <script type='text/javascript' src='jquery.mobile-1.4.5.min.js'></script> -->
+    <script type='text/javascript' src='jquery.mobile-1.4.5.min.js'></script>
     
 </head>
 
@@ -30,27 +30,10 @@ $options = [
     'version'           => 'latest'
 ];
 
-// $s3 = new Aws\S3\S3Client([
-//     'region'            => 'ap-southeast-2',
-//     'version'           => 'latest',
-// ]);
-
 $s3 = new S3Client($options);
 
 $bucket = getenv('S3_BUCKET')?:
 die('No "S3_BUCKET" config var in found in env!');
-
-// if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['pic']) && $_FILES['pic']['error'] == UPLOAD_ERR_OK && is_uploaded_file($_FILES['pic']['tmp_name'])) {
-//             // FIXME: add more validation, e.g. using ext/fileinfo
-//     try {
-//         // FIXME: do not use 'name' for upload (that's the original filename from the user's computer)
-//         $upload = $s3->upload($bucket, $_FILES['pic']['name'], fopen($_FILES['pic']['tmp_name'], 'rb'), 'public-read');
-//     } catch (Exception $e) {
-//         echo $e->getMessage();
-//         die();
-//     }
-// }
-
 
 try {
     $db = new PDO('pgsql:host=ec2-54-204-41-175.compute-1.amazonaws.com;port=5432;dbname=d6jmmjm506o0h9;user=ggamcflhqstetx;password=1jc95h0WehE3P8hvgnrQrx9rBT');  
