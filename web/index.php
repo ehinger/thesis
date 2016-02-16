@@ -2,7 +2,7 @@
 
 <html>
 <head>
-    <meta charset='utf-8'>
+    <meta charset='utf-8'/>
     <title>hacks</title>
     <link rel='stylesheet' type='text/css' href='thesis.css'>
     <script type='text/javascript' src='jquery-2.2.0.min.js'></script>
@@ -69,40 +69,40 @@ for ($i = 0; $i<7; $i++)
     $identification .= mt_rand(0,9);
 }
 
-// try {
-//     $results1 = $db->query('select * from hacksdesc');
-//     $results2 = $db->query('select * from hacksingredients');
-//     $results3 = $db->query('select * from hackssteps ');
-//     $results4 = $db->query('select * from hackstags');
-//     // echo '<pre>';
-//     // var_dump($results->fetchAll());
-//     // echo '</pre>';
-//     // die();
-// } catch (Exception $e) {
-//     echo $e->getMessage();
-//     die();
-// }
+try {
+    $results1 = $db->query('select * from hacksdesc');
+    $results2 = $db->query('select * from hacksingredients');
+    $results3 = $db->query('select * from hackssteps ');
+    $results4 = $db->query('select * from hackstags');
+    // echo '<pre>';
+    // var_dump($results->fetchAll());
+    // echo '</pre>';
+    // die();
+} catch (Exception $e) {
+    echo $e->getMessage();
+    die();
+}
 
-// $hacks1 = $results1->fetchAll(PDO::FETCH_ASSOC);
-// $hacks2 = $results2->fetchAll(PDO::FETCH_ASSOC);
+$hacks1 = $results1->fetchAll(PDO::FETCH_ASSOC);
+$hacks2 = $results2->fetchAll(PDO::FETCH_ASSOC);
 
-// if (isset($_POST['push'])){
-//     $title = pg_escape_string($_POST['hackTitle']); 
-//     $ability = pg_escape_string($_POST['hackAbility']); 
-//     $type = pg_escape_string($_POST['hackType']); 
-//     $sql = "INSERT INTO hacksdesc (id, title, ability, type) VALUES ('" . $title . $identification . "', '" . $title . "', '" . $ability . "', '" . $type . "')";
-//     // use exec() because no results are returned
-//     $db->exec($sql);
-//     $s3->getCommand('PutObject', [
-//             'Bucket' => $bucket,
-//             'Key'    => $files
-//         ]);
-// } 
+if (isset($_POST['push'])){
+    $title = pg_escape_string($_POST['hackTitle']); 
+    $ability = pg_escape_string($_POST['hackAbility']); 
+    $type = pg_escape_string($_POST['hackType']); 
+    $sql = "INSERT INTO hacksdesc (id, title, ability, type) VALUES ('" . $title . $identification . "', '" . $title . "', '" . $ability . "', '" . $type . "')";
+    // use exec() because no results are returned
+    $db->exec($sql);
+    $s3->getCommand('PutObject', [
+            'Bucket' => $bucket,
+            'Key'    => $files
+        ]);
+} 
 
-// if (isset($_GET['hackI'])) {
-//     $hackI = pg_escape_string($_GET['hackI']);
-//     echo "<script>console.log('id is ');</script>";
-// }
+if (isset($_GET['hackI'])) {
+    $hackI = pg_escape_string($_GET['hackI']);
+    echo "<script>console.log('id is ');</script>";
+}
 
 // if (isset($_POST['hackID'])) {
 //     echo "<script>console.log('yay for stuff');</script>";
@@ -138,7 +138,7 @@ Post a hack
 ************************************************************************************/ -->
 
 
-<!-- <div class='newHackFrame'>
+<div class='newHackFrame'>
 
     <div class='newHackClose'></div>
 
@@ -183,7 +183,7 @@ Post a hack
 
     </form>
 
-</div> -->
+</div>
 
 <!-- /************************************************************************************
 
@@ -191,34 +191,17 @@ Content Page
 
 ************************************************************************************/ -->
 
-<h1>S3 upload example</h1>
-<?php
-if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['userfile']) && $_FILES['userfile']['error'] == UPLOAD_ERR_OK && is_uploaded_file($_FILES['userfile']['tmp_name'])) {
-    // FIXME: add more validation, e.g. using ext/fileinfo
-    try {
-        // FIXME: do not use 'name' for upload (that's the original filename from the user's computer)
-        $upload = $s3->upload($bucket, $_FILES['userfile']['name'], fopen($_FILES['userfile']['tmp_name'], 'rb'), 'public-read');
-        ?>
-        <p>Upload <a href="<?=htmlspecialchars($upload->get('ObjectURL'))?>">successful</a> :)</p>
-        <?php } catch(Exception $e) { ?>
-        <p>Upload error :(</p>
-        <?php } } ?>
-        <h2>Upload a file</h2>
-        <form enctype="multipart/form-data" action="<?=$_SERVER['PHP_SELF']?>" method="POST">
-            <input name="userfile" type="file"><input type="submit" value="Upload">
-        </form>
-
 <?php 
-    // foreach ($hacks1 as $hack) {
-    //     echo "<div class='hackSelectionFrame'>";
-    //         echo "<img class='hackHeroImage' src='http://fillmurray.com/425/640'>";
-    //         echo '<h1 class="hackTitle">'.$hack["title"].'</h1>';
-    //         echo "<p class='hackShortDesc'>This hack can be used by people with a ".$hack["ability"]." ability level for ".$hack["type"]."</p>";
-    //         echo "<div class='hackSelectionButton' id=".$hack['id'].">";
-    //             echo "<h1 class='hackButtonText'>Enter</h1>";
-    //         echo "</div>";
-    //     echo "</div>";
-    // }
+    foreach ($hacks1 as $hack) {
+        echo "<div class='hackSelectionFrame'>";
+            echo "<img class='hackHeroImage' src='http://fillmurray.com/425/640'>";
+            echo '<h1 class="hackTitle">'.$hack["title"].'</h1>';
+            echo "<p class='hackShortDesc'>This hack can be used by people with a ".$hack["ability"]." ability level for ".$hack["type"]."</p>";
+            echo "<div class='hackSelectionButton' id=".$hack['id'].">";
+                echo "<h1 class='hackButtonText'>Enter</h1>";
+            echo "</div>";
+        echo "</div>";
+    }
 ?>
 
 <!-- /************************************************************************************
