@@ -6,13 +6,13 @@
     <title>hacks</title>
     <link rel='stylesheet' type='text/css' href='thesis.css'>
     <script type='text/javascript' src='jquery-2.2.0.min.js'></script>
-<!--     <script>
+    <script>
         $(document).bind('mobileinit',function(){
             $.mobile.changePage.defaults.changeHash = false;
             $.mobile.hashListeningEnabled = false;
             $.mobile.pushStateEnabled = false;
         });
-    </script> -->
+    </script>
 <!--     <script type='text/javascript' src='jquery.mobile-1.4.5.min.js'></script> -->
     
 </head>
