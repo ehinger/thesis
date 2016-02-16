@@ -143,9 +143,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['userfile']) && $_FILES
         <p>Upload error :(</p>
 <?php } } ?>
         <h2>Upload a file</h2>
-        <form enctype="multipart/form-data" action="<?=$_SERVER['PHP_SELF']?>" method="POST">
+<!--         <form enctype="multipart/form-data" action="<?=$_SERVER['PHP_SELF']?>" method="POST">
             <input name="userfile" type="file"><input type="submit" value="Upload">
-        </form>
+        </form> -->
 
 <div class='newHackFrame'>
 
@@ -182,7 +182,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['userfile']) && $_FILES
         <div class="steps">     
         </div>
 
-        <input type='file' name='pic'>
+        <input name="userfile" type="file">
 
         <input type="submit" value="Upload">
         
@@ -201,16 +201,16 @@ Content Page
 ************************************************************************************/ -->
 
 <?php 
-    foreach ($hacks1 as $hack) {
-        echo "<div class='hackSelectionFrame'>";
-            echo "<img class='hackHeroImage' src='http://fillmurray.com/425/640'>";
-            echo '<h1 class="hackTitle">'.$hack["title"].'</h1>';
-            echo "<p class='hackShortDesc'>This hack can be used by people with a ".$hack["ability"]." ability level for ".$hack["type"]."</p>";
-            echo "<div class='hackSelectionButton' id=".$hack['id'].">";
-                echo "<h1 class='hackButtonText'>Enter</h1>";
-            echo "</div>";
-        echo "</div>";
-    }
+    // foreach ($hacks1 as $hack) {
+    //     echo "<div class='hackSelectionFrame'>";
+    //         echo "<img class='hackHeroImage' src='http://fillmurray.com/425/640'>";
+    //         echo '<h1 class="hackTitle">'.$hack["title"].'</h1>';
+    //         echo "<p class='hackShortDesc'>This hack can be used by people with a ".$hack["ability"]." ability level for ".$hack["type"]."</p>";
+    //         echo "<div class='hackSelectionButton' id=".$hack['id'].">";
+    //             echo "<h1 class='hackButtonText'>Enter</h1>";
+    //         echo "</div>";
+    //     echo "</div>";
+    // }
 ?>
 
 <!-- /************************************************************************************
