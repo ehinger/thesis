@@ -66,19 +66,19 @@ try {
 //     $identification .= mt_rand(0,9);
 // }
 
-// try {
-//     $results1 = $db->query('select * from hacksdesc');
-//     $results2 = $db->query('select * from hacksingredients');
-//     $results3 = $db->query('select * from hackssteps ');
-//     $results4 = $db->query('select * from hackstags');
-//     // echo '<pre>';
-//     // var_dump($results->fetchAll());
-//     // echo '</pre>';
-//     // die();
-// } catch (Exception $e) {
-//     echo $e->getMessage();
-//     die();
-// }
+try {
+    $results1 = $db->query('select * from hacksdesc');
+    $results2 = $db->query('select * from hacksingredients');
+    $results3 = $db->query('select * from hackssteps ');
+    $results4 = $db->query('select * from hackstags');
+    // echo '<pre>';
+    // var_dump($results->fetchAll());
+    // echo '</pre>';
+    // die();
+} catch (Exception $e) {
+    echo $e->getMessage();
+    die();
+}
 
 // $hacks1 = $results1->fetchAll(PDO::FETCH_ASSOC);
 // $hacks2 = $results2->fetchAll(PDO::FETCH_ASSOC);
