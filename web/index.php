@@ -61,8 +61,8 @@ $hacks2 = $results2->fetchAll(PDO::FETCH_ASSOC);
 if (isset($_POST['push'])){
     $title = pg_escape_string($_POST['hackTitle']); 
     $ability = pg_escape_string($_POST['hackAbility']); 
-    $type = pg_escape_string($_POST['hackType']); 
-    
+    $type = htmlspecialchars($upload->get('ObjectURL')); 
+
     $sql = "INSERT INTO hacksdesc (id, title, ability, type) VALUES ('" . $title . $identification . "', '" . $title . "', '" . $ability . "', '" . $type . "')";
     // use exec() because no results are returned
     $db->exec($sql);
@@ -175,7 +175,7 @@ Content Page
 <?php 
     foreach ($hacks1 as $hack) {
         echo "<div class='hackSelectionFrame'>";
-            echo "<img class='hackHeroImage' src='https://s3-ap-southeast-2.amazonaws.com/thesis-tom-creagh/393217457_c906301977_o.jpg'>";
+            echo "<img class='hackHeroImage' src='".$hack["type"]."'>";
             echo '<h1 class="hackTitle">'.$hack["title"].'</h1>';
             echo "<p class='hackShortDesc'>This hack can be used by people with a ".$hack["ability"]." ability level for ".$hack["type"]."</p>";
             echo "<div class='hackSelectionButton' id=".$hack['id'].">";
