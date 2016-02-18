@@ -41,44 +41,6 @@ try {
 //     $identification .= mt_rand(0,9);
 // }
 
-if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['userfile']) && $_FILES['userfile']['error'] == UPLOAD_ERR_OK && is_uploaded_file($_FILES['userfile']['tmp_name'])) {
-    // FIXME: add more validation, e.g. using ext/fileinfo
-    try {
-        // FIXME: do not use 'name' for upload (that's the original filename from the user's computer)
-        $upload = $s3->upload($bucket, $_FILES['userfile']['name'], fopen($_FILES['userfile']['tmp_name'], 'rb'), 'public-read');
-    } catch(Exception $e) { 
-        echo $e->getMessage();
-        die();
-    } 
-} 
-
-try {
-    $results1 = $db->query('select * from hacksdesc');
-    $results2 = $db->query('select * from hacksingredients');
-    $results3 = $db->query('select * from hackssteps ');
-    $results4 = $db->query('select * from hackstags');
-    // echo '<pre>';
-    // var_dump($results->fetchAll());
-    // echo '</pre>';
-    // die();
-} catch (Exception $e) {
-    echo $e->getMessage();
-    die();
-}
-
-$hacks1 = $results1->fetchAll(PDO::FETCH_ASSOC);
-$hacks2 = $results2->fetchAll(PDO::FETCH_ASSOC);
-
-if (isset($_POST['push'])){
-    $title = pg_escape_string($_POST['hackTitle']); 
-    $ability = pg_escape_string($_POST['hackAbility']); 
-    $type = htmlspecialchars($upload->get('ObjectURL')); 
-
-    $sql = "INSERT INTO hacksdesc (id, title, ability, type) VALUES ('" . $title . $identification . "', '" . $title . "', '" . $ability . "', '" . $type . "')";
-    // use exec() because no results are returned
-    $db->exec($sql);
-} 
-
 // if (isset($_GET['hackI'])) {
 //     $hackI = pg_escape_string($_GET['hackI']);
 //     echo "<script>console.log('id is ');</script>";
@@ -125,7 +87,7 @@ Post a hack
 
     <div class='newHackClose'></div>
 
-    <form enctype="multipart/form-data" id='recipeCreator' action="<?=$_SERVER['PHP_SELF']?>" method="post">
+    <form enctype="multipart/form-data" id='recipeCreator' action="form.php" method="post">
 
         <label>Title:</label>
         <input name="hackTitle" type='text'>
