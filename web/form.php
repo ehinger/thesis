@@ -39,16 +39,10 @@ if (isset($_POST['push'])){
     $ability = pg_escape_string($_POST['hackAbility']); 
     $type = htmlspecialchars($upload->get('ObjectURL')); 
 
-    $values = array($identification, $title, $ability, $type);
-    $valuelist = '{' . implode(', ', $values . '}'
-
-    $sql = "INSERT INTO hacksdesc (id, title, ability, type) VALUES ('$1')";
-    $result = pg_query_params($db, $sql, array($valuelist));
-
-    // $sql = "INSERT INTO hacksdesc (id, title, ability, type) VALUES ('" . $title . $identification . "', '" . $title . "', '" . $ability . "', '" . $type . "')";
+    $sql = "INSERT INTO hacksdesc (id, title, ability, type) VALUES ('" . $title . $identification . "', '" . $title . "', '" . $ability . "', '" . $type . "')";
     // use exec() because no results are returned
-    $db->exec($result);
-    header('Location: index.php');
+    $db->exec($sql);
 } 
 
+header('Location: index.php');
 ?>
