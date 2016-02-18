@@ -91,7 +91,7 @@ var i = 1;
 function hackSteps() {
 	steps += "<h1>step " + i++ + "</h1>";
 	steps += "<select name='stepIngredients'></select>";
-	steps += "<input type='file' name='pic' accept='image/*'>";
+	steps += "<input name='userfile' type='file'>";
 	steps += "<textarea name='hackDesc' rows='10' cols='30'></textarea>";
 	$('.steps').html(steps);
 }
