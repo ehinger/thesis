@@ -34,23 +34,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['userfile']) && $_FILES
     } 
 } 
 
-try {
-    $results1 = $db->query('select * from hacksdesc');
-    $results2 = $db->query('select * from hacksingredients');
-    $results3 = $db->query('select * from hackssteps ');
-    $results4 = $db->query('select * from hackstags');
-    // echo '<pre>';
-    // var_dump($results->fetchAll());
-    // echo '</pre>';
-    // die();
-} catch (Exception $e) {
-    echo $e->getMessage();
-    die();
-}
-
-$hacks1 = $results1->fetchAll(PDO::FETCH_ASSOC);
-$hacks2 = $results2->fetchAll(PDO::FETCH_ASSOC);
-
 if (isset($_POST['push'])){
     $title = pg_escape_string($_POST['hackTitle']); 
     $ability = pg_escape_string($_POST['hackAbility']); 
