@@ -37,13 +37,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['userfile']) && $_FILES
         echo "File is not an image.";
         $uploadOk = 0;
     }
-
-    // Check if file already exists
-    $response = $s3->getObjectInfo($bucket, $target_file);
-    if ($response) {
-        echo "Sorry, file already exists.";
-        $uploadOk = 0;
-    }
+    
     // Check file size
     if ($target_file > 500000) {
         echo "Sorry, your file is too large.";
