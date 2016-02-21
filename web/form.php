@@ -39,7 +39,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['userfile']) && $_FILES
     }
 
     // Check if file already exists
-    $response = $s3->if_object_exists($bucket, $target_file);
+    $response = $s3->if_object_exists($bucket, $_FILES["userfile"]["name"]);
     if ($response) {
         echo "Sorry, file already exists.";
         $uploadOk = 0;
