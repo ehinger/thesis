@@ -69,9 +69,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['userfile']) && $_FILES
 if (isset($_POST['push'])){
     $title = pg_escape_string($_POST['hackTitle']); 
     $ability = pg_escape_string($_POST['hackAbility']); 
-    $type = htmlspecialchars(); 
+    $type = htmlspecialchars($upload->get('ObjectURL')); 
 
-    $sql = "INSERT INTO hacksdesc (id, title, ability, type) VALUES ('" . $title . $identification . "', '" . $title . "', '" . $ability . "', '" . $ability . "')";
+    $sql = "INSERT INTO hacksdesc (id, title, ability, type) VALUES ('" . $title . $identification . "', '" . $title . "', '" . $ability . "', '" . $type . "')";
     // use exec() because no results are returned
     $db->exec($sql);
 } 
