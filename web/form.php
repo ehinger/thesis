@@ -39,10 +39,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['userfile']) && $_FILES
     }
 
     // Check file size
-    if ($target_file > 5000000000) {
-        echo "Sorry, your file is too large.";
-        $uploadOk = 0;
-    }
+    // if ($target_file > 5000000000) {
+    //     echo "Sorry, your file is too large.";
+    //     $uploadOk = 0;
+    // }
     // Allow certain file formats
     if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
     && $imageFileType != "gif" ) {
