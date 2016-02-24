@@ -136,7 +136,7 @@ Post a hack
         <div class="steps">     
         </div>
 
-        <input name="userfile" type="file">
+        <input name="userfile" type="file" multiple>
 
 <!--         <input type="submit" value="Upload"> -->
         
