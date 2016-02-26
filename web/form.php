@@ -23,13 +23,15 @@ try {
     die();
 }
 
-$target_file = basename($_FILES["userfile"]["name"]);
-$uploadOk = 1;
-$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
+
 
 if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['userfile']) && $_FILES['userfile']['error'] == UPLOAD_ERR_OK && is_uploaded_file($_FILES['userfile']['tmp_name'])) {
     // FIXME: add more validation, e.g. using ext/fileinfo
     $check = getimagesize($_FILES["userfile"]["tmp_name"]);
+    for ($i = 0; $i < count($_FILES['file']['name']); $i++) {
+    $target_file = basename($_FILES["userfile"]["name"]);
+    $uploadOk = 1;
+    $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
     if($check !== false) {
         echo "File is an image - " . $check["mime"] . ".";
         $uploadOk = 1;
@@ -58,12 +60,12 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['userfile']) && $_FILES
         try {
             // FIXME: do not use 'name' for upload (that's the original filename from the user's computer)
             $upload = $s3->upload($bucket, $_FILES['userfile']['name'], fopen($_FILES['userfile']['tmp_name'], 'rb'), 'public-read');
-            move_uploaded_file($_FILES["file"]["tmp_name"], "huj.jpg");
         } catch(Exception $e) { 
             echo $e->getMessage();
             die();
         } 
     }
+}
 } 
 
 if (isset($_POST['push'])){
