@@ -17,8 +17,8 @@ $(window).load(function(){
 	$(".hackSelectionButton").on('click', function() {
 		hackI = $(this).parent().attr('id')
 		function ihg (hackID) {
-			$(".hackSelectionFrame").css("overflow", "scroll");
-			// $(".hackSelectionFrame").css("height", "100%");
+			$(".hackSelectionFrame").css("overflowY", "scroll");
+			$(".hackSelectionFrame").css("height", "100%");
 			$("#" + hackID + " .infoWrapper").css("width", "100%");
 			$("#" + hackID + " .insframe").css("opacity", "1");
 			$("#" + hackID + " .insframe").css("height", "100%");
