@@ -156,14 +156,19 @@ Content Page
 
 <?php 
     foreach ($hacks1 as $hack) {
-        echo "<div class='hackSelectionFrame'>";
-            echo "<img class='hackHeroImage' src=''>";
+        echo "<div class='hackSelectionFrame' id=".$hack['id'].">";
+            echo "<img class='hackHeroImage' src='".$hack["type"]."'>";
             echo '<h1 class="hackTitle">'.$hack["title"].'</h1>';
             echo "<p class='hackShortDesc'>This hack can be used by people with a ".$hack["ability"]." ability level for ".$hack["type"]."</p>";
-            echo "<div class='hackSelectionButton' id=".$hack['id'].">";
+            echo "<div class='hackSelectionButton'>";
                 echo "<h1 class='hackButtonText'>Enter</h1>";
             echo "</div>";
         echo "</div>";
+        echo '<div class="close">'
+        echo '</div>'
+        echo '<div class="insframe">'
+            echo '<p>This is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thing</p>'
+        echo '</div>'
     }
 ?>
 
@@ -183,13 +188,13 @@ Instructions
     //     echo "</div>"
     // } -->
 
-<div id="instructions">
+<!-- <div id="instructions">
     <div class="close">
     </div>
     <div class="insframe">
         <p>This is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thing</p>
     </div>
-</div>
+</div> -->
 
 <script src='thesis.js' type='text/javascript' ></script>
 </body>

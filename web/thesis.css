@@ -100,6 +100,22 @@ Hack selection
   overflow: hidden;
 }
 
+.infoWrapper {
+  margin: 0;
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 70%;
+  height: 100%;
+  background: yellow;
+  opacity: .7;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s; 
+}
+
 .hackTitle {
   margin-left: 10%;
   margin-top: 12%;
@@ -125,6 +141,12 @@ Hack selection
   width: 40%;
   height: 10%;
   background: white;
+  border: 1pt solid black;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s; 
 }
 
 .hackButtonText {
@@ -248,14 +270,13 @@ Instructions
 }
 
 .insframe {
-  background: white;
   width: 100%;
-  height: 55%;
-  position: fixed;
-  top: 100%;
+  height: 0;
+  position: relative;
+  top: 10%;
   left: 0;
   margin: 0;
-  overflow-y: scroll;
+  opacity: 0;
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
   -ms-transition: 0.3s;
@@ -273,12 +294,14 @@ Instructions
 }
 
 .close {
-  right: 0;
-  top: 100%;
+  right: 100%;
+  top: 10%;
   width: 25%;
   height: 10%;
   position: fixed;
   background: black;
+  opacity: 0;
+  z-index: 2;
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
   -ms-transition: 0.3s;
@@ -294,24 +317,4 @@ Instructions
 
 .offset4 {
   overflow: hidden;
-}
-
-/************************************************************************************
-
-keeps jquery mobile from messing the layout up
-
-************************************************************************************/
-
-.ui-loading .ui-loader { 
-  display: block; 
-}
-.ui-loader { 
-  display: none; 
-  position: absolute; 
-  opacity: 0; 
-  left: 0px; 
-  width: 0px; 
-  margin-left: 0px; 
-  margin-top: 0px; 
-  padding: 0px; 
 }

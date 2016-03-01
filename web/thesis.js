@@ -15,14 +15,25 @@ $(window).load(function(){
 	});
 
 	$(".hackSelectionButton").on('click', function() {
-		$("#instructions").css("top", "5%");
-		$(".insframe").css("top", "45%");
-		$(".close").css("top", "10%");
-		$("body").addClass( "offset4" );
-		$(".newHackFrame").addClass( "offset2" );
-		hackID = $(this).attr("id");
-		ajaxurl = 'index.php';
-		window.location.href = "#index.php?hackI=" + hackID;
+		hackI = $(this).parent().attr('id')
+		function ihg (hackID) {
+			$(".hackSelectionFrame").css("overflow", "scroll");
+			// $(".hackSelectionFrame").css("height", "100%");
+			$("#" + hackID + " .infoWrapper").css("width", "100%");
+			$("#" + hackID + " .insframe").css("opacity", "1");
+			$("#" + hackID + " .insframe").css("height", "100%");
+			$("#" + hackID + " .hackSelectionButton").css("opacity", "0");
+			$("#" + hackID + " .hackSelectionButton").css("left", "100%");
+			$("#" + hackID + " .close").css("opacity", "1");
+			$("#" + hackID + " .close").css("right", "0");
+			$("body").addClass( "offset4" );
+			$(".newHackFrame").addClass( "offset2" );
+			$("body").scrollTop($("#" + hackID).offset().top - parseInt($(".navbutton").css("height")));
+			console.log();
+		}
+		ihg(hackI);
+		// ajaxurl = 'index.php';
+		// window.location.href = "#index.php?hackI=" + hackID;
         // $.post(ajaxurl, hackID, function (response) {
         //     // Response div goes here.
         //     console.log(hackID);
@@ -30,9 +41,15 @@ $(window).load(function(){
 	});
 
 	$(".close").on('click', function() {
-		$("#instructions").css("top", "100%");
-		$(".insframe").css("top", "100%");
-		$(".close").css("top", "100%");
+		$(".hackSelectionFrame").scrollTop(0);
+		$(".hackSelectionFrame").css("overflow", "hidden");
+		$(".hackSelectionFrame").css("height", "85%");
+		$(".infoWrapper").css("width", "70%");
+		$(".insframe").css("opacity", "0");
+		$(".hackSelectionButton").css("opacity", "1");
+		$(".hackSelectionButton").css("left", "10%");
+		$(".close").css("opacity", "0");
+		$(".close").css("right", "100%");
 		$("body").removeClass( "offset4" );
 		$(".newHackFrame").removeClass( "offset2" );
 	});
