@@ -156,7 +156,7 @@ Content Page
 
 <?php 
     foreach ($hacks1 as $hack) {
-        echo "<div class='hackSelectionFrame' id='id'>";
+        echo "<div class='hackSelectionFrame' id=".$hack['id'].">";
             echo "<img class='hackHeroImage' src='".$hack["type"]."'>";
             echo '<div class="infoWrapper"></div>';
             echo '<h1 class="hackTitle">'.$hack["title"].'</h1>';

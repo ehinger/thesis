@@ -142,6 +142,7 @@ Hack selection
   height: 10%;
   background: white;
   border: 1pt solid black;
+  z-index: 5;
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
   -ms-transition: 0.3s;
