@@ -11,33 +11,33 @@
 
 <?php
 // remove before flight
-// ini_set('display_errors', 'On');
+ini_set('display_errors', 'On');
 
-// require_once "dbconn.php";
-// require_once "profiles.php";
+require_once "dbconn.php";
+require_once "profiles.php";
 
-// if (isset($_POST['login']) && !empty($_POST('username')) && !empty($_POST('password'))) {
-//     profiles->validate_user ($_POST('username'), $_POST('password'));
-// }
+if (isset($_POST['login']) && !empty($_POST('username')) && !empty($_POST('password'))) {
+    profiles->validate_user ($_POST('username'), $_POST('password'));
+}
 
-// if (isset($_POST['register']) && !empty($_POST('usernameR')) && !empty($_POST('passwordR')) && !empty($_POST('password1R'))) {
-//     profiles->register ($_POST('usernameR'), $_POST('passwordR'), $_POST('password1R'));
-// }
+if (isset($_POST['register']) && !empty($_POST('usernameR')) && !empty($_POST('passwordR')) && !empty($_POST('password1R'))) {
+    profiles->register ($_POST('usernameR'), $_POST('passwordR'), $_POST('password1R'));
+}
 
-// try {
-//     $results1 = $db->query('select * from hacksGeneral');
-//     $results2 = $db->query('select * from hacksTags');
-//     $results3 = $db->query('select * from hacksSupplies');
-//     $results4 = $db->query('select * from hackInstructions');
-//     $results5 = $db->query('select * from userProfile');
-//     // echo '<pre>';
-//     // var_dump($results->fetchAll());
-//     // echo '</pre>';
-//     // die();
-// } catch (Exception $e) {
-//     echo $e->getMessage();
-//     die();
-// }
+try {
+    $results1 = $db->query('select * from hacksGeneral');
+    $results2 = $db->query('select * from hacksTags');
+    $results3 = $db->query('select * from hacksSupplies');
+    $results4 = $db->query('select * from hackInstructions');
+    $results5 = $db->query('select * from userProfile');
+    // echo '<pre>';
+    // var_dump($results->fetchAll());
+    // echo '</pre>';
+    // die();
+} catch (Exception $e) {
+    echo $e->getMessage();
+    die();
+}
 
 // $hacks1 = $results1->fetchAll(PDO::FETCH_ASSOC);
 // $hacks2 = $results2->fetchAll(PDO::FETCH_ASSOC);
