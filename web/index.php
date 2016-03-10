@@ -20,9 +20,9 @@ require_once "profiles.php";
 //     profiles->validate_user($_POST('username'), $_POST('password'));
 // }
 
-if (isset($_POST['register']) && !empty($_POST('usernameR')) && !empty($_POST('passwordR')) && !empty($_POST('password1R'))) {
-    profiles->register($_POST('usernameR'), $_POST('passwordR'), $_POST('password1R'));
-}
+// if (isset($_POST['register']) && !empty($_POST('usernameR')) && !empty($_POST('passwordR')) && !empty($_POST('password1R'))) {
+//     profiles->register($_POST('usernameR'), $_POST('passwordR'), $_POST('password1R'));
+// }
 
 try {
     $results1 = $db->query('select * from hacksGeneral');
