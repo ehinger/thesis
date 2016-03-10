@@ -25,11 +25,11 @@ if (isset($_POST['register']) && !empty($_POST('usernameR')) && !empty($_POST('p
 }
 
 try {
-    $results1 = $db->query('select * from hacksGeneral');
-    $results2 = $db->query('select * from hacksTags');
-    $results3 = $db->query('select * from hacksSupplies');
-    $results4 = $db->query('select * from hackInstructions');
-    $results5 = $db->query('select * from userProfile');
+    // $results1 = $db->query('select * from hacksGeneral');
+    // $results2 = $db->query('select * from hacksTags');
+    // $results3 = $db->query('select * from hacksSupplies');
+    // $results4 = $db->query('select * from hackInstructions');
+    // $results5 = $db->query('select * from userProfile');
     // echo '<pre>';
     // var_dump($results->fetchAll());
     // echo '</pre>';
