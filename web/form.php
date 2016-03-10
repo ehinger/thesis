@@ -1,29 +1,7 @@
 <?php
 ini_set('display_errors', 'On');
 
-require('../vendor/autoload.php');
-
-use Aws\S3\S3Client;
-
-$options = [
-    'region'            => 'ap-southeast-2',
-    'version'           => 'latest'
-];
-
-$s3 = new S3Client($options);
-
-$bucket = getenv('S3_BUCKET')?:
-die('No "S3_BUCKET" config var in found in env!');
-
-try {
-    $db = new PDO('pgsql:host=ec2-54-204-41-175.compute-1.amazonaws.com;port=5432;dbname=d6jmmjm506o0h9;user=ggamcflhqstetx;password=1jc95h0WehE3P8hvgnrQrx9rBT');  
-    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch (Exception $e) {
-    echo $e->getMessage();
-    die();
-}
-
-
+require_once "dbconn.php";
 
 if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['userfile']) && $_FILES['userfile']['error'] == UPLOAD_ERR_OK && is_uploaded_file($_FILES['userfile']['tmp_name'])) {
     // FIXME: add more validation, e.g. using ext/fileinfo
@@ -70,10 +48,12 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['userfile']) && $_FILES
 
 if (isset($_POST['push'])){
     $title = pg_escape_string($_POST['hackTitle']); 
-    $ability = pg_escape_string($_POST['hackAbility']); 
-    // $type = htmlspecialchars($upload->get('ObjectURL')); 
+    $type = pg_escape_string($_POST['hackType']); 
+    $heroImageURL = htmlspecialchars($upload->get('ObjectURL')); 
+    $description = pg_escape_string($_POST['hackDesc']); 
+    $userID = "";
 
-    $sql = "INSERT INTO hacksdesc (id, title, ability, type) VALUES ('" . $title . $identification . "', '" . $title . "', '" . $ability . "', '" . $ability . "')";
+    $sql = "INSERT INTO hacksGeneral (id, heroImageURL, title, type, description, userID) VALUES ('" . $title . $identification . "', '" . $heroImageURL . "', '" . $type . "', '" . $description . "', '" . $userID . "')";
     // use exec() because no results are returned
     $db->exec($sql);
 } 

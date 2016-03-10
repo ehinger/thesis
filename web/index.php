@@ -13,34 +13,23 @@
 // remove before flight
 ini_set('display_errors', 'On');
 
-require('../vendor/autoload.php');
+require_once "dbconn.php";
+require_once "profiles.php";
 
-use Aws\S3\S3Client;
-
-$options = [
-    'region'            => 'ap-southeast-2',
-    'version'           => 'latest'
-];
-
-$s3 = new S3Client($options);
-
-$bucket = getenv('S3_BUCKET')?:
-die('No "S3_BUCKET" config var in found in env!');
-
-try {
-    $db = new PDO('pgsql:host=ec2-54-204-41-175.compute-1.amazonaws.com;port=5432;dbname=d6jmmjm506o0h9;user=ggamcflhqstetx;password=1jc95h0WehE3P8hvgnrQrx9rBT');  
-    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch (Exception $e) {
-    echo $e->getMessage();
-    die();
+if (isset($_POST['login']) && !empty($_POST('username')) && !empty($_POST('password'))) {
+    profiles->validate_user ($_POST('username'), $_POST('password'));
 }
 
+if (isset($_POST['register']) && !empty($_POST('usernameR')) && !empty($_POST('passwordR')) && !empty($_POST('password1R'))) {
+    profiles->register ($_POST('usernameR'), $_POST('passwordR'), $_POST('password1R'));
+}
 
 try {
-    $results1 = $db->query('select * from hacksdesc');
-    $results2 = $db->query('select * from hacksingredients');
-    $results3 = $db->query('select * from hackssteps ');
-    $results4 = $db->query('select * from hackstags');
+    $results1 = $db->query('select * from hacksGeneral');
+    $results2 = $db->query('select * from hacksTags');
+    $results3 = $db->query('select * from hacksSupplies');
+    $results4 = $db->query('select * from hackInstructions');
+    $results5 = $db->query('select * from userProfile');
     // echo '<pre>';
     // var_dump($results->fetchAll());
     // echo '</pre>';
@@ -88,7 +77,34 @@ Navigation Bar
 <div class='navbutton'></div>
 <div class='menuBar'></div>
 <nav>
+<form id='login' action='' method='post'>
 
+    <label>Username:</label>
+    <input name="username" type="text">
+
+    <label>Password:</label>
+    <input name="password" type="text">
+
+    <input type="checkbox" name="remainLoggedIn" value="remainLoggedIn"> Stay logged in?<br>
+
+    <input type="submit" value="log in" name="login">
+
+</form>
+
+<form id='register' action='' method='post'>
+
+    <label>Username:</label>
+    <input name="usernameR" type="text">
+
+    <label>Password:</label>
+    <input name="passwordR" type="text">
+
+    <label>Confirm password:</label>
+    <input name="password1R" type="text">
+
+    <input type="submit" value="register" name="login">
+
+</form>
 </nav>
 
 <!-- /************************************************************************************
@@ -121,7 +137,7 @@ Post a hack
             <option value="communication">Communication</option>
         </select>
 
-        <label>Tags:</label>
+        <label>description:</label>
         <textarea name="hackDesc" rows="10" cols="30">
         </textarea>
 
@@ -156,33 +172,19 @@ Content Page
 
 <?php 
     foreach ($hacks1 as $hack) {
-        // echo "<div class='hackSelectionFrame' id=".$hack['id'].">";
-        //     echo "<img class='hackHeroImage' src='".$hack["type"]."'>";
-        //     echo '<div class="infoWrapper"></div>';
-        //     echo '<h1 class="hackTitle">'.$hack["title"].'</h1>';
-        //     echo "<p class='hackShortDesc'>This hack can be used by people with a ".$hack["ability"]." ability level for ".$hack["type"]."</p>";
-        //     echo "<div class='hackSelectionButton'>";
-        //         echo "<h1 class='hackButtonText'>Enter</h1>";
-        //     echo "</div>";
-        // echo "</div>";
-        // echo '<div class="close">';
-        // echo '</div>';
-        // echo '<div class="insframe">';
-        //     echo '<p>This is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thing</p>';
-        // echo '</div>';
-        echo '<div class="hackSelectionFrame" id='.$hack["id"].'>';
-            echo '<img class="hackHeroImage" src='.$hack["type"].'>';
+        echo "<div class='hackSelectionFrame' id=".$hack['id'].">";
+            echo "<img class='hackHeroImage' src='".$hack["type"]."'>";
             echo '<div class="infoWrapper"></div>';
             echo '<h1 class="hackTitle">'.$hack["title"].'</h1>';
-            echo '<p class="hackShortDesc">This hack can be used by people with a '.$hack["ability"].' ability level for '.$hack["type"].'</p>';
-            echo '<div class="hackSelectionButton">';
-               echo  '<h1 class="hackButtonText">Enter</h1>';
-            echo '</div>';
-            echo '<div class="close">';
-            echo '</div>';
-            echo '<div class="insframe">';
-                echo '<p>This is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thing</p>';
-            echo '</div>';
+            echo "<p class='hackShortDesc'>This hack can be used by people with a ".$hack["ability"]." ability level for ".$hack["type"]."</p>";
+            echo "<div class='hackSelectionButton'>";
+                echo "<h1 class='hackButtonText'>Enter</h1>";
+            echo "</div>";
+        echo "</div>";
+        echo '<div class="close">';
+        echo '</div>';
+        echo '<div class="insframe">';
+            echo '<p>This is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thing</p>';
         echo '</div>';
     }
 ?>
