@@ -18,11 +18,11 @@ require_once "profiles.php";
 
 $profiles = new profiles;
 
-if (isset($_POST['login']) && !empty($_POST('username')) && !empty($_POST('password'))) {
+if (isset($_POST['login'])) {
     $profiles->validate_user($_POST('username'), $_POST('password'));
 }
 
-if (isset($_POST['register']) && !empty($_POST('usernameR')) && !empty($_POST('passwordR')) && !empty($_POST('password1R'))) {
+if (isset($_POST['register'])) {
     $profiles->register($_POST('usernameR'), $_POST('passwordR'), $_POST('password1R'));
 }
 
