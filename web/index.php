@@ -18,9 +18,9 @@ require_once "profiles.php";
 
 $profiles = new profiles;
 
-if (isset($_POST['login'])) {
-    $profiles->validate_user($_POST['username'], $_POST['password']);
-}
+// if (isset($_POST['login'])) {
+//     $profiles->validate_user($_POST['username'], $_POST['password']);
+// }
 
 if (isset($_POST['register'])) {
     $profiles->register($_POST['usernameR'], $_POST['passwordR'], $_POST['password1R']);
@@ -89,7 +89,7 @@ Navigation Bar
 
     <input type="checkbox" name="remainLoggedIn" value="remainLoggedIn"> Stay logged in?<br>
 
-    <input type="submit" value="log in" name="login">
+    <input type="submit" value="login" name="login">
 
 </form>
 
@@ -104,7 +104,7 @@ Navigation Bar
     <label>Confirm password:</label>
     <input name="password1R" type="text">
 
-    <input type="submit" value="register" name="login">
+    <input type="submit" value="register" name="l">
 
 </form>
 </nav>
