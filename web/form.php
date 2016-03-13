@@ -53,7 +53,7 @@ if (isset($_POST['push'])){
     $description = pg_escape_string($_POST['hackDesc']); 
     $userID = "";
 
-    $sql = "INSERT INTO hacksGeneral (id, heroImageURL, title, type, description, userID) VALUES ('" . $title . $identification . "', '" . $heroImageURL . "', '" . $type . "', '" . $description . "', '" . $userID . "')";
+    $sql = "INSERT INTO hacksGeneral (hackId, heroImageURL, title, type, description, userID) VALUES ('" . $title . $identification . "', '" . $heroImageURL . "', '" . $type . "', '" . $description . "', '" . $userID . "')";
     // use exec() because no results are returned
     $db->exec($sql);
 } 
