@@ -43,8 +43,8 @@ class profiles {
 		$ensure_credentials = $this->verify_username_password($un, $pwd);
 
 		if ($ensure_credentials) {
-			$_SESSION['status'] = 'authorised';
-			return true;
+			// $_SESSION['status'] = 'authorised';
+			// return true;
 			echo "passwords don't match";
 			die();
 
