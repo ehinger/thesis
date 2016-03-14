@@ -17,7 +17,7 @@ if (isset($_POST['register'])) {
 
 			$db->exec($query_register);
 
-			echo "passwords do match";
+			echo $un_register;
 			die();
 
 }
