@@ -45,6 +45,9 @@ class profiles {
 		if ($ensure_credentials) {
 			$_SESSION['status'] = 'authorised';
 			return true;
+			echo "passwords don't match";
+			die();
+
 		} else return "not right";
 	}
 
