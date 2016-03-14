@@ -16,8 +16,6 @@ ini_set('display_errors', 'On');
 require_once "dbconn.php";
 require_once "profiles.php";
 
-$profiles = new profiles;
-
 // if (isset($_POST['login'])) {
 //     $profiles->validate_user($_POST['username'], $_POST['password']);
 // }
