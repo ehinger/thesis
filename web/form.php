@@ -70,7 +70,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['userfile']) && $_FILES
 if (isset($_POST['push'])){
     $title = pg_escape_string($_POST['hackTitle']); 
     $type = pg_escape_string($_POST['hackType']); 
-    $heroImageURL = htmlspecialchars($upload->get('ObjectURL')); 
+    // $heroImageURL = htmlspecialchars($upload->get('ObjectURL')); 
     $description = pg_escape_string($_POST['hackDesc']); 
     $userID = "";
 
