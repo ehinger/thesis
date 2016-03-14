@@ -16,8 +16,7 @@ class profiles {
 			}
 			$query_register = "INSERT INTO userProfile (userID, username, password) VALUES ('" . $un_register . $identification . "', '" . $un_register . "', '" . $pwd_register . "')";
 			$db->exec($query_register);
-			echo "passwords do match";
-			die();
+			header('Location: index.php');
 		} else {
 			echo "passwords don't match";
 			die();

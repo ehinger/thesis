@@ -93,7 +93,7 @@ Navigation Bar
 
 </form>
 
-<form id='register' action='profiles.php' method='post'>
+<form id='register' action='' method='post'>
 
     <label>Username:</label>
     <input name="usernameR" type="text">
