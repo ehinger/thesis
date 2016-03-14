@@ -27,7 +27,7 @@ class profiles {
 	function verify_username_password ($un, $pwd) {
 		global $db;
 
-		$query = "SELECT FROM userProfile WHERE username = '$un' AND password = '$pwd' LIMIT 1";
+		$query = "SELECT FROM userProfile WHERE username = '" . $un . "' AND password = '" . $pwd . "' LIMIT 1";
 
 		$stmt = $db->exec($query);
 
