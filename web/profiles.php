@@ -36,7 +36,6 @@ class profiles {
 				$stmt->close();
 				return true;
 			}
-		}
 	}
 
 	function validate_user($un, $pwd) {
