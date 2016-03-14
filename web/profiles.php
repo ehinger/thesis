@@ -2,10 +2,8 @@
 
 require_once "dbconn.php";
 
-class profiles {
-
-	function register ($un, $pwd, $pwd1) {
-		$un_register = pg_escape_string($un);
+if (isset($_POST['register'])) {
+    $un_register = pg_escape_string($un);
 		$pwd_register = pg_escape_string($pwd);
 		$pwd_check = pg_escape_string($pwd1);
 
@@ -27,7 +25,8 @@ class profiles {
 			echo "passwords don't match";
 			die();
 		}
-	}
+}
+
 
 	function verify_username_password ($un, $pwd) {
 		$query = "SELECT FROM userProfile WHERE username = '$un' AND password = '$pwd' LIMIT 1";
@@ -63,6 +62,5 @@ class profiles {
 			}
 		}
 	}
-}
 
 ?>
