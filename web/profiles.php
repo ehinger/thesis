@@ -5,6 +5,7 @@ require_once "dbconn.php";
 class profiles {
 
 	function register ($un, $pwd, $pwd1) {
+		global $db;
 		$un_register = pg_escape_string($un);
 		$pwd_register = pg_escape_string($pwd);
 		$pwd_check = pg_escape_string($pwd1);
