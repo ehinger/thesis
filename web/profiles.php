@@ -29,7 +29,7 @@ class profiles {
 
 		$query = "SELECT FROM userProfile WHERE username = '$un' AND password = '$pwd' LIMIT 1";
 
-		$stmt = $db->exec($query_register);
+		$stmt = $db->exec($query);
 
 			if ($stmt->fetch()) {
 				$stmt->close();
