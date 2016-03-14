@@ -6,7 +6,7 @@ if (isset($_POST['register'])) {
     $un_register = pg_escape_string($_POST['usernameR']);
 		$pwd_register = pg_escape_string($_POST['passwordR']);
 		$pwd_check = pg_escape_string($_POST['password1R']);
-		
+
 		if ($pwd_register == $pwd_check) {
 			$identification = '';
 			for ($i = 0; $i<7; $i++) 
@@ -18,8 +18,7 @@ if (isset($_POST['register'])) {
 
 			$db->exec($query_register);
 
-			echo "passwords do match";
-			die();
+			header('Location: index.php');
 
 		} else {
 			echo "passwords don't match";
