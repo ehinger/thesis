@@ -2,30 +2,27 @@
 
 require_once "dbconn.php";
 
-if (isset($_POST['register'])) {
-    $un_register = pg_escape_string($_POST['usernameR']);
-		$pwd_register = pg_escape_string($_POST['passwordR']);
-		$pwd_check = pg_escape_string($_POST['password1R']);
+class profiles {
 
+	function register ($un, $pwd, $pwd1) {
+		$un_register = pg_escape_string($un);
+		$pwd_register = pg_escape_string($pwd);
+		$pwd_check = pg_escape_string($pwd1);
 		if ($pwd_register == $pwd_check) {
 			$identification = '';
 			for ($i = 0; $i<7; $i++) 
 			{
 			    $identification .= mt_rand(0,9);
 			}
-
 			$query_register = "INSERT INTO userProfile (userID, username, password) VALUES ('" . $un_register . $identification . "', '" . $un_register . "', '" . $pwd_register . "')";
-
 			$db->exec($query_register);
-
-			header('Location: index.php');
-
+			echo "passwords do match";
+			die();
 		} else {
 			echo "passwords don't match";
 			die();
 		}
-}
-
+	}
 
 	function verify_username_password ($un, $pwd) {
 		$query = "SELECT FROM userProfile WHERE username = '$un' AND password = '$pwd' LIMIT 1";
@@ -61,5 +58,5 @@ if (isset($_POST['register'])) {
 			}
 		}
 	}
-
+}
 ?>

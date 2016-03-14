@@ -16,9 +16,15 @@ ini_set('display_errors', 'On');
 require_once "dbconn.php";
 require_once "profiles.php";
 
-// if (isset($_POST['login'])) {
-//     $profiles->validate_user($_POST['username'], $_POST['password']);
-// }
+$profiles = new profiles;
+
+if (isset($_POST['login'])) {
+    $profiles->validate_user($_POST['username'], $_POST['password']);
+}
+
+if (isset($_POST['register'])) {
+    $profiles->register($_POST['usernameR'], $_POST['passwordR'], $_POST['password1R']);
+}
 
 try {
     $results1 = $db->query('select * from hacksGeneral');
