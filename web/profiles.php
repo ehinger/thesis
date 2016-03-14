@@ -14,7 +14,7 @@ if (isset($_POST['register'])) {
 			    $identification .= mt_rand(0,9);
 			}
 
-			$query_register = "INSERT INTO userProfile (userID, username, password) VALUES ('" . $un_register . $identification . "', '" . $un_register . "', '" . $$pwd_register . "')";
+			$query_register = "INSERT INTO userProfile (userID, username, password) VALUES ('" . $un_register . $identification . "', '" . $un_register . "', '" . $pwd_register . "')";
 
 			$db->exec($query_register);
 
