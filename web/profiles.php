@@ -40,7 +40,7 @@ class profiles {
 
 	function validate_user($un, $pwd) {
 
-		$ensure_credentials = verify_username_password($un, $pwd);
+		$ensure_credentials = $this->verify_username_password($un, $pwd);
 
 		if ($ensure_credentials) {
 			$_SESSION['status'] = 'authorised';
