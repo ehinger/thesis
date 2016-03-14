@@ -29,15 +29,12 @@ class profiles {
 
 		$query = "SELECT FROM userProfile WHERE username = '$un' AND password = '$pwd' LIMIT 1";
 
-		if ($stmt = $db->prepare($query)) {
-			$stmt->bind_param('ss', $un, $pwd);
-			$stmt->execute();
+		$stmt = $db->exec($query_register);
 
 			if ($stmt->fetch()) {
 				$stmt->close();
 				return true;
 			}
-		}
 	}
 
 	function validate_user($un, $pwd) {
