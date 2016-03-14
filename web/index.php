@@ -98,7 +98,7 @@ Navigation Bar
     <label>Confirm password:</label>
     <input name="password1R" type="text">
 
-    <input type="submit" value="register" name="l">
+    <input type="submit" value="register" name="register">
 
 </form>
 </nav>

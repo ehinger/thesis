@@ -7,6 +7,7 @@ if (isset($_POST['register'])) {
 		$pwd_register = pg_escape_string($pwd);
 		$pwd_check = pg_escape_string($pwd1);
 
+		if ($pwd_register == $pwd_check) {
 			$identification = '';
 			for ($i = 0; $i<7; $i++) 
 			{
@@ -19,6 +20,11 @@ if (isset($_POST['register'])) {
 
 			echo "passwords do match";
 			die();
+
+		} else {
+			echo "passwords don't match";
+			die();
+		}
 }
 
 
