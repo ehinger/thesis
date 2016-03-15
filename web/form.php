@@ -54,19 +54,20 @@ if (isset($_POST['push'])){
                 $identification .= mt_rand(0,9);
             }
         $title = pg_escape_string($_POST['hackTitle']); 
+        $string = preg_replace('/\s+/', '', $title);
         $type = pg_escape_string($_POST['hackType']); 
         $heroImageURL = htmlspecialchars($upload->get('ObjectURL')); 
         $description = pg_escape_string($_POST['hackDesc']); 
         $userID = "";
 
-        $db->exec("INSERT INTO hacksGeneral (hackId, heroImageURL, title, type, description, userID) VALUES ('" . $title . $identification . "', '" . $heroImageURL . "', '" . $title . "', '" . $type . "', '" . $description . "', '" . $userID . "')");
+        $db->exec("INSERT INTO hacksGeneral (hackId, heroImageURL, title, type, description, userID) VALUES ('" . $string . $identification . "', '" . $heroImageURL . "', '" . $title . "', '" . $type . "', '" . $description . "', '" . $userID . "')");
 
         foreach ($_POST['hackTags'] as $k => $v) {
 
             $tags = $_POST['hackTags'][$k];
             // use exec() because no results are returned
         
-            $db->exec("INSERT INTO hacksTags (hackId, tags) VALUES ('" . $title . $identification . "', '" . $tags . "')");
+            $db->exec("INSERT INTO hacksTags (hackId, tags) VALUES ('" . $string . $identification . "', '" . $tags . "')");
         }
 
         foreach ($_POST['ingredientsQuantity'] as $k => $v) {
@@ -75,7 +76,7 @@ if (isset($_POST['push'])){
             $hackIngredients = $_POST['hackIngredients'][$k];
             // use exec() because no results are returned
         
-            $db->exec("INSERT INTO hacksSupplies (hackID, supplyNo, item) VALUES ('" . $title . $identification . "', '" . $ingredientsQuantity . "', '" . $hackIngredients . "')");
+            $db->exec("INSERT INTO hacksSupplies (hackID, supplyNo, item) VALUES ('" . $string . $identification . "', '" . $ingredientsQuantity . "', '" . $hackIngredients . "')");
         }
 
         foreach ($_POST['hackIns'] as $k => $v) {
@@ -85,7 +86,7 @@ if (isset($_POST['push'])){
             $hackDesc = $_POST['hackIns'][$k];
             // use exec() because no results are returned
         
-            $db->exec("INSERT INTO hackInstructions (hackID, stage, stepNumber, instructions) VALUES ('" . $title . $identification . "', '" . $hackDesc . "', '" . $stepNo . "', '" . $hackDesc . "')");
+            $db->exec("INSERT INTO hackInstructions (hackID, stage, stepNumber, instructions) VALUES ('" . $string . $identification . "', '" . $hackDesc . "', '" . $stepNo . "', '" . $hackDesc . "')");
         }
 
             $db->commit();
