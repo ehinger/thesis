@@ -96,8 +96,8 @@ function closeHackFrame() {
 var selection = "";
 
 function ingredientSelection() {
-	selection += "<input type='number' name='ingredientsQuantity' min='1'>";
-	selection += "<input name='hackIngredients' type='text'>";
+	selection += "<input type='number' name='ingredientsQuantity[]' min='1'>";
+	selection += "<input name='hackIngredients[]' type='text'>";
 	$('.ingredient').append(selection);
 }
 
@@ -108,7 +108,7 @@ var i = 1;
 function hackSteps() {
 	steps += "<h1>step " + i++ + "</h1>";
 	steps += "<input name='userfile' type='file'>";
-	steps += "<textarea name='hackDesc[]' rows='10' cols='30'></textarea>";
+	steps += "<textarea name='hackIns[]' rows='10' cols='30'></textarea>";
 	$('.steps').html(steps);
 }
 
