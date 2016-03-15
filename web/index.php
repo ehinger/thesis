@@ -46,7 +46,7 @@ $hacks2 = $results2->fetchAll(PDO::FETCH_ASSOC);
 
 $abv = array("k" => $hacks1);
 
-var_dump($abv['k']['hackid']);
+// var_dump($abv['k']['0']['hackid']);
 
 // $identification = '';
 // for ($i = 0; $i<7; $i++) 
@@ -177,12 +177,12 @@ Content Page
 ************************************************************************************/ -->
 
 <?php 
-/*    for ($i = 0; $i < count($abv); $i++) {
-        echo "<div class='hackSelectionFrame' id='".$abv['hackid']."'>";
-            echo "<img class='hackHeroImage' src='".$hack["heroimageurl"]."'>";
+    for ($i = 0; $i < count($abv); $i++) {
+        echo "<div class='hackSelectionFrame' id='".$abv['k']['0']['hackid']."'>";
+            echo "<img class='hackHeroImage' src=''>";
             echo '<div class="infoWrapper"></div>';
-            echo '<h1 class="hackTitle">'.$hack["title"].'</h1>';
-            echo "<p class='hackShortDesc'>This hack can be used by people with a ability level for ".$hack["type"]."</p>";
+            echo '<h1 class="hackTitle">'.$abv['k']['0']['hackid'].'</h1>';
+            echo "<p class='hackShortDesc'>This hack can be used by people with a ability level for ".$abv['k']['0']['hackid']."</p>";
             echo "<div class='hackSelectionButton'>";
                 echo "<h1 class='hackButtonText'>Enter</h1>";
             echo "</div>";
@@ -190,9 +190,9 @@ Content Page
         echo '<div class="close">';
         echo '</div>';
         echo '<div class="insframe">';
-            echo '<p>'.$hack["description"].'</p>';
+            echo '<p>'.$abv['k']['0']['hackid'].'</p>';
         echo '</div>';
-    }*/
+    }
 
 ?>
 
