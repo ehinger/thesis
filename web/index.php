@@ -173,22 +173,22 @@ Content Page
 ************************************************************************************/ -->
 
 <?php 
-    // foreach ($hacks1 as $hack) {
-    //     echo "<div class='hackSelectionFrame' id=".$hack['id'].">";
-    //         echo "<img class='hackHeroImage' src='".$hack["type"]."'>";
-    //         echo '<div class="infoWrapper"></div>';
-    //         echo '<h1 class="hackTitle">'.$hack["title"].'</h1>';
-    //         echo "<p class='hackShortDesc'>This hack can be used by people with a ".$hack["ability"]." ability level for ".$hack["type"]."</p>";
-    //         echo "<div class='hackSelectionButton'>";
-    //             echo "<h1 class='hackButtonText'>Enter</h1>";
-    //         echo "</div>";
-    //     echo "</div>";
-    //     echo '<div class="close">';
-    //     echo '</div>';
-    //     echo '<div class="insframe">';
-    //         echo '<p>This is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thing</p>';
-    //     echo '</div>';
-    // }
+    foreach ($hacks1 as $hack) {
+        echo "<div class='hackSelectionFrame' id=".$hack['hackId'].">";
+            echo "<img class='hackHeroImage' src='".$hack["heroImageURL"]."'>";
+            echo '<div class="infoWrapper"></div>';
+            echo '<h1 class="hackTitle">'.$hack["title"].'</h1>';
+            echo "<p class='hackShortDesc'>This hack can be used by people with a "" ability level for ".$hack["type"]."</p>";
+            echo "<div class='hackSelectionButton'>";
+                echo "<h1 class='hackButtonText'>Enter</h1>";
+            echo "</div>";
+        echo "</div>";
+        echo '<div class="close">';
+        echo '</div>';
+        echo '<div class="insframe">';
+            echo '<p>'.$hack["description"].'</p>';
+        echo '</div>';
+    }
 ?>
 
 <!-- /************************************************************************************
