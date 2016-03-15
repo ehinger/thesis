@@ -191,7 +191,7 @@ for ($i = 0; $i < count($hacksGeneral['k']); $i++) {
     echo '<div class="infoWrapper"></div>';
     echo '<h1 class="hackTitle">'.$hacksGeneral['k'][$i]['title'].'</h1>';
     echo "<p class='hackShortDesc'>This hack can be used by people with a ability level for ".$hacksGeneral['k'][$i]['type']."</p>";
-    
+
     for ($n = 0; $n < count($hacksTags['k']); $n++) {
         if ($hacksTags['k'][$n]['hackid'] == $hacksGeneral['k'][$i]['hackid']) {
             echo "<p class='hackTags'>".$hacksTags['k'][$n]['tags']."</p>";
@@ -212,7 +212,7 @@ for ($i = 0; $i < count($hacksGeneral['k']); $i++) {
 
     for ($ni = 0; $ni < count($hacksInstructions['k']); $ni++) {
         if ($hacksInstructions['k'][$ni]['hackid'] == $hacksGeneral['k'][$i]['hackid']) {
-            echo "<h1 class='stepNumber'>".$hacksInstructions['k'][$ni]['stepnumber']."</h1>";
+            echo "<h1 class='stepNumber'>Step ".$hacksInstructions['k'][$ni]['stepnumber']."</h1>";
             echo "<p class='hackInstructions'>".$hacksInstructions['k'][$ni]['instructions']."</p>";
         }
     }

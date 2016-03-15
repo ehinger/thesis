@@ -56,6 +56,7 @@ $(window).load(function(){
 
 	$(".newHackFrame").on('click', function() {
 		console.log("opening");
+		$(".newHackFrame").css("overflowY", "scroll");
 		$(".newHackFrame").addClass( "offset5" );
 		$(".newHackFrame *").addClass( "offset6" );
 		$("body").addClass( "offset4" );
@@ -63,6 +64,7 @@ $(window).load(function(){
 
 	$(".newHackClose").on('click', function(event) {
     	event.stopPropagation();
+		$(".newHackFrame").css("overflow", "hidden");
 		console.log("closing");
 		$(".newHackFrame").removeClass( "offset5" );
 		$(".newHackFrame *").removeClass( "offset6" );
