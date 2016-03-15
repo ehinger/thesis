@@ -177,14 +177,12 @@ Content Page
 ************************************************************************************/ -->
 
 <?php 
-$mjk = count($abv['k']);
-
-    for ($i = 0; $i < $mjk; $i++) {
+    for ($i = 0; $i < count($abv['k']); $i++) {
         echo "<div class='hackSelectionFrame' id='".$abv['k'][$i]['hackid']."'>";
-            echo "<img class='hackHeroImage' src=''>";
+            echo "<img class='hackHeroImage' src='".$abv['k'][$i]['heroimageurl']."'>";
             echo '<div class="infoWrapper"></div>';
-            echo '<h1 class="hackTitle">'.$abv['k'][$i]['hackid'].'</h1>';
-            echo "<p class='hackShortDesc'>This hack can be used by people with a ability level for ".$abv['k'][$i]['hackid']."</p>";
+            echo '<h1 class="hackTitle">'.$abv['k'][$i]['title'].'</h1>';
+            echo "<p class='hackShortDesc'>This hack can be used by people with a ability level for ".$abv['k'][$i]['type']."</p>";
             echo "<div class='hackSelectionButton'>";
                 echo "<h1 class='hackButtonText'>Enter</h1>";
             echo "</div>";
@@ -192,10 +190,9 @@ $mjk = count($abv['k']);
         echo '<div class="close">';
         echo '</div>';
         echo '<div class="insframe">';
-            echo '<p>'.$abv['k'][$i]['hackid'].'</p>';
+            echo '<p>'.$abv['k'][$i]['description'].'</p>';
         echo '</div>';
     }
-
 ?>
 
 <!-- /************************************************************************************
