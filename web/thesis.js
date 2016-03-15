@@ -15,7 +15,7 @@ $(window).load(function(){
 	});
 
 	$(".hackSelectionButton").on('click', function() {
-		hackID = $(this).parent().attr('id')
+		hackI = $(this).parent().attr('id')
 		function ihg (hackID) {
 			$(".hackSelectionFrame").css("overflowY", "scroll");
 			// $(".hackSelectionFrame").css("height", "100%");
