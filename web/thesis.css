@@ -152,6 +152,24 @@ Hack selection
   color: black;
 }
 
+.stepNumber {
+  margin-left: 10%;
+  margin-right: 30%;
+  margin-top: 12%;
+  position: relative;
+  font-size: 5em;
+  color: black;
+}
+
+.hackInstructions {
+  margin-left: 10%;
+  margin-right: 30%;
+  margin-top: 12%;
+  position: relative;
+  font-size: 5em;
+  color: black;
+}
+
 .hackSelectionButton {
   margin: 0;
   top: 10%;
