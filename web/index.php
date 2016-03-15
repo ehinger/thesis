@@ -177,7 +177,9 @@ Content Page
 ************************************************************************************/ -->
 
 <?php 
-    for ($i = 0; $i < count($abv)-1; $i++) {
+$mjk = count($abv['k']);
+
+    for ($i = 0; $i < $mjk; $i++) {
         echo "<div class='hackSelectionFrame' id='".$abv['k'][$i]['hackid']."'>";
             echo "<img class='hackHeroImage' src=''>";
             echo '<div class="infoWrapper"></div>';
