@@ -61,11 +61,11 @@ if (isset($_POST['push'])){
 
         $db->exec("INSERT INTO hacksGeneral (hackId, heroImageURL, title, type, description, userID) VALUES ('" . $title . $identification . "', '" . $heroImageURL . "', '" . $title . "', '" . $type . "', '" . $description . "', '" . $userID . "')");
 
-        for ($i = 0; $i<$_POST['hackTags']; $i++)  {
+        foreach ($_POST['hackTags'] as $k => $v) {
 
-            $tags = pg_escape_string($_POST['hackTags']);
+            $tags = $_POST['hackTags'][$k];
 
-            $db->exec("INSERT INTO hacksTags (hackId, tags) VALUES ('" . $title . $identification . "', '" . $i . "')");
+            $db->exec("INSERT INTO hacksTags (hackId, tags) VALUES ('" . $title . $identification . "', '" . $tags . "')");
             // use exec() because no results are returned
         }
 
