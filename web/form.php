@@ -92,7 +92,7 @@ if (isset($_POST['push'])){
     catch(PDOException $e)
         {
         // roll back the transaction if something failed
-            $conn->rollback();
+            $db->rollback();
             echo $e->getMessage();
             die();
         }
