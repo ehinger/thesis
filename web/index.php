@@ -206,8 +206,7 @@ for ($i = 0; $i < count($hacksGeneral['k']); $i++) {
         for ($in = 0; $in < count($hacksSupplies['k']); $in++) {
                 if ($hacksSupplies['k'][$in]['hackid'] == $hacksGeneral['k'][$i]['hackid']) {
                     echo "<p class='hackSupplies'>".$hacksSupplies['k'][$in]['supplyNo']." X    ".$hacksSupplies['k'][$in]['item']."</p>";
-            }  else {
-                die();
+                }
             }
         }
     echo '</div>';
