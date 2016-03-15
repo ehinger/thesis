@@ -26,7 +26,32 @@ Navigation Bar
 <div class="navbutton"></div>
 <div class="menuBar"></div>
 <nav>
+<form id='login' action='' method='post'>
 
+    <label>Username:</label>
+    <input name="username" type="text">
+
+    <label>Password:</label>
+    <input name="password" type="text">
+
+    <input type="checkbox" name="remainLoggedIn" value="remainLoggedIn"> Stay logged in?<br>
+
+    <input type="submit" value="login" name="login">
+
+</form>
+
+<form id='register' action='' method='post'>
+
+    <label>Username:</label>
+    <input name="usernameR" type="text">
+
+    <label>Password:</label>
+    <input name="passwordR" type="text">
+
+    <label>Confirm password:</label>
+    <input name="password1R" type="text">
+
+    <input type="submit" value="register" name="register">
 </nav>
 
 <!-- /************************************************************************************
