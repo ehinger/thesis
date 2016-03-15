@@ -84,7 +84,7 @@ if (isset($_POST['push'])){
             $hackDesc = $_POST['hackIns'][$k];
             // use exec() because no results are returned
         
-            $db->exec("INSERT INTO hacksSupplies (hackID, stage, stepNumber, instructions) VALUES ('" . $title . $identification . "', '" . $hackDesc . "', '" . $stepNo++ . "', '" . $hackDesc . "')");
+            $db->exec("INSERT INTO hackInstructions (hackID, stage, stepNumber, instructions) VALUES ('" . $title . $identification . "', '" . $hackDesc . "', '" . $stepNo++ . "', '" . $hackDesc . "')");
         }
 
             $db->commit();
