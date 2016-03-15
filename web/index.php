@@ -174,8 +174,8 @@ Content Page
 
 <?php 
     foreach ($hacks1 as $hack) {
-        echo "<div class='hackSelectionFrame' id='m'>";
-            echo "<img class='hackHeroImage' src='m'>";
+        echo "<div class='hackSelectionFrame' id='".$hack['hackId']."'>";
+            echo "<img class='hackHeroImage' src='".$hack["heroImageURL"]."'>";
             echo '<div class="infoWrapper"></div>';
             echo '<h1 class="hackTitle">'.$hack["title"].'</h1>';
             echo "<p class='hackShortDesc'>This hack can be used by people with a ability level for ".$hack["type"]."</p>";
