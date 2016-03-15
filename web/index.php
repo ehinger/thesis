@@ -144,7 +144,7 @@ Post a hack
         </select>
 
         <label>description:</label>
-        <textarea name="hackDesc" rows="10" cols="30">
+        <input name="hackDesc" type='text'>
         </textarea>
 
         <div class="ingredient">        
