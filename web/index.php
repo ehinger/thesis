@@ -148,8 +148,8 @@ Post a hack
 
         <div class="ingredient">        
             <label>Ingredients:</label>
-            <input type="number" name="ingredientsQuantity" min="1">
-            <input name="hackIngredients" type='text'>  
+            <input type="number" name="ingredientsQuantity[]" min="1">
+            <input name="hackIngredients[]" type='text'>  
         </div>
 
        <input type="button" onclick="ingredientSelection()" value="Add another">
