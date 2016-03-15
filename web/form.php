@@ -63,11 +63,11 @@ if (isset($_POST['push'])){
 
         foreach ($_POST['hackTags'] as $k => $v) {
 
-            $tags = pg_escape_string($_POST['hackTags']);
-
-            $db->exec("INSERT INTO hacksTags (hackId, tags) VALUES ('" . $title . $identification . "', '" . $tags . "')");
+            $tags = $_POST['hackTags'][$k];
             // use exec() because no results are returned
         }
+
+        $db->exec("INSERT INTO hacksTags (hackId, tags) VALUES ('" . $title . $identification . "', '" . $tags . "')");
 
             $db->commit();
         }
