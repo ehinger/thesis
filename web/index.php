@@ -189,7 +189,7 @@ for ($i = 0; $i < count($hacksGeneral['k']); $i++) {
         echo "<p class='hackTags'>"
         for ($n = 0; $n < count($hacksTags['k']); $n++) {
             if ($hacksTags['k'][$n]['hackid'] == $hacksGeneral['k'][$i]['hackid']) {
-                .$hacksTags['k'][$n]['tags'].
+                .$hacksTags['k'][$n]['tags'].;
             }  
         }
         "</p>";
