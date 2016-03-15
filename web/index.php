@@ -44,6 +44,8 @@ try {
 $hacks1 = $results1->fetchAll(PDO::FETCH_ASSOC);
 $hacks2 = $results2->fetchAll(PDO::FETCH_ASSOC);
 
+print_r($hacks1);
+
 // $identification = '';
 // for ($i = 0; $i<7; $i++) 
 // {
@@ -190,10 +192,8 @@ Content Page
     //     echo '</div>';
     // }
 
-    while ($row = pg_fetch_array($hacks1)) 
-    { 
-         echo "data: ".$row["data"]; 
-    } 
+    $row = pg_fetch_array($results1, NULL, PGSQL_ASSOC)
+
 ?>
 
 <!-- /************************************************************************************
