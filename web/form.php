@@ -62,7 +62,7 @@ if (isset($_POST['push'])){
     $sql .= "INSERT INTO hacksTags (hackId, tags) VALUES ('" . $title . $identification . "', '" . $tags . "')";
     $sql .= "INSERT INTO hacksTags (hackId, tags) VALUES ('" . $title . $identification . "', '" . $tags1 . "')";
     // use exec() because no results are returned
-    $db->exec($sql);
+    $db->query($sql);
 } 
 
 header('Location: index.php');
