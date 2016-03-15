@@ -152,9 +152,9 @@ Post a hack
 
        <input type="button" onclick="ingredientSelection()" value="Add another">
 
-       <input name="hackTags" type='text'>
-       <input name="hackTags" type='text'>
-       <input name="hackTags" type='text'>
+       <input name="hackTags[]" type='text'>
+       <input name="hackTags[]" type='text'>
+       <input name="hackTags[]" type='text'>
 
         <div class="steps">     
         </div>
