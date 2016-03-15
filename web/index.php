@@ -145,7 +145,6 @@ Post a hack
 
         <label>description:</label>
         <input name="hackDesc" type='text'>
-        </textarea>
 
         <div class="ingredient">        
             <label>Ingredients:</label>
