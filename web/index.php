@@ -27,7 +27,7 @@ if (isset($_POST['register'])) {
 }
 
 try {
-    $results1 = pg_execute($db, 'select * from hacksGeneral');
+    $results1 = $db->query('select * from hacksGeneral');
     $results2 = $db->query('select * from hacksTags');
     $results3 = $db->query('select * from hacksSupplies');
     $results4 = $db->query('select * from hackInstructions');
@@ -190,7 +190,7 @@ Content Page
     //     echo '</div>';
     // }
 
-    while ($row = pg_fetch_array($results1)) 
+    while ($row = pg_fetch_array($hacks1)) 
     { 
          echo "data: ".$row["data"]; 
     } 
