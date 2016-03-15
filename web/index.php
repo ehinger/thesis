@@ -147,10 +147,11 @@ Post a hack
         <input name="hackDesc" type='text'>
 
         <div class="ingredient">        
-            <label>Ingredients:</label>
-            <input type="number" name="ingredientsQuantity" min="1">
-            <input name="hackIngredients" type='text'>  
+             
         </div>
+        <label>Ingredients:</label>
+            <input type="number" name="ingredientsQuantity" min="1">
+            <input name="hackIngredients" type='text'> 
 
        <input type="button" onclick="ingredientSelection()" value="Add another">
 
