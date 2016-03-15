@@ -197,24 +197,25 @@ for ($i = 0; $i < count($hacksGeneral['k']); $i++) {
                 echo "<p class='hackTags'>".$hacksTags['k'][$n]['tags']."</p>";
             }  
         }
+
+        for ($in = 0; $in < count($hacksSupplies['k']); $in++) {
+            if ($hacksSupplies['k'][$in]['hackid'] == $hacksGeneral['k'][$i]['hackid']) {
+                echo "<p class='hackSupplies'>".$hacksSupplies['k'][$in]['supplyno']." X    ".$hacksSupplies['k'][$in]['item']."</p>";
+            }
+        }
+
+        for ($ni = 0; $ni < count($hacksInstructions['k']); $ni++) {
+            if ($hacksInstructions['k'][$ni]['hackid'] == $hacksGeneral['k'][$i]['hackid']) {
+                echo "<h1 class='stepNumber'>".$hacksInstructions['k'][$ni]['stepnumber']."</h1>";
+                echo "<p class='hackInstructions'>".$hacksInstructions['k'][$ni]['instructions']."</p>";
+            }
+        }
         echo "<div class='hackSelectionButton'>";
             echo "<h1 class='hackButtonText'>Enter</h1>";
         echo "</div>";
     echo '<div class="close">';
     echo '</div>';
     echo '<div class="insframe">';
-        for ($in = 0; $in < count($hacksSupplies['k']); $in++) {
-                if ($hacksSupplies['k'][$in]['hackid'] == $hacksGeneral['k'][$i]['hackid']) {
-                    echo "<p class='hackSupplies'>".$hacksSupplies['k'][$in]['supplyno']." X    ".$hacksSupplies['k'][$in]['item']."</p>";
-            }
-        }
-
-        for ($ni = 0; $ni < count($hacksInstructions['k']); $ni++) {
-                if ($hacksInstructions['k'][$ni]['hackid'] == $hacksGeneral['k'][$i]['hackid']) {
-                    echo "<h1 class='stepNumber'>".$hacksInstructions['k'][$ni]['stepNumber']."</h1>";
-                    echo "<p class='hackInstructions'>".$hacksInstructions['k'][$ni]['instructions']."</p>";
-            }
-        }
     echo '</div>';
     echo "</div>";
 }
