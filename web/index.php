@@ -46,7 +46,7 @@ $hacks2 = $results2->fetchAll(PDO::FETCH_ASSOC);
 
 $abv = array("k" => $hacks1);
 
-var_dump($abv['k']['0']);
+var_dump($abv['k']['0']['hackid']);
 
 // $identification = '';
 // for ($i = 0; $i<7; $i++) 
