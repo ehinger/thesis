@@ -46,7 +46,7 @@ $hacks2 = $results2->fetchAll(PDO::FETCH_ASSOC);
 
 $abv = array($hacks1);
 
-// var_dump($abv['k']['1']);
+var_dump($abv['hackid']);
 
 // $identification = '';
 // for ($i = 0; $i<7; $i++) 
@@ -177,8 +177,8 @@ Content Page
 ************************************************************************************/ -->
 
 <?php 
-    foreach ($abv as $hack) {
-        echo "<div class='hackSelectionFrame' id='".$hack['hackid']."'>";
+/*    for ($i = 0; $i < count($abv); $i++) {
+        echo "<div class='hackSelectionFrame' id='".$abv['hackid']."'>";
             echo "<img class='hackHeroImage' src='".$hack["heroimageurl"]."'>";
             echo '<div class="infoWrapper"></div>';
             echo '<h1 class="hackTitle">'.$hack["title"].'</h1>';
@@ -192,7 +192,7 @@ Content Page
         echo '<div class="insframe">';
             echo '<p>'.$hack["description"].'</p>';
         echo '</div>';
-    }
+    }*/
 
 ?>
 
