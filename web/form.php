@@ -45,25 +45,31 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['userfile']) && $_FILES
 } 
 
 if (isset($_POST['push'])){
-    $identification = '';
-    for ($i = 0; $i<7; $i++) 
-        {
-            $identification .= mt_rand(0,9);
-        }
-    $title = pg_escape_string($_POST['hackTitle']); 
-    $type = pg_escape_string($_POST['hackType']); 
-    $heroImageURL = htmlspecialchars($upload->get('ObjectURL')); 
-    $description = pg_escape_string($_POST['hackDesc']); 
-    $userID = "";
-    $tags = pg_escape_string($_POST['hackTags']);
-    $tags1 = pg_escape_string($_POST['hackTags1']);
     try {
         $db->beginTransaction();
 
+        $identification = '';
+        for ($i = 0; $i<7; $i++) 
+            {
+                $identification .= mt_rand(0,9);
+            }
+        $title = pg_escape_string($_POST['hackTitle']); 
+        $type = pg_escape_string($_POST['hackType']); 
+        $heroImageURL = htmlspecialchars($upload->get('ObjectURL')); 
+        $description = pg_escape_string($_POST['hackDesc']); 
+        $userID = "";
+
         $db->exec("INSERT INTO hacksGeneral (hackId, heroImageURL, title, type, description, userID) VALUES ('" . $title . $identification . "', '" . $heroImageURL . "', '" . $title . "', '" . $type . "', '" . $description . "', '" . $userID . "')");
-        $db->exec("INSERT INTO hacksTags (hackId, tags) VALUES ('" . $title . $identification . "', '" . $tags . "'), ('" . $title . $identification . "', '" . $tags1 . "')");
-        // use exec() because no results are returned
-        $db->commit();
+
+        foreach ($_POST['hackTags'] as $k => $v) {
+            
+            $tags = pg_escape_string($_POST['hackTags'][$k]);
+
+            $db->exec("INSERT INTO hacksTags (hackId, tags) VALUES ('" . $title . $identification . "', '" . $tags . "')");
+            // use exec() because no results are returned
+        }
+
+            $db->commit();
         }
     catch(PDOException $e)
         {
