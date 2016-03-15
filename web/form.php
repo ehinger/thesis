@@ -65,9 +65,10 @@ if (isset($_POST['push'])){
 
             $tags = $_POST['hackTags'][$k];
             // use exec() because no results are returned
+        
+            $db->exec("INSERT INTO hacksTags (hackId, tags) VALUES ('" . $title . $identification . "', '" . $tags . "')");
         }
 
-        $db->exec("INSERT INTO hacksTags (hackId, tags) VALUES ('" . $title . $identification . "', '" . $tags . "')");
 
             $db->commit();
         }
