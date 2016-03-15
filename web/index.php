@@ -181,7 +181,7 @@ Content Page
         echo "<div class='hackSelectionFrame' id='".$abv['k'][$i]['hackid']."'>";
             echo "<img class='hackHeroImage' src='".$abv['k'][$i]['heroimageurl']."'>";
             echo '<div class="infoWrapper"></div>';
-            echo '<h1 class="hackTitle">'.$abv['k'][$i]['title'].'</h1>';
+            echo '<h1 class="hackTitle">'.$abv['k'][$i]['description'].'</h1>';
             echo "<p class='hackShortDesc'>This hack can be used by people with a ability level for ".$abv['k'][$i]['type']."</p>";
             echo "<div class='hackSelectionButton'>";
                 echo "<h1 class='hackButtonText'>Enter</h1>";
