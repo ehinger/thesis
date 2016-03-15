@@ -69,6 +69,14 @@ if (isset($_POST['push'])){
             $db->exec("INSERT INTO hacksTags (hackId, tags) VALUES ('" . $title . $identification . "', '" . $tags . "')");
         }
 
+        foreach ($_POST['ingredientsQuantity'] as $k => $v) {
+
+            $ingredientsQuantity = $_POST['ingredientsQuantity'][$k];
+            $hackIngredients = $_POST['hackIngredients'][$k];
+            // use exec() because no results are returned
+        
+            $db->exec("INSERT INTO hacksSupplies (hackID, number, item) VALUES ('" . $title . $identification . "', '" . $ingredientsQuantity . "', '" . $hackIngredients . "')");
+        }
 
             $db->commit();
         }

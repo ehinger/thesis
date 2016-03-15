@@ -43,6 +43,8 @@ try {
 
 $hacks1 = $results1->fetchAll(PDO::FETCH_ASSOC);
 $hacks2 = $results2->fetchAll(PDO::FETCH_ASSOC);
+$hacks3 = $results3->fetchAll(PDO::FETCH_ASSOC);
+$hacks4 = $results4->fetchAll(PDO::FETCH_ASSOC);
 
 // var_dump($abv['k']['0']['hackid']);
 
@@ -180,6 +182,8 @@ Content Page
 <?php 
 $hacksGeneral = array("k" => $hacks1);
 $hacksTags = array("k" => $hacks2);
+$hacksSupplies = array("k" => $hacks3);
+$hacksInstructions = array("k" => $hacks4);
 
 for ($i = 0; $i < count($hacksGeneral['k']); $i++) {
     echo "<div class='hackSelectionFrame' id='".$hacksGeneral['k'][$i]['hackid']."'>";
@@ -199,7 +203,11 @@ for ($i = 0; $i < count($hacksGeneral['k']); $i++) {
     echo '<div class="close">';
     echo '</div>';
     echo '<div class="insframe">';
-        echo '<p></p>';
+        for ($in = 0; $in < count($hacksSupplies['k']); $in++) {
+                if ($hacksSupplies['k'][$in]['hackid'] == $hacksGeneral['k'][$i]['hackid']) {
+                    echo "<p class='hackSupplies'>".$hacksSupplies['k'][$in]['number']." X    ".$hacksSupplies['k'][$in]['item']."</p>";
+            }  
+        }
     echo '</div>';
     echo "</div>";
 }
