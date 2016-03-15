@@ -57,12 +57,22 @@ if (isset($_POST['push'])){
     $userID = "";
     $tags = pg_escape_string($_POST['hackTags']);
     $tags1 = pg_escape_string($_POST['hackTags1']);
+    try {
+        $db->beginTransaction();
 
-    $sql = "INSERT INTO hacksGeneral (hackId, heroImageURL, title, type, description, userID) VALUES ('" . $title . $identification . "', '" . $heroImageURL . "', '" . $title . "', '" . $type . "', '" . $description . "', '" . $userID . "')";
-    $sql .= "INSERT INTO hacksTags (hackId, tags) VALUES ('" . $title . $identification . "', '" . $tags . "')";
-    $sql .= "INSERT INTO hacksTags (hackId, tags) VALUES ('" . $title . $identification . "', '" . $tags1 . "')";
-    // use exec() because no results are returned
-    $db->exec($sql);
+        $db->exec("INSERT INTO hacksGeneral (hackId, heroImageURL, title, type, description, userID) VALUES ('" . $title . $identification . "', '" . $heroImageURL . "', '" . $title . "', '" . $type . "', '" . $description . "', '" . $userID . "')");
+        $db->exec("INSERT INTO hacksTags (hackId, tags) VALUES ('" . $title . $identification . "', '" . $tags . "')");
+        $db->exec("INSERT INTO hacksTags (hackId, tags) VALUES ('" . $title . $identification . "', '" . $tags1 . "')");
+        // use exec() because no results are returned
+        $db->commit();
+        }
+    catch(PDOException $e)
+        {
+        // roll back the transaction if something failed
+            $conn->rollback();
+            echo $e->getMessage();
+            die();
+        }
 } 
 
 header('Location: index.php');
