@@ -48,8 +48,6 @@ $abv = array('k' => $hacks1);
 
 var_dump($abv['k']);
 
-print_r($hacks1);
-
 // $identification = '';
 // for ($i = 0; $i<7; $i++) 
 // {
