@@ -177,8 +177,8 @@ Content Page
         echo "<div class='hackSelectionFrame' id='".$hack['hackID']."'>";
             echo "<img class='hackHeroImage' src='".$hack["heroImageURL"]."'>";
             echo '<div class="infoWrapper"></div>';
-            echo '<h1 class="hackTitle">'.$hack["title"].'</h1>';
-            echo "<p class='hackShortDesc'>This hack can be used by people with a ability level for ".$hack["type"]."</p>";
+            echo '<h1 class="hackTitle">'.$hack["hackID"].'</h1>';
+            echo "<p class='hackShortDesc'>This hack can be used by people with a ability level for ".$hack["heroImageURL"]."</p>";
             echo "<div class='hackSelectionButton'>";
                 echo "<h1 class='hackButtonText'>Enter</h1>";
             echo "</div>";
