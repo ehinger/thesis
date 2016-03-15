@@ -39,40 +39,48 @@ Post a hack
 
 	<div class='newHackClose'></div>
 
-	<form enctype="multipart/form-data" class='recipeCreator' action="index.php" method="post">
+    <form enctype="multipart/form-data" id='recipeCreator' action="form.php" method="post">
 
-		<label>Title:</label>
-		<input name="hackTitle" type='text'>
+        <label>Title:</label>
+        <input name="hackTitle" type='text'>
 
-		<label>Ability:</label>
-		<input name="hackAbility" type='text'>
+        <label>Ability:</label>
+        <input name="hackAbility" type='text'>
 
-		<label>Type:</label>
-		<select name="hackType">
-		    <option value="nutrition">Nutrition</option>
-		    <option value="fitness">Fitness</option>
-		    <option value="personalCare">Personal Care</option>
-		    <option value="communication">Communication</option>
-		</select>
+        <label>Type:</label>
+        <select name="hackType">
+            <option value="nutrition">Nutrition</option>
+            <option value="fitness">Fitness</option>
+            <option value="personalCare">Personal Care</option>
+            <option value="communication">Communication</option>
+        </select>
 
-		<label>Tags:</label>
-		<textarea name="hackDesc" rows="10" cols="30">
-		</textarea>
+        <label>description:</label>
+        <input name="hackDesc" type='text'>
 
-		<div class="ingredient">		
-			<label>Ingredients:</label>
-			<input type="number" name="ingredientsQuantity" min="1">
-			<input name="hackIngredients" type='text'>	
-		</div>
+        <div class="ingredient">        
+            <label>Ingredients:</label>
+            <input type="number" name="ingredientsQuantity" min="1">
+            <input name="hackIngredients" type='text'>  
+        </div>
 
-		<input type="button" onclick="ingredientSelection()" value="Add another">
+       <input type="button" onclick="ingredientSelection()" value="Add another">
 
-		<div class="steps">		
-		</div>
+       <input name="hackTags" type='text'>
+       <input name="hackTags1" type='text'>
 
-		<input type="button" onclick="hackSteps()" value="Add new step">
+        <div class="steps">     
+        </div>
 
-	</form>
+        <input name="userfile" type="file">
+
+<!--         <input type="submit" value="Upload"> -->
+        
+       <input type="button" onclick="hackSteps()" value="Add new step">
+
+        <input type="submit" value="Submit" name="push">
+
+    </form>
 
 </div>
 

@@ -59,12 +59,10 @@ if (isset($_POST['push'])){
     $tags1 = pg_escape_string($_POST['hackTags1']);
 
     $sql = "INSERT INTO hacksGeneral (hackId, heroImageURL, title, type, description, userID) VALUES ('" . $title . $identification . "', '" . $heroImageURL . "', '" . $title . "', '" . $type . "', '" . $description . "', '" . $userID . "')";
-    $sql1 = "INSERT INTO hacksTags (hackId, tags) VALUES ('" . $title . $identification . "', '" . $tags . "')";
-    $sql2 = "INSERT INTO hacksTags (hackId, tags) VALUES ('" . $title . $identification . "', '" . $tags1 . "')";
+    $sql .= "INSERT INTO hacksTags (hackId, tags) VALUES ('" . $title . $identification . "', '" . $tags . "')";
+    $sql .= "INSERT INTO hacksTags (hackId, tags) VALUES ('" . $title . $identification . "', '" . $tags1 . "')";
     // use exec() because no results are returned
     $db->exec($sql);
-    $db->exec($sql1);
-    $db->exec($sql2);
 } 
 
 header('Location: index.php');
