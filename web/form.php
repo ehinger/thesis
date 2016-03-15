@@ -75,7 +75,7 @@ if (isset($_POST['push'])){
             $hackIngredients = $_POST['hackIngredients'][$k];
             // use exec() because no results are returned
         
-            $db->exec("INSERT INTO hacksSupplies (hackID, number, item) VALUES ('" . $title . $identification . "', '" . $ingredientsQuantity . "', '" . $hackIngredients . "')");
+            $db->exec("INSERT INTO hacksSupplies (hackID, supplyNo, item) VALUES ('" . $title . $identification . "', '" . $ingredientsQuantity . "', '" . $hackIngredients . "')");
         }
 
             $db->commit();

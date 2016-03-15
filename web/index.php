@@ -205,7 +205,7 @@ for ($i = 0; $i < count($hacksGeneral['k']); $i++) {
     echo '<div class="insframe">';
         for ($in = 0; $in < count($hacksSupplies['k']); $in++) {
                 if ($hacksSupplies['k'][$in]['hackid'] == $hacksGeneral['k'][$i]['hackid']) {
-                    echo "<p class='hackSupplies'>".$hacksSupplies['k'][$in]['number']." X    ".$hacksSupplies['k'][$in]['item']."</p>";
+                    echo "<p class='hackSupplies'>".$hacksSupplies['k'][$in]['supplyNo']." X    ".$hacksSupplies['k'][$in]['item']."</p>";
             }  
         }
     echo '</div>';
