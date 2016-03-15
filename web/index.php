@@ -27,7 +27,7 @@ if (isset($_POST['register'])) {
 }
 
 try {
-    $results1 = $db->query('select * from hacksGeneral');
+    $results1 = pg_execute($db, 'select * from hacksGeneral');
     $results2 = $db->query('select * from hacksTags');
     $results3 = $db->query('select * from hacksSupplies');
     $results4 = $db->query('select * from hackInstructions');
