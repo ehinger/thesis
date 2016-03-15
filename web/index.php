@@ -83,34 +83,34 @@ Navigation Bar
 <div class='navbutton'></div>
 <div class='menuBar'></div>
 <nav>
-<form id='login' action='' method='post'>
+    <form id='login' action='' method='post'>
 
-    <label>Username:</label>
-    <input name="username" type="text">
+        <label>Username:</label>
+        <input name="username" type="text">
 
-    <label>Password:</label>
-    <input name="password" type="text">
+        <label>Password:</label>
+        <input name="password" type="text">
 
-    <input type="checkbox" name="remainLoggedIn" value="remainLoggedIn"> Stay logged in?<br>
+        <input type="checkbox" name="remainLoggedIn" value="remainLoggedIn"> Stay logged in?<br>
 
-    <input type="submit" value="login" name="login">
+        <input type="submit" value="login" name="login">
 
-</form>
+    </form>
 
-<form id='register' action='' method='post'>
+    <form id='register' action='' method='post'>
 
-    <label>Username:</label>
-    <input name="usernameR" type="text">
+        <label>Username:</label>
+        <input name="usernameR" type="text">
 
-    <label>Password:</label>
-    <input name="passwordR" type="text">
+        <label>Password:</label>
+        <input name="passwordR" type="text">
 
-    <label>Confirm password:</label>
-    <input name="password1R" type="text">
+        <label>Confirm password:</label>
+        <input name="password1R" type="text">
 
-    <input type="submit" value="register" name="register">
+        <input type="submit" value="register" name="register">
 
-</form>
+    </form>
 </nav>
 
 <!-- /************************************************************************************
@@ -152,20 +152,20 @@ Post a hack
             <input name="hackIngredients[]" type='text'>  
         </div>
 
-       <input type="button" onclick="ingredientSelection()" value="Add another">
+        <input type="button" onclick="ingredientSelection()" value="Add another">
 
-       <input name="hackTags[]" type='text'>
-       <input name="hackTags[]" type='text'>
-       <input name="hackTags[]" type='text'>
+        <input name="hackTags[]" type='text'>
+        <input name="hackTags[]" type='text'>
+        <input name="hackTags[]" type='text'>
 
         <div class="steps">     
         </div>
 
         <input name="userfile" type="file">
 
-<!--         <input type="submit" value="Upload"> -->
+        <!--         <input type="submit" value="Upload"> -->
         
-       <input type="button" onclick="hackSteps()" value="Add new step">
+        <input type="button" onclick="hackSteps()" value="Add new step">
 
         <input type="submit" value="Submit" name="push">
 
@@ -187,35 +187,35 @@ $hacksInstructions = array("k" => $hacks4);
 
 for ($i = 0; $i < count($hacksGeneral['k']); $i++) {
     echo "<div class='hackSelectionFrame' id='".$hacksGeneral['k'][$i]['hackid']."'>";
-        echo "<img class='hackHeroImage' src='".$hacksGeneral['k'][$i]['heroimageurl']."'>";
-        echo '<div class="infoWrapper"></div>';
-        echo '<h1 class="hackTitle">'.$hacksGeneral['k'][$i]['title'].'</h1>';
-        echo "<p class='hackShortDesc'>This hack can be used by people with a ability level for ".$hacksGeneral['k'][$i]['type']."</p>";
-        
-        for ($n = 0; $n < count($hacksTags['k']); $n++) {
-            if ($hacksTags['k'][$n]['hackid'] == $hacksGeneral['k'][$i]['hackid']) {
-                echo "<p class='hackTags'>".$hacksTags['k'][$n]['tags']."</p>";
-            }  
-        }
+    echo "<img class='hackHeroImage' src='".$hacksGeneral['k'][$i]['heroimageurl']."'>";
+    echo '<div class="infoWrapper"></div>';
+    echo '<h1 class="hackTitle">'.$hacksGeneral['k'][$i]['title'].'</h1>';
+    echo "<p class='hackShortDesc'>This hack can be used by people with a ability level for ".$hacksGeneral['k'][$i]['type']."</p>";
+    
+    for ($n = 0; $n < count($hacksTags['k']); $n++) {
+        if ($hacksTags['k'][$n]['hackid'] == $hacksGeneral['k'][$i]['hackid']) {
+            echo "<p class='hackTags'>".$hacksTags['k'][$n]['tags']."</p>";
+        }  
+    }
 
-        for ($in = 0; $in < count($hacksSupplies['k']); $in++) {
-            if ($hacksSupplies['k'][$in]['hackid'] == $hacksGeneral['k'][$i]['hackid']) {
-                echo "<p class='hackSupplies'>".$hacksSupplies['k'][$in]['supplyno']." X    ".$hacksSupplies['k'][$in]['item']."</p>";
-            }
-        }
-
-        for ($ni = 0; $ni < count($hacksInstructions['k']); $ni++) {
-            if ($hacksInstructions['k'][$ni]['hackid'] == $hacksGeneral['k'][$i]['hackid']) {
-                echo "<h1 class='stepNumber'>".$hacksInstructions['k'][$ni]['stepnumber']."</h1>";
-                echo "<p class='hackInstructions'>".$hacksInstructions['k'][$ni]['instructions']."</p>";
-            }
-        }
-        echo "<div class='hackSelectionButton'>";
-            echo "<h1 class='hackButtonText'>Enter</h1>";
-        echo "</div>";
+    echo "<div class='hackSelectionButton'>";
+    echo "<h1 class='hackButtonText'>Enter</h1>";
+    echo "</div>";
     echo '<div class="close">';
     echo '</div>';
     echo '<div class="insframe">';
+    for ($in = 0; $in < count($hacksSupplies['k']); $in++) {
+        if ($hacksSupplies['k'][$in]['hackid'] == $hacksGeneral['k'][$i]['hackid']) {
+            echo "<p class='hackSupplies'>".$hacksSupplies['k'][$in]['supplyno']." X    ".$hacksSupplies['k'][$in]['item']."</p>";
+        }
+    }
+
+    for ($ni = 0; $ni < count($hacksInstructions['k']); $ni++) {
+        if ($hacksInstructions['k'][$ni]['hackid'] == $hacksGeneral['k'][$i]['hackid']) {
+            echo "<h1 class='stepNumber'>".$hacksInstructions['k'][$ni]['stepnumber']."</h1>";
+            echo "<p class='hackInstructions'>".$hacksInstructions['k'][$ni]['instructions']."</p>";
+        }
+    }
     echo '</div>';
     echo "</div>";
 }

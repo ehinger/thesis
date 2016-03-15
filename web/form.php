@@ -81,10 +81,11 @@ if (isset($_POST['push'])){
         foreach ($_POST['hackIns'] as $k => $v) {
 
             $stepNo = 1;
+            $stepNo++;
             $hackDesc = $_POST['hackIns'][$k];
             // use exec() because no results are returned
         
-            $db->exec("INSERT INTO hackInstructions (hackID, stage, stepNumber, instructions) VALUES ('" . $title . $identification . "', '" . $hackDesc . "', '" . $stepNo++ . "', '" . $hackDesc . "')");
+            $db->exec("INSERT INTO hackInstructions (hackID, stage, stepNumber, instructions) VALUES ('" . $title . $identification . "', '" . $hackDesc . "', '" . $stepNo . "', '" . $hackDesc . "')");
         }
 
             $db->commit();
