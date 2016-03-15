@@ -139,7 +139,8 @@ Hack selection
   margin-right: 30%;
   margin-top: 12%;
   position: relative;
-  font-size: 5em;
+  float: left;
+  font-size: 3em;
   color: black;
 }
 

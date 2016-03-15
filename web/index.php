@@ -194,7 +194,7 @@ for ($i = 0; $i < count($hacksGeneral['k']); $i++) {
 
     for ($n = 0; $n < count($hacksTags['k']); $n++) {
         if ($hacksTags['k'][$n]['hackid'] == $hacksGeneral['k'][$i]['hackid']) {
-            echo "<p class='hackTags'>".$hacksTags['k'][$n]['tags']."</p>";
+            echo "<p class='hackTags'>".$hacksTags['k'][$n]['tags'].",</p>";
         }  
     }
 
