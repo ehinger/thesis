@@ -78,10 +78,10 @@ if (isset($_POST['push'])){
             $db->exec("INSERT INTO hacksSupplies (hackID, supplyNo, item) VALUES ('" . $title . $identification . "', '" . $ingredientsQuantity . "', '" . $hackIngredients . "')");
         }
 
-        foreach ($_POST['hackDesc'] as $k => $v) {
+        foreach ($_POST['hackIns'] as $k => $v) {
 
             $stepNo = 1;
-            $hackDesc = $_POST['hackDesc'][$k];
+            $hackDesc = $_POST['hackIns'][$k];
             // use exec() because no results are returned
         
             $db->exec("INSERT INTO hacksSupplies (hackID, stage, stepNumber, instructions) VALUES ('" . $title . $identification . "', '" . $hackDesc . "', '" . $stepNo++ . "', '" . $hackDesc . "')");
