@@ -147,11 +147,10 @@ Post a hack
         <input name="hackDesc" type='text'>
 
         <div class="ingredient">        
-             
-        </div>
-        <label>Ingredients:</label>
+            <label>Ingredients:</label>
             <input type="number" name="ingredientsQuantity" min="1">
-            <input name="hackIngredients" type='text'> 
+            <input name="hackIngredients" type='text'>  
+        </div>
 
        <input type="button" onclick="ingredientSelection()" value="Add another">
 
@@ -206,7 +205,14 @@ for ($i = 0; $i < count($hacksGeneral['k']); $i++) {
     echo '<div class="insframe">';
         for ($in = 0; $in < count($hacksSupplies['k']); $in++) {
                 if ($hacksSupplies['k'][$in]['hackid'] == $hacksGeneral['k'][$i]['hackid']) {
-                    echo "<p class='hackSupplies'>".$hacksSupplies['k'][$in]['supplyNo']." X    ".$hacksSupplies['k'][$in]['item']."</p>";
+                    echo "<p class='hackSupplies'>".$hacksSupplies['k'][$in]['supplyno']." X    ".$hacksSupplies['k'][$in]['item']."</p>";
+            }
+        }
+
+        for ($ni = 0; $ni < count($hacksInstructions['k']); $ni++) {
+                if ($hacksInstructions['k'][$ni]['hackid'] == $hacksGeneral['k'][$i]['hackid']) {
+                    echo "<h1 class='stepNumber'>".$hacksInstructions['k'][$ni]['stepNumber']."</h1>";
+                    echo "<p class='hackInstructions'>".$hacksInstructions['k'][$ni]['instructions']."</p>";
             }
         }
     echo '</div>';
