@@ -44,8 +44,6 @@ try {
 $hacks1 = $results1->fetchAll(PDO::FETCH_ASSOC);
 $hacks2 = $results2->fetchAll(PDO::FETCH_ASSOC);
 
-$abv = array("k" => $hacks1);
-
 // var_dump($abv['k']['0']['hackid']);
 
 // $identification = '';
@@ -154,6 +152,9 @@ Post a hack
 
        <input type="button" onclick="ingredientSelection()" value="Add another">
 
+       <input name="hackTags" type='text'>
+       <input name="hackTags1" type='text'>
+
         <div class="steps">     
         </div>
 
@@ -176,22 +177,32 @@ Content Page
 ************************************************************************************/ -->
 
 <?php 
-    for ($i = 0; $i < count($abv['k']); $i++) {
-        echo "<div class='hackSelectionFrame' id='".$abv['k'][$i]['hackid']."'>";
-            echo "<img class='hackHeroImage' src='".$abv['k'][$i]['heroimageurl']."'>";
-            echo '<div class="infoWrapper"></div>';
-            echo '<h1 class="hackTitle">'.$abv['k'][$i]['title'].'</h1>';
-            echo "<p class='hackShortDesc'>This hack can be used by people with a ability level for ".$abv['k'][$i]['type']."</p>";
-            echo "<div class='hackSelectionButton'>";
-                echo "<h1 class='hackButtonText'>Enter</h1>";
-            echo "</div>";
+$hacksGeneral = array("k" => $hacks1);
+$hacksTags = array("k" => $hacks2);
+
+for ($i = 0; $i < count($hacksGeneral['k']); $i++) {
+    echo "<div class='hackSelectionFrame' id='".$hacksGeneral['k'][$i]['hackid']."'>";
+        echo "<img class='hackHeroImage' src='".$hacksGeneral['k'][$i]['heroimageurl']."'>";
+        echo '<div class="infoWrapper"></div>';
+        echo '<h1 class="hackTitle">'.$hacksGeneral['k'][$i]['title'].'</h1>';
+        echo "<p class='hackShortDesc'>This hack can be used by people with a ability level for ".$hacksGeneral['k'][$i]['type']."</p>";
+        echo "<p class='hackTags'>"
+        for ($n = 0; $n < count($hacksTags['k']); $n++) {
+            if ($hacksTags['k'][$n]['hackid'] == $hacksGeneral['k'][$i]['hackid']) {
+                .$hacksTags['k'][$n]['tags'].
+            }  
+        }
+        "</p>";
+        echo "<div class='hackSelectionButton'>";
+            echo "<h1 class='hackButtonText'>Enter</h1>";
         echo "</div>";
-        echo '<div class="close">';
-        echo '</div>';
-        echo '<div class="insframe">';
-            echo '<p>'.$abv['k'][$i]['description'].'</p>';
-        echo '</div>';
-    }
+    echo "</div>";
+    echo '<div class="close">';
+    echo '</div>';
+    echo '<div class="insframe">';
+        echo '<p></p>';
+    echo '</div>';
+}
 ?>
 
 <!-- /************************************************************************************
