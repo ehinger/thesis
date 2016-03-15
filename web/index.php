@@ -196,12 +196,12 @@ for ($i = 0; $i < count($hacksGeneral['k']); $i++) {
         echo "<div class='hackSelectionButton'>";
             echo "<h1 class='hackButtonText'>Enter</h1>";
         echo "</div>";
-    echo "</div>";
     echo '<div class="close">';
     echo '</div>';
     echo '<div class="insframe">';
         echo '<p></p>';
     echo '</div>';
+    echo "</div>";
 }
 ?>
 
