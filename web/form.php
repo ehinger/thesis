@@ -45,6 +45,11 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['userfile']) && $_FILES
 } 
 
 if (isset($_POST['push'])){
+    $identification = '';
+    for ($i = 0; $i<7; $i++) 
+        {
+            $identification .= mt_rand(0,9);
+        }
     $title = pg_escape_string($_POST['hackTitle']); 
     $type = pg_escape_string($_POST['hackType']); 
     $heroImageURL = htmlspecialchars($upload->get('ObjectURL')); 
