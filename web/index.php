@@ -181,8 +181,8 @@ Content Page
         echo "<div class='hackSelectionFrame' id='".$abv['k'][$i]['hackid']."'>";
             echo "<img class='hackHeroImage' src=''>";
             echo '<div class="infoWrapper"></div>';
-            echo '<h1 class="hackTitle">'.$abv['k']['0']['hackid'].'</h1>';
-            echo "<p class='hackShortDesc'>This hack can be used by people with a ability level for ".$abv['k']['0']['hackid']."</p>";
+            echo '<h1 class="hackTitle">'.$abv['k'][$i]['hackid'].'</h1>';
+            echo "<p class='hackShortDesc'>This hack can be used by people with a ability level for ".$abv['k'][$i]['hackid']."</p>";
             echo "<div class='hackSelectionButton'>";
                 echo "<h1 class='hackButtonText'>Enter</h1>";
             echo "</div>";
@@ -190,7 +190,7 @@ Content Page
         echo '<div class="close">';
         echo '</div>';
         echo '<div class="insframe">';
-            echo '<p>'.$abv['k']['0']['hackid'].'</p>';
+            echo '<p>'.$abv['k'][$i]['hackid'].'</p>';
         echo '</div>';
     }
 
