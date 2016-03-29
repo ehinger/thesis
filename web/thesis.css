@@ -57,7 +57,7 @@ nav {
   height: 100%;
   position: fixed;
   background: white;
-  margin: 10%;
+  margin: 0;
   top: -100%;
   left: 0;
   z-index: 1;
@@ -66,6 +66,13 @@ nav {
   -ms-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s; */
+}
+
+form {
+  position: relative;
+  top: 10%; 
+  left: 10%; 
+  margin: 10%;
 }
 
 /************************************************************************************
