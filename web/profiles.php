@@ -56,7 +56,10 @@ class profiles {
 				echo "match";
 				die();
 
-		} else return "not right";
+		} else {
+			echo "passwords don't match";
+			die();
+		}
 	}
 
 	function log_user_out () {
