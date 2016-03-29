@@ -45,12 +45,12 @@ class profiles {
 		if ($ensure_credentials) {
 			// $_SESSION['status'] = 'authorised';
 			// return true;
-			for ($i = 0; $i < count($id['k']); $i++) {
-				if ($un == $id['k'][$i]['username']) {
-					$uId = $id['k'][$i]['userID'];
-				}
-			}
-			setcookie("userId", $uId);
+			// for ($i = 0; $i < count($id['k']); $i++) {
+			// 	if ($un == $id['k'][$i]['username']) {
+			// 		$uId = $id['k'][$i]['userID'];
+			// 	}
+			// }
+			// setcookie("userId", $uId);
 			echo "match";
 			die();
 
