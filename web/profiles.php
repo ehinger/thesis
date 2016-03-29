@@ -34,7 +34,8 @@ class profiles {
 
 			if ($stmt->fetch()) {
 				$stmt->close();
-				return true;
+				echo "match";
+				die();
 			}
 	}
 
@@ -51,8 +52,8 @@ class profiles {
 			// 	}
 			// }
 			// setcookie("userId", $uId);
-			echo "match";
-			die();
+			// echo "match";
+			// die();
 
 		} else return "not right";
 	}
