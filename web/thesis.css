@@ -57,7 +57,7 @@ nav {
   height: 100%;
   position: fixed;
   background: white;
-  margin: 0;
+  margin: 10%;
   top: -100%;
   left: 0;
   z-index: 1;
@@ -67,10 +67,6 @@ nav {
   -o-transition: 0.3s;
   transition: 0.3s; */
 }
-
-/*.login {
-  padding: 10%;
-}*/
 
 /************************************************************************************
 
