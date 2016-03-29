@@ -34,12 +34,13 @@ class profiles {
 
 			if ($stmt->fetch()) {
 				$stmt->close();
-				echo "match";
-				die();
 			}
 	}
 
 	function validate_user($un, $pwd, $id) {
+
+		$un_ = pg_escape_string($un);
+		$pwd_ = pg_escape_string($pwd);
 
 		$ensure_credentials = $this->verify_username_password($un, $pwd);
 
@@ -52,8 +53,8 @@ class profiles {
 			// 	}
 			// }
 			// setcookie("userId", $uId);
-			// echo "match";
-			// die();
+				echo "match";
+				die();
 
 		} else return "not right";
 	}
