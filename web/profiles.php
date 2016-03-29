@@ -42,7 +42,7 @@ class profiles {
 
 		$ensure_credentials = $this->verify_username_password($un, $pwd);
 
-		if ($ensure_credentials) {
+		if ($ensure_credentials == true) {
 			// $_SESSION['status'] = 'authorised';
 			// return true;
 			// for ($i = 0; $i < count($id['k']); $i++) {
