@@ -16,16 +16,6 @@ ini_set('display_errors', 'On');
 require_once "dbconn.php";
 require_once "profiles.php";
 
-$profiles = new profiles;
-
-if (isset($_POST['login'])) {
-    $profiles->validate_user($_POST['username'], $_POST['password']);
-}
-
-if (isset($_POST['register'])) {
-    $profiles->register($_POST['usernameR'], $_POST['passwordR'], $_POST['password1R']);
-}
-
 try {
     $results1 = $db->query('select * from hacksGeneral');
     $results2 = $db->query('select * from hacksTags');
@@ -45,6 +35,19 @@ $hacks1 = $results1->fetchAll(PDO::FETCH_ASSOC);
 $hacks2 = $results2->fetchAll(PDO::FETCH_ASSOC);
 $hacks3 = $results3->fetchAll(PDO::FETCH_ASSOC);
 $hacks4 = $results4->fetchAll(PDO::FETCH_ASSOC);
+$hacks5 = $results5->fetchAll(PDO::FETCH_ASSOC);
+
+$profiles = new profiles;
+
+$hacksInstructions = array("k" => $hacks5);
+
+if (isset($_POST['login'])) {
+    $profiles->validate_user($_POST['username'], $_POST['password'], $hacksInstructions);
+}
+
+if (isset($_POST['register'])) {
+    $profiles->register($_POST['usernameR'], $_POST['passwordR'], $_POST['password1R']);
+}
 
 // var_dump($abv['k']['0']['hackid']);
 

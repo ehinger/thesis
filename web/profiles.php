@@ -38,14 +38,20 @@ class profiles {
 			}
 	}
 
-	function validate_user($un, $pwd) {
+	function validate_user($un, $pwd, $id) {
 
 		$ensure_credentials = $this->verify_username_password($un, $pwd);
 
 		if ($ensure_credentials) {
 			// $_SESSION['status'] = 'authorised';
 			// return true;
-			echo "passwords don't match";
+			for ($i = 0; $i < count($id['k']); $i++) {
+				if ($un == $id['k'][$i]['username']) {
+					$uId = $id['k'][$i]['userID'];
+				}
+			}
+			setcookie("userId", $uId);
+			echo "match";
 			die();
 
 		} else return "not right";
