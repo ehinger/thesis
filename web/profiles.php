@@ -27,44 +27,37 @@ class profiles {
 	function verify_username_password ($un, $pwd) {
 		global $db;
 
-		// $query = "SELECT FROM userProfile WHERE username = '" . $un . "' AND password = '" . $pwd . "' LIMIT 1";
 		$stmt = $db->query("SELECT * FROM userProfile WHERE username = '" . $un . "' AND password = '" . $pwd . "'"); 
 		$stmt->execute();
-		// $stmt = $db->query("SELECT FROM userProfile WHERE username = '" . $un . "' AND password = '" . $pwd . "'");
-		// $d = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-		// $h = array("k" => $d);
-		// var_dump($h);
-		// die();
 			if ($stmt->fetch()) {
-				echo "match";
-				die();
+				return true;
 			}
 	}
 
-	function validate_user($un, $pwd) {
+	function validate_user($un, $pwd, $id) {
 
 		$un_ = pg_escape_string($un);
 		$pwd_ = pg_escape_string($pwd);
 
 		$this->verify_username_password($un_, $pwd_);
 
-		// if ($ensure_credentials == true) {
-		// 	// $_SESSION['status'] = 'authorised';
-		// 	// return true;
-		// 	// for ($i = 0; $i < count($id['k']); $i++) {
-		// 	// 	if ($un == $id['k'][$i]['username']) {
-		// 	// 		$uId = $id['k'][$i]['userID'];
-		// 	// 	}
-		// 	// }
-		// 	// setcookie("userId", $uId);
-		// 		echo "match";
-		// 		die();
+		if ($ensure_credentials == true) {
+			$_SESSION['status'] = 'authorised';
+			return true;
+			for ($i = 0; $i < count($id['k']); $i++) {
+				if ($un == $id['k'][$i]['username']) {
+					$uId = $id['k'][$i]['userID'];
+				}
+			}
+			setcookie("userId", $uId);
+				echo "match";
+				die();
 
-		// } else {
-		// 	echo $un_, $pwd_;
-		// 	die();
-		// }
+		} else {
+			echo $un_, $pwd_;
+			die();
+		}
 	}
 
 	function log_user_out () {

@@ -39,17 +39,15 @@ $hacks5 = $results5->fetchAll(PDO::FETCH_ASSOC);
 
 $profiles = new profiles;
 
-$hacksInstructions = array("k" => $hacks5);
+$hackId = array("k" => $hacks5);
 
 if (isset($_POST['login'])) {
-    $profiles->validate_user($_POST['username'], $_POST['password']);
+    $profiles->validate_user($_POST['username'], $_POST['password'], $hackId);
 }
 
 if (isset($_POST['register'])) {
     $profiles->register($_POST['usernameR'], $_POST['passwordR'], $_POST['password1R']);
 }
-
-// var_dump($abv['k']['0']['hackid']);
 
 // $identification = '';
 // for ($i = 0; $i<7; $i++) 
@@ -188,43 +186,43 @@ $hacksTags = array("k" => $hacks2);
 $hacksSupplies = array("k" => $hacks3);
 $hacksInstructions = array("k" => $hacks4);
 
-// for ($i = 0; $i < count($hacksGeneral['k']); $i++) {
-//     echo "<div class='hackSelectionFrame' id='".$hacksGeneral['k'][$i]['hackid']."'>";
-//     echo "<img class='hackHeroImage' src='".$hacksGeneral['k'][$i]['heroimageurl']."'>";
-//     echo '<div class="infoWrapper"></div>';
-//     echo '<h1 class="hackTitle">'.$hacksGeneral['k'][$i]['title'].'</h1>';
-//     echo "<p class='hackShortDesc'>This hack can be used by people with a ability level for ".$hacksGeneral['k'][$i]['type']."</p>";
+for ($i = 0; $i < count($hacksGeneral['k']); $i++) {
+    echo "<div class='hackSelectionFrame' id='".$hacksGeneral['k'][$i]['hackid']."'>";
+    echo "<img class='hackHeroImage' src='".$hacksGeneral['k'][$i]['heroimageurl']."'>";
+    echo '<div class="infoWrapper"></div>';
+    echo '<h1 class="hackTitle">'.$hacksGeneral['k'][$i]['title'].'</h1>';
+    echo "<p class='hackShortDesc'>This hack can be used by people with a ability level for ".$hacksGeneral['k'][$i]['type']."</p>";
 
-//     for ($n = 0; $n < count($hacksTags['k']); $n++) {
-//         if ($hacksTags['k'][$n]['hackid'] == $hacksGeneral['k'][$i]['hackid']) {
-//             echo "<p class='hackTags'>".$hacksTags['k'][$n]['tags'].",</p>";
-//         }  
-//     }
+    for ($n = 0; $n < count($hacksTags['k']); $n++) {
+        if ($hacksTags['k'][$n]['hackid'] == $hacksGeneral['k'][$i]['hackid']) {
+            echo "<p class='hackTags'>".$hacksTags['k'][$n]['tags'].",</p>";
+        }  
+    }
 
-//     echo "<div class='hackSelectionButton'>";
-//     echo "<h1 class='hackButtonText'>Enter</h1>";
-//     echo "</div>";
-//     echo '<div class="close">';
-//     echo '</div>';
-//     echo '<div class="insframe">';
+    echo "<div class='hackSelectionButton'>";
+    echo "<h1 class='hackButtonText'>Enter</h1>";
+    echo "</div>";
+    echo '<div class="close">';
+    echo '</div>';
+    echo '<div class="insframe">';
 
-//     echo "<p class='hackShortDesc'>".$hacksGeneral['k'][$i]['description']."</p>";
+    echo "<p class='hackShortDesc'>".$hacksGeneral['k'][$i]['description']."</p>";
 
-//     for ($in = 0; $in < count($hacksSupplies['k']); $in++) {
-//         if ($hacksSupplies['k'][$in]['hackid'] == $hacksGeneral['k'][$i]['hackid']) {
-//             echo "<p class='hackSupplies'>".$hacksSupplies['k'][$in]['supplyno']." X    ".$hacksSupplies['k'][$in]['item']."</p>";
-//         }
-//     }
+    for ($in = 0; $in < count($hacksSupplies['k']); $in++) {
+        if ($hacksSupplies['k'][$in]['hackid'] == $hacksGeneral['k'][$i]['hackid']) {
+            echo "<p class='hackSupplies'>".$hacksSupplies['k'][$in]['supplyno']." X    ".$hacksSupplies['k'][$in]['item']."</p>";
+        }
+    }
 
-//     for ($ni = 0; $ni < count($hacksInstructions['k']); $ni++) {
-//         if ($hacksInstructions['k'][$ni]['hackid'] == $hacksGeneral['k'][$i]['hackid']) {
-//             echo "<h1 class='stepNumber'>Step ".$hacksInstructions['k'][$ni]['stepnumber']."</h1>";
-//             echo "<p class='hackInstructions'>".$hacksInstructions['k'][$ni]['instructions']."</p>";
-//         }
-//     }
-//     echo '</div>';
-//     echo "</div>";
-// }
+    for ($ni = 0; $ni < count($hacksInstructions['k']); $ni++) {
+        if ($hacksInstructions['k'][$ni]['hackid'] == $hacksGeneral['k'][$i]['hackid']) {
+            echo "<h1 class='stepNumber'>Step ".$hacksInstructions['k'][$ni]['stepnumber']."</h1>";
+            echo "<p class='hackInstructions'>".$hacksInstructions['k'][$ni]['instructions']."</p>";
+        }
+    }
+    echo '</div>';
+    echo "</div>";
+}
 ?>
 
 <!-- /************************************************************************************
@@ -252,10 +250,6 @@ Instructions
 </div> -->
 
 <script src='thesis.js' type='text/javascript' ></script>
-<?php
-var_dump($hacksGeneral);
-die();
-?>
 </body>
 </html>
 
