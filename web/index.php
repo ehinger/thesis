@@ -188,9 +188,6 @@ $hacksTags = array("k" => $hacks2);
 $hacksSupplies = array("k" => $hacks3);
 $hacksInstructions = array("k" => $hacks4);
 
-var_dump($hacksGeneral);
-die();
-
 // for ($i = 0; $i < count($hacksGeneral['k']); $i++) {
 //     echo "<div class='hackSelectionFrame' id='".$hacksGeneral['k'][$i]['hackid']."'>";
 //     echo "<img class='hackHeroImage' src='".$hacksGeneral['k'][$i]['heroimageurl']."'>";
@@ -255,6 +252,10 @@ Instructions
 </div> -->
 
 <script src='thesis.js' type='text/javascript' ></script>
+<?php
+var_dump($hacksGeneral);
+die();
+?>
 </body>
 </html>
 
