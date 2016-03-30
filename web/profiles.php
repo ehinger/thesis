@@ -28,11 +28,13 @@ class profiles {
 		global $db;
 
 		// $query = "SELECT FROM userProfile WHERE username = '" . $un . "' AND password = '" . $pwd . "' LIMIT 1";
-
-		$stmt = $db->query("SELECT FROM userProfile WHERE username = '" . $un . "' AND password = '" . $pwd . "'"); 
-		$stmt->execute();
-				echo $un, $pwd;
-				die();
+}
+		// $stmt = $db->query("SELECT FROM userProfile WHERE username = '" . $un . "' AND password = '" . $pwd . "'"); 
+		// $stmt->execute();
+		$stmt = $db->query("SELECT FROM userProfile WHERE username = '" . $un . "' AND password = '" . $pwd . "'");
+		$d = $stmt->fetchAll(PDO::FETCH_ASSOC);
+		echo $d;
+		die();
 			// if ($stmt->fetch()) {
 
 			// }
