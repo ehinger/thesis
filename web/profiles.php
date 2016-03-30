@@ -31,7 +31,8 @@ class profiles {
 		$stmt->execute();
 
 			if ($stmt->fetch()) {
-				return true;
+				echo "kliop";
+				die();
 			}
 	}
 
