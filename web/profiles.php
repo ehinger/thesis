@@ -34,7 +34,7 @@ class profiles {
 		$d = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 		$h = array("k" => $d);
-		echo $h['k'][0];
+		var_dump($h)
 		die();
 			// if ($stmt->fetch()) {
 
