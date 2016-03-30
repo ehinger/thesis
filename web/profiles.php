@@ -57,7 +57,7 @@ class profiles {
 				die();
 
 		} else {
-			echo "passwords don't match";
+			echo "don't";
 			die();
 		}
 	}
