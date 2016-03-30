@@ -24,42 +24,43 @@ class profiles {
 		}
 	}
 
-	function verify_username_password ($un, $pwd) {
+	function verify_username_password ($un, $pwd, $id) {
 		global $db;
-
-		$stmt = $db->query("SELECT * FROM userProfile WHERE username = '" . $un . "' AND password = '" . $pwd . "'"); 
-		$stmt->execute();
-
-			if ($stmt->fetch()) {
-				echo "kliop";
-				die();
-			}
-	}
-
-	function validate_user($un, $pwd, $id) {
 
 		$un_ = pg_escape_string($un);
 		$pwd_ = pg_escape_string($pwd);
 
-		$this->verify_username_password($un_, $pwd_);
+		$stmt = $db->query("SELECT * FROM userProfile WHERE username = '" . $un_ . "' AND password = '" . $pwd_ . "'"); 
+		$stmt->execute();
 
-		if ($ensure_credentials) {
-			$_SESSION['status'] = 'authorised';
-			return true;
+		if ($stmt->fetch()) {
 			for ($i = 0; $i < count($id['k']); $i++) {
-				if ($un == $id['k'][$i]['username']) {
-					$uId = $id['k'][$i]['userID'];
+					if ($un == $id['k'][$i]['username']) {
+						$uId = $id['k'][$i]['userID'];
+					}
 				}
-			}
-			setcookie("userId", $uId);
-				echo "match";
-				die();
+				setcookie("userId", $uId);
+					echo "match";
+					die();
 
-		} else {
-			echo $un_, $pwd_;
-			die();
-		}
+			} else {
+				echo $un_, $pwd_;
+				die();
+			}
 	}
+
+	// function validate_user($un, $pwd, $id) {
+
+	// 	$un_ = pg_escape_string($un);
+	// 	$pwd_ = pg_escape_string($pwd);
+
+	// 	$this->verify_username_password($un_, $pwd_);
+
+	// 	if ($ensure_credentials) {
+	// 		$_SESSION['status'] = 'authorised';
+	// 		return true;
+			
+	// }
 
 	function log_user_out () {
 		if (isset($_SESSION['status'])) {
