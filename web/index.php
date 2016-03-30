@@ -42,7 +42,7 @@ $profiles = new profiles;
 $hacksInstructions = array("k" => $hacks5);
 
 if (isset($_POST['login'])) {
-    $profiles->validate_user($_POST['username'], $_POST['password'], $hacksInstructions);
+    $profiles->validate_user($_POST['username'], $_POST['password']);
 }
 
 if (isset($_POST['register'])) {

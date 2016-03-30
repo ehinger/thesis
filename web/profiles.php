@@ -38,14 +38,14 @@ class profiles {
 			}
 	}
 
-	function validate_user($un, $pwd, $id) {
+	function validate_user($un, $pwd) {
 
 		$un_ = pg_escape_string($un);
 		$pwd_ = pg_escape_string($pwd);
 
 		$ensure_credentials = $this->verify_username_password($un_, $pwd_);
 
-		if ($ensure_credentials) {
+		if ($ensure_credentials == true) {
 			// $_SESSION['status'] = 'authorised';
 			// return true;
 			// for ($i = 0; $i < count($id['k']); $i++) {
