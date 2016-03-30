@@ -33,7 +33,8 @@ class profiles {
 		$stmt->execute();
 
 			if ($stmt->fetch()) {
-				return true;
+				echo $un, $pwd;
+				die();
 			}
 	}
 
@@ -42,24 +43,24 @@ class profiles {
 		$un_ = pg_escape_string($un);
 		$pwd_ = pg_escape_string($pwd);
 
-		$ensure_credentials = $this->verify_username_password($un_, $pwd_);
+		$this->verify_username_password($un_, $pwd_);
 
-		if ($ensure_credentials == true) {
-			// $_SESSION['status'] = 'authorised';
-			// return true;
-			// for ($i = 0; $i < count($id['k']); $i++) {
-			// 	if ($un == $id['k'][$i]['username']) {
-			// 		$uId = $id['k'][$i]['userID'];
-			// 	}
-			// }
-			// setcookie("userId", $uId);
-				echo "match";
-				die();
+		// if ($ensure_credentials == true) {
+		// 	// $_SESSION['status'] = 'authorised';
+		// 	// return true;
+		// 	// for ($i = 0; $i < count($id['k']); $i++) {
+		// 	// 	if ($un == $id['k'][$i]['username']) {
+		// 	// 		$uId = $id['k'][$i]['userID'];
+		// 	// 	}
+		// 	// }
+		// 	// setcookie("userId", $uId);
+		// 		echo "match";
+		// 		die();
 
-		} else {
-			echo $un_, $pwd_;
-			die();
-		}
+		// } else {
+		// 	echo $un_, $pwd_;
+		// 	die();
+		// }
 	}
 
 	function log_user_out () {
