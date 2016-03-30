@@ -31,8 +31,10 @@ class profiles {
 		$stmt = $db->query("SELECT FROM userProfile WHERE username = '" . $un . "' AND password = '" . $pwd . "'"); 
 		// $stmt->execute();
 		// $stmt = $db->query("SELECT FROM userProfile WHERE username = '" . $un . "' AND password = '" . $pwd . "'");
+		$d = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-		echo $un, $pwd;
+		$h = array("k" => $d);
+		echo $h('k')[0];
 		die();
 			// if ($stmt->fetch()) {
 
