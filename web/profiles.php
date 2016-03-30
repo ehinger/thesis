@@ -57,7 +57,7 @@ class profiles {
 				die();
 
 		} else {
-			echo "don't";
+			echo $un_, $pwd_;
 			die();
 		}
 	}
