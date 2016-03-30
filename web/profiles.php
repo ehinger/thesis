@@ -36,11 +36,11 @@ class profiles {
 		if ($stmt->fetch()) {
 			for ($i = 0; $i < count($id['k']); $i++) {
 					if ($un == $id['k'][$i]['username']) {
-						$uId = $id['k'][$i]['userID'];
+						$uId = $id['k'][$i]['userid'];
 					}
 				}
 				setcookie("userId", $uId);
-					var_dump($id['k']);
+					var_dump($id['k'][$i]['userid']);
 					die();
 
 			} else {
