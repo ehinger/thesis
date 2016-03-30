@@ -24,46 +24,44 @@ class profiles {
 		}
 	}
 
-	function verify_username_password ($un, $pwd, $id) {
+	function verify_username_password ($un, $pwd) {
 		global $db;
 
-		$un_ = pg_escape_string($un);
-		$pwd_ = pg_escape_string($pwd);
-
-		$query = "SELECT FROM userProfile WHERE username = '" . $un_ . "' AND password = '" . $pwd_ . "' LIMIT 1";
+		$query = "SELECT FROM userProfile WHERE username = '" . $un . "' AND password = '" . $pwd . "' LIMIT 1";
 
 		$stmt = $db->prepare($query); 
 		$stmt->execute();
 
-		if ($stmt->fetch()) {
-			$stmt->close();
-			echo "match";
-			die();
+			if ($stmt->fetch()) {
+				$stmt->close();
+				return true;
+			}
+	}
+
+	function validate_user($un, $pwd, $id) {
+
+		$un_ = pg_escape_string($un);
+		$pwd_ = pg_escape_string($pwd);
+
+		$ensure_credentials = $this->verify_username_password($un_, $pwd_);
+
+		if ($ensure_credentials) {
+			// $_SESSION['status'] = 'authorised';
+			// return true;
+			// for ($i = 0; $i < count($id['k']); $i++) {
+			// 	if ($un == $id['k'][$i]['username']) {
+			// 		$uId = $id['k'][$i]['userID'];
+			// 	}
+			// }
+			// setcookie("userId", $uId);
+				echo "match";
+				die();
 
 		} else {
 			echo "don't";
 			die();
 		}
 	}
-
-	// function validate_user($un, $pwd, $id) {
-
-	// 	$un_ = pg_escape_string($un);
-	// 	$pwd_ = pg_escape_string($pwd);
-
-	// 	$ensure_credentials = $this->verify_username_password($un_, $pwd_);
-
-	// 	if ($ensure_credentials) {
-	// 		// $_SESSION['status'] = 'authorised';
-	// 		// return true;
-	// 		// for ($i = 0; $i < count($id['k']); $i++) {
-	// 		// 	if ($un == $id['k'][$i]['username']) {
-	// 		// 		$uId = $id['k'][$i]['userID'];
-	// 		// 	}
-	// 		// }
-	// 		// setcookie("userId", $uId);
-		
-	// }
 
 	function log_user_out () {
 		if (isset($_SESSION['status'])) {
