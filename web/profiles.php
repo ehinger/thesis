@@ -31,11 +31,11 @@ class profiles {
 
 		$stmt = $db->query("SELECT FROM userProfile WHERE username = '" . $un . "' AND password = '" . $pwd . "'"); 
 		$stmt->execute();
-
-			if ($stmt->fetch()) {
 				echo $un, $pwd;
 				die();
-			}
+			// if ($stmt->fetch()) {
+
+			// }
 	}
 
 	function validate_user($un, $pwd) {
