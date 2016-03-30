@@ -30,7 +30,7 @@ class profiles {
 		// $query = "SELECT FROM userProfile WHERE username = '" . $un . "' AND password = '" . $pwd . "' LIMIT 1";
 
 		$stmt = $db->query("SELECT FROM userProfile WHERE username = '" . $un . "' AND password = '" . $pwd . "'"); 
-		// $stmt->execute();
+		$stmt->execute();
 
 			if ($stmt->fetch()) {
 				return true;
