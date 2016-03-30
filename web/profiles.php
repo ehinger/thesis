@@ -40,7 +40,7 @@ class profiles {
 					}
 				}
 				setcookie("userId", $uId);
-					echo $id['k'];
+					var_dump($id['k']);
 					die();
 
 			} else {
