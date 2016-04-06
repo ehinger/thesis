@@ -6,11 +6,35 @@ html, body, div {
   border: 0; 
 }
 
+body {
+  overflow: hidden;
+}
+
 /************************************************************************************
 Navigation Bar
 ************************************************************************************/
 
 .navbutton {
+  width: 100%;
+  height: 10%;
+  top: 90%;
+  left: 0;
+  position: fixed;
+  background: black;
+  margin: 0;
+  z-index: 2;
+/*  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s; */
+}
+
+.offset3 {
+  top: 0; 
+}
+
+.menuBar {
   width: 100%;
   height: 10%;
   top: 0;
@@ -26,28 +50,8 @@ Navigation Bar
   transition: 0.3s; */
 }
 
-.menuBar {
-  width: 100%;
-  height: 10%;
-  top: -100%;
-  left: 0;
-  position: fixed;
-  background: black;
-  margin: 0;
-  z-index: 2;
-/*  -webkit-transition: 0.3s;
-  -moz-transition: 0.3s;
-  -ms-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s; */
-}
-
 .offset {
-  top: 0; 
-}
-
-.offset3 {
-  top: 90%; 
+  top: -100%; 
 }
 
 nav {
@@ -56,7 +60,7 @@ nav {
   position: fixed;
   background: white;
   margin: 0;
-  top: -100%;
+  top: 0;
   left: 0;
   z-index: 1;
 /*  -webkit-transition: 0.3s;
@@ -66,13 +70,25 @@ nav {
   transition: 0.3s; */
 }
 
+#login {
+  margin: 10%;
+  position: relative;
+  left: 10%;
+  top: 10%;
+}
+
+#login input {
+  width: 60%;
+  height: 5%;
+}
+
 /************************************************************************************
 Hack selection
 ************************************************************************************/
 
 .hackSelectionFrame {
   position: relative;
-  top: 10%; 
+  top: 100%; 
   left: 0; 
   padding: 0;
   width: 100%;
@@ -80,11 +96,18 @@ Hack selection
   overflow: hidden;
   overflow-y: hidden;
   float: left;
+  z-index: -1;
 /*  -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
   -ms-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s; */
+}
+
+.offset2 {
+  top: 10%; 
+  z-index: 1;
+  overflow: hidden;
 }
 
 .hackHeroImage {
@@ -198,13 +221,13 @@ Post a hack
 
 .newHackFrame {
   margin: 0;
-  bottom: 5%;
+  bottom: 100%; 
   right: 10%;
   position: fixed;
   width: 250px;
   height: 250px;
   background: white;
-  z-index: 2;
+  z-index: -1;
   border-radius: 100%;
   overflow: hidden;
 /*  -webkit-transition: 0.3s;
@@ -212,6 +235,12 @@ Post a hack
   -ms-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;*/
+}
+
+.offset7 { 
+  z-index: 2;
+  overflow: hidden;
+  bottom: 5%;
 }
 
 .newHackFrame h1 {
@@ -266,6 +295,7 @@ input:nth-child(2n+1), textarea:nth-child(2n+1), label:nth-child(2n+1) {
 
 .offset5 {
   bottom: 0;
+  top: 10%;
   right: 0;
   height: 100%;
   width: 100%;
@@ -283,28 +313,15 @@ input:nth-child(2n+1), textarea:nth-child(2n+1), label:nth-child(2n+1) {
 Instructions
 ************************************************************************************/
 
-#instructions {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 100%;
-  left: 0;
-  margin: 0;
-/*  -webkit-transition: 0.3s;
-  -moz-transition: 0.3s;
-  -ms-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;*/
-}
-
 .insframe {
   width: 100%;
   height: 0;
   position: relative;
-  top: 10%;
+  top: 100%;
   left: 0;
   margin: 0;
   opacity: 0;
+  z-index: 1;
 /*  -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
   -ms-transition: 0.3s;
@@ -316,6 +333,27 @@ Instructions
   margin-left: 10%;
   margin-right: 10%;
   margin-top: 12%;
+  position: relative;
+  font-size: 5em;
+  color: black;
+}
+
+.follow {
+  width: 100%;
+  height: 10%;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  left: 0;
+  bottom: 0;
+  background: blue;
+}
+
+.follow h1 {
+  margin: auto;
+  line-height: 10%;
+  top: 50%;
+  text-align: center;
   position: relative;
   font-size: 5em;
   color: black;
@@ -337,12 +375,7 @@ Instructions
   transition: 0.3s;*/
 }
 
-.offset2 {
-  top: 100%; 
-  z-index: -1;
-  overflow: hidden;
-}
 
 .offset4 {
-  overflow: hidden;
+  overflow: initial;
 }

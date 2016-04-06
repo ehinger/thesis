@@ -92,7 +92,7 @@ Navigation Bar
         <label>Password:</label>
         <input name="password" type="text">
 
-        <input type="checkbox" name="remainLoggedIn" value="remainLoggedIn"> Stay logged in?<br>
+<!--         <input type="checkbox" name="remainLoggedIn" value="remainLoggedIn"> Stay logged in?<br> -->
 
         <input type="submit" value="login" name="login">
 
@@ -220,6 +220,9 @@ for ($i = 0; $i < count($hacksGeneral['k']); $i++) {
             echo "<p class='hackInstructions'>".$hacksInstructions['k'][$ni]['instructions']."</p>";
         }
     }
+     echo "<div class='follow'>";       
+     echo "<h1>Follow</h1>";       
+     echo "</div>";   
     echo '</div>';
     echo "</div>";
 }

@@ -11,7 +11,7 @@ $(window).load(function(){
 		$(".insframe").toggleClass( "offset2" );
 		$(".navbutton").toggleClass( "offset3" );
 		$("body").toggleClass( "offset4" );
-		$(".newHackFrame").toggleClass( "offset2" );
+		$(".newHackFrame").toggleClass( "offset7" );
 	});
 
 	$(".hackSelectionButton").on('click', function() {
@@ -26,8 +26,8 @@ $(window).load(function(){
 			$("#" + hackID + " .hackSelectionButton").css("left", "100%");
 			$("#" + hackID + " .close").css("opacity", "1");
 			$("#" + hackID + " .close").css("right", "0");
-			$("body").addClass( "offset4" );
-			$(".newHackFrame").addClass( "offset2" );
+			$("body").removeClass( "offset4" );
+			$(".newHackFrame").removeClass( "offset7" );
 			$("body").scrollTop($("#" + hackID).offset().top - parseInt($(".navbutton").css("height")));
 			console.log();
 		}
@@ -50,8 +50,8 @@ $(window).load(function(){
 		$(".hackSelectionButton").css("left", "10%");
 		$(".close").css("opacity", "0");
 		$(".close").css("right", "100%");
-		$("body").removeClass( "offset4" );
-		$(".newHackFrame").removeClass( "offset2" );
+		$("body").addClass( "offset4" );
+		$(".newHackFrame").addClass( "offset7" );
 	});
 
 	$(".newHackFrame").on('click', function() {
@@ -59,7 +59,7 @@ $(window).load(function(){
 		$(".newHackFrame").css("overflowY", "scroll");
 		$(".newHackFrame").addClass( "offset5" );
 		$(".newHackFrame *").addClass( "offset6" );
-		$("body").addClass( "offset4" );
+		$("body").removeClass( "offset4" );
 	});
 
 	$(".newHackClose").on('click', function(event) {
@@ -68,7 +68,7 @@ $(window).load(function(){
 		console.log("closing");
 		$(".newHackFrame").removeClass( "offset5" );
 		$(".newHackFrame *").removeClass( "offset6" );
-		$("body").removeClass( "offset4" );
+		$("body").addClass( "offset4" );
 	});
 
 	// $('.button').click(function(){
