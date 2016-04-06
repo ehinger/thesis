@@ -60,13 +60,8 @@ class profiles {
 	// }
 
 	function log_user_out () {
-		if (isset($_SESSION['status'])) {
-			unset($_SESSION['status']);
-
-			if (isset($_COOKIE[session_name()])) {
-				setcookie(session_name(), '', time() - 10000);
-				session_destroy();
-			}
+		if (isset($_COOKIE["userId"])) {
+				setcookie("userId", '', time() - 10000);
 		}
 	}
 }

@@ -49,6 +49,10 @@ if (isset($_POST['register'])) {
     $profiles->register($_POST['usernameR'], $_POST['passwordR'], $_POST['password1R']);
 }
 
+if (isset($_POST['logout'])) {
+    $profiles->log_user_out();
+}
+
 // $identification = '';
 // for ($i = 0; $i<7; $i++) 
 // {
@@ -95,6 +99,12 @@ Navigation Bar
 <!--         <input type="checkbox" name="remainLoggedIn" value="remainLoggedIn"> Stay logged in?<br> -->
 
         <input type="submit" value="login" name="login">
+
+    </form>
+
+    <form id='logout' action='' method='post'>
+
+        <input type="submit" value="logout" name="logout">
 
     </form>
 
@@ -220,9 +230,9 @@ for ($i = 0; $i < count($hacksGeneral['k']); $i++) {
             echo "<p class='hackInstructions'>".$hacksInstructions['k'][$ni]['instructions']."</p>";
         }
     }
-     echo "<div class='follow'>";       
-     echo "<h1>Follow</h1>";       
-     echo "</div>";   
+    echo "<div class='follow'>";       
+    echo "<h1>Follow</h1>";       
+    echo "</div>";   
     echo '</div>';
     echo "</div>";
 }
