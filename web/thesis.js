@@ -15,7 +15,7 @@ $(window).load(function(){
 	});
 
 	$(".hackSelectionButton").on('click', function() {
-		hackI = $(this).parent().attr('id')
+		hackI = $(this).parent().attr('id');
 		function ihg (hackID) {
 			$(".hackSelectionFrame").css("overflowY", "scroll");
 			// $(".hackSelectionFrame").css("height", "100%");
@@ -69,6 +69,12 @@ $(window).load(function(){
 		$(".newHackFrame").removeClass( "offset5" );
 		$(".newHackFrame *").removeClass( "offset6" );
 		$("body").addClass( "offset4" );
+	});
+
+	var n = 1;
+
+	$(".follow").on('click', function() {
+		Cookies.set('follow' + n++, $(this).parent().attr('id'));
 	});
 
 	// $('.button').click(function(){

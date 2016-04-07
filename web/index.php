@@ -6,7 +6,7 @@
     <title>hacks</title>
     <link rel='stylesheet' type='text/css' href='thesis.css'>
     <script type='text/javascript' src='jquery-2.2.0.min.js'></script>
-    
+    <script src="/js-cookie-2.1.0/src/js.cookie.js"></script>
 </head>
 
 <?php
