@@ -53,9 +53,9 @@ if (isset($_POST['logout'])) {
     $profiles->log_user_out();
 }
 
-// if (isset($_SERVER['REQUEST_METHOD'] === 'POST')) {
-//     setcookie("u", $_POST['follow']);
-// }
+if (isset($_SERVER['REQUEST_METHOD'] === 'POST')) {
+    setcookie("u", $_POST['follow']);
+}
 
 // $identification = '';
 // for ($i = 0; $i<7; $i++) 
