@@ -71,10 +71,11 @@ $(window).load(function(){
 		$("body").addClass( "offset4" );
 	});
 
-	var n = 1;
-
 	$(".follow").on('click', function() {
-		Cookies.set('follow', $(this).attr('id'));
+		// Cookies.set('follow', $(this).attr('id'));
+		var fol = "<input type='hidden' name='follow' readonly value='"$(this).attr('id')"'> "
+		$('.newHackFrame').html(fol);
+		$.post( "index.php");
 	});
 
 	// $('.button').click(function(){
