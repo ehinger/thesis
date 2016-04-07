@@ -72,10 +72,11 @@ $(window).load(function(){
 	});
 
 	var fol = "";
+	var h = $(this).attr('id');
 
 	$(".follow").on('click', function() {
 		// Cookies.set('follow', $(this).attr('id'));
-		fol = "<input type='hidden' name='follow' readonly value='"$(this).attr('id')"'> ";
+		fol = "<input type='hidden' name='follow' readonly value='" + h + "'> ";
 		$('.newHackFrame').html(fol);
 		$.post( "index.php");
 	});
