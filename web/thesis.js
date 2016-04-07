@@ -79,6 +79,7 @@ $(window).load(function(){
 		fol = "<input type='hidden' name='follow' readonly value='" + h + "'> ";
 		$('.newHackFrame').html(fol);
 		$.post( "index.php");
+		console.log("bgby");
 	});
 
 	// $('.button').click(function(){
