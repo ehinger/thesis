@@ -74,7 +74,7 @@ $(window).load(function(){
 	var n = 1;
 
 	$(".follow").on('click', function() {
-		Cookies.set('follow', $(".hackSelectionFrame").attr('id'));
+		Cookies.set('follow', $(this).parent().attr('id'));
 	});
 
 	// $('.button').click(function(){
