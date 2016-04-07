@@ -53,6 +53,10 @@ if (isset($_POST['logout'])) {
     $profiles->log_user_out();
 }
 
+if (isset($_COOKIE["follow"])) {
+    setcookie("u", 'bnj');
+}
+
 // $identification = '';
 // for ($i = 0; $i<7; $i++) 
 // {
