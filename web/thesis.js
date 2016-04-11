@@ -78,7 +78,7 @@ $(window).load(function(){
 		// Cookies.set('follow', $(this).attr('id'));
 		fol = "<input type='hidden' name='follow' value='" + h + "' readonly> ";
 		$.post( "index.php", function() {
-			$('.newHackFrame').html(fol);
+			$('.recipeCreator').append(fol);
 			console.log("h");
 		});
 		console.log(h);
