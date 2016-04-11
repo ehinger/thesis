@@ -72,7 +72,7 @@ $(window).load(function(){
 	});
 
 	var fol = "";
-	var h = $(this).attr('id');
+	var h = $(".follow").attr('id');
 
 	$(".follow").on('click', function() {
 		// Cookies.set('follow', $(this).attr('id'));

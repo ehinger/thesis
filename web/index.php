@@ -235,7 +235,7 @@ for ($i = 0; $i < count($hacksGeneral['k']); $i++) {
         }
     }
     echo "<div class='follow' id='".$hacksGeneral['k'][$i]['hackid']."'>";       
-    echo "<h1 id='".$hacksGeneral['k'][$i]['hackid']."'>Follow</h1>";       
+    echo "<h1>Follow</h1>";       
     echo "</div>";   
     echo '</div>';
     echo "</div>";
