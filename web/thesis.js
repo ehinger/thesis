@@ -76,10 +76,12 @@ $(window).load(function(){
 
 	$(".follow").on('click', function() {
 		// Cookies.set('follow', $(this).attr('id'));
-		fol = "<input type='hidden' name='follow' readonly value='" + h + "'> ";
-		$('.newHackFrame').html(fol);
-		$.post( "index.php");
-		console.log("bgby");
+		fol = "<input type='hidden' name='follow' value='" + h + "' readonly> ";
+		$.post( "index.php", function() {
+			$('.newHackFrame').html(fol);
+			console.log("h");
+		});
+		console.log(h);
 	});
 
 	// $('.button').click(function(){
