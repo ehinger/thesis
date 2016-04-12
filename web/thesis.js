@@ -81,9 +81,7 @@ $(window).load(function(){
 		$('#followForm').html(fol);
 		console.log("starting");
 
-		$( "#followForm" ).submit(function(event){
-			console.log("please work");
-		});
+		$( "bum" ).submit();
 	});
 
 	// $('.button').click(function(){
