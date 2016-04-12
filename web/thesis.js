@@ -78,11 +78,9 @@ $(window).load(function(){
 		h = $(this).attr('id');
 		// Cookies.set('follow', $(this).attr('id'));
 		fol = "<input type='hidden' name='followInput' value='" + h + "' readonly>";
-		$('#followForm').html(fol, function() {
-							console.log("almost");
+		$('#followForm').html(fol);
 			$( "#followForm" ).submit(function( event ) {
-
-
+console.log("almost");
 		  // Stop form from submitting normally
 		  event.preventDefault();
 
@@ -98,7 +96,6 @@ $(window).load(function(){
 		  posting.done(function( data ) {
 		  	console.log("sent");
 		  });
-		});
 		});
 		
 	});
