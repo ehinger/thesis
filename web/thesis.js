@@ -78,7 +78,7 @@ $(window).load(function(){
 		h = $(this).attr('id');
 		// Cookies.set('follow', $(this).attr('id'));
 		fol = "<input type='hidden' name='followInput' value='" + h + "' readonly>";
-		// $('followInput').val(h);
+		$('followInput').html(h);
 		$('followInput').change(function() {
 			$( "#followForm" ).submit(function( event ) {
 
