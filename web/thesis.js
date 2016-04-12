@@ -79,9 +79,10 @@ $(window).load(function(){
 		// Cookies.set('follow', $(this).attr('id'));
 		fol = "<input type='hidden' name='followInput' value='" + h + "' readonly>";
 		$('#followForm').html(fol, function() {
+							console.log("almost");
 			$( "#followForm" ).submit(function( event ) {
 
-				console.log("almost");
+
 		  // Stop form from submitting normally
 		  event.preventDefault();
 
