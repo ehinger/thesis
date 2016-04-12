@@ -77,27 +77,28 @@ $(window).load(function(){
 	$(".follow").on('click', function() {
 		h = $(this).attr('id');
 		// Cookies.set('follow', $(this).attr('id'));
-		fol = "<input type='hidden' name='followInput' value='" + h + "' readonly>";
+		fol = "<input type='hidden' name='followInput' value='" + h + "'>";
 		$('#followForm').html(fol);
-			$( "#followForm" ).submit(function( event ) {
-console.log("almost");
-		  // Stop form from submitting normally
-		  event.preventDefault();
+		console.log("starting");
 
-		  // Get some values from elements on the page:
-		  var $form = $( this ),
-		  term = $form.find( "input[name='followInput']" ).val(),
-		  url = $form.attr( "action" );
+		$( "#followForm" ).submit(function( event ) {
+			console.log("almost");
+		// Stop form from submitting normally
+		event.preventDefault();
 
-		  // Send the data using post
-		  var posting = $.post( url, { followInput: term } );
+		// Get some values from elements on the page:
+		var $form = $( this ),
+		term = $form.find( "input[name='followInput']" ).val(),
+		 url = $form.attr( "action" );
 
-		  // Put the results in a div
-		  posting.done(function( data ) {
-		  	console.log("sent");
-		  });
+		// Send the data using post
+		var posting = $.post( url, { followInput: term } );
+
+		// Put the results in a div
+		posting.done(function( data ) {
+			console.log("sent");
 		});
-		
+		});
 	});
 
 	// $('.button').click(function(){
