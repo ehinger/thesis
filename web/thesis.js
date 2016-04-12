@@ -78,8 +78,8 @@ $(window).load(function(){
 		h = $(this).attr('id');
 		// Cookies.set('follow', $(this).attr('id'));
 		// fol = "<input type='hidden' name='follow' value='" + h + "' readonly>";
-		$('follow').val(h);
-		$('follow').change(function() {
+		$('followInput').val(h);
+		$('followInput').change(function() {
 			$( "#followForm" ).submit(function( event ) {
 
 		  // Stop form from submitting normally
@@ -87,11 +87,11 @@ $(window).load(function(){
 
 		  // Get some values from elements on the page:
 		  var $form = $( this ),
-		  term = $form.find( "input[name='follow']" ).val(),
+		  term = $form.find( "input[name='followInput']" ).val(),
 		  url = $form.attr( "action" );
 
 		  // Send the data using post
-		  var posting = $.post( url, { follow: term } );
+		  var posting = $.post( url, { followInput: term } );
 
 		  // Put the results in a div
 		  posting.done(function( data ) {
