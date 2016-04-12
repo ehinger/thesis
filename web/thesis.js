@@ -2,6 +2,9 @@ var hackID;
 
 var ajaxurl;
 
+var fol = "";
+var h;
+
 $(window).load(function(){
 	$(".navbutton").on('click', function() {
 		$("nav").toggleClass( "offset" );
@@ -71,10 +74,8 @@ $(window).load(function(){
 		$("body").addClass( "offset4" );
 	});
 
-	var fol = "";
-	var h = $(this).parent().attr('id');
-
 	$(".follow").on('click', function() {
+		h = $(this).attr('id');
 		// Cookies.set('follow', $(this).attr('id'));
 		fol = "<input type='hidden' name='follow' value='" + h + "' readonly> ";
 		$('.newHackFrame').append(fol);
