@@ -81,24 +81,7 @@ $(window).load(function(){
 		$('#followForm').html(fol);
 		console.log("starting");
 
-		$( "#followForm" ).submit(function( event ) {
-			console.log("almost");
-		// Stop form from submitting normally
-		event.preventDefault();
-
-		// Get some values from elements on the page:
-		var $form = $( this ),
-		term = $form.find( "input[name='followInput']" ).val(),
-		 url = $form.attr( "action" );
-
-		// Send the data using post
-		var posting = $.post( url, { followInput: term } );
-
-		// Put the results in a div
-		posting.done(function( data ) {
-			console.log("sent");
-		});
-		});
+		$( "#followForm" ).submit();
 	});
 
 	// $('.button').click(function(){
