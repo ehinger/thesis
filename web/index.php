@@ -242,7 +242,7 @@ for ($i = 0; $i < count($hacksGeneral['k']); $i++) {
 }
 ?>
 
-<form enctype="multipart/form-data" id='follow' action="form.php" method="post">
+<form enctype="multipart/form-data" id='followForm' action="form.php" method="post">
 
 </form>
 
