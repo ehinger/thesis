@@ -81,6 +81,7 @@ $(window).load(function(){
 		$('#followForm').html(fol, function() {
 			$( "#followForm" ).submit(function( event ) {
 
+				console.log("almost");
 		  // Stop form from submitting normally
 		  event.preventDefault();
 
@@ -96,7 +97,7 @@ $(window).load(function(){
 		  posting.done(function( data ) {
 		  	console.log("sent");
 		  });
-		}););
+		});
 		});
 		
 	});
