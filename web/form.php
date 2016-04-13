@@ -31,8 +31,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['userfile']) && $_FILES
     }
     foreach ($_FILES['userfile'] as $k => $v) {
 
-    $nm = $_FILES['userfile']['name'][$k];
-    $tmpnm = $_FILES['userfile']['tmp_name'][$k];
+    $nm = $_FILES['userfile'][$k]['name'];
+    $tmpnm = $_FILES['userfile'][$k]['tmp_name'];
 
     if ($uploadOk == 0) {
         echo "Sorry, your file was not uploaded.";
