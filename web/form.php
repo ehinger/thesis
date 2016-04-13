@@ -5,6 +5,7 @@ require_once "dbconn.php";
 
 if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['userfile']) && $_FILES['userfile']['error'] == UPLOAD_ERR_OK && is_uploaded_file($_FILES['userfile']['tmp_name'])) {
     // FIXME: add more validation, e.g. using ext/fileinfo
+    foreach ($_FILES['userfile'] as $k => $v) {
     $check = getimagesize($_FILES["userfile"]["tmp_name"]);
     $target_file = basename($_FILES["userfile"]["name"]);
     $uploadOk = 1;
@@ -31,7 +32,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['userfile']) && $_FILES
 
     $nm = $_FILES['userfile']['name'];
     $tmpnm = $_FILES['userfile']['tmp_name'];
-    
+
     if ($uploadOk == 0) {
         echo "Sorry, your file was not uploaded.";
         die();
@@ -45,6 +46,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['userfile']) && $_FILES
             die();
         } 
     }
+
+}
 } 
 
 if (isset($_POST['push'])){

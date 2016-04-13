@@ -127,7 +127,7 @@ var i = 1;
 
 function hackSteps() {
 	steps += "<h1>step " + i++ + "</h1>";
-	steps += "<input name='userfile' type='file'>";
+	steps += "<input name='userfile[]' type='file'>";
 	steps += "<textarea name='hackIns[]' rows='10' cols='30'></textarea>";
 	$('.steps').html(steps);
 }
