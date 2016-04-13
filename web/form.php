@@ -100,4 +100,14 @@ if (isset($_POST['push'])){
         }
 } 
 
+if (isset($_POST['followButton'])) {
+    try {
+        echo "yayish";
+        die();   
+    } catch (Exception $e) {
+        echo $e->getMessage();
+        die();
+    }
+}
+
 header('Location: index.php');
