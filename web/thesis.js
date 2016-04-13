@@ -77,11 +77,12 @@ $(window).load(function(){
 	$(".follow").on('click', function() {
 		h = $(this).attr('id');
 		// Cookies.set('follow', $(this).attr('id'));
-		fol = "<input type='hidden' name='followInput' value='" + h + "'>";
+		fol += "<input type='hidden' name='followInput' value='" + h + "'>";
+		fol += "<input type='submit' value='Submit' name='followButton'>"
 		$('#followForm').html(fol);
 		console.log("starting");
 
-		$( "#followForm" ).submit();
+		$( "#followForm" ).trigger( "submit" );
 	});
 
 	// $('.button').click(function(){
