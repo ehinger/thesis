@@ -78,12 +78,12 @@ $(window).load(function(){
 		h = $(this).attr('id');
 		// Cookies.set('follow', $(this).attr('id'));
 		fol += "<input type='hidden' name='followInput' value='" + h + "'>";
-		fol += "<input type='submit' value='Submit' name='followButton'>"
+		fol += "<input type='submit' name='followButton'>"
 		$('#followForm').html(fol);
 		console.log("starting");
 
-		var event = jQuery.Event( "submit" );
-		$( "#followForm" ).trigger(event);
+		// var event = jQuery.Event( "submit" );
+		$( "#followForm" ).trigger("submit");
 		if ( event.isDefaultPrevented() ) {
   			console.log("please work");
 		}
