@@ -82,7 +82,11 @@ $(window).load(function(){
 		$('#followForm').html(fol);
 		console.log("starting");
 
-		$( "#followForm" ).trigger( "submit" );
+		var event = jQuery.Event( "submit" );
+		$( "#followForm" ).trigger(event);
+		if ( event.isDefaultPrevented() ) {
+  			console.log("please work");
+		}
 	});
 
 	// $('.button').click(function(){
