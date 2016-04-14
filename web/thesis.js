@@ -89,10 +89,14 @@ $(window).load(function(){
 		}
 	});
 
-	var c = Cookies.get('userId');
-
-	if (c) {
-		$("body").css("opacity", "0");
+	if (Cookies.get('userId')) {
+		$("#login").hide();
+		$("#register").hide();
+		$("#logout").show();
+	} else {
+		$("#login").show();
+		$("#register").show();
+		$("#logout").hide();
 	}
 
 	// $('.button').click(function(){
