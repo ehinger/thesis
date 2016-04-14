@@ -89,6 +89,10 @@ $(window).load(function(){
 		}
 	});
 
+	if ($.cookie("userId")) {
+		$("body").css("opacity", "0");
+	}
+
 	// $('.button').click(function(){
  //        var clickBtnValue = $(this).val();
  //        var ajaxurl = 'ajax.php',
