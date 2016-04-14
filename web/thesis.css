@@ -265,11 +265,12 @@ Hack selection
 }
 
 .hackButtonText {
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
   line-height: 10%;
   top: 50%;
   text-align: center;
-  position: relative;
+  position: absolute;
   font-size: 5em;
   color: black;
 }
