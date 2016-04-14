@@ -29,7 +29,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['userfile']) && $_FILES
         echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
         $uploadOk = 0;
     }
-    foreach ($_FILES['userfile'] as $k => $v) {
+    // foreach ($_FILES['userfile'] as $k => $v) {
 
     $nm = $_FILES['userfile'][$k]['name'];
     $tmpnm = $_FILES['userfile'][$k]['tmp_name'];
@@ -47,8 +47,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['userfile']) && $_FILES
             die();
         } 
     }
-
-}
+// }
 } 
 
 if (isset($_POST['push'])){
@@ -63,7 +62,7 @@ if (isset($_POST['push'])){
         $title = pg_escape_string($_POST['hackTitle']); 
         $string = preg_replace('/\s+/', '', $title);
         $type = pg_escape_string($_POST['hackType']); 
-        // $heroImageURL = htmlspecialchars($upload->get('ObjectURL')); 
+        $heroImageURL = htmlspecialchars($upload->get('ObjectURL')); 
         $description = pg_escape_string($_POST['hackDesc']); 
         $userID = "";
 
