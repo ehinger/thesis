@@ -105,12 +105,18 @@ Navigation Bar
         <input type="submit" value="login" name="login">
 
     </form>
-
+    <?php
+if (isset($_COOKIE["userId"])) {
+    ?>
     <form id='logout' action='' method='post'>
 
         <input type="submit" value="logout" name="logout">
 
-    </form>
+    </form>        
+    <?php
+    }
+    ?>
+
 
     <form id='register' action='' method='post'>
 
