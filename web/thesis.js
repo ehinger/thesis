@@ -89,7 +89,9 @@ $(window).load(function(){
 		}
 	});
 
-	if ($.cookie("userId")) {
+	var c = Cookies.get('userId');
+
+	if (c) {
 		$("body").css("opacity", "0");
 	}
 
