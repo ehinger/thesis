@@ -160,6 +160,7 @@ Post a hack
 
         <label>Description:</label>
         <textarea name="hackDesc" rows="4" cols="50">
+        </textarea>
 
         <div class="ingredient">        
             <label>Ingredients:</label>
