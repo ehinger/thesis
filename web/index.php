@@ -163,22 +163,23 @@ Post a hack
         </textarea>
 
         <div class="ingredient">        
-            <label>Ingredients:</label>
+            <label>Resources:</label>
             <input type="number" name="ingredientsQuantity[]" min="1">
             <input name="hackIngredients[]" type='text'>  
         </div>
 
-        <input type="button" onclick="ingredientSelection()" value="Add another">
+        <input type="button" onclick="ingredientSelection()" value="Add another resource">
 
         <label>Tags:</label>
         <input name="hackTags[]" type='text'>
         <input name="hackTags[]" type='text'>
         <input name="hackTags[]" type='text'>
 
+        <label>Title image:</label>
+        <input name="userfile[]" type="file">
+        
         <div class="steps">     
         </div>
-
-        <input name="userfile[]" type="file">
 
         <!--         <input type="submit" value="Upload"> -->
         
