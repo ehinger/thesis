@@ -105,7 +105,7 @@ Navigation Bar
         <input type="submit" value="login" name="login">
 
     </form>
-    
+
     <form id='logout' action='' method='post'>
 
         <input type="submit" value="logout" name="logout">
@@ -158,8 +158,8 @@ Post a hack
             <option value="communication">Communication</option>
         </select>
 
-        <label>description:</label>
-        <input name="hackDesc" type='text'>
+        <label>Description:</label>
+        <textarea name="hackDesc" rows="4" cols="50">
 
         <div class="ingredient">        
             <label>Ingredients:</label>
@@ -169,6 +169,7 @@ Post a hack
 
         <input type="button" onclick="ingredientSelection()" value="Add another">
 
+        <label>Tags:</label>
         <input name="hackTags[]" type='text'>
         <input name="hackTags[]" type='text'>
         <input name="hackTags[]" type='text'>
