@@ -24,7 +24,7 @@ $(window).load(function(){
 			// $(".hackSelectionFrame").css("height", "100%");
 			$("#" + hackID + " .infoWrapper").css("width", "100%");
 			$("#" + hackID + " .insframe").css("opacity", "1");
-			$("#" + hackID + " .insframe").css("height", "100%");
+			$("#" + hackID + " .insframe").css("height", "auto");
 			$("#" + hackID + " .hackSelectionButton").css("opacity", "0");
 			$("#" + hackID + " .hackSelectionButton").css("left", "100%");
 			$("#" + hackID + " .close").css("opacity", "1");

@@ -390,6 +390,7 @@ Instructions
   margin: 0;
   opacity: 0;
   z-index: 1;
+  overflow-y: scroll;
 /*  -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
   -ms-transition: 0.3s;
@@ -401,9 +402,10 @@ Instructions
   margin-left: 10%;
   margin-right: 10%;
   margin-top: 12%;
-  position: relative;
+  position: a;
   font-size: 5em;
   color: black;
+  float: right;
 }
 
 .follow {
