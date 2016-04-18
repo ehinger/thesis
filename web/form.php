@@ -37,6 +37,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['userfile']) && $_FILES
     for ($i = 0; $i < count($_FILES['userfile']['name']); $i++) {
 
         echo "string";
+        die();
 
     }
 
