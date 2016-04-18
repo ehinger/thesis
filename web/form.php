@@ -31,15 +31,15 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['userfile']) && $_FILES
     }
     // foreach ($_FILES['userfile'] as $k => $v) {
 
-    $nm = $_FILES['userfile'][$k]['name'];
-    $tmpnm = $_FILES['userfile'][$k]['tmp_name'];
+    $nm = $_FILES['userfile']['name'];
+    $tmpnm = $_FILES['userfile']['tmp_name'];
 
-    // for ($i = 0; $i < count($_FILES['userfile']['name']); $i++) {
+    for ($i = 0; $i < count($_FILES['userfile']['name']); $i++) {
 
-    //     echo "string";
-    //     die();
+        echo "string";
+        die();
 
-    // }
+    }
 
     if ($uploadOk == 0) {
         echo "Sorry, your file was not uploaded.";
@@ -69,7 +69,7 @@ if (isset($_POST['push'])){
         $title = pg_escape_string($_POST['hackTitle']); 
         $string = preg_replace('/\s+/', '', $title);
         $type = pg_escape_string($_POST['hackType']); 
-        $heroImageURL = htmlspecialchars($upload->get('ObjectURL')); 
+        // $heroImageURL = htmlspecialchars($upload->get('ObjectURL')); 
         $description = pg_escape_string($_POST['hackDesc']); 
         $userID = "";
 
