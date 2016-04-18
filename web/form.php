@@ -65,8 +65,8 @@ if (isset($_POST['push'])){
 
          // FIXME: add more validation, e.g. using ext/fileinfo
     
-    $check = getimagesize($_FILES["userfile"]["tmp_name"]);
-    $target_file = basename($_FILES["userfile"]["name"]);
+    // $check = getimagesize($_FILES["userfile"]["tmp_name"]);
+    // $target_file = basename($_FILES["userfile"]["name"]);
     $uploadOk = 1;
     $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
     if($check !== false) {
