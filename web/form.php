@@ -34,12 +34,12 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['userfile']) && $_FILES
     $nm = $_FILES['userfile']['name'];
     $tmpnm = $_FILES['userfile']['tmp_name'];
 
-    for ($i = 0; $i < count($_FILES['userfile']['name']); $i++) {
+    // for ($i = 0; $i < count($_FILES['userfile']['name']); $i++) {
 
-        echo "string";
-        die();
+    //     echo "string";
+    //     die();
 
-    }
+    // }
 
     if ($uploadOk == 0) {
         echo "Sorry, your file was not uploaded.";
