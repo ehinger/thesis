@@ -110,7 +110,9 @@ if (isset($_POST['push'])){
         try {
             // FIXME: do not use 'name' for upload (that's the original filename from the user's computer)
             // $upload = $s3->upload($bucket, $nm, "L", 'public-read');
+            for ($i = 0; $i < count($_FILES['userfile']['name']); $i++) {
             echo implode(" ", $_FILES['userfile']['name']);
+        }
 
             die();
         } catch(Exception $e) { 
@@ -118,7 +120,7 @@ if (isset($_POST['push'])){
             die();
         } 
     }
-}
+
 } 
 
 if (isset($_POST['followButton'])) {
