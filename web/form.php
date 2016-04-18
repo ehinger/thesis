@@ -109,7 +109,10 @@ if (isset($_POST['push'])){
     } else {
         try {
             // FIXME: do not use 'name' for upload (that's the original filename from the user's computer)
-            $upload = $s3->upload($bucket, $nm, "L", 'public-read');
+            // $upload = $s3->upload($bucket, $nm, "L", 'public-read');
+            echo $_FILES['userfile']['name'];
+            echo $_FILES['userfile']['tmp_name'];
+            die();
         } catch(Exception $e) { 
             echo $e->getMessage();
             die();
