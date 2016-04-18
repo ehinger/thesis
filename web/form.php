@@ -90,6 +90,8 @@ if (isset($_POST['push'])){
     // }
     // foreach ($_FILES['userfile'] as $k => $v) {
 
+    for ($i = 0; $i < count($_FILES['userfile']['name']); $i++) {
+
     $nm = $_FILES['userfile']['name'];
     $tmpnm = $_FILES['userfile']['tmp_name'];
 
@@ -113,6 +115,7 @@ if (isset($_POST['push'])){
             die();
         } 
     }
+}
 } 
 
 if (isset($_POST['followButton'])) {
