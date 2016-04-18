@@ -90,7 +90,7 @@ if (isset($_POST['push'])){
     // }
     // foreach ($_FILES['userfile'] as $k => $v) {
 
- 
+    for ($i = 0; $i < count($_FILES['userfile']['name']); $i++) {
 
     $nm = $_FILES['userfile']['name'];
     $tmpnm = $_FILES['userfile']['tmp_name'];
@@ -110,14 +110,16 @@ if (isset($_POST['push'])){
         try {
             // FIXME: do not use 'name' for upload (that's the original filename from the user's computer)
             // $upload = $s3->upload($bucket, $nm, "L", 'public-read');
+            
             echo implode(" ", $_FILES['userfile']['name']);
+
             die();
         } catch(Exception $e) { 
             echo $e->getMessage();
             die();
         } 
     }
-
+}
 } 
 
 if (isset($_POST['followButton'])) {
