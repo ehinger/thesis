@@ -4,13 +4,17 @@ require_once "dbconn.php";
 
 class profiles {
 
-	function register ($un, $pwd, $pwd1, $fN, $lN, $pPic) {
+	function register ($un, $pwd, $pwd1, $fN, $lN, $pPic, $pPicN;, $pPicTN) {
 		global $db;
 		global $bucket;
 		global $s3;
 
-		if (isset($_POST['proPic'])) {
-			$upload = $s3->upload($bucket, $_FILES['proPic']['name'], fopen($_FILES['proPic']['tmp_name'], "rb"), 'public-read');
+		$uImg = $pPic;
+		$uImgN = $pPicN;
+		$uImgTN = $pPicTN;
+
+		if (isset($uImg)) {
+			$upload = $s3->upload($bucket, $uImgN, fopen($uImgTN, "rb"), 'public-read');
 			$pro_pic = htmlspecialchars($upload->get('ObjectURL'));
 		}
 		
@@ -19,7 +23,7 @@ class profiles {
 		$pwd_check = pg_escape_string($pwd1);
 		$f_name = pg_escape_string($fN);
 		$l_name = pg_escape_string($lN);
-		if ($pwd_register == $pwd_check && isset($_POST["usernameR"]) && isset($_POST["fName"]) && isset($_POST["lName"]) && isset($_POST['proPic'])) {
+		if ($pwd_register == $pwd_check && isset($un) && isset($fN) && isset($lN) && isset($uImg)) {
 			$identification = '';
 			for ($i = 0; $i<7; $i++) 
 			{
