@@ -46,7 +46,7 @@ if (isset($_POST['login'])) {
 }
 
 if (isset($_POST['register'])) {
-    $profiles->register($_POST['usernameR'], $_POST['passwordR'], $_POST['password1R']);
+    $profiles->register($_POST['usernameR'], $_POST['passwordR'], $_POST['password1R'], $_POST['fName'], $_POST['lName'], $_POST['proPic']);
 }
 
 if (isset($_POST['logout'])) {
@@ -124,6 +124,15 @@ Navigation Bar
 
         <label>Confirm password:</label>
         <input name="password1R" type="password">
+
+        <label>First name:</label>
+        <input name="fName" type="password">
+
+        <label>Last name:</label>
+        <input name="lName" type="password">
+
+        <label>Profile pic:</label>
+        <input name="proPic" type="file">
 
         <input type="submit" value="register" name="register">
 

@@ -4,22 +4,26 @@ require_once "dbconn.php";
 
 class profiles {
 
-	function register ($un, $pwd, $pwd1) {
+	function register ($un, $pwd, $pwd1, $fN, $lN, $pPic) {
 		global $db;
 		$un_register = pg_escape_string($un);
 		$pwd_register = pg_escape_string($pwd);
 		$pwd_check = pg_escape_string($pwd1);
-		if ($pwd_register == $pwd_check) {
+		$f_name = pg_escape_string($fN);
+		$l_name = pg_escape_string($lN);
+		$pro_pic = pg_escape_string($pPic);
+		if ($pwd_register == $pwd_check && isset($_POST["usernameR"]) && isset($_POST["fName"]) && isset($_POST["lName"])) {
 			$identification = '';
 			for ($i = 0; $i<7; $i++) 
 			{
 			    $identification .= mt_rand(0,9);
 			}
-			$query_register = "INSERT INTO userProfile (userID, username, password) VALUES ('" . $un_register . $identification . "', '" . $un_register . "', '" . $pwd_register . "')";
+			$query_register = "INSERT INTO userProfile (userID, username, password, firstN, lastN, proPicURL) VALUES ('" . $un_register . $identification . "', '" . $un_register . "', '" . $pwd_register . "', '" . $f_name . "', '" . $l_name . "', '" . $pro_pic . "')";
 			$db->exec($query_register);
+			setcookie("userId", $un_register . $identification);
 			header('Location: index.php');
 		} else {
-			echo "passwords don't match";
+			echo "Field left empty";
 			die();
 		}
 	}
