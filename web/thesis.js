@@ -21,6 +21,7 @@ $(window).load(function(){
 	$(".startRegistration").on('click', function() {
 		$("#register").show();
 		$("#login").hide();
+		$(this).hide();
 	});
 
 	$(".hackSelectionButton").on('click', function() {
