@@ -4,7 +4,7 @@ require_once "dbconn.php";
 
 class profiles {
 
-	function register ($un, $pwd, $pwd1, $fN, $lN, $pPic, $pPicN;, $pPicTN) {
+	function register ($un, $pwd, $pwd1, $fN, $lN, $pPic, $pPicN, $pPicTN) {
 		global $db;
 		global $bucket;
 		global $s3;
