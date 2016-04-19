@@ -97,11 +97,11 @@ $(window).load(function(){
 
 	if (Cookies.get('userId')) {
 		$("#login").hide();
-		$("#register").hide();
+		$(".startRegistration").hide();
 		$("#logout").show();
 	} else {
 		$("#login").show();
-		$("#register").show();
+		$(".startRegistration").show();
 		$("#logout").hide();
 	}
 
