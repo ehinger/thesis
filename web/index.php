@@ -126,10 +126,10 @@ Navigation Bar
         <input name="password1R" type="password">
 
         <label>First name:</label>
-        <input name="fName" type="password">
+        <input name="fName" type="text">
 
         <label>Last name:</label>
-        <input name="lName" type="password">
+        <input name="lName" type="text">
 
         <label>Profile pic:</label>
         <input name="proPic" type="file">

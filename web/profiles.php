@@ -6,13 +6,18 @@ class profiles {
 
 	function register ($un, $pwd, $pwd1, $fN, $lN, $pPic) {
 		global $db;
+
+		if (isset($_POST['proPic'])) {
+			$upload = $s3->upload($bucket, $_FILES['userfile']['name'];, fopen($_FILES['userfile']['tmp_name'], "rb"), 'public-read');
+			$pro_pic = htmlspecialchars($upload->get('ObjectURL'));
+		}
+		
 		$un_register = pg_escape_string($un);
 		$pwd_register = pg_escape_string($pwd);
 		$pwd_check = pg_escape_string($pwd1);
 		$f_name = pg_escape_string($fN);
 		$l_name = pg_escape_string($lN);
-		$pro_pic = pg_escape_string($pPic);
-		if ($pwd_register == $pwd_check && isset($_POST["usernameR"]) && isset($_POST["fName"]) && isset($_POST["lName"])) {
+		if ($pwd_register == $pwd_check && isset($_POST["usernameR"]) && isset($_POST["fName"]) && isset($_POST["lName"]) && isset($_POST['proPic'])) {
 			$identification = '';
 			for ($i = 0; $i<7; $i++) 
 			{
