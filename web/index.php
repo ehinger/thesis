@@ -106,6 +106,8 @@ Navigation Bar
 
     </form>
 
+    <div class="startRegistration"></div>
+
     <form id='logout' action='' method='post'>
 
         <input type="submit" value="logout" name="logout">

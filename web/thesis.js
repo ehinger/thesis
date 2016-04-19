@@ -8,6 +8,7 @@ var h;
 $(window).load(function(){
 	$(".navbutton").on('click', function() {
 		$("nav").toggleClass( "offset" );
+		$(".startRegistration").toggleClass( "offset" );
 		$(".menuBar").toggleClass( "offset" );
 		$(".hackSelectionFrame").toggleClass( "offset2" );
 		$("#instructions").toggleClass( "offset2" );
@@ -15,6 +16,11 @@ $(window).load(function(){
 		$(".navbutton").toggleClass( "offset3" );
 		$("body").toggleClass( "offset4" );
 		$(".newHackFrame").toggleClass( "offset7" );
+	});
+
+	$(".startRegistration").on('click', function() {
+		$("#register").show();
+		$("#login").hide();
 	});
 
 	$(".hackSelectionButton").on('click', function() {
