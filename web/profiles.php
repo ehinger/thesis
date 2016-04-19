@@ -6,6 +6,8 @@ class profiles {
 
 	function register ($un, $pwd, $pwd1, $fN, $lN, $pPic) {
 		global $db;
+		global $bucket;
+		global $s3;
 
 		if (isset($_POST['proPic'])) {
 			$upload = $s3->upload($bucket, $_FILES['proPic']['name'], fopen($_FILES['proPic']['tmp_name'], "rb"), 'public-read');
