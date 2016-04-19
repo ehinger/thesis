@@ -98,7 +98,7 @@ Navigation Bar
         <input name="username" type="text">
 
         <label>Password:</label>
-        <input name="password" type="text">
+        <input name="password" type="password">
 
 <!--         <input type="checkbox" name="remainLoggedIn" value="remainLoggedIn"> Stay logged in?<br> -->
 
@@ -118,10 +118,10 @@ Navigation Bar
         <input name="usernameR" type="text">
 
         <label>Password:</label>
-        <input name="passwordR" type="text">
+        <input name="passwordR" type="password">
 
         <label>Confirm password:</label>
-        <input name="password1R" type="text">
+        <input name="password1R" type="password">
 
         <input type="submit" value="register" name="register">
 
