@@ -8,7 +8,7 @@ class profiles {
 		global $db;
 
 		if (isset($_POST['proPic'])) {
-			$upload = $s3->upload($bucket, $_FILES['userfile']['name'], fopen($_FILES['userfile']['tmp_name'], "rb"), 'public-read');
+			$upload = $s3->upload($bucket, $_FILES['proPic']['name'], fopen($_FILES['proPic']['tmp_name'], "rb"), 'public-read');
 			$pro_pic = htmlspecialchars($upload->get('ObjectURL'));
 		}
 		
