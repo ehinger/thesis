@@ -100,10 +100,12 @@ $(window).load(function(){
 		$("#login").hide();
 		$(".startRegistration").hide();
 		$("#logout").show();
+		$(".newHackFrame").show();
 	} else {
 		$("#login").show();
 		$(".startRegistration").show();
 		$("#logout").hide();
+		$(".newHackFrame").hide();
 	}
 
 	// $('.button').click(function(){

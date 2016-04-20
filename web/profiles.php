@@ -14,7 +14,7 @@ class profiles {
 		$uImgTN = $pPicTN;
 
 		// if (isset($uImg)) {
-		// 	$upload = $s3->upload($bucket, $uImgN, "l", 'public-read');, $pPicTN && isset($uImg)
+		// 	$upload = $s3->upload($bucket, $uImgN, fopen($uImgTN, "rb"), 'public-read');, $pPicTN && isset($uImg)
 		// 	$pro_pic = htmlspecialchars($upload->get('ObjectURL'));
 		// }
 		

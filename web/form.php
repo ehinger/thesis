@@ -22,7 +22,7 @@ if (isset($_POST['push'])){
         $type = pg_escape_string($_POST['hackType']); 
         // $heroImageURL = htmlspecialchars($upload->get('ObjectURL')); 
         $description = pg_escape_string($_POST['hackDesc']); 
-        $userID = "";
+        $userID = pg_escape_string($_COOKIE["userId"]);
 
         $db->exec("INSERT INTO hacksGeneral (hackId, heroImageURL, title, type, description, userID) VALUES ('" . $string . $identification . "', '" . $heroImageURL . "', '" . $title . "', '" . $type . "', '" . $description . "', '" . $userID . "')");
 
@@ -131,4 +131,4 @@ if (isset($_POST['followButton'])) {
     }
 }
 
-header('Location: index.php');
+// header('Location: index.php');
