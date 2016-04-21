@@ -100,6 +100,7 @@ Navigation Bar
     <h1 class='menuBarSettingsText'>Settings</h1>
 </div>
 <nav>
+<div class="logInPage">
     <form id='login' action='' method='post'>
 
         <label>Username:</label>
@@ -116,12 +117,17 @@ Navigation Bar
 
     <div class="startRegistration"></div>
 
+</div>
+
+<div class="loggedInPage">
     <form id='logout' action='' method='post'>
 
         <input type="submit" value="logout" name="logout">
 
     </form>   
+</div>
 
+<div class="registerPage">
     <form id='register' action='' method='post'>
 
         <label>Username:</label>
@@ -145,6 +151,7 @@ Navigation Bar
         <input type="submit" value="register" name="register">
 
     </form>
+</div>
 </nav>
 
 <!-- /************************************************************************************

@@ -40,7 +40,7 @@ Navigation Bar
   top: 0;
   left: 0;
   position: fixed;
-  background: black;
+  background: yellow;
   margin: 0;
   z-index: 2;
 /*  -webkit-transition: 0.3s;
