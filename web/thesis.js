@@ -9,7 +9,9 @@ $(window).load(function(){
 	$(".navbutton").on('click', function() {
 		$("nav").toggleClass( "offset" );
 		$(".startRegistration").toggleClass( "offset" );
-		$(".menuBar").toggleClass( "offset" );
+		$(".menuBarYourHacks").toggleClass( "offset" );
+		$(".menuBarProfile").toggleClass( "offset" );
+		$(".menuBarSettings").toggleClass( "offset" );
 		$(".hackSelectionFrame").toggleClass( "offset2" );
 		$("#instructions").toggleClass( "offset2" );
 		$(".insframe").toggleClass( "offset2" );

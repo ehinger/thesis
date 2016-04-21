@@ -50,6 +50,15 @@ Navigation Bar
   transition: 0.3s; */
 }
 
+.menuBarYourHacksText {
+  text-align: center;
+  vertical-align: middle;
+  line-height: 10%;
+  position: absolute;
+  font-size: 5em;
+  color: black;
+}
+
 .menuBarProfile {
   width: 33.3%;
   height: 10%;
@@ -66,6 +75,15 @@ Navigation Bar
   transition: 0.3s; */
 }
 
+.menuBarProfileText {
+  text-align: center;
+  vertical-align: middle;
+  line-height: 10%;
+  position: absolute;
+  font-size: 5em;
+  color: black;
+}
+
 .menuBarSettings {
   width: 33.3%;
   height: 10%;
@@ -80,6 +98,15 @@ Navigation Bar
   -ms-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s; */
+}
+
+.menuBarSettingsText {
+  text-align: center;
+  vertical-align: middle;
+  line-height: 10%;
+  position: absolute;
+  font-size: 5em;
+  color: black;
 }
 
 .offset {

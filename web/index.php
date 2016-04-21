@@ -90,9 +90,15 @@ Navigation Bar
 ************************************************************************************/ -->
 
 <div class='navbutton'></div>
-<div class='menuBarYourHacks'></div>
-<div class='menuBarProfile'></div>
-<div class='menuBarSettings'></div>
+<div class='menuBarYourHacks'>
+    <h1 class='menuBarYourHacksText'>Hacks</h1>
+</div>
+<div class='menuBarProfile'>
+    <h1 class='menuBarProfileText'>Profile</h1>
+</div>
+<div class='menuBarSettings'>
+    <h1 class='menuBarSettingsText'>Settings</h1>
+</div>
 <nav>
     <form id='login' action='' method='post'>
 
