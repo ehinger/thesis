@@ -34,13 +34,45 @@ Navigation Bar
   top: 0; 
 }
 
-.menuBar {
-  width: 100%;
+.menuBarYourHacks {
+  width: 33%;
   height: 10%;
   top: 0;
   left: 0;
   position: fixed;
   background: black;
+  margin: 0;
+  z-index: 2;
+/*  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s; */
+}
+
+.menuBarProfile {
+  width: 33%;
+  height: 10%;
+  top: 0;
+  left: 33%;
+  position: fixed;
+  background: blue;
+  margin: 0;
+  z-index: 2;
+/*  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s; */
+}
+
+.menuBarSettings {
+  width: 33%;
+  height: 10%;
+  top: 0;
+  left: 66%;
+  position: fixed;
+  background: red;
   margin: 0;
   z-index: 2;
 /*  -webkit-transition: 0.3s;
