@@ -97,13 +97,11 @@ Navigation Bar
 <div class='navbutton'></div>
 <div class='menuBarYourHacks'>
     <h1 class='menuBarYourHacksText'><?php
-    echo pg_escape_string($_COOKIE["userId"]);
+    echo $hacksGeneral['k'][$i]['userID'];
     ?></h1>
 </div>
 <div class='menuBarProfile'>
-    <h1 class='menuBarProfileText'><?php
-    echo $_COOKIE["userId"];
-    ?></h1>
+    <h1 class='menuBarProfileText'>Profile</h1>
 </div>
 <div class='menuBarSettings'>
     <h1 class='menuBarSettingsText'>Settings</h1>
