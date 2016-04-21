@@ -126,4 +126,4 @@ if (isset($_POST['followButton'])) {
     }
 }
 
-// header('Location: index.php');
+header('Location: index.php');
