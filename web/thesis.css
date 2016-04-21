@@ -204,6 +204,10 @@ font-size: 2.3em;
 
 .registerPage {
   overflow-y: scroll;
+  position: fixed;
+  margin: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .startRegistration {
