@@ -203,7 +203,7 @@ font-size: 2.3em;
 }
 
 .startRegistration {
-  position: relative;
+  position: absolute;
   margin: 20% 10%;
   width: 80%;
   height: 5%;
