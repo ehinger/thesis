@@ -20,10 +20,15 @@ $(window).load(function(){
 		$(".newHackFrame").toggleClass( "offset7" );
 	});
 
+	$(".menuBarYourHacks").on('click', function() {
+
+	}
+
 	$(".startRegistration").on('click', function() {
 		$("#register").show();
 		$("#login").hide();
 		$(this).hide();
+		$(".registerPage").show();
 	});
 
 	$(".hackSelectionButton").on('click', function() {
