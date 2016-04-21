@@ -218,6 +218,19 @@ font-size: 2.3em;
   background: green;
 }
 
+.yourHacksPage {
+  display: none;
+  position: relative;
+  top: 10%; 
+  left: 0; 
+  padding: 0;
+  width: 100%;
+  height: 85%;
+  overflow: hidden;
+  overflow-y: scroll;
+  float: left;
+}
+
 /************************************************************************************
 Hack selection
 ************************************************************************************/

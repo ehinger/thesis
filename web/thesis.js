@@ -24,14 +24,16 @@ $(window).load(function(){
 		$(".logInPage").hide();
 		$(".loggedInPage").hide();
 		$(".registerPage").hide();
+		$(".yourHacksPage").show();
 	});
 
 	$(".menuBarProfile").on('click', function() {
+		$(".registerPage").hide();
+		$(".yourHacksPage").hide();
 		if (Cookies.get('userId')) {
 			$(".loggedInPage").show();
 		} else {
 			$(".logInPage").show();
-			$(".registerPage").hide();
 		}
 	});
 
@@ -39,6 +41,7 @@ $(window).load(function(){
 		$(".logInPage").hide();
 		$(".loggedInPage").hide();
 		$(".registerPage").hide();
+		$(".yourHacksPage").hide();
 	});
 
 	$(".startRegistration").on('click', function() {
