@@ -155,16 +155,18 @@ function closeHackFrame() {
 var selection = "";
 
 function ingredientSelection() {
+	var selection = "";
 	selection += "<input type='number' name='ingredientsQuantity[]' min='1'>";
 	selection += "<input name='hackIngredients[]' type='text'>";
 	$('.ingredient').append(selection);
 }
 
-var steps = "";
+
 
 var i = 1;
 
 function hackSteps() {
+	var steps = "";
 	steps += "<h1>step " + i++ + "</h1>";
 	steps += "<input name='userfile[]' type='file'>";
 	steps += "<label>Step description:</label>";
