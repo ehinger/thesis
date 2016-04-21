@@ -22,6 +22,18 @@ $(window).load(function(){
 
 	$(".menuBarYourHacks").on('click', function() {
 		$(".logInPage").hide();
+		$(".loggedInPage").hide();
+		$(".registerPage").hide();
+	});
+
+	$(".menuBarProfile").on('click', function() {
+		$(".logInPage").show();
+	});
+
+	$(".menuBarSettings").on('click', function() {
+		$(".logInPage").hide();
+		$(".loggedInPage").hide();
+		$(".registerPage").hide();
 	});
 
 	$(".startRegistration").on('click', function() {
