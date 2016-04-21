@@ -31,6 +31,7 @@ $(window).load(function(){
 			$(".loggedInPage").show();
 		} else {
 			$(".logInPage").show();
+			$(".registerPage").hide();
 		}
 	});
 
