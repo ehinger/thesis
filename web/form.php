@@ -19,8 +19,8 @@ if (isset($_POST['push'])){
             }
         $title = pg_escape_string($_POST['hackTitle']); 
         $string = preg_replace('/\s+/', '', $title);
-        $type = pg_escape_string($_POST['hackType']); 
-        // $heroImageURL = htmlspecialchars($upload->get('ObjectURL')); 
+        // $type = pg_escape_string($_POST['hackType']); 
+        // // $heroImageURL = htmlspecialchars($upload->get('ObjectURL')); 
         $description = pg_escape_string($_POST['hackDesc']); 
         $userID = pg_escape_string($_COOKIE["userId"]);
 
@@ -90,8 +90,6 @@ if (isset($_POST['push'])){
     // }
     // foreach ($_FILES['userfile'] as $k => $v) {
 
-    for ($i = 0; $i < count($_FILES['userfile']['name']); $i++) {
-
     $nm = $_FILES['userfile']['name'];
     $tmpnm = $_FILES['userfile']['tmp_name'];
 
@@ -109,10 +107,7 @@ if (isset($_POST['push'])){
     } else {
         try {
             // FIXME: do not use 'name' for upload (that's the original filename from the user's computer)
-            // $upload = $s3->upload($bucket, $nm, "L", 'public-read');
-            echo implode(" ", $_FILES['userfile']['name']);
-            echo implode(" ", $_FILES['userfile']['tmp_name']);
-            die();
+            $upload = $s3->upload($bucket, $nm, fopen($tmpnm, "rb"), 'public-read');
         } catch(Exception $e) { 
             echo $e->getMessage();
             die();
