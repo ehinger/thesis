@@ -22,7 +22,7 @@ $(window).load(function(){
 
 	$(".menuBarYourHacks").on('click', function() {
 
-	}
+	});
 
 	$(".startRegistration").on('click', function() {
 		$("#register").show();
