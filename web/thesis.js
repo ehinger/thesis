@@ -27,7 +27,11 @@ $(window).load(function(){
 	});
 
 	$(".menuBarProfile").on('click', function() {
-		$(".logInPage").show();
+		if (Cookies.get('userId')) {
+			$(".loggedInPage").show();
+		} else {
+			$(".logInPage").show();
+		}
 	});
 
 	$(".menuBarSettings").on('click', function() {
@@ -114,14 +118,12 @@ $(window).load(function(){
 	});
 
 	if (Cookies.get('userId')) {
-		$("#login").hide();
-		$(".startRegistration").hide();
-		$("#logout").show();
+		$(".logInPage").hide();
+		$(".loggedInPage").show();
 		$(".newHackFrame").show();
 	} else {
-		$("#login").show();
-		$(".startRegistration").show();
-		$("#logout").hide();
+		$(".logInPage").show();
+		$(".loggedInPage").hide();
 		$(".newHackFrame").hide();
 	}
 
