@@ -35,7 +35,7 @@ Navigation Bar
 }
 
 .menuBarYourHacks {
-  width: 33%;
+  width: 33.3%;
   height: 10%;
   top: 0;
   left: 0;
@@ -51,10 +51,10 @@ Navigation Bar
 }
 
 .menuBarProfile {
-  width: 33%;
+  width: 33.3%;
   height: 10%;
   top: 0;
-  left: 33%;
+  left: 33.3%;
   position: fixed;
   background: blue;
   margin: 0;
@@ -67,10 +67,10 @@ Navigation Bar
 }
 
 .menuBarSettings {
-  width: 33%;
+  width: 33.3%;
   height: 10%;
   top: 0;
-  left: 66%;
+  left: 66.6%;
   position: fixed;
   background: red;
   margin: 0;
