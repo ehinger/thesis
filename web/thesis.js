@@ -21,7 +21,7 @@ $(window).load(function(){
 	});
 
 	$(".menuBarYourHacks").on('click', function() {
-		$(".registerPage").hide();
+		$(".registerPage").css("left", "100%");
 	});
 
 	$(".startRegistration").on('click', function() {
