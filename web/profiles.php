@@ -2,7 +2,7 @@
 
 require_once "dbconn.php";
 
-if (isset($_POST['login'])) {
+if (isset($_POST['register'])) {
 		global $db;
 		global $bucket;
 		global $s3;
@@ -11,23 +11,23 @@ if (isset($_POST['login'])) {
 		$uImgN = $pPicN;
 		$uImgTN = $pPicTN;
 
-		// if (isset($uImg)) {
-		// 	$upload = $s3->upload($bucket, $uImgN, fopen($uImgTN, "rb"), 'public-read');, $pPicTN && isset($uImg)
-		// 	$pro_pic = htmlspecialchars($upload->get('ObjectURL'));
-		// }
+		if (isset($uImg)) {
+			$upload = $s3->upload($bucket, $_FILES['proPic']['name'], fopen($_FILES['proPic']['tmp_name'], "rb"), 'public-read');
+			$pro_pic = htmlspecialchars($upload->get('ObjectURL'));
+		}
 		
-		$un_register = pg_escape_string($un);
-		$pwd_register = pg_escape_string($pwd);
-		$pwd_check = pg_escape_string($pwd1);
-		$f_name = pg_escape_string($fN);
-		$l_name = pg_escape_string($lN);
-		if ($pwd_register == $pwd_check && isset($un) && isset($fN) && isset($lN)) {
+		$un_register = pg_escape_string($_POST['usernameR']);
+		$pwd_register = pg_escape_string($_POST['passwordR']);
+		$pwd_check = pg_escape_string($_POST['password1R']);
+		$f_name = pg_escape_string($_POST['fName']);
+		$l_name = pg_escape_string($_POST['lName']);
+		if ($pwd_register == $pwd_check && isset($un_register) && isset($f_name) && isset($l_name) && isset($uImg)) {
 			$identification = '';
 			for ($i = 0; $i<7; $i++) 
 			{
 			    $identification .= mt_rand(0,9);
 			}
-			$query_register = "INSERT INTO userProfile (userID, username, password, firstN, lastN, proPicURL) VALUES ('" . $un_register . $identification . "', '" . $un_register . "', '" . $pwd_register . "', '" . $f_name . "', '" . $l_name . "', 'https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/608e1c34259817.56ca53c657e24.png')";
+			$query_register = "INSERT INTO userProfile (userID, username, password, firstN, lastN, proPicURL) VALUES ('" . $un_register . $identification . "', '" . $un_register . "', '" . $pwd_register . "', '" . $f_name . "', '" . $l_name . "', '" . $pro_pic . "')";
 			$db->exec($query_register);
 			setcookie("userId", $un_register . $identification);
 			header('Location: index.php');
@@ -37,7 +37,7 @@ if (isset($_POST['login'])) {
 		}
 }
 		
-if (isset($_POST['register'])) {
+if (isset($_POST['login'])) {
 		global $db;
 
 		$un_ = pg_escape_string($un);
