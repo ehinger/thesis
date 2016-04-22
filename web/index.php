@@ -96,9 +96,7 @@ Navigation Bar
 
 <div class='navbutton'></div>
 <div class='menuBarYourHacks'>
-    <h1 class='menuBarYourHacksText'><?php
-    echo $hacksGeneral['k'][$i]['userID'];
-    ?></h1>
+    <h1 class='menuBarYourHacksText'>Hacks</h1>
 </div>
 <div class='menuBarProfile'>
     <h1 class='menuBarProfileText'>Profile</h1>
@@ -163,7 +161,7 @@ Navigation Bar
 <div class="yourHacksPage">
     <?php
         for ($i = 0; $i < count($hacksGeneral['k']); $i++) {
-            if ($hacksGeneral['k'][$i]['userID'] == $_COOKIE["userId"]) {
+            if ($hacksGeneral['k'][$i]['userid'] == $_COOKIE["userId"]) {
                 echo "<div class='hackSelectionFrame' id='".$hacksGeneral['k'][$i]['hackid']."'>";
                 echo "<img class='hackHeroImage' src='".$hacksGeneral['k'][$i]['heroimageurl']."'>";
                 echo '<div class="infoWrapper"></div>';
