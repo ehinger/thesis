@@ -37,8 +37,8 @@ if (isset($_POST['register'])) {
 if (isset($_POST['login'])) {
 		global $db;
 
-		$un_ = pg_escape_string($un);
-		$pwd_ = pg_escape_string($pwd);
+		$un_ = pg_escape_string($_POST['username']);
+		$pwd_ = pg_escape_string($_POST['password']);
 
 		$stmt = $db->query("SELECT * FROM userProfile WHERE username = '" . $un_ . "' AND password = '" . $pwd_ . "'"); 
 		$stmt->execute();
