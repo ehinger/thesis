@@ -27,11 +27,11 @@ if (isset($_POST['register'])) {
 			$query_register = "INSERT INTO userProfile (userID, username, password, firstN, lastN, proPicURL) VALUES ('" . $un_register . $identification . "', '" . $un_register . "', '" . $pwd_register . "', '" . $f_name . "', '" . $l_name . "', '" . $pro_pic . "')";
 			$db->exec($query_register);
 			setcookie("userId", $un_register . $identification);
-			header('Location: index.php');
 		} else {
 			echo "Field left empty";
 			die();
 		}
+			header('Location: index.php');
 }
 		
 if (isset($_POST['login'])) {
@@ -50,18 +50,18 @@ if (isset($_POST['login'])) {
 					}
 				}
 				setcookie("userId", $uId);
-				header('Location: index.php');
 			} else {
 				echo $un_, $pwd_;
 				die();
 			}
+				header('Location: index.php');
 		}
 
 if (isset($_POST['logout'])) {
 		if (isset($_COOKIE["userId"])) {
 				setcookie("userId", '', time() - 10000);
-				header('Location: index.php');
 		}
+				header('Location: index.php');
 	}
 
 ?>
