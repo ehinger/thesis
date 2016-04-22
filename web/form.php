@@ -19,8 +19,8 @@ if (isset($_POST['push'])){
             }
         $title = pg_escape_string($_POST['hackTitle']); 
         $string = preg_replace('/\s+/', '', $title);
-        // $type = pg_escape_string($_POST['hackType']); 
-        // // $heroImageURL = htmlspecialchars($upload->get('ObjectURL')); 
+        $type = pg_escape_string($_POST['hackType']); 
+        $heroImageURL = htmlspecialchars($upload->get('ObjectURL')); 
         $description = pg_escape_string($_POST['hackDesc']); 
         $userID = pg_escape_string($_COOKIE["userId"]);
 
