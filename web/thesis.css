@@ -221,11 +221,10 @@ font-size: 2.3em;
 .yourHacksPage {
   display: none;
   position: relative;
-  top: 10%; 
+  top: 0; 
   left: 0; 
   padding: 0;
   width: 100%;
-  height: 85%;
   overflow: hidden;
   overflow-y: scroll;
   float: left;
