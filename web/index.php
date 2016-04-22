@@ -42,7 +42,7 @@ $hacksTags = array("k" => $hacks2);
 $hacksSupplies = array("k" => $hacks3);
 $hacksInstructions = array("k" => $hacks4);
 
-$profiles = new profiles;
+// $profiles = new profiles;
 
 $hackId = array("k" => $hacks5);
 
