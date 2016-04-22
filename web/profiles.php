@@ -3,15 +3,12 @@
 require_once "dbconn.php";
 
 if (isset($_POST['register'])) {
-		global $db;
-		global $bucket;
-		global $s3;
 
 		$uImg = $pPic;
 		$uImgN = $pPicN;
 		$uImgTN = $pPicTN;
 
-		if (isset($uImg)) {
+		if (isset($_FILES['proPic'])) {
 			$upload = $s3->upload($bucket, $_FILES['proPic']['name'], fopen($_FILES['proPic']['tmp_name'], "rb"), 'public-read');
 			$pro_pic = htmlspecialchars($upload->get('ObjectURL'));
 		}
@@ -53,6 +50,7 @@ if (isset($_POST['login'])) {
 					}
 				}
 				setcookie("userId", $uId);
+				header('Location: index.php');
 			} else {
 				echo $un_, $pwd_;
 				die();
@@ -62,8 +60,8 @@ if (isset($_POST['login'])) {
 if (isset($_POST['logout'])) {
 		if (isset($_COOKIE["userId"])) {
 				setcookie("userId", '', time() - 10000);
+				header('Location: index.php');
 		}
 	}
 
-	header('Location: index.php');
 ?>
