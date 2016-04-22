@@ -2,9 +2,7 @@
 
 require_once "dbconn.php";
 
-class profiles {
-
-	function register ($un, $pwd, $pwd1, $fN, $lN, $pPic, $pPicN) {
+if (isset($_POST['login'])) {
 		global $db;
 		global $bucket;
 		global $s3;
@@ -37,9 +35,9 @@ class profiles {
 			echo "Field left empty";
 			die();
 		}
-	}
-
-	function verify_username_password ($un, $pwd, $id) {
+}
+		
+if (isset($_POST['register'])) {
 		global $db;
 
 		$un_ = pg_escape_string($un);
@@ -59,12 +57,13 @@ class profiles {
 				echo $un_, $pwd_;
 				die();
 			}
-	}
+		}
 
-	function log_user_out () {
+if (isset($_POST['logout'])) {
 		if (isset($_COOKIE["userId"])) {
 				setcookie("userId", '', time() - 10000);
 		}
 	}
-}
+
+	header('Location: index.php');
 ?>
