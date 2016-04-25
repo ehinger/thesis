@@ -42,21 +42,21 @@ $hacksTags = array("k" => $hacks2);
 $hacksSupplies = array("k" => $hacks3);
 $hacksInstructions = array("k" => $hacks4);
 
-// $profiles = new profiles;
+$profiles = new profiles;
 
 $hackId = array("k" => $hacks5);
 
-// if (isset($_POST['login'])) {
-//     $profiles->verify_username_password($_POST['username'], $_POST['password'], $hackId);
-// }
+if (isset($_POST['login'])) {
+    $profiles->verify_username_password($_POST['username'], $_POST['password'], $hackId);
+}
 
-// if (isset($_POST['register'])) {
-//     $profiles->register($_POST['usernameR'], $_POST['passwordR'], $_POST['password1R'], $_POST['fName'], $_POST['lName'], $_POST['proPic'], $_FILES['proPic']['name'], $_FILES['proPic']['tmp_name']);
-// }
+if (isset($_POST['register'])) {
+    $profiles->register($_POST['usernameR'], $_POST['passwordR'], $_POST['password1R'], $_POST['fName'], $_POST['lName'], $_POST['proPic'], $_FILES['proPic']['name'], $_FILES['proPic']['tmp_name']);
+}
 
-// if (isset($_POST['logout'])) {
-//     $profiles->log_user_out();
-// }
+if (isset($_POST['logout'])) {
+    $profiles->log_user_out();
+}
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     setcookie("u", $_POST['follow']);
@@ -133,7 +133,7 @@ Navigation Bar
 </div>
 
 <div class="registerPage">
-    <form id='register' action='profiles.php' method='post'>
+    <form enctype="multipart/form-data" id='register' action='profiles.php' method='post'>
 
         <label>Username:</label>
         <input name="usernameR" type="text">

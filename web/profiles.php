@@ -1,43 +1,60 @@
 <?php
-
 require_once "dbconn.php";
+class profiles {
+	function register ($un, $pwd, $pwd1, $fN, $lN, $pPic, $pPicN, $pPicTN) {
 
-if (isset($_POST['register'])) {
+		global $db;
+		global $bucket;
+		global $s3;
 
 		$uImg = $pPic;
 		$uImgN = $pPicN;
 		$uImgTN = $pPicTN;
 
-		if (isset($_FILES['proPic'])) {
-			$upload = $s3->upload($bucket, $_FILES['proPic']['name'], fopen($_FILES['proPic']['tmp_name'], "rb"), 'public-read');
+		if (isset($uImg)) {
+
+			$upload = $s3->upload($bucket, $uImgN, "l", 'public-read');
 			$pro_pic = htmlspecialchars($upload->get('ObjectURL'));
+
 		}
 		
-		$un_register = pg_escape_string($_POST['usernameR']);
-		$pwd_register = pg_escape_string($_POST['passwordR']);
-		$pwd_check = pg_escape_string($_POST['password1R']);
-		$f_name = pg_escape_string($_POST['fName']);
-		$l_name = pg_escape_string($_POST['lName']);
-		if ($pwd_register == $pwd_check && isset($un_register) && isset($f_name) && isset($l_name) && isset($uImg)) {
+		$un_register = pg_escape_string($un);
+		$pwd_register = pg_escape_string($pwd);
+		$pwd_check = pg_escape_string($pwd1);
+		$f_name = pg_escape_string($fN);
+		$l_name = pg_escape_string($lN);
+
+		if ($pwd_register == $pwd_check && isset($un) && isset($fN) && isset($lN) && isset($uImg)) {
+
 			$identification = '';
-			for ($i = 0; $i<7; $i++) 
-			{
+
+			for ($i = 0; $i<7; $i++) {
+
 			    $identification .= mt_rand(0,9);
+
 			}
+
 			$query_register = "INSERT INTO userProfile (userID, username, password, firstN, lastN, proPicURL) VALUES ('" . $un_register . $identification . "', '" . $un_register . "', '" . $pwd_register . "', '" . $f_name . "', '" . $l_name . "', '" . $pro_pic . "')";
+
 			$db->exec($query_register);
+
 			setcookie("userId", $un_register . $identification);
+
 			header('Location: index.php');
+
 		} else {
+
 			echo "Field left empty";
 			die();
-		}
-}
-		
-if (isset($_POST['login'])) {
 
-		$un_ = pg_escape_string($_POST['username']);
-		$pwd_ = pg_escape_string($_POST['password']);
+		}
+	}
+	function verify_username_password ($un, $pwd, $id) {
+
+		global $db;
+
+		$un_ = pg_escape_string($un);
+		$pwd_ = pg_escape_string($pwd);
 
 		$stmt = $db->query("SELECT * FROM userProfile WHERE username = '" . $un_ . "' AND password = '" . $pwd_ . "'"); 
 		$stmt->execute();
@@ -45,22 +62,28 @@ if (isset($_POST['login'])) {
 		if ($stmt->fetch()) {
 			for ($i = 0; $i < count($id['k']); $i++) {
 					if ($un == $id['k'][$i]['username']) {
+
 						$uId = $id['k'][$i]['userid'];
+
 					}
 				}
+
 				setcookie("userId", $uId);
-				header('Location: index.php');
+
 			} else {
+
 				echo $un_, $pwd_;
 				die();
-			}
-		}
 
-if (isset($_POST['logout'])) {
+			}
+	}
+	function log_user_out () {
+
 		if (isset($_COOKIE["userId"])) {
+
 				setcookie("userId", '', time() - 10000);
-				header('Location: index.php');
+				
 		}
 	}
-
+}
 ?>
