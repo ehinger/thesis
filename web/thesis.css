@@ -244,9 +244,9 @@ font-size: 2.3em;
 }
 
 .yourSettingsPage input {
-  width: 100%;
+  width: 80%;
   height: 15%;
-  margin: 3% 0 3% 0;
+  margin: 10% 0 10% 0;
   padding: .5em;
   outline: none;
   font-size: 2em;
