@@ -179,8 +179,9 @@ function hackSteps() {
 	$('.steps').html(steps);
 }
 
-function textSize(val) {
-	$("html").css( "font-size", val);
+function textSize(v) {
+	$("html").css( "font-size", v);
+	console.log(v);
 }
 
 // $('a').on('click', function(){
