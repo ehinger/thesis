@@ -208,7 +208,7 @@ Navigation Bar
 
 <div class="yourSettingsPage">
     <label> Font size:</label>
-    <input class="textSize" type="range" name="textSize" min="12" max="36" onchange="textSize(this.value);"></input>
+    <input class="textSize" type="range" name="textSize" min="12" max="36" onchange="textSize(this.value)"></input>
 </div>
 </nav>
 
