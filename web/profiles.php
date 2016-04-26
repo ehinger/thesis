@@ -44,7 +44,7 @@ class profiles {
 
 		} else {
 
-			echo "Field left empty";
+			echo "Field left empty" . $un . $fN . $lN;
 			die();
 
 		}
@@ -82,7 +82,7 @@ class profiles {
 		if (isset($_COOKIE["userId"])) {
 
 				setcookie("userId", '', time() - 10000);
-				
+
 		}
 	}
 }
