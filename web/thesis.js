@@ -24,12 +24,14 @@ $(window).load(function(){
 		$(".logInPage").hide();
 		$(".loggedInPage").hide();
 		$(".registerPage").hide();
+		$(".yourSettingsPage").hide();
 		$(".yourHacksPage").show();
 	});
 
 	$(".menuBarProfile").on('click', function() {
 		$(".registerPage").hide();
 		$(".yourHacksPage").hide();
+		$(".yourSettingsPage").hide();
 		if (Cookies.get('userId')) {
 			$(".loggedInPage").show();
 		} else {
