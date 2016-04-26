@@ -179,6 +179,10 @@ function hackSteps() {
 	$('.steps').html(steps);
 }
 
+function textSize(val) {
+	$("html").css( "font-size", val);
+}
+
 // $('a').on('click', function(){
 // 	a = $(this).attr("class");
 // 	setTimeout(function () {
