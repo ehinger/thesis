@@ -205,6 +205,10 @@ Navigation Bar
         }
     ?>
 </div>
+
+<div class="yourSettingsPage">
+    <input type="range" name="textSize" min="12" max="36"></input>
+</div>
 </nav>
 
 <!-- /************************************************************************************

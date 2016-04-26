@@ -42,6 +42,7 @@ $(window).load(function(){
 		$(".loggedInPage").hide();
 		$(".registerPage").hide();
 		$(".yourHacksPage").hide();
+		$(".yourSettingsPage").show();
 	});
 
 	$(".startRegistration").on('click', function() {
