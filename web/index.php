@@ -106,7 +106,7 @@ Navigation Bar
 </div>
 <nav>
 <div class="logInPage">
-    <form id='login' action='profiles.php' method='post'>
+    <form id='login' action='' method='post'>
 
         <label>Username:</label>
         <input name="username" type="text">
@@ -125,7 +125,7 @@ Navigation Bar
 </div>
 
 <div class="loggedInPage">
-    <form id='logout' action='profiles.php' method='post'>
+    <form id='logout' action='' method='post'>
 
         <input type="submit" value="logout" name="logout">
 
@@ -133,7 +133,7 @@ Navigation Bar
 </div>
 
 <div class="registerPage">
-    <form enctype="multipart/form-data" id='register' action='profiles.php' method='post'>
+    <form enctype="multipart/form-data" id='register' action='' method='post'>
 
         <label>Username:</label>
         <input name="usernameR" type="text">
