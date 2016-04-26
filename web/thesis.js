@@ -180,7 +180,7 @@ function hackSteps() {
 }
 
 function textSize(v) {
-	$("html").css( "font-size", v);
+	$("html").css( "font-size", v + "px");
 	console.log(v);
 }
 
