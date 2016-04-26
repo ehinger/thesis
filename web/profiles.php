@@ -18,11 +18,20 @@ class profiles {
 
 		}
 		
-		$un_register = pg_escape_string($un);
-		$pwd_register = pg_escape_string($pwd);
-		$pwd_check = pg_escape_string($pwd1);
-		$f_name = pg_escape_string($fN);
-		$l_name = pg_escape_string($lN);
+		$strUn = strtolower($un);
+		$un_register = pg_escape_string($strUn);
+
+		$strpwd = strtolower($pwd);
+		$pwd_register = pg_escape_string($strpwd);
+
+		$strpwd1 = strtolower($pwd1);
+		$pwd_check = pg_escape_string($strpwd1);
+
+		$strfN = strtolower($fN);
+		$f_name = pg_escape_string($strfN);
+
+		$strlN = strtolower($lN);
+		$l_name = pg_escape_string($strlN);
 
 		if ($pwd_register == $pwd_check && isset($un) && isset($fN) && isset($lN) && isset($uImg)) {
 
@@ -53,7 +62,10 @@ class profiles {
 
 		global $db;
 
+		$strUn = strtolower($un);
 		$un_ = pg_escape_string($un);
+
+		$strpwd = strtolower($pwd);
 		$pwd_ = pg_escape_string($pwd);
 
 		$stmt = $db->query("SELECT * FROM userProfile WHERE username = '" . $un_ . "' AND password = '" . $pwd_ . "'"); 
