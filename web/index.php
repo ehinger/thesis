@@ -51,7 +51,7 @@ if (isset($_POST['login'])) {
 }
 
 if (isset($_POST['register'])) {
-    $profiles->register($_POST['usernameR'], $_POST['passwordR'], $_POST['password1R'], $_POST['fName'], $_POST['lName'], $_POST['proPic'], $_FILES['proPic']['name'], $_FILES['proPic']['tmp_name']);
+    $profiles->register($_POST['usernameR'], $_POST['passwordR'], $_POST['password1R'], $_POST['fName'], $_POST['lName'], $_FILES['proPic'], $_FILES['proPic']['name'], $_FILES['proPic']['tmp_name']);
 }
 
 if (isset($_POST['logout'])) {
