@@ -254,6 +254,7 @@ font-size: 2.3em;
 }
 
 .yourSettingsPage label {
+  position: absolute;
   margin: 20% 10%;
   padding: .5em;
   font-size: 2rem;
