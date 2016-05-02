@@ -211,7 +211,7 @@ function abilityProfileNextThreeQuestions() {
 	questionsNew += '<input class="q2" type="range" name="q' + n++ + '" min="0" max="10">';
 	questionsNew += '<label></label>';
 	questionsNew += '<input class="q3" type="range" name="q' + n++ + '" min="0" max="10">';
-	$('.q3').append(questionsNew);
+	$('.nextThreeQuestions').prepend(questionsNew);
 	// console.log(n++, n++, n++);
 }
 
