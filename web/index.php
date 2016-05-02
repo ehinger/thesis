@@ -92,9 +92,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <script type="text/javascript">
 
+document.getElementById("abilityProfileStageTwoButton").addEventListener("click", abilityProfileStageTwo);
+
 var n = 4;
 function abilityProfileStageTwo() {
-    $(".abilityProfileStageTwoButton").hide();
+    $("#abilityProfileStageTwoButton").hide();
     questions += <?php for ($i = 0; $i < count($hacksGeneral["k"]); $i++) {?>;
     questions += <?php echo "<p>On a scale of not at all to not a problem:</p>"?>; 
     questions += <?php echo "<label>".$hacksGeneral['k'][$i]['hackid']."</label>"?>;
@@ -209,7 +211,7 @@ Navigation Bar
             <option value="right">Right</option>
         </select>
 
-        <input class="abilityProfileStageTwoButton" type="button" onclick="abilityProfileStageTwo()" value="Next">
+        <input id="abilityProfileStageTwoButton" type="button" value="Next">
 
     </form>
 </div>
