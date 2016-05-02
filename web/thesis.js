@@ -161,7 +161,7 @@ function closeHackFrame() {
 var selection = "";
 
 function ingredientSelection() {
-	var selection = "";
+	selection = "";
 	selection += "<input type='number' name='ingredientsQuantity[]' min='1'>";
 	selection += "<input name='hackIngredients[]' type='text'>";
 	$('.ingredient').append(selection);
@@ -201,8 +201,10 @@ function abilityProfileStageTwo() {
 	$('#abilityRegister').append(questions);
 }
 
-function abilityProfileNextThreeQuestions() {
-	var questionsNew = ""; 
+var questionsNew = "";
+
+function abilityProfileNextThreeQuestions() { 
+	questionsNew = "";
 	questionsNew += '<label></label>';
 	questionsNew += '<input class="q1" type="range" name="q' + n++ + '" min="0" max="10">';
 	questionsNew += '<label></label>';
