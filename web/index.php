@@ -91,8 +91,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <script type="text/javascript">  
       // notice the quotes around the ?php tag         
-      var htmlString="<?php echo $htmlString; ?>";
-      alert(htmlString);
+      var jsStringFromPhp=<?php echo json_encode($jsString); ?>;
+      alert(jsStringFromPhp);
 </script>
 <!-- /************************************************************************************
 
