@@ -99,38 +99,42 @@ class profiles {
 ?>
 <script type="text/javascript">
 
-var n = 4;
-function abilityProfileStageTwo() {
-	$(".abilityProfileStageTwoButton").hide();
-	var questions = "";
-	questions += <?php;
-	questions += for ($i = 0; $i < count($hacksGeneral["k"]); $i++) {;
-	questions += echo "<p>On a scale of not at all to not a problem:</p>"; 
-	questions += echo "<label></label>";
-	questions += }
-	questions += '<input class="q1" type="range" name="q1" min="0" max="10">';
-	questions += '<label></label>';
-	questions += '<input class="q2" type="range" name="q2" min="0" max="10">';
-	questions += '<label></label>';
-	questions += '<input class="q3" type="range" name="q3" min="0" max="10">';
-	questions += '<input class="nextThreeQuestions" type="button" onclick="abilityProfileNextThreeQuestions()" value="Next">';
-	questions += ?>;
-	questions += '<input type="submit" value="abilityRegister" name="abilityRegister">';
-	$('#abilityRegister').append(questions);
-}
+var i = 0 ;
+i = <?php echo 35; ?>;
+alert( i );
 
-var questionsNew = "";
+// var n = 4;
+// function abilityProfileStageTwo() {
+// 	$(".abilityProfileStageTwoButton").hide();
+// 	var questions = "";
+// 	questions += <?php;
+// 	questions += for ($i = 0; $i < count($hacksGeneral["k"]); $i++) {;
+// 	questions += echo "<p>On a scale of not at all to not a problem:</p>"; 
+// 	questions += echo "<label></label>";
+// 	questions += }
+// 	questions += '<input class="q1" type="range" name="q1" min="0" max="10">';
+// 	questions += '<label></label>';
+// 	questions += '<input class="q2" type="range" name="q2" min="0" max="10">';
+// 	questions += '<label></label>';
+// 	questions += '<input class="q3" type="range" name="q3" min="0" max="10">';
+// 	questions += '<input class="nextThreeQuestions" type="button" onclick="abilityProfileNextThreeQuestions()" value="Next">';
+// 	questions += ?>;
+// 	questions += '<input type="submit" value="abilityRegister" name="abilityRegister">';
+// 	$('#abilityRegister').append(questions);
+// }
 
-function abilityProfileNextThreeQuestions() { 
-	questionsNew = "";
-	questionsNew += '<label></label>';
-	questionsNew += '<input class="q' + n + '" type="range" name="q' + n++ + '" min="0" max="10">';
-	questionsNew += '<label></label>';
-	questionsNew += '<input class="q' + n + '" type="range" name="q' + n++ + '" min="0" max="10">';
-	questionsNew += '<label></label>';
-	questionsNew += '<input class="q' + n + '" type="range" name="q' + n++ + '" min="0" max="10">';
-	$('.nextThreeQuestions').before(questionsNew);
-	// console.log(n++, n++, n++);
-}
+// var questionsNew = "";
+
+// function abilityProfileNextThreeQuestions() { 
+// 	questionsNew = "";
+// 	questionsNew += '<label></label>';
+// 	questionsNew += '<input class="q' + n + '" type="range" name="q' + n++ + '" min="0" max="10">';
+// 	questionsNew += '<label></label>';
+// 	questionsNew += '<input class="q' + n + '" type="range" name="q' + n++ + '" min="0" max="10">';
+// 	questionsNew += '<label></label>';
+// 	questionsNew += '<input class="q' + n + '" type="range" name="q' + n++ + '" min="0" max="10">';
+// 	$('.nextThreeQuestions').before(questionsNew);
+// 	// console.log(n++, n++, n++);
+// }
 </script>
 
