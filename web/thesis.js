@@ -185,6 +185,7 @@ function textSize(v) {
 }
 
 var n = 1;
+var on;
 
 function abilityProfileStageTwo() {
 	$(".abilityProfileStageTwoButton").hide();
@@ -199,6 +200,8 @@ function abilityProfileStageTwo() {
 	questions += '<input class="nextThreeQuestions" type="button" onclick="abilityProfileNextThreeQuestions()" value="Next">';
 	questions += '<input type="submit" value="abilityRegister" name="abilityRegister">';
 	$('#abilityRegister').append(questions);
+	on = n;
+	console.log(on);
 }
 
 function abilityProfileNextThreeQuestions() {
