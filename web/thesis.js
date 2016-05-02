@@ -189,14 +189,18 @@ var n = 4;
 function abilityProfileStageTwo() {
 	$(".abilityProfileStageTwoButton").hide();
 	var questions = "";
-	questions += '<p>On a scale of not at all to not a problem:</p>'; 
-	questions += '<label></label>';
+	questions += '<?php';
+	questions += 'for ($i = 0; $i < count($hacksGeneral["k"]); $i++) {';
+	questions += 'echo "<p>On a scale of not at all to not a problem:</p>"'; 
+	questions += 'echo "<label>\'".$hacksGeneral[\'k\'][$i][\'hackid\']."\'</label>"';
+	questions += '}'
 	questions += '<input class="q1" type="range" name="q1" min="0" max="10">';
 	questions += '<label></label>';
 	questions += '<input class="q2" type="range" name="q2" min="0" max="10">';
 	questions += '<label></label>';
-	questions += '<input class="q5" type="range" name="q3" min="0" max="10">';
+	questions += '<input class="q3" type="range" name="q3" min="0" max="10">';
 	questions += '<input class="nextThreeQuestions" type="button" onclick="abilityProfileNextThreeQuestions()" value="Next">';
+	questions += '?>';
 	questions += '<input type="submit" value="abilityRegister" name="abilityRegister">';
 	$('#abilityRegister').append(questions);
 }
