@@ -204,7 +204,6 @@ function abilityProfileStageTwo() {
 var questionsNew = "";
 
 function abilityProfileNextThreeQuestions() { 
-	questionsNew = "";
 	questionsNew += '<label></label>';
 	questionsNew += '<input class="q1" type="range" name="q' + n++ + '" min="0" max="10">';
 	questionsNew += '<label></label>';
