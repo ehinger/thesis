@@ -387,6 +387,7 @@ function abilityProfileStageTwo() {
     questions += <?php echo '<input class="nextThreeQuestions" type="button" onclick="abilityProfileNextThreeQuestions()" value="Next">'?>;
     questions += <?php echo '<input type="submit" value="abilityRegister" name="abilityRegister">'?>;
     $('#abilityRegister').append(questions);
+    console.log("yjgjhkj,h");
 }
 
 // var questionsNew = "";
