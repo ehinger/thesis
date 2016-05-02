@@ -97,64 +97,6 @@ class profiles {
 	}
 }
 
-try {
-    $results1 = $db->query('select * from hacksGeneral');
-    $results2 = $db->query('select * from hacksTags');
-    $results3 = $db->query('select * from hacksSupplies');
-    $results4 = $db->query('select * from hackInstructions');
-    $results5 = $db->query('select * from userProfile');
-    // echo '<pre>';
-    // var_dump($results->fetchAll());
-    // echo '</pre>';
-    // die();
-} catch (Exception $e) {
-    echo $e->getMessage();
-    die();
-}
-
-$hacks1 = $results1->fetchAll(PDO::FETCH_ASSOC);
-$hacks2 = $results2->fetchAll(PDO::FETCH_ASSOC);
-$hacks3 = $results3->fetchAll(PDO::FETCH_ASSOC);
-$hacks4 = $results4->fetchAll(PDO::FETCH_ASSOC);
-$hacks5 = $results5->fetchAll(PDO::FETCH_ASSOC);
-
-$hacksGeneral = array("k" => $hacks1);
-$hacksTags = array("k" => $hacks2);
-$hacksSupplies = array("k" => $hacks3);
-$hacksInstructions = array("k" => $hacks4);
-
 ?>
-<script type="text/javascript">
 
-var n = 4;
-function abilityProfileStageTwo() {
-	$(".abilityProfileStageTwoButton").hide();
-	questions += <?php for ($i = 0; $i < count($hacksGeneral["k"]); $i++) {?>;
-	questions += <?php echo "<p>On a scale of not at all to not a problem:</p>"?>; 
-	questions += <?php echo "<label>".$hacksGeneral['k'][$i]['hackid']."</label>"?>;
-	questions += <?php }?>;
-	questions += <?php echo '<input class="q1" type="range" name="q1" min="0" max="10">'?>;
-	questions += <?php echo '<label></label>'?>;
-	questions += <?php echo '<input class="q2" type="range" name="q2" min="0" max="10">'?>;
-	questions += <?php echo '<label></label>'?>;
-	questions += <?php echo '<input class="q3" type="range" name="q3" min="0" max="10">'?>;
-	questions += <?php echo '<input class="nextThreeQuestions" type="button" onclick="abilityProfileNextThreeQuestions()" value="Next">'?>;
-	questions += <?php echo '<input type="submit" value="abilityRegister" name="abilityRegister">'?>;
-	$('#abilityRegister').append(questions);
-}
-
-// var questionsNew = "";
-
-// function abilityProfileNextThreeQuestions() { 
-// 	questionsNew = "";
-// 	questionsNew += '<label></label>';
-// 	questionsNew += '<input class="q' + n + '" type="range" name="q' + n++ + '" min="0" max="10">';
-// 	questionsNew += '<label></label>';
-// 	questionsNew += '<input class="q' + n + '" type="range" name="q' + n++ + '" min="0" max="10">';
-// 	questionsNew += '<label></label>';
-// 	questionsNew += '<input class="q' + n + '" type="range" name="q' + n++ + '" min="0" max="10">';
-// 	$('.nextThreeQuestions').before(questionsNew);
-// 	// console.log(n++, n++, n++);
-// }
-</script>
 
