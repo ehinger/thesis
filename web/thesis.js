@@ -195,7 +195,7 @@ function abilityProfileStageTwo() {
 	questions += '<label></label>';
 	questions += '<input class="q3" type="range" name="q3" min="0" max="10"></input>';
 	questions += '<input type="submit" value="abilityRegister" name="abilityRegister">';
-	$('.leftOrRight').append(questions);
+	$('#abilityRegister').append(questions);
 }
 
 // $('a').on('click', function(){
