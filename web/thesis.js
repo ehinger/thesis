@@ -184,18 +184,18 @@ function textSize(v) {
 	console.log(v);
 }
 
-var n = 1;
+var n = 4;
 
 function abilityProfileStageTwo() {
 	$(".abilityProfileStageTwoButton").hide();
 	var questions = "";
 	questions += '<p>On a scale of not at all to not a problem:</p>'; 
 	questions += '<label></label>';
-	questions += '<input class="q1" type="range" name="q' + n++ + '" min="0" max="10">';
+	questions += '<input class="q1" type="range" name="q1" min="0" max="10">';
 	questions += '<label></label>';
-	questions += '<input class="q2" type="range" name="q' + n++ + '" min="0" max="10">';
+	questions += '<input class="q2" type="range" name="q2" min="0" max="10">';
 	questions += '<label></label>';
-	questions += '<input class="q3" type="range" name="q' + n++ + '" min="0" max="10">';
+	questions += '<input class="q3" type="range" name="q3" min="0" max="10">';
 	questions += '<input class="nextThreeQuestions" type="button" onclick="abilityProfileNextThreeQuestions()" value="Next">';
 	questions += '<input type="submit" value="abilityRegister" name="abilityRegister">';
 	$('#abilityRegister').append(questions);
@@ -209,8 +209,8 @@ function abilityProfileNextThreeQuestions() {
 	questionsNew += '<input class="q2" type="range" name="q' + n++ + '" min="0" max="10">';
 	questionsNew += '<label></label>';
 	questionsNew += '<input class="q3" type="range" name="q' + n++ + '" min="0" max="10">';
-	// $('.q3').after(questionsNew);
-	console.log(n++, n++, n++);
+	$('.q3').after(questionsNew);
+	// console.log(n++, n++, n++);
 }
 
 // $('a').on('click', function(){
