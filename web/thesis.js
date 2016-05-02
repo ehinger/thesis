@@ -192,7 +192,7 @@ function abilityProfileStageTwo() {
 	questions += '<?php';
 	questions += 'for ($i = 0; $i < count($hacksGeneral["k"]); $i++) {';
 	questions += 'echo "<p>On a scale of not at all to not a problem:</p>"'; 
-	questions += 'echo "<label>\'".$hacksGeneral[\'k\'][$i][\'hackid\']."\'</label>"';
+	questions += 'echo "<label></label>"';
 	questions += '}'
 	questions += '<input class="q1" type="range" name="q1" min="0" max="10">';
 	questions += '<label></label>';
