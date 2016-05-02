@@ -175,7 +175,7 @@ Navigation Bar
             <option value="right">Right</option>
         </select>
 
-        <input class="abilityProfileStageTwoButton" type="button" onclick="" value="Next">
+        <input class="abilityProfileStageTwoButton" type="button" onclick="abilityProfileStageTwo()" value="Next">
 
     </form>
 </div>
