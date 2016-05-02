@@ -92,7 +92,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <script type="text/javascript">
 
-document.getElementById("abilityProfileStageTwoButton").addEventListener("click", abilityProfileStageTwo);
 
 var n = 4;
 function abilityProfileStageTwo() {
@@ -124,6 +123,7 @@ function abilityProfileStageTwo() {
 //  $('.nextThreeQuestions').before(questionsNew);
 //  // console.log(n++, n++, n++);
 // }
+document.getElementById("abilityProfileStageTwoButton").addEventListener("click", abilityProfileStageTwo);
 </script>
 
 <!-- /************************************************************************************
