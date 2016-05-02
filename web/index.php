@@ -86,8 +86,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 ?>
 
+
 <body>
 
+<script type="text/javascript">  
+      // notice the quotes around the ?php tag         
+      var htmlString="<?php echo $htmlString; ?>";
+      alert(htmlString);
+</script>
 <!-- /************************************************************************************
 
 Navigation Bar
