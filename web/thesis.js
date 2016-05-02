@@ -184,10 +184,10 @@ function textSize(v) {
 	console.log(v);
 }
 
-var n = 1;
 var on;
 
 function abilityProfileStageTwo() {
+	var n = 1;
 	$(".abilityProfileStageTwoButton").hide();
 	var questions = "";
 	questions += '<p>On a scale of not at all to not a problem:</p>'; 
@@ -207,11 +207,11 @@ function abilityProfileStageTwo() {
 function abilityProfileNextThreeQuestions() {
 	var questionsNew = ""; 
 	questionsNew += '<label></label>';
-	questionsNew += '<input class="q1" type="range" name="q' + n++ + '" min="0" max="10">';
+	questionsNew += '<input class="q1" type="range" name="q' + on++ + '" min="0" max="10">';
 	questionsNew += '<label></label>';
-	questionsNew += '<input class="q2" type="range" name="q' + n++ + '" min="0" max="10">';
+	questionsNew += '<input class="q2" type="range" name="q' + on++ + '" min="0" max="10">';
 	questionsNew += '<label></label>';
-	questionsNew += '<input class="q3" type="range" name="q' + n++ + '" min="0" max="10">';
+	questionsNew += '<input class="q3" type="range" name="q' + on++ + '" min="0" max="10">';
 	$('.q3').after(questionsNew);
 }
 
