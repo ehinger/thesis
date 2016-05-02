@@ -207,11 +207,11 @@ function abilityProfileStageTwo() {
 function abilityProfileNextThreeQuestions() {
 	var questionsNew = ""; 
 	questionsNew += '<label></label>';
-	questionsNew += '<input class="q1" type="range" name="q1" min="0" max="10">';
+	questionsNew += '<input class="q1" type="range" name="q' + n++ + '" min="0" max="10">';
 	questionsNew += '<label></label>';
-	questionsNew += '<input class="q2" type="range" name="q2" min="0" max="10">';
+	questionsNew += '<input class="q2" type="range" name="q' + n++ + '" min="0" max="10">';
 	questionsNew += '<label></label>';
-	questionsNew += '<input class="q3" type="range" name="q3" min="0" max="10">';
+	questionsNew += '<input class="q3" type="range" name="q' + n++ + '" min="0" max="10">';
 	$('.q3').after(questionsNew);
 }
 
