@@ -186,7 +186,7 @@ function textSize(v) {
 
 function abilityProfileStageTwo() {
 	$(".abilityProfileStageTwoButton").hide();
-	var n = 0;
+	var n = 1;
 	var questions = "";
 	questions += '<p>On a scale of not at all to not a problem:</p>'; 
 	questions += '<label></label>';
