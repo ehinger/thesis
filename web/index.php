@@ -6,7 +6,6 @@
     <title>hacks</title>
     <link rel='stylesheet' type='text/css' href='thesis.css'>
     <script type='text/javascript' src='jquery-2.2.0.min.js'></script>
-    <script type='text/javascript' src='jquery-2.2.0.min.js'></script>
     <script src="/js-cookie-2.1.0/src/js.cookie.js"></script>
 </head>
 
@@ -176,7 +175,7 @@ Navigation Bar
             <option value="right">Right</option>
         </select>
 
-        <input id="abilityProfileStageTwoButton" type="button" value="Next">
+        <input class="abilityProfileStageTwoButton" type="button" onclick="" value="Next">
 
     </form>
 </div>
@@ -375,7 +374,7 @@ Instructions
 
 var n = 4;
 function abilityProfileStageTwo() {
-    $("#abilityProfileStageTwoButton").hide();
+    $(".abilityProfileStageTwoButton").hide();
     questions += <?php for ($i = 0; $i < count($hacksGeneral["k"]); $i++) {?>;
     questions += <?php echo "<p>On a scale of not at all to not a problem:</p>"?>; 
     questions += <?php echo "<label>".$hacksGeneral['k'][$i]['hackid']."</label>"?>;
@@ -403,7 +402,6 @@ function abilityProfileStageTwo() {
 //  $('.nextThreeQuestions').before(questionsNew);
 //  // console.log(n++, n++, n++);
 // }
-document.getElementById("abilityProfileStageTwoButton").addEventListener("click", abilityProfileStageTwo);
 </script>
 
 <script src='thesis.js' type='text/javascript' ></script>
