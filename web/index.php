@@ -175,7 +175,7 @@ Navigation Bar
             <option value="right">Right</option>
         </select>
 
-        <input class="abilityProfileStageTwoButton" type="button" onclick="abilityProfileStageTwo()" value="Next">
+        <input class="abilityProfileStageTwoButton" type="button" value="Next">
 
     </form>
 </div>
@@ -371,6 +371,7 @@ Instructions
 </div> -->
 <script type="text/javascript">
 
+document.getElementById("abilityProfileStageTwoButton").addEventListener("click", abilityProfileStageTwo);
 
 var n = 4;
 function abilityProfileStageTwo() {
