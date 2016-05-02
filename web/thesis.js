@@ -200,18 +200,17 @@ function abilityProfileStageTwo() {
 	questions += '<input class="nextThreeQuestions" type="button" onclick="abilityProfileNextThreeQuestions()" value="Next">';
 	questions += '<input type="submit" value="abilityRegister" name="abilityRegister">';
 	$('#abilityRegister').append(questions);
-	on = n;
 	console.log(on);
 }
 
 function abilityProfileNextThreeQuestions() {
 	var questionsNew = ""; 
 	questionsNew += '<label></label>';
-	questionsNew += '<input class="q1" type="range" name="q' + on++ + '" min="0" max="10">';
+	questionsNew += '<input class="q1" type="range" name="q' + n++ + '" min="0" max="10">';
 	questionsNew += '<label></label>';
-	questionsNew += '<input class="q2" type="range" name="q' + on++ + '" min="0" max="10">';
+	questionsNew += '<input class="q2" type="range" name="q' + n++ + '" min="0" max="10">';
 	questionsNew += '<label></label>';
-	questionsNew += '<input class="q3" type="range" name="q' + on++ + '" min="0" max="10">';
+	questionsNew += '<input class="q3" type="range" name="q' + n++ + '" min="0" max="10">';
 	$('.q3').after(questionsNew);
 }
 
