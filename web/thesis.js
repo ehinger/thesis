@@ -186,16 +186,29 @@ function textSize(v) {
 
 function abilityProfileStageTwo() {
 	$(".abilityProfileStageTwoButton").hide();
+	var n = 0;
 	var questions = "";
 	questions += '<p>On a scale of not at all to not a problem:</p>'; 
 	questions += '<label></label>';
-	questions += '<input class="q1" type="range" name="q1" min="0" max="10"></input>';
+	questions += '<input class="q1" type="range" name="q' + n++ + '" min="0" max="10"></input>';
 	questions += '<label></label>';
-	questions += '<input class="q2" type="range" name="q2" min="0" max="10"></input>';
+	questions += '<input class="q2" type="range" name="q' + n++ + '" min="0" max="10"></input>';
 	questions += '<label></label>';
-	questions += '<input class="q3" type="range" name="q3" min="0" max="10"></input>';
+	questions += '<input class="q3" type="range" name="q' + n++ + '" min="0" max="10"></input>';
+	questions += '<input class="nextThreeQuestions" type="button" onclick="abilityProfileNextThreeQuestions()" value="Next"></input>';
 	questions += '<input type="submit" value="abilityRegister" name="abilityRegister">';
 	$('#abilityRegister').append(questions);
+}
+
+function abilityProfileNextThreeQuestions() {
+	var questionsNew = ""; 
+	questionsNew += '<label></label>';
+	questionsNew += '<input class="q1" type="range" name="q1" min="0" max="10"></input>';
+	questionsNew += '<label></label>';
+	questionsNew += '<input class="q2" type="range" name="q2" min="0" max="10"></input>';
+	questionsNew += '<label></label>';
+	questionsNew += '<input class="q3" type="range" name="q3" min="0" max="10"></input>';
+	$('.q3').append(questionsNew);
 }
 
 // $('a').on('click', function(){
