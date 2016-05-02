@@ -184,10 +184,9 @@ function textSize(v) {
 	console.log(v);
 }
 
-var on;
+var n = 1;
 
 function abilityProfileStageTwo() {
-	var n = 1;
 	$(".abilityProfileStageTwoButton").hide();
 	var questions = "";
 	questions += '<p>On a scale of not at all to not a problem:</p>'; 
