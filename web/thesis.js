@@ -208,7 +208,7 @@ function abilityProfileNextThreeQuestions() {
 	questionsNew += '<input class="q2" type="range" name="q2" min="0" max="10">';
 	questionsNew += '<label></label>';
 	questionsNew += '<input class="q3" type="range" name="q3" min="0" max="10">';
-	$('.q3').append(questionsNew);
+	$('.q3').after(questionsNew);
 }
 
 // $('a').on('click', function(){
