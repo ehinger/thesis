@@ -158,6 +158,26 @@ Navigation Bar
     </form>
 </div>
 
+<div class="abilityProfilePage">
+    <form enctype="multipart/form-data" id='abilityRegister' action='' method='post'>
+
+        <label>Upper or Lower body:</label>
+        <select name="upOrLow">
+            <option value="upper">Upper</option>
+            <option value="lower">Lower</option>
+        </select>
+
+        <label>Left or Right side:</label>
+        <select class="leftOrRight" name="leftOrRight">
+            <option value="left">Left</option>
+            <option value="right">Right</option>
+        </select>
+
+        <input class="abilityProfileStageTwoButton" type="button" onclick="abilityProfileStageTwo()" value="Next">
+
+    </form>
+</div>
+
 <div class="yourHacksPage">
     <?php
         for ($i = 0; $i < count($hacksGeneral['k']); $i++) {

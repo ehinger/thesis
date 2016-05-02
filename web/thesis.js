@@ -184,6 +184,20 @@ function textSize(v) {
 	console.log(v);
 }
 
+function abilityProfileStageTwo() {
+	$(".abilityProfileStageTwoButton").hide();
+	var questions = "";
+	questions += '<p>On a scale of not at all to not a problem:</p>'; 
+	questions += '<label></label>';
+	questions += '<input class="q1" type="range" name="q1" min="0" max="10"></input>';
+	questions += '<label></label>';
+	questions += '<input class="q2" type="range" name="q2" min="0" max="10"></input>';
+	questions += '<label></label>';
+	questions += '<input class="q3" type="range" name="q3" min="0" max="10"></input>';
+	questions += '<input type="submit" value="abilityRegister" name="abilityRegister">';
+	$('.leftOrRight').append(questions);
+}
+
 // $('a').on('click', function(){
 // 	a = $(this).attr("class");
 // 	setTimeout(function () {
