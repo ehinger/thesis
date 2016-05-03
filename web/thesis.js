@@ -191,7 +191,7 @@ function abilityProfileStageTwo() {
 	$('.rangeOne').show();
     $('.nextThreeQuestions').show();
     $('.abilityRegister').show();
-    
+
     // questions += "";
     // questions += "<p>On a scale of not at all to not a problem:</p>"; 
     // questions += "<label></label>";
@@ -210,8 +210,9 @@ function abilityProfileStageTwo() {
 // var questionsNew = "";
 
 function abilityProfileNextThreeQuestions() {
-    $('.rangeTwo').show();
-
+    if ($('.rangeTwo').css('display') == 'none') {
+    	$('.rangeTwo').show();
+    }
  // questionsNew = "";
  // questionsNew += '<label></label>';
  // questionsNew += '<input class="q' + n + '" type="range" name="q' + n++ + '" min="0" max="10">';
