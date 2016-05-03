@@ -184,36 +184,49 @@ function textSize(v) {
 	console.log(v);
 }
 
-var questions = "";
+// var questions = "";
 
 function abilityProfileStageTwo() {
     $(".abilityProfileStageTwoButton").hide();
-    questions += "";
-    questions += "<p>On a scale of not at all to not a problem:</p>"; 
-    questions += "<label></label>";
-    questions += '<input class="q1" type="range" name="q1" min="0" max="10">';
-    questions += '<label></label>';
-    questions += '<input class="q2" type="range" name="q2" min="0" max="10">';
-    questions += '<label></label>';
-    questions += '<input class="q3" type="range" name="q3" min="0" max="10">';
-    questions += '<input class="nextThreeQuestions" type="button" onclick="abilityProfileNextThreeQuestions()" value="Next">';
-    questions += '<input type="submit" value="abilityRegister" name="abilityRegister">';
-    $('#abilityRegister').append(questions);
+    for (var i = 4; i = 6; i++) {
+    	$('.q' + i).show();
+    }
+    $('.nextThreeQuestions').show();
+    // questions += "";
+    // questions += "<p>On a scale of not at all to not a problem:</p>"; 
+    // questions += "<label></label>";
+    // questions += '<input class="q1" type="range" name="q1" min="0" max="10">';
+    // questions += '<label></label>';
+    // questions += '<input class="q2" type="range" name="q2" min="0" max="10">';
+    // questions += '<label></label>';
+    // questions += '<input class="q3" type="range" name="q3" min="0" max="10">';
+    // questions += '<input class="nextThreeQuestions" type="button" onclick="abilityProfileNextThreeQuestions()" value="Next">';
+    // questions += '<input type="submit" value="abilityRegister" name="abilityRegister">';
+    // $('#abilityRegister').append(questions);
 }
 
 var n = 4;
 
-var questionsNew = "";
+// var questionsNew = "";
 
-function abilityProfileNextThreeQuestions() { 
- questionsNew = "";
- questionsNew += '<label></label>';
- questionsNew += '<input class="q' + n + '" type="range" name="q' + n++ + '" min="0" max="10">';
- questionsNew += '<label></label>';
- questionsNew += '<input class="q' + n + '" type="range" name="q' + n++ + '" min="0" max="10">';
- questionsNew += '<label></label>';
- questionsNew += '<input class="q' + n + '" type="range" name="q' + n++ + '" min="0" max="10">';
- $('.nextThreeQuestions').before(questionsNew);
+function abilityProfileNextThreeQuestions() {
+if (n == 4) { 
+	for (var i = n; i < 7; i = n + 1) {
+    	$('.q' + i).show();
+    }
+} else if (n == 7) {
+	for (var i = n; i == 9; i = n + 1) {
+    	$('.q' + i).show();
+    }
+}
+ // questionsNew = "";
+ // questionsNew += '<label></label>';
+ // questionsNew += '<input class="q' + n + '" type="range" name="q' + n++ + '" min="0" max="10">';
+ // questionsNew += '<label></label>';
+ // questionsNew += '<input class="q' + n + '" type="range" name="q' + n++ + '" min="0" max="10">';
+ // questionsNew += '<label></label>';
+ // questionsNew += '<input class="q' + n + '" type="range" name="q' + n++ + '" min="0" max="10">';
+ // $('.nextThreeQuestions').before(questionsNew);
  // console.log(n++, n++, n++);
 }
 
