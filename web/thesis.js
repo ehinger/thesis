@@ -212,6 +212,8 @@ function abilityProfileStageTwo() {
 function abilityProfileNextThreeQuestions() {
     if ($('.rangeTwo').css('display') == 'none') {
     	$('.rangeTwo').show();
+    } else {
+    	$('.rangeThree').show();
     }
  // questionsNew = "";
  // questionsNew += '<label></label>';
