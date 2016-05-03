@@ -214,6 +214,7 @@ function abilityProfileNextThreeQuestions() {
     	$('.rangeTwo').show();
     } else {
     	$('.rangeThree').show();
+    	$('.nextThreeQuestions').hide();
     }
  // questionsNew = "";
  // questionsNew += '<label></label>';
