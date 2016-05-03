@@ -177,9 +177,8 @@ Navigation Bar
 
             <input class="abilityProfileStageTwoButton" type="button" onclick="abilityProfileStageTwo()" value="Next">
 
-            <p>On a scale of not at all to not a problem:</p>
-
             <div class="rangeOne">
+                <p>On a scale of not at all to not a problem:</p>
                 <label></label>
                 <input class="q1" type="range" name="q1" min="0" max="10">
                 <label></label>
