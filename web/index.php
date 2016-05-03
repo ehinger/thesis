@@ -23,7 +23,7 @@ try {
     $results4 = $db->query('select * from hackInstructions');
     $results5 = $db->query('select * from userProfile');
     $results6 = $db->query('select * from userAbility');
-    $results7 = $db->query('select * from userAnswers');
+    $results7 = $db->query('select * from userAnswersOne');
     $results8 = $db->query('select * from userQuestions');
     // echo '<pre>';
     // var_dump($results->fetchAll());
