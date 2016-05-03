@@ -187,8 +187,6 @@ Navigation Bar
                 <input class="q3" type="range" name="q3" min="0" max="10">
             </div>
 
-            <input class="nextThreeQuestions" type="button" onclick="abilityProfileNextThreeQuestions()" value="Next">
-
             <div class="rangeTwo">
                 <label></label>
                 <input class="q4" type="range" name="q4" min="0" max="10">
@@ -206,6 +204,8 @@ Navigation Bar
                 <label></label>
                 <input class="q9" type="range" name="q9" min="0" max="10">
             </div>
+
+            <input class="nextThreeQuestions" type="button" onclick="abilityProfileNextThreeQuestions()" value="Next">
 
             <input class="abilityRegister" type="submit" value="abilityRegister" name="abilityRegister">
 
