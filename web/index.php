@@ -107,81 +107,114 @@ Navigation Bar
     <h1 class='menuBarSettingsText'>Settings</h1>
 </div>
 <nav>
-<div class="logInPage">
-    <form id='login' action='' method='post'>
+    <div class="logInPage">
+        <form id='login' action='' method='post'>
 
-        <label>Username:</label>
-        <input name="username" type="text">
+            <label>Username:</label>
+            <input name="username" type="text">
 
-        <label>Password:</label>
-        <input name="password" type="password">
+            <label>Password:</label>
+            <input name="password" type="password">
 
-<!--         <input type="checkbox" name="remainLoggedIn" value="remainLoggedIn"> Stay logged in?<br> -->
+            <!--         <input type="checkbox" name="remainLoggedIn" value="remainLoggedIn"> Stay logged in?<br> -->
 
-        <input type="submit" value="login" name="login">
+            <input type="submit" value="login" name="login">
 
-    </form>
+        </form>
 
-    <div class="startRegistration"></div>
+        <div class="startRegistration"></div>
 
-</div>
+    </div>
 
-<div class="loggedInPage">
-    <form id='logout' action='' method='post'>
+    <div class="loggedInPage">
+        <form id='logout' action='' method='post'>
 
-        <input type="submit" value="logout" name="logout">
+            <input type="submit" value="logout" name="logout">
 
-    </form>   
-</div>
+        </form>   
+    </div>
 
-<div class="registerPage">
-    <form enctype="multipart/form-data" id='register' action='' method='post'>
+    <div class="registerPage">
+        <form enctype="multipart/form-data" id='register' action='' method='post'>
 
-        <label>Username:</label>
-        <input name="usernameR" type="text">
+            <label>Username:</label>
+            <input name="usernameR" type="text">
 
-        <label>Password:</label>
-        <input name="passwordR" type="password">
+            <label>Password:</label>
+            <input name="passwordR" type="password">
 
-        <label>Confirm password:</label>
-        <input name="password1R" type="password">
+            <label>Confirm password:</label>
+            <input name="password1R" type="password">
 
-        <label>First name:</label>
-        <input name="fName" type="text">
+            <label>First name:</label>
+            <input name="fName" type="text">
 
-        <label>Last name:</label>
-        <input name="lName" type="text">
+            <label>Last name:</label>
+            <input name="lName" type="text">
 
-        <label>Profile pic:</label>
-        <input name="proPic" type="file">
+            <label>Profile pic:</label>
+            <input name="proPic" type="file">
 
-        <input type="submit" value="register" name="register">
+            <input type="submit" value="register" name="register">
 
-    </form>
-</div>
+        </form>
+    </div>
 
-<div class="abilityProfilePage">
-    <form enctype="multipart/form-data" id='abilityRegister' action='' method='post'>
+    <div class="abilityProfilePage">
+        <form enctype="multipart/form-data" id='abilityRegister' action='' method='post'>
 
-        <label>Upper or Lower body:</label>
-        <select name="upOrLow">
-            <option value="upper">Upper</option>
-            <option value="lower">Lower</option>
-        </select>
+            <label>Upper or Lower body:</label>
+            <select name="upOrLow">
+                <option value="upper">Upper</option>
+                <option value="lower">Lower</option>
+            </select>
 
-        <label>Left or Right side:</label>
-        <select class="leftOrRight" name="leftOrRight">
-            <option value="left">Left</option>
-            <option value="right">Right</option>
-        </select>
+            <label>Left or Right side:</label>
+            <select class="leftOrRight" name="leftOrRight">
+                <option value="left">Left</option>
+                <option value="right">Right</option>
+            </select>
 
-        <input class="abilityProfileStageTwoButton" type="button" onclick="abilityProfileStageTwo()" value="Next">
+            <input class="abilityProfileStageTwoButton" type="button" onclick="abilityProfileStageTwo()" value="Next">
 
-    </form>
-</div>
+            <p>On a scale of not at all to not a problem:</p>
 
-<div class="yourHacksPage">
-    <?php
+            <div class="rangeOne">
+                <label></label>
+                <input class="q1" type="range" name="q1" min="0" max="10">
+                <label></label>
+                <input class="q2" type="range" name="q2" min="0" max="10">
+                <label></label>
+                <input class="q3" type="range" name="q3" min="0" max="10">
+            </div>
+
+            <input class="nextThreeQuestions" type="button" onclick="abilityProfileNextThreeQuestions()" value="Next">
+
+            <div class="rangeTwo">
+                <label></label>
+                <input class="q4" type="range" name="q4" min="0" max="10">
+                <label></label>
+                <input class="q5" type="range" name="q5" min="0" max="10">
+                <label></label>
+                <input class="q6" type="range" name="q6" min="0" max="10">
+            </div>
+
+            <div class="rangeThree">
+                <label></label>
+                <input class="q7" type="range" name="q7" min="0" max="10">
+                <label></label>
+                <input class="q8" type="range" name="q8" min="0" max="10">
+                <label></label>
+                <input class="q9" type="range" name="q9" min="0" max="10">
+            </div>
+
+            <input class="abilityRegister" type="submit" value="abilityRegister" name="abilityRegister">
+
+        </form>
+    </div>
+
+    <div class="yourHacksPage">
+        <?php
         for ($i = 0; $i < count($hacksGeneral['k']); $i++) {
             if ($hacksGeneral['k'][$i]['userid'] == $_COOKIE["userId"]) {
                 echo "<div class='hackSelectionFrame' id='".$hacksGeneral['k'][$i]['hackid']."'>";
@@ -225,13 +258,13 @@ Navigation Bar
             }
             
         }
-    ?>
-</div>
+        ?>
+    </div>
 
-<div class="yourSettingsPage">
-    <label> Font size:</label>
-    <input class="textSize" type="range" name="textSize" min="12" max="36" onchange="textSize(this.value)"></input>
-</div>
+    <div class="yourSettingsPage">
+        <label> Font size:</label>
+        <input class="textSize" type="range" name="textSize" min="12" max="36" onchange="textSize(this.value)"></input>
+    </div>
 </nav>
 
 <!-- /************************************************************************************

@@ -188,10 +188,9 @@ function textSize(v) {
 
 function abilityProfileStageTwo() {
     $(".abilityProfileStageTwoButton").hide();
-    for (var i = 4; i == 6; i++) {
-    	$('.q' + i).show();
-    }
+	$('.rangeOne').show();
     $('.nextThreeQuestions').show();
+    $('.abilityRegister').show();
     // questions += "";
     // questions += "<p>On a scale of not at all to not a problem:</p>"; 
     // questions += "<label></label>";

@@ -260,19 +260,23 @@ font-size: 2.3em;
   font-size: 2rem;
 }
 
-.q4 {
+.rangeOne {
   display: none;
 }
 
-.q5 {
+.rangeTwo {
   display: none;
 }
 
-.q6 {
+.rangeThree {
   display: none;
 }
 
 .nextThreeQuestions {
+  display: none;
+}
+
+.abilityRegister {
   display: none;
 }
 
