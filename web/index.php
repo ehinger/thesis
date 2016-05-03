@@ -170,10 +170,6 @@ Navigation Bar
         </form>
     </div>
 
-$userAbility = array("k" => $hacks6);
-$userAnswers = array("k" => $hacks7);
-$userQuestions = array("k" => $hacks8);
-
     <div class="abilityProfilePage">
         <form enctype="multipart/form-data" id='abilityRegister' action='' method='post'>
 
