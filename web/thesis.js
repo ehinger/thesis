@@ -188,7 +188,7 @@ function textSize(v) {
 
 function abilityProfileStageTwo() {
     $(".abilityProfileStageTwoButton").hide();
-    for (var i = 4; i = 6; i++) {
+    for (var i = 4; i == 6; i++) {
     	$('.q' + i).show();
     }
     $('.nextThreeQuestions').show();
@@ -205,20 +205,13 @@ function abilityProfileStageTwo() {
     // $('#abilityRegister').append(questions);
 }
 
-var n = 4;
+// var n = 4;
 
 // var questionsNew = "";
 
 function abilityProfileNextThreeQuestions() {
-if (n == 4) { 
-	for (var i = n; i < 7; i = n + 1) {
-    	$('.q' + i).show();
-    }
-} else if (n == 7) {
-	for (var i = n; i == 9; i = n + 1) {
-    	$('.q' + i).show();
-    }
-}
+
+
  // questionsNew = "";
  // questionsNew += '<label></label>';
  // questionsNew += '<input class="q' + n + '" type="range" name="q' + n++ + '" min="0" max="10">';
