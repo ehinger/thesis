@@ -184,7 +184,8 @@ function textSize(v) {
 	console.log(v);
 }
 
-var n = 4;
+var questions = "";
+
 function abilityProfileStageTwo() {
     $(".abilityProfileStageTwoButton").hide();
     questions += "";
@@ -199,6 +200,8 @@ function abilityProfileStageTwo() {
     questions += '<input type="submit" value="abilityRegister" name="abilityRegister">';
     $('#abilityRegister').append(questions);
 }
+
+var n = 4;
 
 var questionsNew = "";
 
