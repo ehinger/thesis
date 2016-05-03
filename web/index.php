@@ -369,43 +369,6 @@ Instructions
         <p>This is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thing</p>
     </div>
 </div> -->
-<script type="text/javascript">
-
-document.getElementById("abilityProfileStageTwoButton").addEventListener("click", abilityProfileStageTwo);
-
-var n = 4;
-function abilityProfileStageTwo() {
-    $(".abilityProfileStageTwoButton").hide();
-    questions += <?php for ($i = 0; $i < count($hacksGeneral["k"]); $i++) {?>;
-    questions += <?php echo "<p>On a scale of not at all to not a problem:</p>"?>; 
-    questions += <?php echo "<label>".$hacksGeneral['k'][$i]['hackid']."</label>"?>;
-    questions += <?php }?>;
-    questions += <?php echo '<input class="q1" type="range" name="q1" min="0" max="10">'?>;
-    questions += <?php echo '<label></label>'?>;
-    questions += <?php echo '<input class="q2" type="range" name="q2" min="0" max="10">'?>;
-    questions += <?php echo '<label></label>'?>;
-    questions += <?php echo '<input class="q3" type="range" name="q3" min="0" max="10">'?>;
-    questions += <?php echo '<input class="nextThreeQuestions" type="button" onclick="abilityProfileNextThreeQuestions()" value="Next">'?>;
-    questions += <?php echo '<input type="submit" value="abilityRegister" name="abilityRegister">'?>;
-    $('#abilityRegister').append(questions);
-    console.log("yjgjhkj,h");
-}
-
-// var questionsNew = "";
-
-// function abilityProfileNextThreeQuestions() { 
-//  questionsNew = "";
-//  questionsNew += '<label></label>';
-//  questionsNew += '<input class="q' + n + '" type="range" name="q' + n++ + '" min="0" max="10">';
-//  questionsNew += '<label></label>';
-//  questionsNew += '<input class="q' + n + '" type="range" name="q' + n++ + '" min="0" max="10">';
-//  questionsNew += '<label></label>';
-//  questionsNew += '<input class="q' + n + '" type="range" name="q' + n++ + '" min="0" max="10">';
-//  $('.nextThreeQuestions').before(questionsNew);
-//  // console.log(n++, n++, n++);
-// }
-</script>
-
 <script src='thesis.js' type='text/javascript' ></script>
 </body>
 </html>
