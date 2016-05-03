@@ -22,6 +22,9 @@ try {
     $results3 = $db->query('select * from hacksSupplies');
     $results4 = $db->query('select * from hackInstructions');
     $results5 = $db->query('select * from userProfile');
+    $results6 = $db->query('select * from userAbility');
+    $results7 = $db->query('select * from userAnswers');
+    $results8 = $db->query('select * from userQuestions');
     // echo '<pre>';
     // var_dump($results->fetchAll());
     // echo '</pre>';
@@ -36,11 +39,18 @@ $hacks2 = $results2->fetchAll(PDO::FETCH_ASSOC);
 $hacks3 = $results3->fetchAll(PDO::FETCH_ASSOC);
 $hacks4 = $results4->fetchAll(PDO::FETCH_ASSOC);
 $hacks5 = $results5->fetchAll(PDO::FETCH_ASSOC);
+$hacks6 = $results6->fetchAll(PDO::FETCH_ASSOC);
+$hacks7 = $results7->fetchAll(PDO::FETCH_ASSOC);
+$hacks8 = $results8->fetchAll(PDO::FETCH_ASSOC);
 
 $hacksGeneral = array("k" => $hacks1);
 $hacksTags = array("k" => $hacks2);
 $hacksSupplies = array("k" => $hacks3);
 $hacksInstructions = array("k" => $hacks4);
+$userProfile = array("k" => $hacks5);
+$userAbility = array("k" => $hacks6);
+$userAnswers = array("k" => $hacks7);
+$userQuestions = array("k" => $hacks8);
 
 $profiles = new profiles;
 
@@ -160,6 +170,10 @@ Navigation Bar
         </form>
     </div>
 
+$userAbility = array("k" => $hacks6);
+$userAnswers = array("k" => $hacks7);
+$userQuestions = array("k" => $hacks8);
+
     <div class="abilityProfilePage">
         <form enctype="multipart/form-data" id='abilityRegister' action='' method='post'>
 
@@ -176,35 +190,43 @@ Navigation Bar
             </select>
 
             <input class="abilityProfileStageTwoButton" type="button" onclick="abilityProfileStageTwo()" value="Next">
+<?php
+            for ($i = 0; $i < count($userQuestions['k']); $i++) {
+                if ($userQuestions['k'][$i]['focus'] == 1) {
+                    echo '<div class="rangeOne">'
+                    echo     '<p>On a scale of not at all to not a problem:</p>'
+                    echo     '<label>' . $userQuestions['k'][$i]['qone'] . '</label>'
+                    echo     '<input class="q1" type="range" name="q1" min="0" max="10">'
+                    echo     '<label>' . $userQuestions['k'][$i]['qtwo'] . '</label>'
+                    echo     '<input class="q2" type="range" name="q2" min="0" max="10">'
+                    echo     '<label>' . $userQuestions['k'][$i]['qthree'] . '</label>'
+                    echo     '<input class="q3" type="range" name="q3" min="0" max="10">'
+                    echo '</div>'
+                }
 
-            <div class="rangeOne">
-                <p>On a scale of not at all to not a problem:</p>
-                <label></label>
-                <input class="q1" type="range" name="q1" min="0" max="10">
-                <label></label>
-                <input class="q2" type="range" name="q2" min="0" max="10">
-                <label></label>
-                <input class="q3" type="range" name="q3" min="0" max="10">
-            </div>
+                if ($userQuestions['k'][$i]['focus'] == 2) {
+                    echo '<div class="rangeTwo">'
+                    echo     '<label>' . $userQuestions['k'][$i]['qone'] . '</label>'
+                    echo     '<input class="q4" type="range" name="q4" min="0" max="10">'
+                    echo     '<label>' . $userQuestions['k'][$i]['qtwo'] . '</label>'
+                    echo     '<input class="q5" type="range" name="q5" min="0" max="10">'
+                    echo     '<label>' . $userQuestions['k'][$i]['qthree'] . '</label>'
+                    echo     '<input class="q6" type="range" name="q6" min="0" max="10">'
+                    echo '</div>'
+                }
 
-            <div class="rangeTwo">
-                <label></label>
-                <input class="q4" type="range" name="q4" min="0" max="10">
-                <label></label>
-                <input class="q5" type="range" name="q5" min="0" max="10">
-                <label></label>
-                <input class="q6" type="range" name="q6" min="0" max="10">
-            </div>
-
-            <div class="rangeThree">
-                <label></label>
-                <input class="q7" type="range" name="q7" min="0" max="10">
-                <label></label>
-                <input class="q8" type="range" name="q8" min="0" max="10">
-                <label></label>
-                <input class="q9" type="range" name="q9" min="0" max="10">
-            </div>
-
+                if ($userQuestions['k'][$i]['focus'] == 3) {
+                    echo '<div class="rangeThree">'
+                    echo     '<label>' . $userQuestions['k'][$i]['qone'] . '</label>'
+                    echo     '<input class="q7" type="range" name="q7" min="0" max="10">'
+                    echo     '<label>' . $userQuestions['k'][$i]['qtwo'] . '</label>'
+                    echo     '<input class="q8" type="range" name="q8" min="0" max="10">'
+                    echo     '<label>' . $userQuestions['k'][$i]['qthree'] . '</label>'
+                    echo     '<input class="q9" type="range" name="q9" min="0" max="10">'
+                    echo '</div>'
+                }
+            }
+?>
             <input class="nextThreeQuestions" type="button" onclick="abilityProfileNextThreeQuestions()" value="Next">
 
             <input class="abilityRegister" type="submit" value="abilityRegister" name="abilityRegister">
