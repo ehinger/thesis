@@ -328,7 +328,7 @@ Post a hack
         <input name="hackTags[]" type='text'>
 
         <label>Title image:</label>
-        <input name="userfile[]" type="file">
+        <input name="userfile[]" type="file" multiple>
         
         <div class="steps">     
         </div>
