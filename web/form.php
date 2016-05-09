@@ -101,7 +101,6 @@ if (isset($_POST['push'])){
     //     die();
 
     // }
-            echo ($_FILES['userfile']['name'], " ", $_FILES['userfile']['tmp_name'], " ");
 
     if ($uploadOk == 0) {
         echo "Sorry, your file was not uploaded.";
@@ -111,6 +110,7 @@ if (isset($_POST['push'])){
         try {
             // FIXME: do not use 'name' for upload (that's the original filename from the user's computer)
             // $upload = $s3->upload($bucket, $nm, "L", 'public-read');
+            echo implode(" ", $_FILES['userfile']['name']);
         } catch(Exception $e) { 
             echo $e->getMessage();
             die();
