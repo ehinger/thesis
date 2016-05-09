@@ -112,12 +112,12 @@ if (isset($_POST['push'])){
             // $upload = $s3->upload($bucket, $nm, "L", 'public-read');
             echo implode(" ", $_FILES['userfile']['name']);
             echo implode(" ", $_FILES['userfile']['tmp_name']);
-            // die();
         } catch(Exception $e) { 
             echo $e->getMessage();
             die();
         } 
     }
+    die();
 }
 } 
 
