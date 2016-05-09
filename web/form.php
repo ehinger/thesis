@@ -110,8 +110,7 @@ if (isset($_POST['push'])){
         try {
             // FIXME: do not use 'name' for upload (that's the original filename from the user's computer)
             // $upload = $s3->upload($bucket, $nm, "L", 'public-read');
-            echo implode(" ", $_FILES['userfile']['name']);
-            echo implode(" ", $_FILES['userfile']['tmp_name']);
+            echo ("gear");
         } catch(Exception $e) { 
             echo $e->getMessage();
             die();
