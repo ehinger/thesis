@@ -117,7 +117,6 @@ if (isset($_POST['push'])){
         } 
     }
 }
-    die();
 } 
 
 if (isset($_POST['followButton'])) {
