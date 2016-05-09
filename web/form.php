@@ -90,7 +90,7 @@ if (isset($_POST['push'])){
     // }
     // foreach ($_FILES['userfile'] as $k => $v) {
 
-    for ($_FILES['userfile']['name'] as $k) {
+    for ($_FILES['userfile']['name'] as $k => $v) {
 
     $nm = $_FILES['userfile']['name'];
     $tmpnm = $_FILES['userfile']['tmp_name'];
