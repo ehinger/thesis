@@ -190,13 +190,21 @@ function textSize(v) {
 }
 
 // var questions = "";
+var abilitySwitch;
 
-function abilityProfileStageTwoUpper() {
-    $(".lowerLimbButton").hide();
-	$('.rangeOneUpper').show();
-    $('.nextThreeQuestions').show();
-    $('.abilityRegister').show();
-
+function abilityProfileStageTwo() {
+	if ($(this).val() == 'Upper Limb') {
+		abilitySwitch = 'Upper Limb';
+	    $(".lowerLimbButton").hide();
+		$('.rangeOneUpper').show();
+	    $('.nextThreeQuestions').show();
+	    $('.abilityRegister').show();
+	} else {
+	    $(".UpperLimbButton").hide();
+		$('.rangeOneLower').show();
+	    $('.nextThreeQuestions').show();
+	    $('.abilityRegister').show();
+	}
     // questions += "";
     // questions += "<p>On a scale of not at all to not a problem:</p>"; 
     // questions += "<label></label>";
@@ -215,12 +223,22 @@ function abilityProfileStageTwoUpper() {
 // var questionsNew = "";
 
 function abilityProfileNextThreeQuestions() {
-    if ($('.rangeTwoUpper').css('display') == 'none') {
-    	$('.rangeTwoUpper').show();
-    } else {
-    	$('.rangeThreeUpper').show();
-    	$('.nextThreeQuestions').hide();
-    }
+	if (abilitySwitch == 'Upper Limb') {
+		if ($('.rangeTwoUpper').css('display') == 'none') {
+			$('.rangeTwoUpper').show();
+		} else {
+			$('.rangeThreeUpper').show();
+			$('.nextThreeQuestions').hide();
+		}
+	} else {
+		if ($('.rangeTwoLower').css('display') == 'none') {
+			$('.rangeTwoLower').show();
+		} else {
+			$('.rangeThreeLower').show();
+			$('.nextThreeQuestions').hide();
+		}		
+	}
+    
  // questionsNew = "";
  // questionsNew += '<label></label>';
  // questionsNew += '<input class="q' + n + '" type="range" name="q' + n++ + '" min="0" max="10">';
