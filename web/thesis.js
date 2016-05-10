@@ -194,7 +194,7 @@ var abilitySwitch;
 
 function abilityProfileStageTwo() {
 	if ($(this).attr("class") == 'upperLimbButton') {
-		abilitySwitch = $(".upperLimbButton").val();
+		abilitySwitch = 'upperLimbButton';
 	    $(".lowerLimbButton").hide();
 		$('.rangeOneUpper').show();
 	    $('.nextThreeQuestions').show();
@@ -223,7 +223,7 @@ function abilityProfileStageTwo() {
 // var questionsNew = "";
 
 function abilityProfileNextThreeQuestions() {
-	if (abilitySwitch == 'Upper Limb') {
+	if (abilitySwitch == 'upperLimbButton') {
 		if ($('.rangeTwoUpper').css('display') == 'none') {
 			$('.rangeTwoUpper').show();
 		} else {
