@@ -178,8 +178,8 @@ Navigation Bar
             <input class="rightSideButton" type="button" onclick="" value="Right Side">
 
             <label>Upper or Lower body:</label>
-            <input class="upperLimbButton" type="button" onclick="abilityProfileStageTwoUpper()" value="Upper Limb">
-            <input class="lowerLimbButton" type="button" onclick="" value="Lower Limb">
+            <input class="upperLimbButton" type="button" onclick="abilityProfileStageTwo()" value="Upper Limb">
+            <input class="lowerLimbButton" type="button" onclick="abilityProfileStageTwo()" value="Lower Limb">
 
             <?php
             for ($i = 0; $i < count($userQuestions['k']); $i++) {
