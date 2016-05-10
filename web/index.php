@@ -231,11 +231,9 @@ Navigation Bar
     </div>
 
     <div class="yourHacksPage">
-        <div class="yourHacksButtons">
             <div class="yourHacksYourHacks"></div>
             <div class="yourHacksFollowedHacks"></div>
             <div class="yourHacksCreateHacks"></div>
-        </div>
 
         <div class="yourHacksMade">
             <?php
