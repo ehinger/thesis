@@ -193,7 +193,7 @@ function textSize(v) {
 var abilitySwitch;
 
 function abilityProfileStageTwo() {
-	if ($(this).attr("class")() == 'upperLimbButton') {
+	if ($(this).attr("class") == 'upperLimbButton') {
 		abilitySwitch = $(".upperLimbButton").val();
 	    $(".lowerLimbButton").hide();
 		$('.rangeOneUpper').show();
