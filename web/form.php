@@ -50,7 +50,6 @@ if (isset($_POST['push'])){
             } 
         }
     }
-                die();
 
     try {
         $db->beginTransaction();
