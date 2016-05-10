@@ -34,6 +34,7 @@ if (isset($_POST['push'])){
     // }
     // foreach ($_FILES['userfile'] as $k => $v) {
 
+    $d = 0;
     for ($i = 0; $i < count($_FILES['userfile']['name']); $i++) {
 
         if ($uploadOk == 0) {
@@ -41,7 +42,7 @@ if (isset($_POST['push'])){
             die();
         } else {
             try {
-                $upload = $s3->upload($bucket, $_FILES['userfile']['name'][$i], $_FILES['userfile']['tmp_name'][$i], 'public-read');
+                $upload = $s3->upload($bucket, $_FILES['userfile']['name'][$i], $d++, 'public-read');
             } catch(Exception $e) { 
                 echo $e->getMessage();
                 die();
@@ -60,7 +61,7 @@ if (isset($_POST['push'])){
         $title = pg_escape_string($_POST['hackTitle']); 
         $string = preg_replace('/\s+/', '', $title);
         $type = pg_escape_string($_POST['hackType']); 
-        $heroImageURL = htmlspecialchars($s3->getObjectUrl("thesis-tom-creagh", $_FILES['userfile']['name'][0])); 
+        $heroImageURL = htmlspecialchars($s3->getObjectUrl("thesis-tom-creagh", 1)); 
         $description = pg_escape_string($_POST['hackDesc']); 
         $userID = pg_escape_string($_COOKIE["userId"]);
 
