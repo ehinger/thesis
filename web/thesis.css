@@ -321,6 +321,18 @@ font-size: 2.3rem;
   display: none;
 }
 
+.rangeOnelower {
+  display: none;
+}
+
+.rangeTwolower {
+  display: none;
+}
+
+.rangeThreelower {
+  display: none;
+}
+
 .nextThreeQuestions {
   display: none;
 }

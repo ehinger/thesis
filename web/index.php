@@ -195,7 +195,7 @@ Navigation Bar
                     echo '</div>';
                 }
 
-                if ($userQuestions['k'][$i]['focus'] == 2) {
+                if ($userQuestions['k'][$i]['focus'] == 2 && $userQuestions['k'][$i]['area'] == 'upper') {
                     echo '<div class="rangeTwoUpper">';
                     echo     '<label>' . $userQuestions['k'][$i]['qone'] . '</label>';
                     echo     '<input class="q4" type="range" name="q4" min="0" max="10">';
@@ -206,7 +206,7 @@ Navigation Bar
                     echo '</div>';
                 }
 
-                if ($userQuestions['k'][$i]['focus'] == 3) {
+                if ($userQuestions['k'][$i]['focus'] == 3 && $userQuestions['k'][$i]['area'] == 'upper') {
                     echo '<div class="rangeThreeUpper">';
                     echo     '<label>' . $userQuestions['k'][$i]['qone'] . '</label>';
                     echo     '<input class="q7" type="range" name="q7" min="0" max="10">';
@@ -231,7 +231,7 @@ Navigation Bar
                     echo '</div>';
                 }
 
-                if ($userQuestions['k'][$i]['focus'] == 2) {
+                if ($userQuestions['k'][$i]['focus'] == 2 && $userQuestions['k'][$i]['area'] == 'lower') {
                     echo '<div class="rangeTwoLower">';
                     echo     '<label>' . $userQuestions['k'][$i]['qone'] . '</label>';
                     echo     '<input class="q4" type="range" name="q4" min="0" max="10">';
@@ -242,7 +242,7 @@ Navigation Bar
                     echo '</div>';
                 }
 
-                if ($userQuestions['k'][$i]['focus'] == 3) {
+                if ($userQuestions['k'][$i]['focus'] == 3 && $userQuestions['k'][$i]['area'] == 'lower') {
                     echo '<div class="rangeThreeLower">';
                     echo     '<label>' . $userQuestions['k'][$i]['qone'] . '</label>';
                     echo     '<input class="q7" type="range" name="q7" min="0" max="10">';
