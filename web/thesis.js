@@ -204,7 +204,7 @@ function abilityProfileStageTwo() {
 		$('.rangeOneLower').show();
 	    $('.nextThreeQuestions').show();
 	    $('.abilityRegister').show();
-	    console.log(abilitySwitch);
+	    console.log($(this).attr("class"));
 	}
     // questions += "";
     // questions += "<p>On a scale of not at all to not a problem:</p>"; 
