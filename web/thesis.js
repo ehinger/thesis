@@ -215,10 +215,10 @@ function abilityProfileStageTwoUpper() {
 // var questionsNew = "";
 
 function abilityProfileNextThreeQuestions() {
-    if ($('.rangeTwo').css('display') == 'none') {
-    	$('.rangeTwo').show();
+    if ($('.rangeTwoUpper').css('display') == 'none') {
+    	$('.rangeTwoUpper').show();
     } else {
-    	$('.rangeThree').show();
+    	$('.rangeThreeUpper').show();
     	$('.nextThreeQuestions').hide();
     }
  // questionsNew = "";
