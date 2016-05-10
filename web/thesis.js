@@ -191,9 +191,9 @@ function textSize(v) {
 
 // var questions = "";
 
-function abilityProfileStageTwo() {
-    $(".abilityProfileStageTwoButton").hide();
-	$('.rangeOne').show();
+function abilityProfileStageTwoUpper() {
+    $(".lowerLimbButton").hide();
+	$('.rangeOneUpper').show();
     $('.nextThreeQuestions').show();
     $('.abilityRegister').show();
 

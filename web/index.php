@@ -174,17 +174,17 @@ Navigation Bar
         <form enctype="multipart/form-data" id='abilityRegister' action='' method='post'>
 
             <label>Left or Right side:</label>
-            <input class="abilityProfileStageTwoButton" type="button" onclick="" value="Left side">
-            <input class="abilityProfileStageTwoButton" type="button" onclick="" value="Right Side">
+            <input class="leftSideButton" type="button" onclick="" value="Left side">
+            <input class="rightSideButton" type="button" onclick="" value="Right Side">
 
             <label>Upper or Lower body:</label>
-            <input class="abilityProfileStageTwoButton" type="button" onclick="abilityProfileStageTwo()" value="Upper Limb">
-            <input class="abilityProfileStageTwoButton" type="button" onclick="" value="Lower Limb">
+            <input class="upperLimbButton" type="button" onclick="abilityProfileStageTwoUpper()" value="Upper Limb">
+            <input class="lowerLimbButton" type="button" onclick="" value="Lower Limb">
 
             <?php
             for ($i = 0; $i < count($userQuestions['k']); $i++) {
                 if ($userQuestions['k'][$i]['focus'] == 1) {
-                    echo '<div class="rangeOne">';
+                    echo '<div class="rangeOneUpper">';
                     echo     '<p>On a scale of not at all to not a problem:</p>';
                     echo     '<label>' . $userQuestions['k'][$i]['qone'] . '</label>';
                     echo     '<input class="q1" type="range" name="q1" min="0" max="10">';
@@ -196,7 +196,7 @@ Navigation Bar
                 }
 
                 if ($userQuestions['k'][$i]['focus'] == 2) {
-                    echo '<div class="rangeTwo">';
+                    echo '<div class="rangeTwoUpper">';
                     echo     '<label>' . $userQuestions['k'][$i]['qone'] . '</label>';
                     echo     '<input class="q4" type="range" name="q4" min="0" max="10">';
                     echo     '<label>' . $userQuestions['k'][$i]['qtwo'] . '</label>';
@@ -207,7 +207,7 @@ Navigation Bar
                 }
 
                 if ($userQuestions['k'][$i]['focus'] == 3) {
-                    echo '<div class="rangeThree">';
+                    echo '<div class="rangeThreeUpper">';
                     echo     '<label>' . $userQuestions['k'][$i]['qone'] . '</label>';
                     echo     '<input class="q7" type="range" name="q7" min="0" max="10">';
                     echo     '<label>' . $userQuestions['k'][$i]['qtwo'] . '</label>';
