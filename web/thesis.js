@@ -28,6 +28,11 @@ $(window).load(function(){
 		$(".yourHacksPage").show();
 	});
 
+	$(".yourHacksYourHacks").on('click', function() {
+		$(".yourHacksPage").hide();
+		$(".yourHacksMade").show();
+	});
+
 	$(".menuBarProfile").on('click', function() {
 		$(".registerPage").hide();
 		$(".yourHacksPage").hide();

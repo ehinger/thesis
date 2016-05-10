@@ -186,7 +186,7 @@ Navigation Bar
             </select>
 
             <input class="abilityProfileStageTwoButton" type="button" onclick="abilityProfileStageTwo()" value="Next">
-<?php
+            <?php
             // for ($i = 0; $i < count($userQuestions['k']); $i++) {
             //     if ($userQuestions['k'][$i]['focus'] == 1) {
             //         echo '<div class="rangeOne">'
@@ -222,7 +222,7 @@ Navigation Bar
             //         echo '</div>'
             //     }
             // }
-?>
+            ?>
             <input class="nextThreeQuestions" type="button" onclick="abilityProfileNextThreeQuestions()" value="Next">
 
             <input class="abilityRegister" type="submit" value="abilityRegister" name="abilityRegister">
@@ -231,51 +231,59 @@ Navigation Bar
     </div>
 
     <div class="yourHacksPage">
-        <?php
-        for ($i = 0; $i < count($hacksGeneral['k']); $i++) {
-            if ($hacksGeneral['k'][$i]['userid'] == $_COOKIE["userId"]) {
-                echo "<div class='hackSelectionFrame' id='".$hacksGeneral['k'][$i]['hackid']."'>";
-                echo "<img class='hackHeroImage' src='".$hacksGeneral['k'][$i]['heroimageurl']."'>";
-                echo '<div class="infoWrapper"></div>';
-                echo '<h1 class="hackTitle">'.$hacksGeneral['k'][$i]['title'].'</h1>';
-                echo "<p class='hackShortDesc'>This hack can be used by people with a ability level for ".$hacksGeneral['k'][$i]['type']."</p>";
+        <div class="yourHacksButtons">
+            <div class="yourHacksYourHacks"></div>
+            <div class="yourHacksFollowedHacks"></div>
+            <div class="yourHacksCreateHacks"></div>
+        </div>
 
-                for ($n = 0; $n < count($hacksTags['k']); $n++) {
-                    if ($hacksTags['k'][$n]['hackid'] == $hacksGeneral['k'][$i]['hackid']) {
-                        echo "<p class='hackTags'>".$hacksTags['k'][$n]['tags'].",</p>";
-                    }  
-                }
+        <div class="yourHacksMade">
+            <?php
+            for ($i = 0; $i < count($hacksGeneral['k']); $i++) {
+                if ($hacksGeneral['k'][$i]['userid'] == $_COOKIE["userId"]) {
+                    echo "<div class='hackSelectionFrame' id='".$hacksGeneral['k'][$i]['hackid']."'>";
+                    echo "<img class='hackHeroImage' src='".$hacksGeneral['k'][$i]['heroimageurl']."'>";
+                    echo '<div class="infoWrapper"></div>';
+                    echo '<h1 class="hackTitle">'.$hacksGeneral['k'][$i]['title'].'</h1>';
+                    echo "<p class='hackShortDesc'>This hack can be used by people with a ability level for ".$hacksGeneral['k'][$i]['type']."</p>";
 
-                echo "<div class='hackSelectionButton'>";
-                echo "<h1 class='hackButtonText'>Enter</h1>";
-                echo "</div>";
-                echo '<div class="close">';
-                echo '</div>';
-                echo '<div class="insframe">';
-
-                echo "<p class='hackShortDesc'>".$hacksGeneral['k'][$i]['description']."</p>";
-
-                for ($in = 0; $in < count($hacksSupplies['k']); $in++) {
-                    if ($hacksSupplies['k'][$in]['hackid'] == $hacksGeneral['k'][$i]['hackid']) {
-                        echo "<p class='hackSupplies'>".$hacksSupplies['k'][$in]['supplyno']." X    ".$hacksSupplies['k'][$in]['item']."</p>";
+                    for ($n = 0; $n < count($hacksTags['k']); $n++) {
+                        if ($hacksTags['k'][$n]['hackid'] == $hacksGeneral['k'][$i]['hackid']) {
+                            echo "<p class='hackTags'>".$hacksTags['k'][$n]['tags'].",</p>";
+                        }  
                     }
-                }
 
-                for ($ni = 0; $ni < count($hacksInstructions['k']); $ni++) {
-                    if ($hacksInstructions['k'][$ni]['hackid'] == $hacksGeneral['k'][$i]['hackid']) {
-                        echo "<h1 class='stepNumber'>Step ".$hacksInstructions['k'][$ni]['stepnumber']."</h1>";
-                        echo "<p class='hackInstructions'>".$hacksInstructions['k'][$ni]['instructions']."</p>";
+                    echo "<div class='hackSelectionButton'>";
+                    echo "<h1 class='hackButtonText'>Enter</h1>";
+                    echo "</div>";
+                    echo '<div class="close">';
+                    echo '</div>';
+                    echo '<div class="insframe">';
+
+                    echo "<p class='hackShortDesc'>".$hacksGeneral['k'][$i]['description']."</p>";
+
+                    for ($in = 0; $in < count($hacksSupplies['k']); $in++) {
+                        if ($hacksSupplies['k'][$in]['hackid'] == $hacksGeneral['k'][$i]['hackid']) {
+                            echo "<p class='hackSupplies'>".$hacksSupplies['k'][$in]['supplyno']." X    ".$hacksSupplies['k'][$in]['item']."</p>";
+                        }
                     }
-                }
+
+                    for ($ni = 0; $ni < count($hacksInstructions['k']); $ni++) {
+                        if ($hacksInstructions['k'][$ni]['hackid'] == $hacksGeneral['k'][$i]['hackid']) {
+                            echo "<h1 class='stepNumber'>Step ".$hacksInstructions['k'][$ni]['stepnumber']."</h1>";
+                            echo "<p class='hackInstructions'>".$hacksInstructions['k'][$ni]['instructions']."</p>";
+                        }
+                    }
                 // echo "<div class='follow' id='".$hacksGeneral['k'][$i]['hackid']."'>";       
                 // echo "<h1>Follow</h1>";       
                 // echo "</div>";   
-                echo '</div>';
-                echo "</div>";
+                    echo '</div>';
+                    echo "</div>";
+                }
+                
             }
-            
-        }
-        ?>
+            ?>
+        </div>
     </div>
 
     <div class="yourSettingsPage">
