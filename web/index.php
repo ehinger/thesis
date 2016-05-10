@@ -208,7 +208,7 @@ Navigation Bar
                     echo     '<input class="q5" type="range" name="q5" min="0" max="10">';
                     echo     '<label>' . $userQuestions['k'][$i]['qthree'] . '</label>';
                     echo     '<input class="q6" type="range" name="q6" min="0" max="10">';
-                    echo '</div>'
+                    echo '</div>';
                 }
 
                 if ($userQuestions['k'][$i]['focus'] == 3) {
@@ -219,7 +219,7 @@ Navigation Bar
                     echo     '<input class="q8" type="range" name="q8" min="0" max="10">';
                     echo     '<label>' . $userQuestions['k'][$i]['qthree'] . '</label>';
                     echo     '<input class="q9" type="range" name="q9" min="0" max="10">';
-                    echo '</div>'
+                    echo '</div>';
                 }
             }
             ?>
