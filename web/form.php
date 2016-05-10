@@ -42,14 +42,17 @@ if (isset($_POST['push'])){
         } else {
             try {
                 $upload = $s3->upload($bucket, $_FILES['userfile']['name'][$i], $_FILES['userfile']['tmp_name'][$i], 'public-read');
-                $heroImageURL = htmlspecialchars($s3->getObjectUrl("thesis-tom-creagh", $_FILES['userfile']['name'][1])); 
-                echo $heroImageURL;
+
             } catch(Exception $e) { 
                 echo $e->getMessage();
                 die();
             } 
         }
     }
+
+                    $heroImageURL = htmlspecialchars($s3->getObjectUrl("thesis-tom-creagh", $_FILES['userfile']['name'][1])); 
+                echo $heroImageURL;
+                die();
 
     try {
         $db->beginTransaction();
