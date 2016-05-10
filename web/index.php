@@ -178,7 +178,7 @@ Navigation Bar
             <input class="rightSideButton" type="button" onclick="" value="Right Side">
 
             <label>Upper or Lower body:</label>
-            <input class="upperLimbButton" type="button" onclick="abilityProfileStageTwo()" value="Upper Limb">
+            <input class="upperLimbButton" type="button" onclick="abilityProfileStageTwo($(this).attr('class'))" value="Upper Limb">
             <input class="lowerLimbButton" type="button" onclick="abilityProfileStageTwo()" value="Lower Limb">
 
             <?php

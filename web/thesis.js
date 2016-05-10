@@ -190,11 +190,9 @@ function textSize(v) {
 }
 
 // var questions = "";
-var abilitySwitch = "";
 
-function abilityProfileStageTwo() {
-	if ($(this).attr("class") == 'upperLimbButton') {
-		abilitySwitch = 'upperLimbButton';
+function abilityProfileStageTwo(abilitySwitch) {
+	if (abilitySwitch == 'upperLimbButton') {
 	    $(".lowerLimbButton").hide();
 		$('.rangeOneUpper').show();
 	    $('.nextThreeQuestions').show();
