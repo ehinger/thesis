@@ -56,7 +56,7 @@ Navigation Bar
   vertical-align: middle;
   line-height: 10%;
   position: absolute;
-  font-size: 5em;
+  font-size: 5rem;
   color: black;
 }
 
@@ -81,7 +81,7 @@ Navigation Bar
   vertical-align: middle;
   line-height: 10%;
   position: absolute;
-  font-size: 5em;
+  font-size: 5rem;
   color: black;
 }
 
@@ -106,7 +106,7 @@ Navigation Bar
   vertical-align: middle;
   line-height: 10%;
   position: absolute;
-  font-size: 5em;
+  font-size: 5rem;
   color: black;
 }
 
@@ -143,7 +143,7 @@ nav {
   padding: .5em;
   border: 0.2em solid black;
   outline: none;
-  font-size: 2em;
+  font-size: 2rem;
 }
 
 #login label {
@@ -151,7 +151,7 @@ font-size: 2.3rem;
 }
 
 #login input[type=submit] {
-  font-size: 1.5em;
+  font-size: 1.5rem;
 }
 
 #logout {
@@ -167,15 +167,15 @@ font-size: 2.3rem;
   padding: .5em;
   border: 0.2em solid black;
   outline: none;
-  font-size: 2em;
+  font-size: 2rem;
 }
 
 #logout label {
-font-size: 2.3em;
+font-size: 2.3rem;
 }
 
 #logout input[type=submit] {
-  font-size: 1.5em;
+  font-size: 1.5rem;
 }
 
 #register {
@@ -191,15 +191,15 @@ font-size: 2.3em;
   padding: .5em;
   border: 0.2em solid black;
   outline: none;
-  font-size: 2em;
+  font-size: 2rem;
 }
 
 #register label {
-font-size: 2.3em;
+font-size: 2.3rem;
 }
 
 #register input[type=submit] {
-  font-size: 1.5em;
+  font-size: 1.5rem;
 }
 
 .registerPage {
@@ -250,7 +250,7 @@ font-size: 2.3em;
   margin: 20% 10%;
   padding: .5em;
   outline: none;
-  font-size: 2em;
+  font-size: 2rem;
 }
 
 .yourSettingsPage label {
@@ -338,7 +338,7 @@ Hack selection
   margin-left: 10%;
   margin-top: 12%;
   position: relative;
-  font-size: 8em;
+  font-size: 8rem;
   color: black;
 }
 
@@ -347,7 +347,7 @@ Hack selection
   margin-right: 30%;
   margin-top: 12%;
   position: relative;
-  font-size: 5em;
+  font-size: 5rem;
   color: black;
 }
 
@@ -355,7 +355,7 @@ Hack selection
   margin-left: 10%;
   position: relative;
   float: left;
-  font-size: 3em;
+  font-size: 3rem;
   color: black;
 }
 
@@ -364,7 +364,7 @@ Hack selection
   margin-right: 30%;
   margin-top: 12%;
   position: relative;
-  font-size: 5em;
+  font-size: 5rem;
   color: black;
 }
 
@@ -373,7 +373,7 @@ Hack selection
   margin-right: 30%;
   margin-top: 12%;
   position: relative;
-  font-size: 5em;
+  font-size: 5rem;
   color: black;
 }
 
@@ -382,7 +382,7 @@ Hack selection
   margin-right: 30%;
   margin-top: 12%;
   position: relative;
-  font-size: 5em;
+  font-size: 5rem;
   color: black;
 }
 
@@ -407,7 +407,7 @@ Hack selection
   vertical-align: middle;
   line-height: 10%;
   position: absolute;
-  font-size: 5em;
+  font-size: 5rem;
   color: black;
 }
 
@@ -444,7 +444,7 @@ Post a hack
   margin-left: 10%;
   margin-top: 12%;
   position: relative;
-  font-size: 8em;
+  font-size: 8rem;
   color: black;
 }
 
@@ -479,7 +479,7 @@ Post a hack
   padding: .5em;
   border: 0.2em solid black;
   outline: none;
-  font-size: 2em;
+  font-size: 2rem;
 }
 
 #recipeCreator textarea {
@@ -488,15 +488,15 @@ Post a hack
   padding: .5em;
   border: 0.2em solid black;
   outline: none;
-  font-size: 2em;
+  font-size: 2rem;
 }
 
 #recipeCreator label {
-font-size: 2.3em;
+font-size: 2.3rem;
 }
 
 #recipeCreator input[type=submit] {
-  font-size: 1.5em;
+  font-size: 1.5rem;
 }
 
 .newHackClose {
@@ -550,7 +550,7 @@ Instructions
   margin-right: 10%;
   margin-top: 12%;
   position: a;
-  font-size: 5em;
+  font-size: 5rem;
   color: black;
   float: right;
 }
@@ -572,7 +572,7 @@ Instructions
   top: 50%;
   text-align: center;
   position: relative;
-  font-size: 5em;
+  font-size: 5rem;
   color: black;
 }
 
