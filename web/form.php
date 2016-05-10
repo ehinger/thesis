@@ -61,7 +61,7 @@ if (isset($_POST['push'])){
         $title = pg_escape_string($_POST['hackTitle']); 
         $string = preg_replace('/\s+/', '', $title);
         $type = pg_escape_string($_POST['hackType']); 
-        $heroImageURL = htmlspecialchars($s3->getObjectUrl("thesis-tom-creagh", 1)); 
+        $heroImageURL = htmlspecialchars($s3->getObjectUrl("thesis-tom-creagh", "1")); 
         $description = pg_escape_string($_POST['hackDesc']); 
         $userID = pg_escape_string($_COOKIE["userId"]);
 
