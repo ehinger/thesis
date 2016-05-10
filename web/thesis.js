@@ -190,7 +190,7 @@ function textSize(v) {
 }
 
 // var questions = "";
-var abilitySwitch;
+var abilitySwitch = "";
 
 function abilityProfileStageTwo() {
 	if ($(this).attr("class") == 'upperLimbButton') {
