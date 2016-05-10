@@ -50,7 +50,7 @@ if (isset($_POST['push'])){
         }
     }
 
-                    $heroImageURL = htmlspecialchars($s3->getObjectUrl("thesis-tom-creagh", $_FILES['userfile']['name'][1])); 
+                    $heroImageURL = htmlspecialchars($s3->getObjectUrl("thesis-tom-creagh", $_FILES['userfile']['name'][0])); 
                 echo $heroImageURL;
                 die();
 
