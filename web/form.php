@@ -42,7 +42,8 @@ if (isset($_POST['push'])){
             die();
         } else {
             try {
-                $upload = $s3->upload($bucket, $_FILES['userfile']['name'][$i], $d++, 'public-read');
+                $d++;
+                $upload = $s3->upload($bucket, $_FILES['userfile']['name'][$i], strval($d), 'public-read');
             } catch(Exception $e) { 
                 echo $e->getMessage();
                 die();
