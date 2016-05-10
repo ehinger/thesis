@@ -41,7 +41,12 @@ if (isset($_POST['push'])){
             die();
         } else {
             try {
-                $upload = $s3->upload($bucket, $_FILES['userfile']['name'][$i], $_FILES['userfile']['tmp_name'][$i], 'public-read');
+                $upload = $s3->upload($bucket, $_FILES['userfile']['name'][$i], fopen($_FILES['userfile']['tmp_name'][$i], 'rb'), 'public-read');
+                // getCommand('PutObject', array(
+                //     'Bucket' => $bucket,
+                //     'Key'    => $_FILES['userfile']['name'][$i],
+                //     'Body'   => fopen('/tmp/photo02.jpg', 'r'),
+                //     ));
             } catch(Exception $e) { 
                 echo $e->getMessage();
                 die();
