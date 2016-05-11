@@ -200,7 +200,7 @@ function abilityProfileStageTwo(abilitySwitch) {
 	    $('.nextThreeQuestions').show();
 	    $('.abilityRegister').show();
 	} else {
-	    $(".UpperLimbButton").hide();
+	    $(".upperLimbButton").hide();
 		$('.rangeOneLower').show();
 	    $('.nextThreeQuestions').show();
 	    $('.abilityRegister').show();
