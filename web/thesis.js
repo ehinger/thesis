@@ -190,7 +190,7 @@ function textSize(v) {
 }
 
 // var questions = "";
-var abilitySwitchContinuation;
+var abilitySwitchContinuation == "";
 
 function abilityProfileStageOne(abilitySwitch) {
 	if ($(abilitySwitch).attr('class') == 'leftSideButton') {
@@ -216,6 +216,7 @@ function abilityProfileStageTwo(abilitySwitch) {
 	    $('.abilityRegister').show();
 	}
 } else {
+		abilitySwitchContinuation == "";
 	    $(".upperLimbButton").show();
 	    $(".lowerLimbButton").show();
 		$('.rangeOneUpper').hide();
