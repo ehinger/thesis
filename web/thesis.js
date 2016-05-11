@@ -219,6 +219,7 @@ function abilityProfileStageTwo(abilitySwitch) {
 	    $(".lowerLimbButton").show();
 		$('.rangeOneUpper').hide();
 	    $('.nextThreeQuestions').hide();
+	    $('.abilityRegister').hide();
 }
 
     // questions += "";
