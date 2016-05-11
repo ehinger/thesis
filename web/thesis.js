@@ -203,7 +203,7 @@ function abilityProfileStageOne(abilitySwitch) {
 function abilityProfileStageTwo(abilitySwitch) {
 	if (abilitySwitch.checked) {
 	if ($(abilitySwitch).attr('class') == 'upperLimbButton') {
-		abilitySwitchContinuation = abilitySwitch;
+		abilitySwitchContinuation = $(abilitySwitch).attr('class');
 	    $(".lowerLimbButton").hide();
 		$('.rangeOneUpper').show();
 	    $('.nextThreeQuestions').show();
