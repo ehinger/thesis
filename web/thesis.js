@@ -35,6 +35,7 @@ $(window).load(function(){
 		$(".yourHacksButtons").hide();
 		$(".yourHacksButtons").css("left", "100%");
 		$(".yourHacksMade").show();
+		$(".yourHacksPage").css("overflowY", "hidden");
 	});
 
 	$(".menuBarProfile").on('click', function() {
@@ -76,6 +77,7 @@ $(window).load(function(){
 			$("body").removeClass( "offset4" );
 			$(".newHackFrame").removeClass( "offset7" );
 			$("body").scrollTop($("#" + hackID).offset().top - parseInt($(".navbutton").css("height")));
+			$(".yourHacksMade").css("overflowY", "hidden");
 			console.log();
 		}
 		ihg(hackI);
