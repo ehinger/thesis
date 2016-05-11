@@ -193,7 +193,7 @@ function textSize(v) {
 var abilitySwitchContinuation;
 
 function abilityProfileStageOne(abilitySwitch) {
-	if (abilitySwitch.attr('class') == 'leftSideButton') {
+	if ($(abilitySwitch).attr('class') == 'leftSideButton') {
 		
 	} else {
 
@@ -201,7 +201,7 @@ function abilityProfileStageOne(abilitySwitch) {
 }
 
 function abilityProfileStageTwo(abilitySwitch) {
-	if (abilitySwitch.attr('class') == 'upperLimbButton') {
+	if ($(abilitySwitch).attr('class') == 'upperLimbButton') {
 		abilitySwitchContinuation = abilitySwitch;
 	    $(".lowerLimbButton").hide();
 		$('.rangeOneUpper').show();
