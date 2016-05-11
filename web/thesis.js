@@ -215,7 +215,7 @@ function abilityProfileStageTwo(abilitySwitch) {
 			$('.abilityRegister').show();
 		}
 	} else {
-		abilitySwitchContinuation == "";
+		abilitySwitchContinuation = "";
 		$(".upperLimbButton").show();
 		$(".lowerLimbButton").show();
 		$('.rangeOneUpper').hide();
