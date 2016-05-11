@@ -29,7 +29,7 @@ $(window).load(function(){
 	});
 
 	$(".yourHacksYourHacks").on('click', function() {
-		$(".yourHacksPage").hide();
+		$(".yourHacksButtons").hide();
 		$(".yourHacksMade").show();
 	});
 
