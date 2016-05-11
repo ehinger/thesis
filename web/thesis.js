@@ -28,10 +28,12 @@ $(window).load(function(){
 		$(".yourHacksPage").show();
 		$(".yourHacksButtons").show();
 		$(".yourHacksMade").hide();
+		$(".yourHacksButtons").css("left", "0");
 	});
 
 	$(".yourHacksYourHacks").on('click', function() {
 		$(".yourHacksButtons").hide();
+		$(".yourHacksButtons").css("left", "100%");
 		$(".yourHacksMade").show();
 	});
 
