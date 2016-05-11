@@ -221,6 +221,9 @@ function abilityProfileStageTwo(abilitySwitch) {
 		$('.rangeOneUpper').hide();
 		$('.rangeTwoUpper').hide();
 		$('.rangeThreeUpper').hide();
+		$('.rangeOneLower').hide();
+		$('.rangeTwoLower').hide();
+		$('.rangeThreeLower').hide();
 	    $('.nextThreeQuestions').hide();
 	    $('.abilityRegister').hide();
 }
