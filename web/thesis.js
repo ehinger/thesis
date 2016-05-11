@@ -190,7 +190,7 @@ function textSize(v) {
 }
 
 // var questions = "";
-var abilitySwitchContinuation == "";
+var abilitySwitchContinuation = "";
 
 function abilityProfileStageOne(abilitySwitch) {
 	if ($(abilitySwitch).attr('class') == 'leftSideButton') {
