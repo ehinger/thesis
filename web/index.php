@@ -174,12 +174,12 @@ Navigation Bar
         <form enctype="multipart/form-data" id='abilityRegister' action='' method='post'>
 
             <label>Left or Right side:</label>
-            <input class="leftSideButton" type="button" onclick="" value="Left side">
-            <input class="rightSideButton" type="button" onclick="" value="Right Side">
+            <input class="leftSideButton" type="checkbox" onclick="abilityProfileStageOne($(this).attr('class'))" value="Left side">
+            <input class="rightSideButton" type="checkbox" onclick="abilityProfileStageOne($(this).attr('class'))" value="Right Side">
 
             <label>Upper or Lower body:</label>
-            <input class="upperLimbButton" type="button" onclick="abilityProfileStageTwo($(this).attr('class'))" value="Upper Limb">
-            <input class="lowerLimbButton" type="button" onclick="abilityProfileStageTwo()" value="Lower Limb">
+            <input class="upperLimbButton" type="checkbox" onclick="abilityProfileStageTwo($(this).attr('class'))" value="Upper Limb">
+            <input class="lowerLimbButton" type="checkbox" onclick="abilityProfileStageTwo($(this).attr('class'))" value="Lower Limb">
 
             <?php
             for ($i = 0; $i < count($userQuestions['k']); $i++) {

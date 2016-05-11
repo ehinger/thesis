@@ -192,6 +192,14 @@ function textSize(v) {
 // var questions = "";
 var abilitySwitchContinuation;
 
+function abilityProfileStageOne(abilitySwitch) {
+	if (abilitySwitch == 'leftSideButton') {
+		
+	} else {
+
+	}
+}
+
 function abilityProfileStageTwo(abilitySwitch) {
 	if (abilitySwitch == 'upperLimbButton') {
 		abilitySwitchContinuation = abilitySwitch;
