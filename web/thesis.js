@@ -201,7 +201,8 @@ function abilityProfileStageOne(abilitySwitch) {
 }
 
 function abilityProfileStageTwo(abilitySwitch) {
-	if (abilitySwitch.checked && $(abilitySwitch).attr('class') == 'upperLimbButton') {
+	if (abilitySwitch.checked) {
+	if ($(abilitySwitch).attr('class') == 'upperLimbButton') {
 		abilitySwitchContinuation = abilitySwitch;
 	    $(".lowerLimbButton").hide();
 		$('.rangeOneUpper').show();
@@ -214,6 +215,12 @@ function abilityProfileStageTwo(abilitySwitch) {
 	    $('.abilityRegister').show();
 	    console.log(abilitySwitch);
 	}
+} else {
+	    $(".lowerLimbButton").show();
+		$('.rangeOneUpper').hide();
+	    $('.nextThreeQuestions').hide();
+}
+
     // questions += "";
     // questions += "<p>On a scale of not at all to not a problem:</p>"; 
     // questions += "<label></label>";
