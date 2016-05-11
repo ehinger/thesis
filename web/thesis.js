@@ -194,14 +194,14 @@ var abilitySwitchContinuation;
 
 function abilityProfileStageOne(abilitySwitch) {
 	if ($(abilitySwitch).attr('class') == 'leftSideButton') {
-		
+
 	} else {
 
 	}
 }
 
 function abilityProfileStageTwo(abilitySwitch) {
-	if ($(abilitySwitch).attr('class') == 'upperLimbButton') {
+	if (abilitySwitch.checked && $(abilitySwitch).attr('class') == 'upperLimbButton') {
 		abilitySwitchContinuation = abilitySwitch;
 	    $(".lowerLimbButton").hide();
 		$('.rangeOneUpper').show();
