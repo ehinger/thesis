@@ -26,6 +26,8 @@ $(window).load(function(){
 		$(".registerPage").hide();
 		$(".yourSettingsPage").hide();
 		$(".yourHacksPage").show();
+		$(".yourHacksButtons").show();
+		$(".yourHacksMade").hide();
 	});
 
 	$(".yourHacksYourHacks").on('click', function() {
