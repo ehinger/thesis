@@ -208,12 +208,12 @@ function abilityProfileStageTwo(abilitySwitch) {
 		$('.rangeOneUpper').show();
 	    $('.nextThreeQuestions').show();
 	    $('.abilityRegister').show();
+	    console.log(abilitySwitch);
 	} else {
 	    $(".upperLimbButton").hide();
 		$('.rangeOneLower').show();
 	    $('.nextThreeQuestions').show();
 	    $('.abilityRegister').show();
-	    console.log(abilitySwitch);
 	}
 } else {
 	    $(".lowerLimbButton").show();
