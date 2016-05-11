@@ -81,7 +81,7 @@ $(window).load(function(){
         //     // Response div goes here.
         //     console.log(hackID);
         // });
-	});
+    });
 
 	$(".close").on('click', function() {
 		$(".hackSelectionFrame").scrollTop(0);
@@ -106,7 +106,7 @@ $(window).load(function(){
 	});
 
 	$(".newHackClose").on('click', function(event) {
-    	event.stopPropagation();
+		event.stopPropagation();
 		$(".newHackFrame").css("overflow", "hidden");
 		console.log("closing");
 		$(".newHackFrame").removeClass( "offset5" );
@@ -125,7 +125,7 @@ $(window).load(function(){
 		// var event = jQuery.Event( "submit" );
 		$( "#followForm" ).trigger("submit");
 		if ( event.isDefaultPrevented() ) {
-  			console.log("please work");
+			console.log("please work");
 		}
 	});
 
@@ -202,32 +202,31 @@ function abilityProfileStageOne(abilitySwitch) {
 
 function abilityProfileStageTwo(abilitySwitch) {
 	if (abilitySwitch.checked) {
-	if ($(abilitySwitch).attr('class') == 'upperLimbButton') {
-		abilitySwitchContinuation = $(abilitySwitch).attr('class');
-	    $(".lowerLimbButton").hide();
-		$('.rangeOneUpper').show();
-	    $('.nextThreeQuestions').show();
-	    $('.abilityRegister').show();
-	    console.log(abilitySwitch);
-	} else if ($(abilitySwitch).attr('class') == 'lowerLimbButton') {
-	    $(".upperLimbButton").hide();
-		$('.rangeOneLower').show();
-	    $('.nextThreeQuestions').show();
-	    $('.abilityRegister').show();
-	}
-} else {
+		if ($(abilitySwitch).attr('class') == 'upperLimbButton') {
+			abilitySwitchContinuation = $(abilitySwitch).attr('class');
+			$(".lowerLimbButton").hide();
+			$('.rangeOneUpper').show();
+			$('.nextThreeQuestions').show();
+			$('.abilityRegister').show();
+		} else {
+			$(".upperLimbButton").hide();
+			$('.rangeOneLower').show();
+			$('.nextThreeQuestions').show();
+			$('.abilityRegister').show();
+		}
+	} else {
 		abilitySwitchContinuation == "";
-	    $(".upperLimbButton").show();
-	    $(".lowerLimbButton").show();
+		$(".upperLimbButton").show();
+		$(".lowerLimbButton").show();
 		$('.rangeOneUpper').hide();
 		$('.rangeTwoUpper').hide();
 		$('.rangeThreeUpper').hide();
 		$('.rangeOneLower').hide();
 		$('.rangeTwoLower').hide();
 		$('.rangeThreeLower').hide();
-	    $('.nextThreeQuestions').hide();
-	    $('.abilityRegister').hide();
-}
+		$('.nextThreeQuestions').hide();
+		$('.abilityRegister').hide();
+	}
 
     // questions += "";
     // questions += "<p>On a scale of not at all to not a problem:</p>"; 
@@ -262,7 +261,7 @@ function abilityProfileNextThreeQuestions() {
 			$('.nextThreeQuestions').hide();
 		}		
 	}
-    
+
  // questionsNew = "";
  // questionsNew += '<label></label>';
  // questionsNew += '<input class="q' + n + '" type="range" name="q' + n++ + '" min="0" max="10">';
