@@ -272,9 +272,9 @@ Navigation Bar
             <?php
             for ($i = 0; $i < count($hacksGeneral['k']); $i++) {
                 if ($hacksGeneral['k'][$i]['userid'] == $_COOKIE["userId"]) {
-                    echo "<div class='hackSelectionFrame' id='".$hacksGeneral['k'][$i]['hackid']."'>";
+                    echo "<div class='hackSelectionFrameYourHacks' id='".$hacksGeneral['k'][$i]['hackid']."'>";
                     echo "<img class='hackHeroImage' src='".$hacksGeneral['k'][$i]['heroimageurl']."'>";
-                    echo '<div class="infoWrapper"></div>';
+                    echo '<div class="infoWrapperYourHacks"></div>';
                     echo '<h1 class="hackTitle">'.$hacksGeneral['k'][$i]['title'].'</h1>';
                     echo "<p class='hackShortDesc'>This hack can be used by people with a ability level for ".$hacksGeneral['k'][$i]['type']."</p>";
 
@@ -284,12 +284,12 @@ Navigation Bar
                         }  
                     }
 
-                    echo "<div class='hackSelectionButton'>";
+                    echo "<div class='hackSelectionButtonYourHacks'>";
                     echo "<h1 class='hackButtonText'>Enter</h1>";
                     echo "</div>";
-                    echo '<div class="close">';
+                    echo '<div class="closeYourHacks">';
                     echo '</div>';
-                    echo '<div class="insframe">';
+                    echo '<div class="insframeYourHacks">';
 
                     echo "<p class='hackShortDesc'>".$hacksGeneral['k'][$i]['description']."</p>";
 
