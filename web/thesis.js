@@ -190,9 +190,11 @@ function textSize(v) {
 }
 
 // var questions = "";
+var abilitySwitchContinuation;
 
 function abilityProfileStageTwo(abilitySwitch) {
 	if (abilitySwitch == 'upperLimbButton') {
+		abilitySwitchContinuation = abilitySwitch;
 	    $(".lowerLimbButton").hide();
 		$('.rangeOneUpper').show();
 	    $('.nextThreeQuestions').show();
@@ -222,7 +224,7 @@ function abilityProfileStageTwo(abilitySwitch) {
 // var questionsNew = "";
 
 function abilityProfileNextThreeQuestions() {
-	if (abilitySwitch == 'upperLimbButton') {
+	if (abilitySwitchContinuation == 'upperLimbButton') {
 		if ($('.rangeTwoUpper').css('display') == 'none') {
 			$('.rangeTwoUpper').show();
 		} else {
