@@ -216,6 +216,7 @@ function abilityProfileStageTwo(abilitySwitch) {
 	    $('.abilityRegister').show();
 	}
 } else {
+	    $(".upperLimbButton").show();
 	    $(".lowerLimbButton").show();
 		$('.rangeOneUpper').hide();
 		$('.rangeTwoUpper').hide();
