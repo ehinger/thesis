@@ -209,7 +209,7 @@ function abilityProfileStageTwo(abilitySwitch) {
 	    $('.nextThreeQuestions').show();
 	    $('.abilityRegister').show();
 	    console.log(abilitySwitch);
-	} else {
+	} else if ($(abilitySwitch).attr('class') == 'lowerLimbButton') {
 	    $(".upperLimbButton").hide();
 		$('.rangeOneLower').show();
 	    $('.nextThreeQuestions').show();
