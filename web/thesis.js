@@ -77,7 +77,7 @@ $(window).load(function(){
 			$("body").removeClass( "offset4" );
 			$(".newHackFrame").removeClass( "offset7" );
 			$("body").scrollTop($("#" + hackID).offset().top - parseInt($(".navbutton").css("height")));
-			console.log($("#" + hackID + " .close").css("right", "0"););
+			console.log($("#" + hackID + " .close").css("right", "0"));
 		}
 		ihg(hackI);
 		// ajaxurl = 'index.php';
