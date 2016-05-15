@@ -209,12 +209,14 @@ function abilityProfileStageOne(abilitySwitch) {
 function abilityProfileStageTwo(abilitySwitch) {
 	if (abilitySwitch.checked) {
 		if ($(abilitySwitch).attr('class') == 'upperLimbButton') {
+			Cookies.set('abilityUOrL', "upper");
 			abilitySwitchContinuation = $(abilitySwitch).attr('class');
 			$(".lowerLimbButton").hide();
 			$('.rangeOneUpper').show();
 			$('.nextThreeQuestions').show();
 			$('.abilityRegister').show();
 		} else {
+			Cookies.set('abilityUOrL', "lower");
 			$(".upperLimbButton").hide();
 			$('.rangeOneLower').show();
 			$('.nextThreeQuestions').show();

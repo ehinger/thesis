@@ -18,17 +18,39 @@ if (isset($_POST['push'])){
 
         $db->beginTransaction();
 
-        $db->exec("INSERT INTO userAnswersOne (userID, qSetId, ansOne, ansTwo, ansThree) VALUES ('" . $userID . "', 'upperSet1', '" . $q1 . "', '" . $q2 . "', '" . $q3 . "')");
-
-        if ($_COOKIE["abilityFocusPost"] == "lvl2Upper") {
+        if ($_COOKIE["abilityUOrL"] == "upper") {
             
-            $db->exec("INSERT INTO userAnswersOne (userID, qSetId, ansOne, ansTwo, ansThree) VALUES ('" . $userID . "', 'upperSet2', '" . $q4 . "', '" . $q5 . "', '" . $q6 . "')");
+            $db->exec("INSERT INTO userAnswersOne (userID, qSetId, ansOne, ansTwo, ansThree) VALUES ('" . $userID . "', 'upperSet1', '" . $q1 . "', '" . $q2 . "', '" . $q3 . "')");
 
-        } else if ($_COOKIE["abilityFocusPost"] == "lvl3Upper") {
+            if ($_COOKIE["abilityFocusPost"] == "lvl2Upper") {
+                
+                $db->exec("INSERT INTO userAnswersOne (userID, qSetId, ansOne, ansTwo, ansThree) VALUES ('" . $userID . "', 'upperSet2', '" . $q4 . "', '" . $q5 . "', '" . $q6 . "')");
+
+            } else if ($_COOKIE["abilityFocusPost"] == "lvl3Upper") {
+                
+                $db->exec("INSERT INTO userAnswersOne (userID, qSetId, ansOne, ansTwo, ansThree) VALUES ('" . $userID . "', 'upperSet2', '" . $q4 . "', '" . $q5 . "', '" . $q6 . "')");
+
+                $db->exec("INSERT INTO userAnswersOne (userID, qSetId, ansOne, ansTwo, ansThree) VALUES ('" . $userID . "', 'upperSet3', '" . $q7 . "', '" . $q8 . "', '" . $q9 . "')");
+
+            }
+
+        }
+
+        if ($_COOKIE["abilityUOrL"] == "lower") {
             
-            $db->exec("INSERT INTO userAnswersOne (userID, qSetId, ansOne, ansTwo, ansThree) VALUES ('" . $userID . "', 'upperSet2', '" . $q4 . "', '" . $q5 . "', '" . $q6 . "')");
+            $db->exec("INSERT INTO userAnswersOne (userID, qSetId, ansOne, ansTwo, ansThree) VALUES ('" . $userID . "', 'lowerSet1', '" . $q1 . "', '" . $q2 . "', '" . $q3 . "')");
 
-            $db->exec("INSERT INTO userAnswersOne (userID, qSetId, ansOne, ansTwo, ansThree) VALUES ('" . $userID . "', 'upperSet3', '" . $q7 . "', '" . $q8 . "', '" . $q9 . "')");
+            if ($_COOKIE["abilityFocusPost"] == "lvl2Upper") {
+                
+                $db->exec("INSERT INTO userAnswersOne (userID, qSetId, ansOne, ansTwo, ansThree) VALUES ('" . $userID . "', 'lowerSet2', '" . $q4 . "', '" . $q5 . "', '" . $q6 . "')");
+
+            } else if ($_COOKIE["abilityFocusPost"] == "lvl3Upper") {
+                
+                $db->exec("INSERT INTO userAnswersOne (userID, qSetId, ansOne, ansTwo, ansThree) VALUES ('" . $userID . "', 'lowerSet2', '" . $q4 . "', '" . $q5 . "', '" . $q6 . "')");
+
+                $db->exec("INSERT INTO userAnswersOne (userID, qSetId, ansOne, ansTwo, ansThree) VALUES ('" . $userID . "', 'lowerSet3', '" . $q7 . "', '" . $q8 . "', '" . $q9 . "')");
+
+            }
 
         }
 
