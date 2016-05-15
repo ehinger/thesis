@@ -96,9 +96,12 @@ if (isset($_POST['push'])){
 } 
 
 if (isset($_POST['follow'])) {
+
+    $followId = pg_escape_string($_COOKIE["followId"]);
+    $userID = pg_escape_string($_COOKIE["userId"]);
+
     try {
-        echo $_COOKIE["followId"];
-        die();   
+        $db->exec("INSERT INTO userFollowing (userID, following) VALUES ('" . $userID . "', '" . $followId . "')");  
     } catch (Exception $e) {
         echo $e->getMessage();
         die();
