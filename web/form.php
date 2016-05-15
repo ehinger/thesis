@@ -3,11 +3,6 @@ ini_set('display_errors', 'On');
 
 require_once "dbconn.php";
 
-// if(isset($_POST['push'])) {
-
-// // }
-// } 
-
 if (isset($_POST['push'])){
     // $check = getimagesize($_FILES["userfile"]["tmp_name"]);
     // $target_file = basename($_FILES["userfile"]["name"]);
@@ -100,9 +95,9 @@ if (isset($_POST['push'])){
     }
 } 
 
-if (isset($_POST['followButton'])) {
+if (isset($_POST['follow'])) {
     try {
-        echo "yayish";
+        echo $_COOKIE["followId"];
         die();   
     } catch (Exception $e) {
         echo $e->getMessage();

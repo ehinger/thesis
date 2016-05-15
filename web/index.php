@@ -141,20 +141,7 @@ Navigation Bar
 
             <input type="submit" value="logout" name="logout">
 
-        </form>   
-    </div>
-
-    <div class="registerPage">
-        <form enctype="multipart/form-data" id='register' action='' method='post'>
-
-            <label>Username:</label>
-            <input name="usernameR" type="text">
-
-            <label>Password:</label>
-            <input name="passwordR" type="password">
-
-            <label>Confirm password:</label>
-            <input name="password1R" type="password">
+        </form>    sword1R" type="password">
 
             <label>First name:</label>
             <input name="fName" type="text">
@@ -424,9 +411,9 @@ for ($i = 0; $i < count($hacksGeneral['k']); $i++) {
             echo "<p class='hackInstructions'>".$hacksInstructions['k'][$ni]['instructions']."</p>";
         }
     }
-    // echo "<div class='follow' id='".$hacksGeneral['k'][$i]['hackid']."'>";       
-    // echo "<h1>Follow</h1>";       
-    // echo "</div>";   
+    echo "<form class='follow' action='form.php' method='post'>";       
+    echo "<input type='submit' value='Submit' name='follow'>";       
+    echo "</form>";   
     echo '</div>';
     echo "</div>";
 }

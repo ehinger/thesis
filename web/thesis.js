@@ -78,6 +78,7 @@ $(window).load(function(){
 			$(".newHackFrame").removeClass( "offset7" );
 			$("body").scrollTop($("#" + hackID).offset().top - parseInt($(".navbutton").css("height")));
 			console.log($("#" + hackID + " .close").css("right", "0"));
+			Cookies.set('followId', hackID);
 		}
 		ihg(hackI);
 		// ajaxurl = 'index.php';
@@ -119,20 +120,20 @@ $(window).load(function(){
 		$("body").addClass( "offset4" );
 	});
 
-	$(".follow").on('click', function() {
-		h = $(this).attr('id');
-		// Cookies.set('follow', $(this).attr('id'));
-		fol += "<input type='hidden' name='followInput' value='" + h + "'>";
-		fol += "<input type='submit' name='followButton'>"
-		$('#followForm').html(fol);
-		console.log("starting");
+	// $(".follow").on('click', function() {
+	// 	h = $(this).attr('id');
+	// 	// Cookies.set('follow', $(this).attr('id'));
+	// 	fol += "<input type='hidden' name='followInput' value='" + h + "'>";
+	// 	fol += "<input type='submit' name='followButton'>"
+	// 	$('#followForm').html(fol);
+	// 	console.log("starting");
 
-		// var event = jQuery.Event( "submit" );
-		$( "#followForm" ).trigger("submit");
-		if ( event.isDefaultPrevented() ) {
-			console.log("please work");
-		}
-	});
+	// 	// var event = jQuery.Event( "submit" );
+	// 	$( "#followForm" ).trigger("submit");
+	// 	if ( event.isDefaultPrevented() ) {
+	// 		console.log("please work");
+	// 	}
+	// });
 
 	if (Cookies.get('userId')) {
 		$(".logInPage").hide();
@@ -253,10 +254,13 @@ function abilityProfileStageTwo(abilitySwitch) {
 function abilityProfileNextThreeQuestions() {
 	if (abilitySwitchContinuation == 'upperLimbButton') {
 		if ($('.rangeTwoUpper').css('display') == 'none') {
+			Cookies.set('abilityFocusPost', "lvl2Upper");
 			$('.rangeTwoUpper').show();
+
 		} else {
 			$('.rangeThreeUpper').show();
 			$('.nextThreeQuestions').hide();
+			Cookies.set('abilityFocusPost', "lvl3Upper");
 		}
 	} else {
 		if ($('.rangeTwoLower').css('display') == 'none') {
