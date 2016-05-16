@@ -46,6 +46,14 @@ $(window).load(function(){
 		$(".yourHacksPage").css("overflowY", "hidden");
 	});
 
+	$(".yourHacksCreateHacks").on('click', function() {
+		console.log("opening");
+		$(".newHackFrame").css("overflowY", "scroll");
+		$(".newHackFrame").addClass( "offset5" );
+		$(".newHackFrame *").addClass( "offset6" );
+		$("body").removeClass( "offset4" );
+	});
+
 	$(".menuBarProfile").on('click', function() {
 		$(".registerPage").hide();
 		$(".yourHacksPage").hide();
