@@ -9,8 +9,8 @@ if (isset($_POST['push'])){
 
     for ($i = 0; $i < count($_FILES['userfile']['name']); $i++) {
 
-    $check = getimagesize($_FILES["userfile"]["tmp_name"]);
-    $target_file = basename($_FILES["userfile"]["name"]);
+    $check = getimagesize($_FILES["userfile"]["tmp_name"][$i]);
+    $target_file = basename($_FILES["userfile"]["name"][$i]);
     $uploadOk = 1;
     $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
     
