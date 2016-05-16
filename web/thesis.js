@@ -29,7 +29,12 @@ $(window).load(function(){
 		$(".yourHacksButtons").show();
 		$(".yourHacksMade").hide();
 		$(".followedHacks").hide();
-		$(".yourHacksButtons").css("left", "0");
+		$(".yourHacksButtons").css("left", "0");		
+		$(".newHackFrame").css("overflow", "hidden");
+		console.log("closing");
+		$(".newHackFrame").removeClass( "offset5" );
+		$(".newHackFrame *").removeClass( "offset6" );
+		$("body").addClass( "offset4" );
 	});
 
 	$(".yourHacksYourHacks").on('click', function() {
@@ -63,6 +68,14 @@ $(window).load(function(){
 		} else {
 			$(".logInPage").show();
 		}
+		$(".yourHacksMade").hide();
+		$(".followedHacks").hide();
+		$(".yourHacksButtons").css("left", "0");		
+		$(".newHackFrame").css("overflow", "hidden");
+		console.log("closing");
+		$(".newHackFrame").removeClass( "offset5" );
+		$(".newHackFrame *").removeClass( "offset6" );
+		$("body").addClass( "offset4" );
 	});
 
 	$(".menuBarSettings").on('click', function() {
@@ -71,6 +84,14 @@ $(window).load(function(){
 		$(".registerPage").hide();
 		$(".yourHacksPage").hide();
 		$(".yourSettingsPage").show();
+		$(".yourHacksMade").hide();
+		$(".followedHacks").hide();
+		$(".yourHacksButtons").css("left", "0");		
+		$(".newHackFrame").css("overflow", "hidden");
+		console.log("closing");
+		$(".newHackFrame").removeClass( "offset5" );
+		$(".newHackFrame *").removeClass( "offset6" );
+		$("body").addClass( "offset4" );
 	});
 
 	$(".startRegistration").on('click', function() {
