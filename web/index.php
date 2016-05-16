@@ -141,7 +141,20 @@ Navigation Bar
 
             <input type="submit" value="logout" name="logout">
 
-        </form>    sword1R" type="password">
+        </form> 
+
+        <div class="registerPage">
+        
+        <form enctype="multipart/form-data" id='register' action='' method='post'>
+
+            <label>Username:</label>
+            <input name="usernameR" type="text">
+
+            <label>Password:</label>
+            <input name="passwordR" type="password">
+
+            <label>Confirm password:</label>
+            <input name="password1R" type="password">
 
             <label>First name:</label>
             <input name="fName" type="text">
