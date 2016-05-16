@@ -18,6 +18,11 @@ $(window).load(function(){
 		$(".navbutton").toggleClass( "offset3" );
 		$("body").toggleClass( "offset4" );
 		$(".newHackFrame").toggleClass( "offset7" );
+		$(".newHackFrame").css("overflow", "hidden");
+		console.log("closing");
+		$(".newHackFrame").removeClass( "offset5" );
+		$(".newHackFrame *").removeClass( "offset6" );
+		$("body").addClass( "offset4" );
 	});
 
 	$(".menuBarYourHacks").on('click', function() {
