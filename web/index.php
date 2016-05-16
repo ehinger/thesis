@@ -319,9 +319,8 @@ Navigation Bar
             }
             ?>
         </div>
-    </div>
 
-    <div class="followedHacks">
+         <div class="followedHacks">
         <?php
             for ($i = 0; $i < count($hacksGeneral['k']); $i++) {
                 if ($userFollowing['k'][$i]['userid'] == $_COOKIE["userId"] && $userFollowing['k'][$i]['following'] == $hacksGeneral['k'][$i]['hackid']) {
@@ -367,6 +366,7 @@ Navigation Bar
                 
             }
             ?>
+    </div>
     </div>
 
     <div class="yourSettingsPage">

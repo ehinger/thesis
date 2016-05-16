@@ -28,6 +28,7 @@ $(window).load(function(){
 		$(".yourHacksPage").show();
 		$(".yourHacksButtons").show();
 		$(".yourHacksMade").hide();
+		$(".followedHacks").hide();
 		$(".yourHacksButtons").css("left", "0");
 	});
 
@@ -35,6 +36,13 @@ $(window).load(function(){
 		$(".yourHacksButtons").hide();
 		$(".yourHacksButtons").css("left", "100%");
 		$(".yourHacksMade").show();
+		$(".yourHacksPage").css("overflowY", "hidden");
+	});	
+
+	$(".yourHacksFollowedHacks").on('click', function() {
+		$(".yourHacksButtons").hide();
+		$(".yourHacksButtons").css("left", "100%");
+		$(".followedHacks").show();
 		$(".yourHacksPage").css("overflowY", "hidden");
 	});
 
