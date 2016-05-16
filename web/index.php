@@ -142,9 +142,10 @@ Navigation Bar
             <input type="submit" value="logout" name="logout">
 
         </form> 
+    </div>
 
         <div class="registerPage">
-        
+
         <form enctype="multipart/form-data" id='register' action='' method='post'>
 
             <label>Username:</label>
