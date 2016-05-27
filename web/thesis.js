@@ -18,6 +18,11 @@ $(window).load(function(){
 		$(".navbutton").toggleClass( "offset3" );
 		$("body").toggleClass( "offset4" );
 		$(".newHackFrame").toggleClass( "offset7" );
+		$(".newHackFrame").css("overflow", "hidden");
+		console.log("closing");
+		$(".newHackFrame").removeClass( "offset5" );
+		$(".newHackFrame *").removeClass( "offset6" );
+		$("body").addClass( "offset4" );
 	});
 
 	$(".menuBarYourHacks").on('click', function() {
@@ -28,7 +33,13 @@ $(window).load(function(){
 		$(".yourHacksPage").show();
 		$(".yourHacksButtons").show();
 		$(".yourHacksMade").hide();
-		$(".yourHacksButtons").css("left", "0");
+		$(".followedHacks").hide();
+		$(".yourHacksButtons").css("left", "0");		
+		$(".newHackFrame").css("overflow", "hidden");
+		console.log("closing");
+		$(".newHackFrame").removeClass( "offset5" );
+		$(".newHackFrame *").removeClass( "offset6" );
+		$("body").addClass( "offset4" );
 	});
 
 	$(".yourHacksYourHacks").on('click', function() {
@@ -36,6 +47,21 @@ $(window).load(function(){
 		$(".yourHacksButtons").css("left", "100%");
 		$(".yourHacksMade").show();
 		$(".yourHacksPage").css("overflowY", "hidden");
+	});	
+
+	$(".yourHacksFollowedHacks").on('click', function() {
+		$(".yourHacksButtons").hide();
+		$(".yourHacksButtons").css("left", "100%");
+		$(".followedHacks").show();
+		$(".yourHacksPage").css("overflowY", "hidden");
+	});
+
+	$(".yourHacksCreateHacks").on('click', function() {
+		console.log("opening");
+		$(".newHackFrame").css("overflowY", "scroll");
+		$(".newHackFrame").addClass( "offset5" );
+		$(".newHackFrame *").addClass( "offset6" );
+		$("body").removeClass( "offset4" );
 	});
 
 	$(".menuBarProfile").on('click', function() {
@@ -47,6 +73,14 @@ $(window).load(function(){
 		} else {
 			$(".logInPage").show();
 		}
+		$(".yourHacksMade").hide();
+		$(".followedHacks").hide();
+		$(".yourHacksButtons").css("left", "0");		
+		$(".newHackFrame").css("overflow", "hidden");
+		console.log("closing");
+		$(".newHackFrame").removeClass( "offset5" );
+		$(".newHackFrame *").removeClass( "offset6" );
+		$("body").addClass( "offset4" );
 	});
 
 	$(".menuBarSettings").on('click', function() {
@@ -55,6 +89,14 @@ $(window).load(function(){
 		$(".registerPage").hide();
 		$(".yourHacksPage").hide();
 		$(".yourSettingsPage").show();
+		$(".yourHacksMade").hide();
+		$(".followedHacks").hide();
+		$(".yourHacksButtons").css("left", "0");		
+		$(".newHackFrame").css("overflow", "hidden");
+		console.log("closing");
+		$(".newHackFrame").removeClass( "offset5" );
+		$(".newHackFrame *").removeClass( "offset6" );
+		$("body").addClass( "offset4" );
 	});
 
 	$(".startRegistration").on('click', function() {

@@ -25,6 +25,7 @@ try {
     $results6 = $db->query('select * from userAbility');
     $results7 = $db->query('select * from userAnswersOne');
     $results8 = $db->query('select * from userQuestions');
+    $results9 = $db->query('select * from userFollowing');
     // echo '<pre>';
     // var_dump($results->fetchAll());
     // echo '</pre>';
@@ -42,6 +43,7 @@ $hacks5 = $results5->fetchAll(PDO::FETCH_ASSOC);
 $hacks6 = $results6->fetchAll(PDO::FETCH_ASSOC);
 $hacks7 = $results7->fetchAll(PDO::FETCH_ASSOC);
 $hacks8 = $results8->fetchAll(PDO::FETCH_ASSOC);
+$hacks9 = $results8->fetchAll(PDO::FETCH_ASSOC);
 
 $hacksGeneral = array("k" => $hacks1);
 $hacksTags = array("k" => $hacks2);
@@ -51,6 +53,7 @@ $userProfile = array("k" => $hacks5);
 $userAbility = array("k" => $hacks6);
 $userAnswers = array("k" => $hacks7);
 $userQuestions = array("k" => $hacks8);
+$userFollowing = array("k" => $hacks9);
 
 $profiles = new profiles;
 
@@ -141,7 +144,21 @@ Navigation Bar
 
             <input type="submit" value="logout" name="logout">
 
-        </form>    sword1R" type="password">
+        </form> 
+    </div>
+
+        <div class="registerPage">
+
+        <form enctype="multipart/form-data" id='register' action='' method='post'>
+
+            <label>Username:</label>
+            <input name="usernameR" type="text">
+
+            <label>Password:</label>
+            <input name="passwordR" type="password">
+
+            <label>Confirm password:</label>
+            <input name="password1R" type="password">
 
             <label>First name:</label>
             <input name="fName" type="text">
@@ -302,6 +319,54 @@ Navigation Bar
             }
             ?>
         </div>
+
+         <div class="followedHacks">
+        <?php
+            for ($i = 0; $i < count($hacksGeneral['k']); $i++) {
+                if ($userFollowing['k'][$i]['userid'] == $_COOKIE["userId"] && $userFollowing['k'][$i]['following'] == $hacksGeneral['k'][$i]['hackid']) {
+                    echo "<div class='hackSelectionFrameYourHacks' id='".$hacksGeneral['k'][$i]['hackid']."'>";
+                    echo "<img class='hackHeroImage' src='".$hacksGeneral['k'][$i]['heroimageurl']."'>";
+                    echo '<div class="infoWrapperYourHacks"></div>';
+                    echo '<h1 class="hackTitle">'.$hacksGeneral['k'][$i]['title'].'</h1>';
+                    echo "<p class='hackShortDesc'>This hack can be used by people with a ability level for ".$hacksGeneral['k'][$i]['type']."</p>";
+
+                    for ($n = 0; $n < count($hacksTags['k']); $n++) {
+                        if ($hacksTags['k'][$n]['hackid'] == $hacksGeneral['k'][$i]['hackid']) {
+                            echo "<p class='hackTags'>".$hacksTags['k'][$n]['tags'].",</p>";
+                        }  
+                    }
+
+                    echo "<div class='hackSelectionButtonYourHacks'>";
+                    echo "<h1 class='hackButtonText'>Enter</h1>";
+                    echo "</div>";
+                    echo '<div class="closeYourHacks">';
+                    echo '</div>';
+                    echo '<div class="insframeYourHacks">';
+
+                    echo "<p class='hackShortDesc'>".$hacksGeneral['k'][$i]['description']."</p>";
+
+                    for ($in = 0; $in < count($hacksSupplies['k']); $in++) {
+                        if ($hacksSupplies['k'][$in]['hackid'] == $hacksGeneral['k'][$i]['hackid']) {
+                            echo "<p class='hackSupplies'>".$hacksSupplies['k'][$in]['supplyno']." X    ".$hacksSupplies['k'][$in]['item']."</p>";
+                        }
+                    }
+
+                    for ($ni = 0; $ni < count($hacksInstructions['k']); $ni++) {
+                        if ($hacksInstructions['k'][$ni]['hackid'] == $hacksGeneral['k'][$i]['hackid']) {
+                            echo "<h1 class='stepNumber'>Step ".$hacksInstructions['k'][$ni]['stepnumber']."</h1>";
+                            echo "<p class='hackInstructions'>".$hacksInstructions['k'][$ni]['instructions']."</p>";
+                        }
+                    }
+                // echo "<div class='follow' id='".$hacksGeneral['k'][$i]['hackid']."'>";       
+                // echo "<h1>Follow</h1>";       
+                // echo "</div>";   
+                    echo '</div>';
+                    echo "</div>";
+                }
+                
+            }
+            ?>
+    </div>
     </div>
 
     <div class="yourSettingsPage">

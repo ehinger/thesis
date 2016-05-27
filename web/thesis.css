@@ -566,11 +566,22 @@ Post a hack
   width: 100%;
   margin: 0;
   border-radius: 0;
+<<<<<<< HEAD
   /*  -webkit-transition: 0.3s;
     -moz-transition: 0.3s;
     -ms-transition: 0.3s;
     -o-transition: 0.3s;
     transition: 0.3s;*/ }
+=======
+  z-index: 5;
+/*  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;*/
+}
+
+>>>>>>> f88642048d076441680518315ff18a7042cf3124
 
 /************************************************************************************
 Instructions
