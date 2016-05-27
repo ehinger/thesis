@@ -1,17 +1,25 @@
+$linkColour: #E16C5B;
+$textColour: #FFF8EE;
+$bgColour: #211F1F;
+$overlayColour: #0E1537;
+
 html, body {
   height: 100%;
   width: 100%;
   margin: 0;
   padding: 0;
-  border: 0;
-  font-size: 5px; }
+  border: 0; 
+  font-size: 5px;
+}
 
 body {
-  overflow: hidden; }
+  overflow: hidden;
+}
 
 /************************************************************************************
 Navigation Bar
 ************************************************************************************/
+
 .navbutton {
   width: 100%;
   height: 10%;
@@ -21,14 +29,16 @@ Navigation Bar
   background: black;
   margin: 0;
   z-index: 2;
-  /*  -webkit-transition: 0.3s;
-    -moz-transition: 0.3s;
-    -ms-transition: 0.3s;
-    -o-transition: 0.3s;
-    transition: 0.3s; */ }
+/*  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s; */
+}
 
 .offset3 {
-  top: 0; }
+  top: 0; 
+}
 
 .menuBarYourHacks {
   width: 33.3%;
@@ -36,14 +46,15 @@ Navigation Bar
   top: 0;
   left: 0;
   position: fixed;
-  background: #211F1F;
+  background: $bgColour;
   margin: 0;
   z-index: 2;
-  /*  -webkit-transition: 0.3s;
-    -moz-transition: 0.3s;
-    -ms-transition: 0.3s;
-    -o-transition: 0.3s;
-    transition: 0.3s; */ }
+/*  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s; */
+}
 
 .menuBarYourHacksText {
   text-align: center;
@@ -51,7 +62,8 @@ Navigation Bar
   line-height: 10%;
   position: absolute;
   font-size: 5rem;
-  color: #E16C5B; }
+  color: $linkColour;
+}
 
 .menuBarProfile {
   width: 33.4%;
@@ -59,14 +71,15 @@ Navigation Bar
   top: 0;
   left: 33.3%;
   position: fixed;
-  background: #211F1F;
+  background: $bgColour;
   margin: 0;
   z-index: 2;
-  /*  -webkit-transition: 0.3s;
-    -moz-transition: 0.3s;
-    -ms-transition: 0.3s;
-    -o-transition: 0.3s;
-    transition: 0.3s; */ }
+/*  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s; */
+}
 
 .menuBarProfileText {
   text-align: center;
@@ -74,7 +87,8 @@ Navigation Bar
   line-height: 10%;
   position: absolute;
   font-size: 5rem;
-  color: #E16C5B; }
+  color: $linkColour;
+}
 
 .menuBarSettings {
   width: 33.3%;
@@ -82,14 +96,15 @@ Navigation Bar
   top: 0;
   left: 66.6%;
   position: fixed;
-  background: #211F1F;
+  background: $bgColour;
   margin: 0;
   z-index: 2;
-  /*  -webkit-transition: 0.3s;
-    -moz-transition: 0.3s;
-    -ms-transition: 0.3s;
-    -o-transition: 0.3s;
-    transition: 0.3s; */ }
+/*  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s; */
+}
 
 .menuBarSettingsText {
   text-align: center;
@@ -97,76 +112,100 @@ Navigation Bar
   line-height: 10%;
   position: absolute;
   font-size: 5rem;
-  color: #E16C5B; }
+  color: $linkColour;
+}
 
 .offset {
-  top: -100%; }
+  top: -100%; 
+}
 
 nav {
   width: 100%;
   height: 100%;
   position: fixed;
-  background: #211F1F;
+  background: $bgColour;
   margin: 0;
   top: 0;
   left: 0;
   z-index: 1;
-  /*  -webkit-transition: 0.3s;
-    -moz-transition: 0.3s;
-    -ms-transition: 0.3s;
-    -o-transition: 0.3s;
-    transition: 0.3s; */ }
+/*  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s; */
+}
 
 #login {
   margin: 20% 10%;
   position: relative;
-  width: 80%; }
-  #login input {
+  width: 80%;
+
+  input {
     width: 100%;
     height: 15%;
     margin: 3% 0 3% 0;
     padding: .5em;
     border: 0.2em solid black;
     outline: none;
-    font-size: 2rem; }
-  #login label {
-    font-size: 2.3rem; }
-  #login input[type=submit] {
-    font-size: 1.5rem; }
+    font-size: 2rem;
+  }
+
+  label {
+    font-size: 2.3rem;
+  }
+
+  input[type=submit] {
+    font-size: 1.5rem;
+  }
+}
 
 #logout {
   margin: 20% 10%;
   position: relative;
-  width: 80%; }
-  #logout input {
+  width: 80%;
+
+  input {
     width: 100%;
     height: 15%;
     margin: 3% 0 3% 0;
     padding: .5em;
     border: 0.2em solid black;
     outline: none;
-    font-size: 2rem; }
-  #logout label {
-    font-size: 2.3rem; }
-  #logout input[type=submit] {
-    font-size: 1.5rem; }
+    font-size: 2rem;
+  }
+
+  label {
+    font-size: 2.3rem;
+  }
+
+  input[type=submit] {
+    font-size: 1.5rem;
+  }
+}
 
 #register {
   margin: 20% 10%;
   position: relative;
-  width: 80%; }
-  #register input {
+  width: 80%;
+
+   input {
     width: 100%;
     height: 15%;
     margin: 3% 0 3% 0;
     padding: .5em;
     border: 0.2em solid black;
     outline: none;
-    font-size: 2rem; }
-  #register label {
-    font-size: 2.3rem; }
-  #register input[type=submit] {
-    font-size: 1.5rem; }
+    font-size: 2rem;
+  }
+
+  label {
+    font-size: 2.3rem;
+  }
+
+  input[type=submit] {
+    font-size: 1.5rem;
+  }
+}
 
 .registerPage {
   overflow-y: scroll;
@@ -174,133 +213,155 @@ nav {
   margin: 0;
   width: 100%;
   height: 100%;
-  display: none; }
+  display: none;
+}
 
 .startRegistration {
   position: absolute;
   margin: 20% 10%;
   width: 80%;
   height: 5%;
-  background: green; }
+  background: green;
+}
 
 .yourHacksPage {
   display: none;
   position: relative;
-  top: 0;
-  left: 0;
+  top: 0; 
+  left: 0; 
   padding: 0;
   width: 100%;
   height: 100%;
   overflow-x: hidden;
   overflow-y: scroll;
-  float: left; }
+  float: left;
+}
 
 .yourHacksYourHacks {
   position: relative;
   margin: 20% 10%;
   width: 80%;
   height: 5%;
-  background: green; }
+  background: green;
+}
 
 .yourHacksFollowedHacks {
   position: relative;
   margin: 20% 10%;
   width: 80%;
   height: 5%;
-  background: green; }
+  background: green;
+}
 
 .yourHacksCreateHacks {
   position: relative;
   margin: 20% 10%;
   width: 80%;
   height: 5%;
-  background: green; }
+  background: green;
+}
 
 .yourHacksMade {
   display: none;
   position: relative;
-  top: 0;
-  left: 0;
+  top: 0; 
+  left: 0; 
   padding: 0;
   width: 100%;
   height: 100%;
   overflow-x: hidden;
   overflow-y: scroll;
-  float: left; }
+  float: left;
+}
 
 .yourHacksButtons {
   position: relative;
-  top: 0;
-  left: 0;
+  top: 0; 
+  left: 0; 
   padding: 0;
   width: 100%;
   height: 100%;
   overflow-x: hidden;
   overflow-y: scroll;
-  float: left; }
+  float: left;
+}
 
 .yourSettingsPage {
   display: none;
   position: relative;
-  top: 0;
-  left: 0;
+  top: 0; 
+  left: 0; 
   padding: 0;
   width: 100%;
   height: 100%;
   overflow-x: hidden;
-  overflow-y: scroll; }
-  .yourSettingsPage input {
+  overflow-y: scroll;
+
+  input {
     width: 80%;
     height: 15%;
     margin: 20% 10%;
     padding: .5em;
     outline: none;
-    font-size: 2rem; }
-  .yourSettingsPage label {
+    font-size: 2rem;
+  }
+
+  label {
     position: absolute;
     margin: 20% 10%;
     padding: .5em;
-    font-size: 2rem; }
+    font-size: 2rem;
+  }
+}
 
 .rangeOneUpper {
-  display: none; }
+  display: none;
+}
 
 .rangeTwoUpper {
-  display: none; }
+  display: none;
+}
 
 .rangeThreeUpper {
-  display: none; }
+  display: none;
+}
 
 .rangeOnelower {
-  display: none; }
+  display: none;
+}
 
 .rangeTwolower {
-  display: none; }
+  display: none;
+}
 
 .rangeThreelower {
-  display: none; }
+  display: none;
+}
 
 .nextThreeQuestions {
-  display: none; }
+  display: none;
+}
 
 .abilityRegister {
-  display: none; }
+  display: none;
+}
 
 .hackSelectionFrameYourHacks {
   position: relative;
-  top: 100%;
-  left: 0;
+  top: 100%; 
+  left: 0; 
   padding: 0;
   width: 100%;
   height: 85%;
   overflow: hidden;
   overflow-y: hidden;
   float: left;
-  /*  -webkit-transition: 0.3s;
-    -moz-transition: 0.3s;
-    -ms-transition: 0.3s;
-    -o-transition: 0.3s;
-    transition: 0.3s; */ }
+/*  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s; */
+}
 
 .infoWrapperYourHacks {
   margin: 0;
@@ -309,13 +370,14 @@ nav {
   position: absolute;
   width: 70%;
   height: 100%;
-  background: #211F1F;
+  background: $bgColour;
   opacity: .4;
-  /*  -webkit-transition: 0.3s;
-    -moz-transition: 0.3s;
-    -ms-transition: 0.3s;
-    -o-transition: 0.3s;
-    transition: 0.3s; */ }
+/*  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s; */
+}
 
 .hackSelectionButtonYourHacks {
   margin: 0;
@@ -324,12 +386,13 @@ nav {
   position: relative;
   width: 40%;
   height: 10%;
-  background: #211F1F;
-  /*  -webkit-transition: 0.3s;
-    -moz-transition: 0.3s;
-    -ms-transition: 0.3s;
-    -o-transition: 0.3s;
-    transition: 0.3s; */ }
+  background: $bgColour;
+/*  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s; */
+}
 
 .insframeYourHacks {
   width: 100%;
@@ -341,11 +404,12 @@ nav {
   opacity: 0;
   z-index: 1;
   overflow-y: scroll;
-  /*  -webkit-transition: 0.3s;
-    -moz-transition: 0.3s;
-    -ms-transition: 0.3s;
-    -o-transition: 0.3s;
-    transition: 0.3s;*/ }
+/*  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;*/
+}
 
 .closeYourHacks {
   right: 100%;
@@ -353,22 +417,24 @@ nav {
   width: 25%;
   height: 10%;
   position: fixed;
-  background: #211F1F;
+  background: $bgColour;
   opacity: 1;
   z-index: 9;
-  /*  -webkit-transition: 0.3s;
-    -moz-transition: 0.3s;
-    -ms-transition: 0.3s;
-    -o-transition: 0.3s;
-    transition: 0.3s;*/ }
+/*  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;*/
+}
 
 /************************************************************************************
 Hack selection
 ************************************************************************************/
+
 .hackSelectionFrame {
   position: relative;
-  top: 100%;
-  left: 0;
+  top: 100%; 
+  left: 0; 
   padding: 0;
   width: 100%;
   height: 85%;
@@ -376,16 +442,18 @@ Hack selection
   overflow-y: hidden;
   float: left;
   z-index: -1;
-  /*  -webkit-transition: 0.3s;
-    -moz-transition: 0.3s;
-    -ms-transition: 0.3s;
-    -o-transition: 0.3s;
-    transition: 0.3s; */ }
+/*  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s; */
+}
 
 .offset2 {
-  top: 10%;
+  top: 10%; 
   z-index: 1;
-  overflow: hidden; }
+  overflow: hidden;
+}
 
 .hackHeroImage {
   width: auto;
@@ -394,7 +462,8 @@ Hack selection
   position: absolute;
   margin-left: auto;
   margin-right: auto;
-  overflow: hidden; }
+  overflow: hidden;
+}
 
 .infoWrapper {
   margin: 0;
@@ -405,18 +474,20 @@ Hack selection
   height: 100%;
   background: white;
   opacity: .4;
-  /*  -webkit-transition: 0.3s;
-    -moz-transition: 0.3s;
-    -ms-transition: 0.3s;
-    -o-transition: 0.3s;
-    transition: 0.3s; */ }
+/*  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s; */
+}
 
 .hackTitle {
   margin-left: 10%;
   margin-top: 12%;
   position: relative;
   font-size: 8rem;
-  color: #FFF8EE; }
+  color: $textColour;
+}
 
 .hackShortDesc {
   margin-left: 10%;
@@ -424,14 +495,16 @@ Hack selection
   margin-top: 12%;
   position: relative;
   font-size: 5rem;
-  color: #FFF8EE; }
+  color: $textColour;
+}
 
 .hackTags {
   margin-left: 10%;
   position: relative;
   float: left;
   font-size: 3rem;
-  color: black; }
+  color: black;
+}
 
 .hackSupplies {
   margin-left: 10%;
@@ -439,7 +512,8 @@ Hack selection
   margin-top: 12%;
   position: relative;
   font-size: 5rem;
-  color: #FFF8EE; }
+  color: $textColour;
+}
 
 .stepNumber {
   margin-left: 10%;
@@ -447,7 +521,8 @@ Hack selection
   margin-top: 12%;
   position: relative;
   font-size: 5rem;
-  color: #FFF8EE; }
+  color: $textColour;
+}
 
 .hackInstructions {
   margin-left: 10%;
@@ -455,7 +530,8 @@ Hack selection
   margin-top: 12%;
   position: relative;
   font-size: 5rem;
-  color: #FFF8EE; }
+  color: $textColour;
+}
 
 .hackSelectionButton {
   margin: 0;
@@ -466,11 +542,12 @@ Hack selection
   height: 10%;
   background: white;
   border: 1pt solid black;
-  /*  -webkit-transition: 0.3s;
-    -moz-transition: 0.3s;
-    -ms-transition: 0.3s;
-    -o-transition: 0.3s;
-    transition: 0.3s; */ }
+/*  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s; */
+}
 
 .hackButtonText {
   text-align: center;
@@ -478,77 +555,96 @@ Hack selection
   line-height: 10%;
   position: absolute;
   font-size: 5rem;
-  color: #E16C5B; }
+  color: $linkColour;
+}
 
 /************************************************************************************
 Post a hack
 ************************************************************************************/
+
+
 .newHackFrame {
   margin: 0;
-  bottom: 100%;
+  bottom: 100%; 
   right: 10%;
   position: fixed;
   width: 250px;
   height: 250px;
-  background: #211F1F;
+  background: $bgColour;
   z-index: -1;
   border-radius: 100%;
   overflow: hidden;
-  /*  -webkit-transition: 0.3s;
-    -moz-transition: 0.3s;
-    -ms-transition: 0.3s;
-    -o-transition: 0.3s;
-    transition: 0.3s;*/ }
-  .newHackFrame h1 {
+/*  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;*/
+
+  h1 {
     margin-left: 10%;
     margin-top: 12%;
     position: relative;
     font-size: 8rem;
-    color: #FFF8EE; }
-  .newHackFrame * {
-    opacity: 0;
-    /*  -webkit-transition: 0.3s;
-      -moz-transition: 0.3s;
-      -ms-transition: 0.3s;
-      -o-transition: 0.3s;
-      transition: 0.3s;*/ }
+    color: $textColour;
+  }
 
-.offset7 {
+  * {
+    opacity: 0;
+  /*  -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;*/
+  }
+}
+
+.offset7 { 
   z-index: 2;
   overflow: hidden;
-  bottom: 5%; }
+  bottom: 5%;
+}
 
 .offset6 {
   opacity: 1;
-  /*  -webkit-transition: 0.1s;
-    -moz-transition: 0.1s;
-    -ms-transition: 0.1s;
-    -o-transition: 0.1s;
-    transition: 0.1s;*/ }
+/*  -webkit-transition: 0.1s;
+  -moz-transition: 0.1s;
+  -ms-transition: 0.1s;
+  -o-transition: 0.1s;
+  transition: 0.1s;*/
+}
 
 #recipeCreator {
   margin: 20% 10%;
   position: relative;
-  width: 80%; }
-  #recipeCreator input {
+  width: 80%;
+
+  input {
     width: 100%;
     height: 15%;
     margin: 3% 0 3% 0;
     padding: .5em;
     border: 0.2em solid black;
     outline: none;
-    font-size: 2rem; }
-  #recipeCreator textarea {
+    font-size: 2rem;
+  }
+
+  textarea {
     width: 100%;
     margin: 3% 0 3% 0;
     padding: .5em;
     border: 0.2em solid black;
     outline: none;
-    font-size: 2rem; }
-  #recipeCreator label {
-    font-size: 2.3rem; }
-  #recipeCreator input[type=submit] {
-    font-size: 1.5rem; }
+    font-size: 2rem;
+  }
+
+  label {
+   font-size: 2.3rem;
+  }
+
+  input[type=submit] {
+    font-size: 1.5rem;
+  }
+}
 
 .newHackClose {
   right: 0;
@@ -556,7 +652,8 @@ Post a hack
   width: 25%;
   height: 10%;
   position: absolute;
-  background: blue; }
+  background: blue;
+}
 
 .offset5 {
   bottom: 0;
@@ -566,15 +663,18 @@ Post a hack
   width: 100%;
   margin: 0;
   border-radius: 0;
-  /*  -webkit-transition: 0.3s;
-    -moz-transition: 0.3s;
-    -ms-transition: 0.3s;
-    -o-transition: 0.3s;
-    transition: 0.3s;*/ }
+/*  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;*/
+}
+
 
 /************************************************************************************
 Instructions
 ************************************************************************************/
+
 .insframe {
   width: 100%;
   height: 0;
@@ -585,19 +685,22 @@ Instructions
   opacity: 0;
   z-index: 1;
   overflow-y: scroll;
-  /*  -webkit-transition: 0.3s;
-    -moz-transition: 0.3s;
-    -ms-transition: 0.3s;
-    -o-transition: 0.3s;
-    transition: 0.3s;*/ }
-  .insframe p {
+/*  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;*/
+
+  p {
     margin-left: 10%;
     margin-right: 10%;
     margin-top: 12%;
     position: a;
     font-size: 5rem;
-    color: #FFF8EE;
-    float: right; }
+    color: $textColour;
+    float: right;
+  }
+}
 
 .follow {
   width: 100%;
@@ -607,15 +710,18 @@ Instructions
   padding: 0;
   left: 0;
   bottom: 0;
-  background: #211F1F; }
-  .follow h1 {
+  background: $bgColour;
+
+  h1 {
     margin: auto;
     line-height: 10%;
     top: 50%;
     text-align: center;
     position: relative;
     font-size: 5rem;
-    color: #E16C5B; }
+    color: $linkColour;
+  }
+}
 
 .close {
   right: 100%;
@@ -623,16 +729,16 @@ Instructions
   width: 25%;
   height: 10%;
   position: fixed;
-  background: #211F1F;
+  background: $bgColour;
   opacity: 1;
   z-index: 9;
-  /*  -webkit-transition: 0.3s;
-    -moz-transition: 0.3s;
-    -ms-transition: 0.3s;
-    -o-transition: 0.3s;
-    transition: 0.3s;*/ }
+/*  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;*/
+}
 
 .offset4 {
-  overflow: initial; }
-
-/*# sourceMappingURL=thesis.css.map */
+  overflow: initial;
+}
