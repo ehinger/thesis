@@ -1,0 +1,167 @@
+.menuBarYourHacks {
+  width: 33.3%;
+  height: 10%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  background: $bgColour;
+  margin: 0;
+  z-index: 2;
+/*  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s; */
+}
+
+.menuBarYourHacksText {
+  text-align: center;
+  vertical-align: middle;
+  line-height: 10%;
+  position: absolute;
+  font-size: 5rem;
+  color: $linkColour;
+  font-family: $linkFont;
+}
+
+.yourHacksPage {
+  display: none;
+  position: relative;
+  top: 0; 
+  left: 0; 
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  float: left;
+}
+
+.yourHacksYourHacks {
+  position: relative;
+  margin: 20% 10%;
+  width: 80%;
+  height: 5%;
+  background: green;
+}
+
+.yourHacksFollowedHacks {
+  position: relative;
+  margin: 20% 10%;
+  width: 80%;
+  height: 5%;
+  background: green;
+}
+
+.yourHacksCreateHacks {
+  position: relative;
+  margin: 20% 10%;
+  width: 80%;
+  height: 5%;
+  background: green;
+}
+
+.yourHacksMade {
+  display: none;
+  position: relative;
+  top: 0; 
+  left: 0; 
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  float: left;
+}
+
+.yourHacksButtons {
+  position: relative;
+  top: 0; 
+  left: 0; 
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  float: left;
+}
+.hackSelectionFrameYourHacks {
+  position: relative;
+  top: 100%; 
+  left: 0; 
+  padding: 0;
+  width: 100%;
+  height: 85%;
+  overflow: hidden;
+  overflow-y: hidden;
+  float: left;
+/*  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s; */
+}
+
+.infoWrapperYourHacks {
+  margin: 0;
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 70%;
+  height: 100%;
+  background: $bgColour;
+  opacity: .4;
+/*  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s; */
+}
+
+.hackSelectionButtonYourHacks {
+  margin: 0;
+  top: 10%;
+  left: 10%;
+  position: relative;
+  width: 40%;
+  height: 10%;
+  background: $bgColour;
+/*  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s; */
+}
+
+.insframeYourHacks {
+  width: 100%;
+  height: 0;
+  position: relative;
+  top: 15%;
+  left: 0;
+  margin: 0;
+  opacity: 0;
+  z-index: 1;
+  overflow-y: scroll;
+/*  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;*/
+}
+
+.closeYourHacks {
+  right: 100%;
+  top: 10%;
+  width: 25%;
+  height: 10%;
+  position: fixed;
+  background: $bgColour;
+  opacity: 1;
+  z-index: 9;
+/*  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;*/
+}

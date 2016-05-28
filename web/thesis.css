@@ -4,7 +4,7 @@ html, body {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 5px; }
+  font-size: 12px; }
 
 body {
   overflow: hidden; }
@@ -30,29 +30,6 @@ Navigation Bar
 .offset3 {
   top: 0; }
 
-.menuBarYourHacks {
-  width: 33.3%;
-  height: 10%;
-  top: 0;
-  left: 0;
-  position: fixed;
-  background: #211F1F;
-  margin: 0;
-  z-index: 2;
-  /*  -webkit-transition: 0.3s;
-    -moz-transition: 0.3s;
-    -ms-transition: 0.3s;
-    -o-transition: 0.3s;
-    transition: 0.3s; */ }
-
-.menuBarYourHacksText {
-  text-align: center;
-  vertical-align: middle;
-  line-height: 10%;
-  position: absolute;
-  font-size: 5rem;
-  color: #E16C5B; }
-
 .menuBarProfile {
   width: 33.4%;
   height: 10%;
@@ -74,30 +51,8 @@ Navigation Bar
   line-height: 10%;
   position: absolute;
   font-size: 5rem;
-  color: #E16C5B; }
-
-.menuBarSettings {
-  width: 33.3%;
-  height: 10%;
-  top: 0;
-  left: 66.6%;
-  position: fixed;
-  background: #211F1F;
-  margin: 0;
-  z-index: 2;
-  /*  -webkit-transition: 0.3s;
-    -moz-transition: 0.3s;
-    -ms-transition: 0.3s;
-    -o-transition: 0.3s;
-    transition: 0.3s; */ }
-
-.menuBarSettingsText {
-  text-align: center;
-  vertical-align: middle;
-  line-height: 10%;
-  position: absolute;
-  font-size: 5rem;
-  color: #E16C5B; }
+  color: #E16C5B;
+  font-family: "Merriweather", serif; }
 
 .offset {
   top: -100%; }
@@ -183,6 +138,101 @@ nav {
   height: 5%;
   background: green; }
 
+.rangeOneUpper {
+  display: none; }
+
+.rangeTwoUpper {
+  display: none; }
+
+.rangeThreeUpper {
+  display: none; }
+
+.rangeOnelower {
+  display: none; }
+
+.rangeTwolower {
+  display: none; }
+
+.rangeThreelower {
+  display: none; }
+
+.nextThreeQuestions {
+  display: none; }
+
+.abilityRegister {
+  display: none; }
+
+.menuBarSettings {
+  width: 33.3%;
+  height: 10%;
+  top: 0;
+  left: 66.6%;
+  position: fixed;
+  background: #211F1F;
+  margin: 0;
+  z-index: 2;
+  /*  -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s; */ }
+
+.menuBarSettingsText {
+  text-align: center;
+  vertical-align: middle;
+  line-height: 10%;
+  position: absolute;
+  font-size: 5rem;
+  color: #E16C5B;
+  font-family: "Merriweather", serif; }
+
+.yourSettingsPage {
+  display: none;
+  position: relative;
+  top: 0;
+  left: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll; }
+  .yourSettingsPage input {
+    width: 80%;
+    height: 15%;
+    margin: 20% 10%;
+    padding: .5em;
+    outline: none;
+    font-size: 2rem; }
+  .yourSettingsPage label {
+    position: absolute;
+    margin: 20% 10%;
+    padding: .5em;
+    font-size: 2rem; }
+
+.menuBarYourHacks {
+  width: 33.3%;
+  height: 10%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  background: #211F1F;
+  margin: 0;
+  z-index: 2;
+  /*  -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s; */ }
+
+.menuBarYourHacksText {
+  text-align: center;
+  vertical-align: middle;
+  line-height: 10%;
+  position: absolute;
+  font-size: 5rem;
+  color: #E16C5B;
+  font-family: "Merriweather", serif; }
+
 .yourHacksPage {
   display: none;
   position: relative;
@@ -238,53 +288,6 @@ nav {
   overflow-x: hidden;
   overflow-y: scroll;
   float: left; }
-
-.yourSettingsPage {
-  display: none;
-  position: relative;
-  top: 0;
-  left: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  overflow-x: hidden;
-  overflow-y: scroll; }
-  .yourSettingsPage input {
-    width: 80%;
-    height: 15%;
-    margin: 20% 10%;
-    padding: .5em;
-    outline: none;
-    font-size: 2rem; }
-  .yourSettingsPage label {
-    position: absolute;
-    margin: 20% 10%;
-    padding: .5em;
-    font-size: 2rem; }
-
-.rangeOneUpper {
-  display: none; }
-
-.rangeTwoUpper {
-  display: none; }
-
-.rangeThreeUpper {
-  display: none; }
-
-.rangeOnelower {
-  display: none; }
-
-.rangeTwolower {
-  display: none; }
-
-.rangeThreelower {
-  display: none; }
-
-.nextThreeQuestions {
-  display: none; }
-
-.abilityRegister {
-  display: none; }
 
 .hackSelectionFrameYourHacks {
   position: relative;
@@ -566,22 +569,11 @@ Post a hack
   width: 100%;
   margin: 0;
   border-radius: 0;
-<<<<<<< HEAD
   /*  -webkit-transition: 0.3s;
     -moz-transition: 0.3s;
     -ms-transition: 0.3s;
     -o-transition: 0.3s;
     transition: 0.3s;*/ }
-=======
-  z-index: 5;
-/*  -webkit-transition: 0.3s;
-  -moz-transition: 0.3s;
-  -ms-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;*/
-}
-
->>>>>>> f88642048d076441680518315ff18a7042cf3124
 
 /************************************************************************************
 Instructions

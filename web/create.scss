@@ -1,0 +1,110 @@
+/************************************************************************************
+Post a hack
+************************************************************************************/
+
+.newHackFrame {
+  margin: 0;
+  bottom: 100%; 
+  right: 10%;
+  position: fixed;
+  width: 250px;
+  height: 250px;
+  background: $bgColour;
+  z-index: -1;
+  border-radius: 100%;
+  overflow: hidden;
+/*  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;*/
+
+  h1 {
+    margin-left: 10%;
+    margin-top: 12%;
+    position: relative;
+    font-size: 8rem;
+    color: $textColour;
+  }
+
+  * {
+    opacity: 0;
+  /*  -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;*/
+  }
+}
+
+.offset7 { 
+  z-index: 2;
+  overflow: hidden;
+  bottom: 5%;
+}
+
+.offset6 {
+  opacity: 1;
+/*  -webkit-transition: 0.1s;
+  -moz-transition: 0.1s;
+  -ms-transition: 0.1s;
+  -o-transition: 0.1s;
+  transition: 0.1s;*/
+}
+
+#recipeCreator {
+  margin: 20% 10%;
+  position: relative;
+  width: 80%;
+
+  input {
+    width: 100%;
+    height: 15%;
+    margin: 3% 0 3% 0;
+    padding: .5em;
+    border: 0.2em solid black;
+    outline: none;
+    font-size: 2rem;
+  }
+
+  textarea {
+    width: 100%;
+    margin: 3% 0 3% 0;
+    padding: .5em;
+    border: 0.2em solid black;
+    outline: none;
+    font-size: 2rem;
+  }
+
+  label {
+   font-size: 2.3rem;
+  }
+
+  input[type=submit] {
+    font-size: 1.5rem;
+  }
+}
+
+.newHackClose {
+  right: 0;
+  top: 0;
+  width: 25%;
+  height: 10%;
+  position: absolute;
+  background: blue;
+}
+
+.offset5 {
+  bottom: 0;
+  top: 10%;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  border-radius: 0;
+/*  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;*/
+}

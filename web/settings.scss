@@ -1,0 +1,53 @@
+.menuBarSettings {
+  width: 33.3%;
+  height: 10%;
+  top: 0;
+  left: 66.6%;
+  position: fixed;
+  background: $bgColour;
+  margin: 0;
+  z-index: 2;
+/*  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s; */
+}
+
+.menuBarSettingsText {
+  text-align: center;
+  vertical-align: middle;
+  line-height: 10%;
+  position: absolute;
+  font-size: 5rem;
+  color: $linkColour;
+  font-family: $linkFont;
+}
+
+.yourSettingsPage {
+  display: none;
+  position: relative;
+  top: 0; 
+  left: 0; 
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+
+  input {
+    width: 80%;
+    height: 15%;
+    margin: 20% 10%;
+    padding: .5em;
+    outline: none;
+    font-size: 2rem;
+  }
+
+  label {
+    position: absolute;
+    margin: 20% 10%;
+    padding: .5em;
+    font-size: 2rem;
+  }
+}

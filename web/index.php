@@ -4,6 +4,8 @@
 <head>
     <meta charset='utf-8'/>
     <title>hacks</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
     <link rel='stylesheet' type='text/css' href='thesis.css'>
     <script type='text/javascript' src='jquery-2.2.0.min.js'></script>
     <script src="/js-cookie-2.1.0/src/js.cookie.js"></script>

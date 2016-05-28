@@ -1,0 +1,130 @@
+/************************************************************************************
+Hack selection
+************************************************************************************/
+
+.hackSelectionFrame {
+  position: relative;
+  top: 100%; 
+  left: 0; 
+  padding: 0;
+  width: 100%;
+  height: 85%;
+  overflow: hidden;
+  overflow-y: hidden;
+  float: left;
+  z-index: -1;
+/*  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s; */
+}
+
+.offset2 {
+  top: 10%; 
+  z-index: 1;
+  overflow: hidden;
+}
+
+.hackHeroImage {
+  width: auto;
+  height: 100%;
+  top: 0;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+
+.infoWrapper {
+  margin: 0;
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 70%;
+  height: 100%;
+  background: white;
+  opacity: .4;
+/*  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s; */
+}
+
+.hackTitle {
+  margin-left: 10%;
+  margin-top: 12%;
+  position: relative;
+  font-size: 8rem;
+  color: $textColour;
+}
+
+.hackShortDesc {
+  margin-left: 10%;
+  margin-right: 30%;
+  margin-top: 12%;
+  position: relative;
+  font-size: 5rem;
+  color: $textColour;
+}
+
+.hackTags {
+  margin-left: 10%;
+  position: relative;
+  float: left;
+  font-size: 3rem;
+  color: black;
+}
+
+.hackSupplies {
+  margin-left: 10%;
+  margin-right: 30%;
+  margin-top: 12%;
+  position: relative;
+  font-size: 5rem;
+  color: $textColour;
+}
+
+.stepNumber {
+  margin-left: 10%;
+  margin-right: 30%;
+  margin-top: 12%;
+  position: relative;
+  font-size: 5rem;
+  color: $textColour;
+}
+
+.hackInstructions {
+  margin-left: 10%;
+  margin-right: 30%;
+  margin-top: 12%;
+  position: relative;
+  font-size: 5rem;
+  color: $textColour;
+}
+
+.hackSelectionButton {
+  margin: 0;
+  top: 10%;
+  left: 10%;
+  position: relative;
+  width: 40%;
+  height: 10%;
+  background: white;
+  border: 1pt solid black;
+/*  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s; */
+}
+
+.hackButtonText {
+  text-align: center;
+  vertical-align: middle;
+  line-height: 10%;
+  position: absolute;
+  font-size: 5rem;
+  color: $linkColour;
+}
