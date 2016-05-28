@@ -26,6 +26,7 @@ Instructions
     font-size: 5rem;
     color: $textColour;
     float: right;
+    font-family: $textFont;
   }
 }
 
@@ -47,6 +48,7 @@ Instructions
     position: relative;
     font-size: 5rem;
     color: $linkColour;
+    font-family: $linkFont;
   }
 }
 

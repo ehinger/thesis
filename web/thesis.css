@@ -207,7 +207,8 @@ nav {
     position: absolute;
     margin: 20% 10%;
     padding: .5em;
-    font-size: 2rem; }
+    font-size: 2rem;
+    font-family: "Open Sans", sans-serif; }
 
 .menuBarYourHacks {
   width: 33.3%;
@@ -419,7 +420,8 @@ Hack selection
   margin-top: 12%;
   position: relative;
   font-size: 8rem;
-  color: #FFF8EE; }
+  color: #FFF8EE;
+  font-family: "Open Sans", sans-serif; }
 
 .hackShortDesc {
   margin-left: 10%;
@@ -427,7 +429,8 @@ Hack selection
   margin-top: 12%;
   position: relative;
   font-size: 5rem;
-  color: #FFF8EE; }
+  color: #FFF8EE;
+  font-family: "Open Sans", sans-serif; }
 
 .hackTags {
   margin-left: 10%;
@@ -442,7 +445,8 @@ Hack selection
   margin-top: 12%;
   position: relative;
   font-size: 5rem;
-  color: #FFF8EE; }
+  color: #FFF8EE;
+  font-family: "Open Sans", sans-serif; }
 
 .stepNumber {
   margin-left: 10%;
@@ -450,7 +454,8 @@ Hack selection
   margin-top: 12%;
   position: relative;
   font-size: 5rem;
-  color: #FFF8EE; }
+  color: #FFF8EE;
+  font-family: "Open Sans", sans-serif; }
 
 .hackInstructions {
   margin-left: 10%;
@@ -458,7 +463,8 @@ Hack selection
   margin-top: 12%;
   position: relative;
   font-size: 5rem;
-  color: #FFF8EE; }
+  color: #FFF8EE;
+  font-family: "Open Sans", sans-serif; }
 
 .hackSelectionButton {
   margin: 0;
@@ -481,7 +487,8 @@ Hack selection
   line-height: 10%;
   position: absolute;
   font-size: 5rem;
-  color: #E16C5B; }
+  color: #E16C5B;
+  font-family: "Merriweather", serif; }
 
 /************************************************************************************
 Post a hack
@@ -507,7 +514,8 @@ Post a hack
     margin-top: 12%;
     position: relative;
     font-size: 8rem;
-    color: #FFF8EE; }
+    color: #FFF8EE;
+    font-family: "Open Sans", sans-serif; }
   .newHackFrame * {
     opacity: 0;
     /*  -webkit-transition: 0.3s;
@@ -540,18 +548,22 @@ Post a hack
     padding: .5em;
     border: 0.2em solid black;
     outline: none;
-    font-size: 2rem; }
+    font-size: 2rem;
+    font-family: "Open Sans", sans-serif; }
   #recipeCreator textarea {
     width: 100%;
     margin: 3% 0 3% 0;
     padding: .5em;
     border: 0.2em solid black;
     outline: none;
-    font-size: 2rem; }
+    font-size: 2rem;
+    font-family: "Open Sans", sans-serif; }
   #recipeCreator label {
-    font-size: 2.3rem; }
+    font-size: 2.3rem;
+    font-family: "Open Sans", sans-serif; }
   #recipeCreator input[type=submit] {
-    font-size: 1.5rem; }
+    font-size: 1.5rem;
+    font-family: "Open Sans", sans-serif; }
 
 .newHackClose {
   right: 0;
@@ -600,7 +612,8 @@ Instructions
     position: a;
     font-size: 5rem;
     color: #FFF8EE;
-    float: right; }
+    float: right;
+    font-family: "Open Sans", sans-serif; }
 
 .follow {
   width: 100%;
@@ -618,7 +631,8 @@ Instructions
     text-align: center;
     position: relative;
     font-size: 5rem;
-    color: #E16C5B; }
+    color: #E16C5B;
+    font-family: "Merriweather", serif; }
 
 .close {
   right: 100%;
