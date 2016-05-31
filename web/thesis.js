@@ -251,7 +251,7 @@ function abilityProfileStageOne() {
 function abilityProfileStageTwo() {
 	if ($(".upperLimblowerLimb").val() == "Upper Limb") {
 			Cookies.set('abilityUOrL', "upper");
-			abilitySwitchContinuation = $($(".upperLimblowerLimb").val());
+			abilitySwitchContinuation = $(".upperLimblowerLimb").val();
 			$(".lowerLimbButton").hide();
 			$('.rangeOneUpper').show();
 			$('.nextThreeQuestions').show();
@@ -259,7 +259,7 @@ function abilityProfileStageTwo() {
 			console.log($(".upperLimblowerLimb").val())
 	} else if ($(".upperLimblowerLimb").val == "Lower Limb") {
 			Cookies.set('abilityUOrL', "lower");
-			abilitySwitchContinuation = $($(".upperLimblowerLimb").val());
+			abilitySwitchContinuation = $(".upperLimblowerLimb").val();
 			$(".upperLimbButton").hide();
 			$('.rangeOneLower').show();
 			$('.nextThreeQuestions').show();
