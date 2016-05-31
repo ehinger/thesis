@@ -241,11 +241,11 @@ function textSize(v) {
 var abilitySwitchContinuation = "";
 
 function abilityProfileStageOne() {
-	if () {
+	// if () {
 
-	} else {
+	// } else {
 
-	}
+	// }
 }
 
 function abilityProfileStageTwo() {
