@@ -180,7 +180,7 @@ Navigation Bar
         <form enctype="multipart/form-data" id='abilityRegister' action='' method='post'>
 
             <label>Left or Right side:</label>
-            <select class="leftSiderightSide" name="leftSiderightSide">
+            <select class="leftSiderightSide" name="leftSiderightSide" onchange="abilityProfileStageOne()">
                 <option value="blank"></option>
                 <option value="Left side">Left side</option>
                 <option value="Right Side">Right Side</option>
@@ -190,7 +190,7 @@ Navigation Bar
             <input class="rightSideButton" type="checkbox" onchange="abilityProfileStageOne(this)" value="Right Side"> -->
 
             <label>Upper or Lower body:</label>
-            <select class="upperLimblowerLimb" name="upperLimblowerLimb">
+            <select class="upperLimblowerLimb" name="upperLimblowerLimb" onchange="abilityProfileStageTwo()">
                 <option value="blank"></option>
                 <option value="Upper Limb">Upper Limb</option>
                 <option value="Lower Limb">Lower Limb</option>
