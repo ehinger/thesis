@@ -241,13 +241,14 @@ function textSize(v) {
 var abilitySwitchContinuation = "";
 
 function abilityProfileStageOne() {
-	// if () {
+	if () {
 
-	// } else {
+	} else {
 
-	// }
+	}
 }
 
+function abilityProfileStageTwo() {
 	if ($(".upperLimblowerLimb").val == "Upper Limb") {
 			Cookies.set('abilityUOrL', "upper");
 			abilitySwitchContinuation = $($(".upperLimblowerLimb").val);
@@ -255,6 +256,7 @@ function abilityProfileStageOne() {
 			$('.rangeOneUpper').show();
 			$('.nextThreeQuestions').show();
 			$('.abilityRegister').show();
+			console.log($(".upperLimblowerLimb").val)
 	} else if ($(".upperLimblowerLimb").val == "Lower Limb") {
 			Cookies.set('abilityUOrL', "lower");
 			abilitySwitchContinuation = $($(".upperLimblowerLimb").val);
@@ -274,8 +276,10 @@ function abilityProfileStageOne() {
 		$('.rangeThreeLower').hide();
 		$('.nextThreeQuestions').hide();
 		$('.abilityRegister').hide();
+		console.log($(".upperLimblowerLimb").val)
 	}
 
+}
     // questions += "";
     // questions += "<p>On a scale of not at all to not a problem:</p>"; 
     // questions += "<label></label>";
@@ -287,6 +291,7 @@ function abilityProfileStageOne() {
     // questions += '<input class="nextThreeQuestions" type="button" onclick="abilityProfileNextThreeQuestions()" value="Next">';
     // questions += '<input type="submit" value="abilityRegister" name="abilityRegister">';
     // $('#abilityRegister').append(questions);
+}
 
 // var n = 4;
 
