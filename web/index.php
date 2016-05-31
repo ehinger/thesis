@@ -180,12 +180,24 @@ Navigation Bar
         <form enctype="multipart/form-data" id='abilityRegister' action='' method='post'>
 
             <label>Left or Right side:</label>
-            <input class="leftSideButton" type="checkbox" onchange="abilityProfileStageOne(this)" value="Left side">
-            <input class="rightSideButton" type="checkbox" onchange="abilityProfileStageOne(this)" value="Right Side">
+            <select class="leftSiderightSide" name="leftSiderightSide" onchange="abilityProfileStageOne()">
+                <option value="blank"></option>
+                <option value="Left side">Left side</option>
+                <option value="Right Side">Right Side</option>
+            </select>
+
+<!--             <input class="leftSideButton" type="checkbox" onchange="abilityProfileStageOne(this)" value="Left side">
+            <input class="rightSideButton" type="checkbox" onchange="abilityProfileStageOne(this)" value="Right Side"> -->
 
             <label>Upper or Lower body:</label>
-            <input class="upperLimbButton" type="checkbox" onchange="abilityProfileStageTwo(this)" value="Upper Limb">
-            <input class="lowerLimbButton" type="checkbox" onchange="abilityProfileStageTwo(this)" value="Lower Limb">
+            <select class="upperLimblowerLimb" name="upperLimblowerLimb" onchange="abilityProfileStageTwo()">
+                <option value="blank"></option>
+                <option value="Upper Limb">Upper Limb</option>
+                <option value="Lower Limb">Lower Limb</option>
+            </select>
+
+<!--             <input class="upperLimbButton" type="checkbox" onchange="abilityProfileStageTwo(this)" value="Upper Limb">
+            <input class="lowerLimbButton" type="checkbox" onchange="abilityProfileStageTwo(this)" value="Lower Limb"> -->
 
             <?php
             for ($i = 0; $i < count($userQuestions['k']); $i++) {

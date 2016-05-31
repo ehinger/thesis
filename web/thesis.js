@@ -240,24 +240,23 @@ function textSize(v) {
 // var questions = "";
 var abilitySwitchContinuation = "";
 
-function abilityProfileStageOne(abilitySwitch) {
-	if ($(abilitySwitch).attr('class') == 'leftSideButton') {
+function abilityProfileStageOne() {
+	if () {
 
 	} else {
 
 	}
 }
 
-function abilityProfileStageTwo(abilitySwitch) {
-	if (abilitySwitch.checked) {
-		if ($(abilitySwitch).attr('class') == 'upperLimbButton') {
+function abilityProfileStageTwo() {
+	if ($(".upperLimblowerLimb").val == "Upper Limb") {
 			Cookies.set('abilityUOrL', "upper");
 			abilitySwitchContinuation = $(abilitySwitch).attr('class');
 			$(".lowerLimbButton").hide();
 			$('.rangeOneUpper').show();
 			$('.nextThreeQuestions').show();
 			$('.abilityRegister').show();
-		} else {
+	} else if ($(".upperLimblowerLimb").val == "Lower Limb") {
 			Cookies.set('abilityUOrL', "lower");
 			$(".upperLimbButton").hide();
 			$('.rangeOneLower').show();
