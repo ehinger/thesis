@@ -241,22 +241,23 @@ function textSize(v) {
 var abilitySwitchContinuation = "";
 
 function abilityProfileStageOne() {
-	if () {
+	// if () {
 
-	} else {
+	// } else {
 
-	}
+	// }
 }
 
 	if ($(".upperLimblowerLimb").val == "Upper Limb") {
 			Cookies.set('abilityUOrL', "upper");
-			abilitySwitchContinuation = $(abilitySwitch).attr('class');
+			abilitySwitchContinuation = $($(".upperLimblowerLimb").val);
 			$(".lowerLimbButton").hide();
 			$('.rangeOneUpper').show();
 			$('.nextThreeQuestions').show();
 			$('.abilityRegister').show();
 	} else if ($(".upperLimblowerLimb").val == "Lower Limb") {
 			Cookies.set('abilityUOrL', "lower");
+			abilitySwitchContinuation = $($(".upperLimblowerLimb").val);
 			$(".upperLimbButton").hide();
 			$('.rangeOneLower').show();
 			$('.nextThreeQuestions').show();
@@ -292,7 +293,7 @@ function abilityProfileStageOne() {
 // var questionsNew = "";
 
 function abilityProfileNextThreeQuestions() {
-	if (abilitySwitchContinuation == 'upperLimbButton') {
+	if (abilitySwitchContinuation == 'Upper Limb') {
 		if ($('.rangeTwoUpper').css('display') == 'none') {
 			Cookies.set('abilityFocusPost', "lvl2Upper");
 			$('.rangeTwoUpper').show();
