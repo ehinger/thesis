@@ -248,7 +248,6 @@ function abilityProfileStageOne() {
 	}
 }
 
-function abilityProfileStageTwo() {
 	if ($(".upperLimblowerLimb").val == "Upper Limb") {
 			Cookies.set('abilityUOrL', "upper");
 			abilitySwitchContinuation = $(abilitySwitch).attr('class');
@@ -276,7 +275,6 @@ function abilityProfileStageTwo() {
 		$('.abilityRegister').hide();
 	}
 
-}
     // questions += "";
     // questions += "<p>On a scale of not at all to not a problem:</p>"; 
     // questions += "<label></label>";
@@ -288,7 +286,6 @@ function abilityProfileStageTwo() {
     // questions += '<input class="nextThreeQuestions" type="button" onclick="abilityProfileNextThreeQuestions()" value="Next">';
     // questions += '<input type="submit" value="abilityRegister" name="abilityRegister">';
     // $('#abilityRegister').append(questions);
-}
 
 // var n = 4;
 
