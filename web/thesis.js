@@ -291,7 +291,6 @@ function abilityProfileStageTwo() {
     // questions += '<input class="nextThreeQuestions" type="button" onclick="abilityProfileNextThreeQuestions()" value="Next">';
     // questions += '<input type="submit" value="abilityRegister" name="abilityRegister">';
     // $('#abilityRegister').append(questions);
-}
 
 // var n = 4;
 
