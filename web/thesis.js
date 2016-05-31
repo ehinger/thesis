@@ -262,7 +262,6 @@ function abilityProfileStageTwo() {
 			$('.rangeOneLower').show();
 			$('.nextThreeQuestions').show();
 			$('.abilityRegister').show();
-		}
 	} else {
 		abilitySwitchContinuation = "";
 		$(".upperLimbButton").show();
@@ -277,6 +276,7 @@ function abilityProfileStageTwo() {
 		$('.abilityRegister').hide();
 	}
 
+}
     // questions += "";
     // questions += "<p>On a scale of not at all to not a problem:</p>"; 
     // questions += "<label></label>";
