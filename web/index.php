@@ -180,24 +180,12 @@ Navigation Bar
         <form enctype="multipart/form-data" id='abilityRegister' action='' method='post'>
 
             <label>Left or Right side:</label>
-            <select class="leftSiderightSide" name="leftSiderightSide" onchange="abilityProfileStageOne()">
-                <option value="blank"></option>
-                <option value="Left side">Left side</option>
-                <option value="Right Side">Right Side</option>
-            </select>
-
-<!--             <input class="leftSideButton" type="checkbox" onchange="abilityProfileStageOne(this)" value="Left side">
-            <input class="rightSideButton" type="checkbox" onchange="abilityProfileStageOne(this)" value="Right Side"> -->
+            <input class="leftSideButton" type="checkbox" onchange="abilityProfileStageOne(this)" value="Left side">
+            <input class="rightSideButton" type="checkbox" onchange="abilityProfileStageOne(this)" value="Right Side">
 
             <label>Upper or Lower body:</label>
-            <select class="upperLimblowerLimb" name="upperLimblowerLimb" onchange="abilityProfileStageTwo()">
-                <option value="blank"></option>
-                <option value="Upper Limb">Upper Limb</option>
-                <option value="Lower Limb">Lower Limb</option>
-            </select>
-
-<!--             <input class="upperLimbButton" type="checkbox" onchange="abilityProfileStageTwo(this)" value="Upper Limb">
-            <input class="lowerLimbButton" type="checkbox" onchange="abilityProfileStageTwo(this)" value="Lower Limb"> -->
+            <input class="upperLimbButton" type="checkbox" onchange="abilityProfileStageTwo(this)" value="Upper Limb">
+            <input class="lowerLimbButton" type="checkbox" onchange="abilityProfileStageTwo(this)" value="Lower Limb">
 
             <?php
             for ($i = 0; $i < count($userQuestions['k']); $i++) {
@@ -487,6 +475,7 @@ for ($i = 0; $i < count($hacksGeneral['k']); $i++) {
     for ($ni = 0; $ni < count($hacksInstructions['k']); $ni++) {
         if ($hacksInstructions['k'][$ni]['hackid'] == $hacksGeneral['k'][$i]['hackid']) {
             echo "<h1 class='stepNumber'>Step ".$hacksInstructions['k'][$ni]['stepnumber']."</h1>";
+            echo "<img class='hackHeroImage' src='".$hacksInstructions['k'][$i]['stage']."'>";
             echo "<p class='hackInstructions'>".$hacksInstructions['k'][$ni]['instructions']."</p>";
         }
     }

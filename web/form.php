@@ -58,8 +58,8 @@ if (isset($_POST['push'])){
         $title = pg_escape_string($_POST['hackTitle']); 
         $string = preg_replace('/\s+/', '', $title);
         $type = pg_escape_string($_POST['hackType']); 
-        $heroImageURL = htmlspecialchars($s3->getObjectUrl("thesis-tom-creagh", $_FILES['userfile']['name'][0])); 
         $description = pg_escape_string($_POST['hackDesc']); 
+        $heroImageURL = htmlspecialchars($s3->getObjectUrl("thesis-tom-creagh", $_FILES['userfile']['name'][0])); 
         $userID = pg_escape_string($_COOKIE["userId"]);
 
         $db->exec("INSERT INTO hacksGeneral (hackId, heroImageURL, title, type, description, userID) VALUES ('" . $string . $identification . "', '" . $heroImageURL . "', '" . $title . "', '" . $type . "', '" . $description . "', '" . $userID . "')");
@@ -79,14 +79,24 @@ if (isset($_POST['push'])){
             $db->exec("INSERT INTO hacksSupplies (hackID, supplyNo, item) VALUES ('" . $string . $identification . "', '" . $ingredientsQuantity . "', '" . $hackIngredients . "')");
         }
 
+        $stepNo = 0;
+
         foreach ($_POST['hackIns'] as $k => $v) {
 
-            $stepNo = 1;
             $stepNo++;
+            $stepImageURL = htmlspecialchars($s3->getObjectUrl("thesis-tom-creagh", $_FILES['userfile']['name'][$stepNo])); 
             $hackDesc = $_POST['hackIns'][$k];
 
-            $db->exec("INSERT INTO hackInstructions (hackID, stage, stepNumber, instructions) VALUES ('" . $string . $identification . "', '" . $hackDesc . "', '" . $stepNo . "', '" . $hackDesc . "')");
+            $db->exec("INSERT INTO hackInstructions (hackID, stage, stepNumber, instructions) VALUES ('" . $string . $identification . "', '" . $stepImageURL . "', '" . $stepNo . "', '" . $hackDesc . "')");
         }
+
+        // for ($i = 1; $i < count($_FILES['userfile']['name']); $i++) { 
+
+            
+        //     $db->exec("INSERT INTO hackImages (hackID, stepNumber, instructions) VALUES ('" . $string . $identification . "', '" . $hackDesc . "', '" . $stepNo . "', '" . $hackDesc . "')");
+
+        // }
+
 
         $db->commit();
     }
