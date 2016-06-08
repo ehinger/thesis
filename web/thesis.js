@@ -229,7 +229,7 @@ function hackSteps() {
 	steps += "<input name='userfile[]' type='file'>";
 	steps += "<label>Step description:</label>";
 	steps += "<textarea name='hackIns[]' rows='10' cols='30'></textarea>";
-	$('.steps').html(steps);
+	$('.steps').append(steps);
 }
 
 function textSize(v) {
