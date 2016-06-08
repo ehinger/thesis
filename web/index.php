@@ -282,13 +282,14 @@ Navigation Bar
                     echo "<img class='hackHeroImage' src='".$hacksGeneral['k'][$i]['heroimageurl']."'>";
                     echo '<div class="infoWrapperYourHacks"></div>';
                     echo '<h1 class="hackTitle">'.$hacksGeneral['k'][$i]['title'].'</h1>';
-                    echo "<p class='hackShortDesc'>This hack can be used by people with a ability level for ".$hacksGeneral['k'][$i]['type']."</p>";
+                    echo "<p class='hackShortDesc'>".$hacksGeneral['k'][$i]['description']."</p>";
+                    // echo "<p class='hackShortDesc'>This hack can be used by people with a ability level for ".$hacksGeneral['k'][$i]['type']."</p>";
 
-                    for ($n = 0; $n < count($hacksTags['k']); $n++) {
-                        if ($hacksTags['k'][$n]['hackid'] == $hacksGeneral['k'][$i]['hackid']) {
-                            echo "<p class='hackTags'>".$hacksTags['k'][$n]['tags'].",</p>";
-                        }  
-                    }
+                    // for ($n = 0; $n < count($hacksTags['k']); $n++) {
+                    //     if ($hacksTags['k'][$n]['hackid'] == $hacksGeneral['k'][$i]['hackid']) {
+                    //         echo "<p class='hackTags'>".$hacksTags['k'][$n]['tags'].",</p>";
+                    //     }  
+                    // }
 
                     echo "<div class='hackSelectionButtonYourHacks'>";
                     echo "<h1 class='hackButtonText'>Enter</h1>";
@@ -297,7 +298,6 @@ Navigation Bar
                     echo '</div>';
                     echo '<div class="insframeYourHacks">';
 
-                    echo "<p class='hackShortDesc'>".$hacksGeneral['k'][$i]['description']."</p>";
 
                     for ($in = 0; $in < count($hacksSupplies['k']); $in++) {
                         if ($hacksSupplies['k'][$in]['hackid'] == $hacksGeneral['k'][$i]['hackid']) {
@@ -330,13 +330,14 @@ Navigation Bar
                     echo "<img class='hackHeroImage' src='".$hacksGeneral['k'][$i]['heroimageurl']."'>";
                     echo '<div class="infoWrapperYourHacks"></div>';
                     echo '<h1 class="hackTitle">'.$hacksGeneral['k'][$i]['title'].'</h1>';
-                    echo "<p class='hackShortDesc'>This hack can be used by people with a ability level for ".$hacksGeneral['k'][$i]['type']."</p>";
+                    echo "<p class='hackShortDesc'>".$hacksGeneral['k'][$i]['description']."</p>";
+                    // echo "<p class='hackShortDesc'>This hack can be used by people with a ability level for ".$hacksGeneral['k'][$i]['type']."</p>";
 
-                    for ($n = 0; $n < count($hacksTags['k']); $n++) {
-                        if ($hacksTags['k'][$n]['hackid'] == $hacksGeneral['k'][$i]['hackid']) {
-                            echo "<p class='hackTags'>".$hacksTags['k'][$n]['tags'].",</p>";
-                        }  
-                    }
+                    // for ($n = 0; $n < count($hacksTags['k']); $n++) {
+                    //     if ($hacksTags['k'][$n]['hackid'] == $hacksGeneral['k'][$i]['hackid']) {
+                    //         echo "<p class='hackTags'>".$hacksTags['k'][$n]['tags'].",</p>";
+                    //     }  
+                    // }
 
                     echo "<div class='hackSelectionButtonYourHacks'>";
                     echo "<h1 class='hackButtonText'>Enter</h1>";
@@ -345,7 +346,6 @@ Navigation Bar
                     echo '</div>';
                     echo '<div class="insframeYourHacks">';
 
-                    echo "<p class='hackShortDesc'>".$hacksGeneral['k'][$i]['description']."</p>";
 
                     for ($in = 0; $in < count($hacksSupplies['k']); $in++) {
                         if ($hacksSupplies['k'][$in]['hackid'] == $hacksGeneral['k'][$i]['hackid']) {
