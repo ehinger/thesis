@@ -220,11 +220,11 @@ function ingredientSelection() {
 	$('.ingredient').append(selection);
 }
 
-var steps = "";
 
 var i = 1;
 
 function hackSteps() {
+	var steps = "";
 	steps += "<h1>step " + i++ + "</h1>";
 	steps += "<input name='userfile[]' type='file'>";
 	steps += "<label>Step description:</label>";
