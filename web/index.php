@@ -176,7 +176,7 @@ Navigation Bar
         </form>
     </div>
 
-    <div class="abilityProfilePage">
+<!--     <div class="abilityProfilePage">
         <form enctype="multipart/form-data" id='abilityRegister' action='' method='post'>
 
             <label>Left or Right side:</label>
@@ -186,86 +186,86 @@ Navigation Bar
             <label>Upper or Lower body:</label>
             <input class="upperLimbButton" type="checkbox" onchange="abilityProfileStageTwo(this)" value="Upper Limb">
             <input class="lowerLimbButton" type="checkbox" onchange="abilityProfileStageTwo(this)" value="Lower Limb">
-
+ -->
             <?php
-            for ($i = 0; $i < count($userQuestions['k']); $i++) {
-                if ($userQuestions['k'][$i]['focus'] == 1 && $userQuestions['k'][$i]['area'] == 'upper') {
-                    echo '<div class="rangeOneUpper">';
-                    echo     '<p>On a scale of not at all to not a problem:</p>';
-                    echo     '<label>' . $userQuestions['k'][$i]['qone'] . '</label>';
-                    echo     '<input class="q1" type="range" name="q1" min="0" max="10">';
-                    echo     '<label>' . $userQuestions['k'][$i]['qtwo'] . '</label>';
-                    echo     '<input class="q2" type="range" name="q2" min="0" max="10">';
-                    echo     '<label>' . $userQuestions['k'][$i]['qthree'] . '</label>';
-                    echo     '<input class="q3" type="range" name="q3" min="0" max="10">';
-                    echo '</div>';
-                }
+            // for ($i = 0; $i < count($userQuestions['k']); $i++) {
+            //     if ($userQuestions['k'][$i]['focus'] == 1 && $userQuestions['k'][$i]['area'] == 'upper') {
+            //         echo '<div class="rangeOneUpper">';
+            //         echo     '<p>On a scale of not at all to not a problem:</p>';
+            //         echo     '<label>' . $userQuestions['k'][$i]['qone'] . '</label>';
+            //         echo     '<input class="q1" type="range" name="q1" min="0" max="10">';
+            //         echo     '<label>' . $userQuestions['k'][$i]['qtwo'] . '</label>';
+            //         echo     '<input class="q2" type="range" name="q2" min="0" max="10">';
+            //         echo     '<label>' . $userQuestions['k'][$i]['qthree'] . '</label>';
+            //         echo     '<input class="q3" type="range" name="q3" min="0" max="10">';
+            //         echo '</div>';
+            //     }
 
-                if ($userQuestions['k'][$i]['focus'] == 2 && $userQuestions['k'][$i]['area'] == 'upper') {
-                    echo '<div class="rangeTwoUpper">';
-                    echo     '<label>' . $userQuestions['k'][$i]['qone'] . '</label>';
-                    echo     '<input class="q4" type="range" name="q4" min="0" max="10">';
-                    echo     '<label>' . $userQuestions['k'][$i]['qtwo'] . '</label>';
-                    echo     '<input class="q5" type="range" name="q5" min="0" max="10">';
-                    echo     '<label>' . $userQuestions['k'][$i]['qthree'] . '</label>';
-                    echo     '<input class="q6" type="range" name="q6" min="0" max="10">';
-                    echo '</div>';
-                }
+            //     if ($userQuestions['k'][$i]['focus'] == 2 && $userQuestions['k'][$i]['area'] == 'upper') {
+            //         echo '<div class="rangeTwoUpper">';
+            //         echo     '<label>' . $userQuestions['k'][$i]['qone'] . '</label>';
+            //         echo     '<input class="q4" type="range" name="q4" min="0" max="10">';
+            //         echo     '<label>' . $userQuestions['k'][$i]['qtwo'] . '</label>';
+            //         echo     '<input class="q5" type="range" name="q5" min="0" max="10">';
+            //         echo     '<label>' . $userQuestions['k'][$i]['qthree'] . '</label>';
+            //         echo     '<input class="q6" type="range" name="q6" min="0" max="10">';
+            //         echo '</div>';
+            //     }
 
-                if ($userQuestions['k'][$i]['focus'] == 3 && $userQuestions['k'][$i]['area'] == 'upper') {
-                    echo '<div class="rangeThreeUpper">';
-                    echo     '<label>' . $userQuestions['k'][$i]['qone'] . '</label>';
-                    echo     '<input class="q7" type="range" name="q7" min="0" max="10">';
-                    echo     '<label>' . $userQuestions['k'][$i]['qtwo'] . '</label>';
-                    echo     '<input class="q8" type="range" name="q8" min="0" max="10">';
-                    echo     '<label>' . $userQuestions['k'][$i]['qthree'] . '</label>';
-                    echo     '<input class="q9" type="range" name="q9" min="0" max="10">';
-                    echo '</div>';
-                }
-            }
+            //     if ($userQuestions['k'][$i]['focus'] == 3 && $userQuestions['k'][$i]['area'] == 'upper') {
+            //         echo '<div class="rangeThreeUpper">';
+            //         echo     '<label>' . $userQuestions['k'][$i]['qone'] . '</label>';
+            //         echo     '<input class="q7" type="range" name="q7" min="0" max="10">';
+            //         echo     '<label>' . $userQuestions['k'][$i]['qtwo'] . '</label>';
+            //         echo     '<input class="q8" type="range" name="q8" min="0" max="10">';
+            //         echo     '<label>' . $userQuestions['k'][$i]['qthree'] . '</label>';
+            //         echo     '<input class="q9" type="range" name="q9" min="0" max="10">';
+            //         echo '</div>';
+            //     }
+            // }
 
-            for ($i = 0; $i < count($userQuestions['k']); $i++) {
-                if ($userQuestions['k'][$i]['focus'] == 1 && $userQuestions['k'][$i]['area'] == 'lower') {
-                    echo '<div class="rangeOneLower">';
-                    echo     '<p>On a scale of not at all to not a problem:</p>';
-                    echo     '<label>' . $userQuestions['k'][$i]['qone'] . '</label>';
-                    echo     '<input class="q1" type="range" name="q1" min="0" max="10">';
-                    echo     '<label>' . $userQuestions['k'][$i]['qtwo'] . '</label>';
-                    echo     '<input class="q2" type="range" name="q2" min="0" max="10">';
-                    echo     '<label>' . $userQuestions['k'][$i]['qthree'] . '</label>';
-                    echo     '<input class="q3" type="range" name="q3" min="0" max="10">';
-                    echo '</div>';
-                }
+            // for ($i = 0; $i < count($userQuestions['k']); $i++) {
+            //     if ($userQuestions['k'][$i]['focus'] == 1 && $userQuestions['k'][$i]['area'] == 'lower') {
+            //         echo '<div class="rangeOneLower">';
+            //         echo     '<p>On a scale of not at all to not a problem:</p>';
+            //         echo     '<label>' . $userQuestions['k'][$i]['qone'] . '</label>';
+            //         echo     '<input class="q1" type="range" name="q1" min="0" max="10">';
+            //         echo     '<label>' . $userQuestions['k'][$i]['qtwo'] . '</label>';
+            //         echo     '<input class="q2" type="range" name="q2" min="0" max="10">';
+            //         echo     '<label>' . $userQuestions['k'][$i]['qthree'] . '</label>';
+            //         echo     '<input class="q3" type="range" name="q3" min="0" max="10">';
+            //         echo '</div>';
+            //     }
 
-                if ($userQuestions['k'][$i]['focus'] == 2 && $userQuestions['k'][$i]['area'] == 'lower') {
-                    echo '<div class="rangeTwoLower">';
-                    echo     '<label>' . $userQuestions['k'][$i]['qone'] . '</label>';
-                    echo     '<input class="q4" type="range" name="q4" min="0" max="10">';
-                    echo     '<label>' . $userQuestions['k'][$i]['qtwo'] . '</label>';
-                    echo     '<input class="q5" type="range" name="q5" min="0" max="10">';
-                    echo     '<label>' . $userQuestions['k'][$i]['qthree'] . '</label>';
-                    echo     '<input class="q6" type="range" name="q6" min="0" max="10">';
-                    echo '</div>';
-                }
+            //     if ($userQuestions['k'][$i]['focus'] == 2 && $userQuestions['k'][$i]['area'] == 'lower') {
+            //         echo '<div class="rangeTwoLower">';
+            //         echo     '<label>' . $userQuestions['k'][$i]['qone'] . '</label>';
+            //         echo     '<input class="q4" type="range" name="q4" min="0" max="10">';
+            //         echo     '<label>' . $userQuestions['k'][$i]['qtwo'] . '</label>';
+            //         echo     '<input class="q5" type="range" name="q5" min="0" max="10">';
+            //         echo     '<label>' . $userQuestions['k'][$i]['qthree'] . '</label>';
+            //         echo     '<input class="q6" type="range" name="q6" min="0" max="10">';
+            //         echo '</div>';
+            //     }
 
-                if ($userQuestions['k'][$i]['focus'] == 3 && $userQuestions['k'][$i]['area'] == 'lower') {
-                    echo '<div class="rangeThreeLower">';
-                    echo     '<label>' . $userQuestions['k'][$i]['qone'] . '</label>';
-                    echo     '<input class="q7" type="range" name="q7" min="0" max="10">';
-                    echo     '<label>' . $userQuestions['k'][$i]['qtwo'] . '</label>';
-                    echo     '<input class="q8" type="range" name="q8" min="0" max="10">';
-                    echo     '<label>' . $userQuestions['k'][$i]['qthree'] . '</label>';
-                    echo     '<input class="q9" type="range" name="q9" min="0" max="10">';
-                    echo '</div>';
-                }
-            }
+            //     if ($userQuestions['k'][$i]['focus'] == 3 && $userQuestions['k'][$i]['area'] == 'lower') {
+            //         echo '<div class="rangeThreeLower">';
+            //         echo     '<label>' . $userQuestions['k'][$i]['qone'] . '</label>';
+            //         echo     '<input class="q7" type="range" name="q7" min="0" max="10">';
+            //         echo     '<label>' . $userQuestions['k'][$i]['qtwo'] . '</label>';
+            //         echo     '<input class="q8" type="range" name="q8" min="0" max="10">';
+            //         echo     '<label>' . $userQuestions['k'][$i]['qthree'] . '</label>';
+            //         echo     '<input class="q9" type="range" name="q9" min="0" max="10">';
+            //         echo '</div>';
+            //     }
+            // }
             ?>
-            <input class="nextThreeQuestions" type="button" onclick="abilityProfileNextThreeQuestions()" value="Next">
+<!--             <input class="nextThreeQuestions" type="button" onclick="abilityProfileNextThreeQuestions()" value="Next">
 
             <input class="abilityRegister" type="submit" value="abilityRegister" name="abilityRegister">
 
         </form>
-    </div>
+    </div> -->
 
     <div class="yourHacksPage">
         <div class="yourHacksButtons">
