@@ -423,12 +423,15 @@ Post a hack
         <label>Title image:</label>
         <input name="userfile[]" type="file">
         
-        <div class="steps">     
+        <div class="stepsMake">     
         </div>
-
-        <!--         <input type="submit" value="Upload"> -->
         
-        <input type="button" onclick="hackSteps()" value="Add new step">
+        <input type="button" onclick="hackStepsMake()" value="Add new step">
+
+<!--         <div class="stepsUse">     
+        </div>
+        
+        <input type="button" onclick="hackStepsUse()" value="Add new step"> -->
 
         <input type="submit" value="Submit" name="push">
 
