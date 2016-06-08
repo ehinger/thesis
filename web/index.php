@@ -392,7 +392,7 @@ Post a hack
         <label>Title:</label>
         <input name="hackTitle" type='text'>
 
-        <label>Ability:</label>
+<!--         <label>Ability:</label>
         <input name="hackAbility" type='text'>
 
         <label>Type:</label>
@@ -401,7 +401,7 @@ Post a hack
             <option value="fitness">Fitness</option>
             <option value="personalCare">Personal Care</option>
             <option value="communication">Communication</option>
-        </select>
+        </select> -->
 
         <label>Description:</label>
         <textarea name="hackDesc" rows="4" cols="50">
@@ -415,10 +415,10 @@ Post a hack
 
         <input type="button" onclick="ingredientSelection()" value="Add another resource">
 
-        <label>Tags:</label>
+<!--         <label>Tags:</label>
         <input name="hackTags[]" type='text'>
         <input name="hackTags[]" type='text'>
-        <input name="hackTags[]" type='text'>
+        <input name="hackTags[]" type='text'> -->
 
         <label>Title image:</label>
         <input name="userfile[]" type="file">
@@ -449,13 +449,14 @@ for ($i = 0; $i < count($hacksGeneral['k']); $i++) {
     echo "<img class='hackHeroImage' src='".$hacksGeneral['k'][$i]['heroimageurl']."'>";
     echo '<div class="infoWrapper"></div>';
     echo '<h1 class="hackTitle">'.$hacksGeneral['k'][$i]['title'].'</h1>';
-    echo "<p class='hackShortDesc'>This hack can be used by people with a ability level for ".$hacksGeneral['k'][$i]['type']."</p>";
+    echo "<p class='hackShortDesc'>".$hacksGeneral['k'][$i]['description']."</p>";
+    // echo "<p class='hackShortDesc'>This hack can be used by people with a ability level for ".$hacksGeneral['k'][$i]['type']."</p>";
 
-    for ($n = 0; $n < count($hacksTags['k']); $n++) {
-        if ($hacksTags['k'][$n]['hackid'] == $hacksGeneral['k'][$i]['hackid']) {
-            echo "<p class='hackTags'>".$hacksTags['k'][$n]['tags'].",</p>";
-        }  
-    }
+    // for ($n = 0; $n < count($hacksTags['k']); $n++) {
+    //     if ($hacksTags['k'][$n]['hackid'] == $hacksGeneral['k'][$i]['hackid']) {
+    //         echo "<p class='hackTags'>".$hacksTags['k'][$n]['tags'].",</p>";
+    //     }  
+    // }
 
     echo "<div class='hackSelectionButton'>";
     echo "<h1 class='hackButtonText'>Enter</h1>";
@@ -464,7 +465,6 @@ for ($i = 0; $i < count($hacksGeneral['k']); $i++) {
     echo '</div>';
     echo '<div class="insframe">';
 
-    echo "<p class='hackShortDesc'>".$hacksGeneral['k'][$i]['description']."</p>";
 
     for ($in = 0; $in < count($hacksSupplies['k']); $in++) {
         if ($hacksSupplies['k'][$in]['hackid'] == $hacksGeneral['k'][$i]['hackid']) {
