@@ -487,6 +487,7 @@ Hack selection
 
 .hackButtonText {
   text-align: center;
+  bottom: 0;
   line-height: 10%;
   position: relative;
   font-size: 5rem;
