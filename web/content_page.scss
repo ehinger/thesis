@@ -128,10 +128,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00211f1f', e
 }
 
 .hackButtonText {
-  bottom: 5%;
+  bottom: 15%;
   text-align: center;
   line-height: 10%;
-  position: absolute;
+  position: relative;
   font-size: 5rem;
   color: $linkColour;
   font-family: $linkFont;
