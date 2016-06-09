@@ -486,7 +486,6 @@ Hack selection
     transition: 0.3s; */ }
 
 .hackButtonText {
-  bottom: 5%;
   text-align: center;
   line-height: 10%;
   position: relative;
