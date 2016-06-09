@@ -392,7 +392,7 @@ Hack selection
   overflow: hidden; }
 
 .hackHeroImage {
-  width: 100% auto;
+  width: 100%;
   height: auto;
   top: 0;
   position: absolute;
