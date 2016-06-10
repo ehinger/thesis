@@ -104,7 +104,7 @@ $(window).load(function(){
 		$(".registerPage").show();
 	});
 
-	$(".hackSelectionButton, .hackButtonText").on('click', function() {
+	$(".hackSelectionButton").on('click', function() {
 		hackI = $(this).parent().attr('id');
 		function ihg (hackID) {
 			$(".hackSelectionFrame").css("overflowY", "scroll");
@@ -129,7 +129,7 @@ $(window).load(function(){
         // });
     });
 
-	$(".hackSelectionButtonYourHacks, .hackButtonText").on('click', function() {
+	$(".hackSelectionButtonYourHacks").on('click', function() {
 		hackI = $(this).parent().attr('id');
 		function ihg (hackID) {
 			$(".hackSelectionFrame").css("overflowY", "scroll");
@@ -154,7 +154,7 @@ $(window).load(function(){
         // });
     });
 
-	$(".hackSelectionButtonFollowedHacks, .hackButtonText").on('click', function() {
+	$(".hackSelectionButtonFollowedHacks").on('click', function() {
 		hackI = $(this).parent().attr('id');
 		function ihg (hackID) {
 			$(".hackSelectionFrame").css("overflowY", "scroll");
