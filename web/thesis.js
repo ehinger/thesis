@@ -117,7 +117,7 @@ $(window).load(function(){
 			$("body").removeClass( "offset4" );
 			$(".newHackFrame").removeClass( "offset7" );
 			$("body").scrollTop($("#" + hackID).offset().top - parseInt($(".navbutton").css("height")));
-			console.log($("#" + hackID).offset().top - parseInt($(".navbutton").css("height")));
+			console.log(parseInt($(".navbutton").css("height")));
 			Cookies.set('followId', hackID);
 		}
 		ihg(hackI);
