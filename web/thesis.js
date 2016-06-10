@@ -151,8 +151,8 @@ $(window).load(function(){
 			$("#" + hackID + " .hackButtonText").css("opacity", "0");
 			$("#" + hackID + " .closeYourHacks").css("opacity", "1");
 			$("#" + hackID + " .closeYourHacks").css("right", "0");
-			$("body").css("overflow", "initial");
-			$("yourHacksMade").scrollTop($("#" + hackID).offset().top - parseInt($(".navbutton").css("height")));
+			$("yourHacksMade").css("overflow", "initial");
+			$("body").scrollTop($("#" + hackID).offset().top - parseInt($(".navbutton").css("height")));
 			console.log($("#" + hackID + " .closeYourHacks").css("right", "0"));
 			Cookies.set('followId', hackID);
 		}
