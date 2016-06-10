@@ -525,6 +525,13 @@ Hack selection
   color: #FFF8EE;
   font-family: "Open Sans", sans-serif; }
 
+.hackUnderline {
+  width: 40%;
+  height: 1px;
+  background: #E16C5B;
+  position: relative;
+  margin: 0 auto; }
+
 .hackShortDesc {
   text-align: center;
   margin-top: 12%;

@@ -454,6 +454,7 @@ for ($i = 0; $i < count($hacksGeneral['k']); $i++) {
     echo "<img class='hackHeroImage' src='".$hacksGeneral['k'][$i]['heroimageurl']."'>";
     echo '<div class="infoWrapper"></div>';
     echo '<h1 class="hackTitle">'.$hacksGeneral['k'][$i]['title'].'</h1>';
+    echo "<div class='hackUnderline'></div>";
     echo "<p class='hackShortDesc'>".$hacksGeneral['k'][$i]['description']."</p>";
     // echo "<p class='hackShortDesc'>This hack can be used by people with a ability level for ".$hacksGeneral['k'][$i]['type']."</p>";
 
