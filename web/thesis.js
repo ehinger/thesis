@@ -109,11 +109,34 @@ $(window).load(function(){
 		function ihg (hackID) {
 			$(".hackSelectionFrame").css("overflowY", "scroll");
 			// $(".hackSelectionFrame").css("height", "100%");
-			$("#" + hackID + " .infoWrapper").css("width", "100%");
 			$("#" + hackID + " .insframe").css("opacity", "1");
 			$("#" + hackID + " .insframe").css("height", "auto");
-			$("#" + hackID + " .hackSelectionButton").css("opacity", "0");
-			$("#" + hackID + " .hackSelectionButton").css("left", "100%");
+			$("#" + hackID + " .hackButtonText").css("opacity", "0");
+			$("#" + hackID + " .close").css("opacity", "1");
+			$("#" + hackID + " .close").css("right", "0");
+			$("body").removeClass( "offset4" );
+			$(".newHackFrame").removeClass( "offset7" );
+			$("body").scrollTop($("#" + hackID).offset().top - parseInt($(".navbutton").css("height")));
+			console.log($("#" + hackID + " .close").css("right", "0"));
+			Cookies.set('followId', hackID);
+		}
+		ihg(hackI);
+		// ajaxurl = 'index.php';
+		// window.location.href = "#index.php?hackI=" + hackID;
+        // $.post(ajaxurl, hackID, function (response) {
+        //     // Response div goes here.
+        //     console.log(hackID);
+        // });
+    });
+
+    	$(".hackTitle").on('click', function() {
+		hackI = $(this).parent().attr('id');
+		function ihg (hackID) {
+			$(".hackSelectionFrame").css("overflowY", "scroll");
+			// $(".hackSelectionFrame").css("height", "100%");
+			$("#" + hackID + " .insframe").css("opacity", "1");
+			$("#" + hackID + " .insframe").css("height", "auto");
+			$("#" + hackID + " .hackButtonText").css("opacity", "0");
 			$("#" + hackID + " .close").css("opacity", "1");
 			$("#" + hackID + " .close").css("right", "0");
 			$("body").removeClass( "offset4" );
@@ -135,10 +158,8 @@ $(window).load(function(){
 		$(".hackSelectionFrame").scrollTop(0);
 		$(".hackSelectionFrame").css("overflow", "hidden");
 		$(".hackSelectionFrame").css("height", "85%");
-		$(".infoWrapper").css("width", "70%");
 		$(".insframe").css("opacity", "0");
-		$(".hackSelectionButton").css("opacity", "1");
-		$(".hackSelectionButton").css("left", "10%");
+		$(".hackButtonText").css("opacity", "1");
 		$(".close").css("opacity", "0");
 		$(".close").css("right", "100%");
 		$("body").addClass( "offset4" );
@@ -223,14 +244,23 @@ function ingredientSelection() {
 
 var i = 1;
 
-function hackSteps() {
+function hackStepsMake() {
 	var steps = "";
 	steps += "<h1>step " + i++ + "</h1>";
 	steps += "<input name='userfile[]' type='file'>";
 	steps += "<label>Step description:</label>";
 	steps += "<textarea name='hackIns[]' rows='10' cols='30'></textarea>";
-	$('.steps').append(steps);
+	$('.stepsMake').append(steps);
 }
+
+// function hackStepsUse() {
+// 	var steps = "";
+// 	steps += "<h1>step " + i++ + "</h1>";
+// 	steps += "<input name='userfile[]' type='file'>";
+// 	steps += "<label>Step description:</label>";
+// 	steps += "<textarea name='hackIns[]' rows='10' cols='30'></textarea>";
+// 	$('.stepsUse').append(steps);
+// }
 
 function textSize(v) {
 	$("html").css( "font-size", v + "px");
