@@ -151,7 +151,7 @@ $(window).load(function(){
 			$("#" + hackID + " .hackButtonText").css("opacity", "0");
 			$("#" + hackID + " .closeYourHacks").css("opacity", "1");
 			$("#" + hackID + " .closeYourHacks").css("right", "0");
-			$("yourHacksMade").css("overflow", "hidden");
+			$("body").css("overflow", "hidden");
 			$("yourHacksMade").scrollTop($("#" + hackID).offset().top - parseInt($(".navbutton").css("height")));
 			console.log($("#" + hackID + " .closeYourHacks").css("right", "0"));
 			Cookies.set('followId', hackID);
