@@ -132,17 +132,17 @@ $(window).load(function(){
 	$(".hackSelectionButtonYourHacks").on('click', function() {
 		hackI = $(this).parent().attr('id');
 		function ihg (hackID) {
-			$(".hackSelectionFrame").css("overflowY", "scroll");
+			$(".hackSelectionFrameYourHacks").css("overflowY", "scroll");
 			// $(".hackSelectionFrame").css("height", "100%");
-			$("#" + hackID + " .insframe").css("opacity", "1");
-			$("#" + hackID + " .insframe").css("height", "auto");
+			$("#" + hackID + " .insframeYourHacks").css("opacity", "1");
+			$("#" + hackID + " .insframeYourHacks").css("height", "auto");
 			$("#" + hackID + " .hackButtonText").css("opacity", "0");
-			$("#" + hackID + " .close").css("opacity", "1");
-			$("#" + hackID + " .close").css("right", "0");
+			$("#" + hackID + " .closeYourHacks").css("opacity", "1");
+			$("#" + hackID + " .closeYourHacks").css("right", "0");
 			$("body").removeClass( "offset4" );
 			$(".newHackFrame").removeClass( "offset7" );
 			$("body").scrollTop($("#" + hackID).offset().top - parseInt($(".navbutton").css("height")));
-			console.log($("#" + hackID + " .close").css("right", "0"));
+			console.log($("#" + hackID + " .closeYourHacks").css("right", "0"));
 			Cookies.set('followId', hackID);
 		}
 		ihg(hackI);
@@ -157,17 +157,17 @@ $(window).load(function(){
 	$(".hackSelectionButtonFollowedHacks").on('click', function() {
 		hackI = $(this).parent().attr('id');
 		function ihg (hackID) {
-			$(".hackSelectionFrame").css("overflowY", "scroll");
+			$(".hackSelectionFrameFollowedHacks").css("overflowY", "scroll");
 			// $(".hackSelectionFrame").css("height", "100%");
-			$("#" + hackID + " .insframe").css("opacity", "1");
-			$("#" + hackID + " .insframe").css("height", "auto");
+			$("#" + hackID + " .insframeFollowedHacks").css("opacity", "1");
+			$("#" + hackID + " .insframeFollowedHacks").css("height", "auto");
 			$("#" + hackID + " .hackButtonText").css("opacity", "0");
-			$("#" + hackID + " .close").css("opacity", "1");
-			$("#" + hackID + " .close").css("right", "0");
+			$("#" + hackID + " .closeFollowedHacks").css("opacity", "1");
+			$("#" + hackID + " .closeFollowedHacks").css("right", "0");
 			$("body").removeClass( "offset4" );
 			$(".newHackFrame").removeClass( "offset7" );
 			$("body").scrollTop($("#" + hackID).offset().top - parseInt($(".navbutton").css("height")));
-			console.log($("#" + hackID + " .close").css("right", "0"));
+			console.log($("#" + hackID + " .closeFollowedHacks").css("right", "0"));
 			Cookies.set('followId', hackID);
 		}
 		ihg(hackI);

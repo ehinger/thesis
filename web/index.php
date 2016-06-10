@@ -325,7 +325,7 @@ Navigation Bar
          <div class="followedHacks">
         <?php
             for ($i = 0; $i < count($hacksGeneral['k']); $i++) {
-                if ($userFollowing['k'][$i]['userid'] == $_COOKIE["userId"] && $userFollowing['k'][$i]['following'] == $hacksGeneral['k'][$i]['hackid']) {
+                if ($userFollowing['k'][$i]['userid'] == $_COOKIE["userId"]) {
                     echo "<div class='hackSelectionFrameFollowedHacks' id='".$hacksGeneral['k'][$i]['hackid']."'>";
                     echo "<img class='hackHeroImage' src='".$hacksGeneral['k'][$i]['heroimageurl']."'>";
                     echo '<div class="infoWrapperFollowedHacks"></div>';
