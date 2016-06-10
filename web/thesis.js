@@ -107,7 +107,7 @@ $(window).load(function(){
 	$(".hackSelectionButton").on('click', function() {
 		hackI = $(this).parent().attr('id');
 		function ihg (hackID) {
-			$("#" + hackID + " .hackSelectionFrame").css("overflowY", "scroll");
+			$(".hackSelectionFrame").css("overflowY", "scroll");
 			// $(".hackSelectionFrame").css("height", "100%");
 			$("#" + hackID + " .insframe").css("opacity", "1");
 			$("#" + hackID + " .insframe").css("height", "auto");
@@ -117,7 +117,7 @@ $(window).load(function(){
 			$("body").removeClass( "offset4" );
 			$(".newHackFrame").removeClass( "offset7" );
 			$("body").scrollTop($("#" + hackID).offset().top - parseInt($(".navbutton").css("height")));
-			console.log($("#" + hackID + " .close").css("right", "0"));
+			console.log($("#" + hackID).offset().top - parseInt($(".navbutton").css("height")));
 			Cookies.set('followId', hackID);
 		}
 		ihg(hackI);
