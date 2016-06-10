@@ -45,9 +45,8 @@ $(window).load(function(){
 	$(".yourHacksYourHacks").on('click', function() {
 		$(".yourHacksButtons").hide();
 		$(".yourHacksButtons").css("left", "100%");
-		$(".hackSelectionFrameYourHacks").addClass( "offset2" );
+		$(".yourHacksMade").show();
 		$(".yourHacksPage").css("overflowY", "hidden");
-		$("body").addClass( "offset4" );
 	});	
 
 	$(".yourHacksFollowedHacks").on('click', function() {
