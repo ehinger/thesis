@@ -152,7 +152,6 @@ $(window).load(function(){
 			$("#" + hackID + " .closeYourHacks").css("opacity", "1");
 			$("#" + hackID + " .closeYourHacks").css("right", "0");
 			$("yourHacksMade").css("overflow", "hidden");
-			$(".newHackFrame").removeClass( "offset7" );
 			$("yourHacksMade").scrollTop($("#" + hackID).offset().top - parseInt($(".navbutton").css("height")));
 			console.log($("#" + hackID + " .closeYourHacks").css("right", "0"));
 			Cookies.set('followId', hackID);
@@ -167,15 +166,14 @@ $(window).load(function(){
     });
 
 	$(".closeYourHacks").on('click', function() {
-		$(".hackSelectionFrame").scrollTop(0);
-		$(".hackSelectionFrame").css("overflow", "hidden");
-		$(".hackSelectionFrame").css("height", "85%");
-		$(".insframe").css("opacity", "0");
+		$(".hackSelectionFrameYourHacks").scrollTop(0);
+		$(".hackSelectionFrameYourHacks").css("overflow", "hidden");
+		$(".hackSelectionFrameYourHacks").css("height", "85%");
+		$(".insframeYourHacks").css("opacity", "0");
 		$(".hackButtonText").css("opacity", "1");
-		$(".close").css("opacity", "0");
-		$(".close").css("right", "100%");
+		$(".closeYourHacks").css("opacity", "0");
+		$(".closeYourHacks").css("right", "100%");
 		$("body").addClass( "offset4" );
-		$(".newHackFrame").addClass( "offset7" );
 	});
 
 	$(".hackSelectionButtonFollowedHacks").on('click', function() {
@@ -189,7 +187,6 @@ $(window).load(function(){
 			$("#" + hackID + " .closeFollowedHacks").css("opacity", "1");
 			$("#" + hackID + " .closeFollowedHacks").css("right", "0");
 			$("body").removeClass( "offset4" );
-			$(".newHackFrame").removeClass( "offset7" );
 			$("body").scrollTop($("#" + hackID).offset().top - parseInt($(".navbutton").css("height")));
 			console.log($("#" + hackID + " .closeFollowedHacks").css("right", "0"));
 			Cookies.set('followId', hackID);
@@ -204,15 +201,14 @@ $(window).load(function(){
     });
 
 	$(".closeFollowedHacks").on('click', function() {
-		$(".hackSelectionFrame").scrollTop(0);
-		$(".hackSelectionFrame").css("overflow", "hidden");
-		$(".hackSelectionFrame").css("height", "85%");
-		$(".insframe").css("opacity", "0");
+		$(".hackSelectionFrameFollowedHacks").scrollTop(0);
+		$(".hackSelectionFrameFollowedHacks").css("overflow", "hidden");
+		$(".hackSelectionFrameFollowedHacks").css("height", "85%");
+		$(".insframeFollowedHacks").css("opacity", "0");
 		$(".hackButtonText").css("opacity", "1");
-		$(".close").css("opacity", "0");
-		$(".close").css("right", "100%");
+		$(".closeFollowedHacks").css("opacity", "0");
+		$(".closeFollowedHacks").css("right", "100%");
 		$("body").addClass( "offset4" );
-		$(".newHackFrame").addClass( "offset7" );
 	});
 
 	$(".newHackFrame").on('click', function() {
