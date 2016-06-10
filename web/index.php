@@ -345,6 +345,7 @@ Navigation Bar
 
                     echo "<div class='hackSelectionButtonFollowedHacks'>";
                     echo "<h1 class='hackButtonText'>Enter</h1>";
+                    echo "<div class='hackArrow'></div>";
                     echo "</div>";
                     echo '<div class="closeFollowedHacks">';
                     echo '</div>';
@@ -469,6 +470,7 @@ for ($i = 0; $i < count($hacksGeneral['k']); $i++) {
 
     echo "<div class='hackSelectionButton'>";
     echo "<h1 class='hackButtonText'>Enter</h1>";
+    echo "<div class='hackArrow'></div>";
     echo "</div>";
     echo '<div class="close">';
     echo '</div>';
