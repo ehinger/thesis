@@ -325,10 +325,10 @@ Navigation Bar
          <div class="followedHacks">
         <?php
             for ($i = 0; $i < count($hacksGeneral['k']); $i++) {
-                if ($userFollowing['k'][$i]['following'] == $hacksGeneral['k'][$i]['hackid']) {
-                    echo "<div class='hackSelectionFrameYourHacks' id='".$hacksGeneral['k'][$i]['hackid']."'>";
+                if ($userFollowing['k'][$i]['userid'] == $_COOKIE["userId"] && $userFollowing['k'][$i]['following'] == $hacksGeneral['k'][$i]['hackid']) {
+                    echo "<div class='hackSelectionFrameFollowedHacks' id='".$hacksGeneral['k'][$i]['hackid']."'>";
                     echo "<img class='hackHeroImage' src='".$hacksGeneral['k'][$i]['heroimageurl']."'>";
-                    echo '<div class="infoWrapperYourHacks"></div>';
+                    echo '<div class="infoWrapperFollowedHacks"></div>';
                     echo '<h1 class="hackTitle">'.$hacksGeneral['k'][$i]['title'].'</h1>';
                     echo "<p class='hackShortDesc'>".$hacksGeneral['k'][$i]['description']."</p>";
                     // echo "<p class='hackShortDesc'>This hack can be used by people with a ability level for ".$hacksGeneral['k'][$i]['type']."</p>";
@@ -342,9 +342,9 @@ Navigation Bar
                     echo "<div class='hackSelectionButtonFollowedHacks'>";
                     echo "<h1 class='hackButtonText'>Enter</h1>";
                     echo "</div>";
-                    echo '<div class="closeYourHacks">';
+                    echo '<div class="closeFollowedHacks">';
                     echo '</div>';
-                    echo '<div class="insframeYourHacks">';
+                    echo '<div class="insframeFollowedHacks">';
 
 
                     for ($in = 0; $in < count($hacksSupplies['k']); $in++) {

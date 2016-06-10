@@ -246,6 +246,18 @@ nav {
   overflow-y: scroll;
   float: left; }
 
+.followedHacks {
+  display: none;
+  position: relative;
+  top: 0;
+  left: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  float: left; }
+
 .yourHacksYourHacks {
   position: relative;
   margin: 20% 10%;
@@ -306,7 +318,38 @@ nav {
     -o-transition: 0.3s;
     transition: 0.3s; */ }
 
+.hackSelectionFrameFollowedHacks {
+  position: relative;
+  top: 100%;
+  left: 0;
+  padding: 0;
+  width: 100%;
+  height: 85%;
+  overflow: hidden;
+  overflow-y: hidden;
+  float: left;
+  /*  -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s; */ }
+
 .infoWrapperYourHacks {
+  margin: 0;
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 70%;
+  height: 100%;
+  background: #211F1F;
+  opacity: .4;
+  /*  -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s; */ }
+
+.infoWrapperFollowedHacks {
   margin: 0;
   top: 0;
   left: 0;
@@ -365,7 +408,38 @@ nav {
     -o-transition: 0.3s;
     transition: 0.3s;*/ }
 
+.insframeFollowedHacks {
+  width: 100%;
+  height: 0;
+  position: relative;
+  top: 15%;
+  left: 0;
+  margin: 0;
+  opacity: 0;
+  z-index: 1;
+  overflow-y: scroll;
+  /*  -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;*/ }
+
 .closeYourHacks {
+  right: 100%;
+  top: 10%;
+  width: 25%;
+  height: 10%;
+  position: fixed;
+  background: #211F1F;
+  opacity: 1;
+  z-index: 9;
+  /*  -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;*/ }
+
+.closeFollowedHacks {
   right: 100%;
   top: 10%;
   width: 25%;
