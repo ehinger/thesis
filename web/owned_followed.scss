@@ -138,9 +138,9 @@
   top: 0;
   left: 0;
   position: absolute;
-  width: 70%;
+  width: 100%;
   height: 100%;
-  background: $bgColour;
+  background: $overlayColour;
   opacity: .4;
 /*  -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
@@ -154,9 +154,9 @@
   top: 0;
   left: 0;
   position: absolute;
-  width: 70%;
+  width: 100%;
   height: 100%;
-  background: $bgColour;
+  background: $overlayColour;
   opacity: .4;
 /*  -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
@@ -167,12 +167,16 @@
 
 .hackSelectionButtonYourHacks {
   margin: 0;
-  top: 10%;
-  left: 10%;
-  position: relative;
-  width: 40%;
-  height: 10%;
-  background: $bgColour;
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+  height: 60%;
+
+  background: -moz-linear-gradient(top,  rgba(33,31,31,0) 0%, rgba(33,31,31,1) 77%, rgba(33,31,31,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  rgba(33,31,31,0) 0%,rgba(33,31,31,1) 77%,rgba(33,31,31,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  rgba(33,31,31,0) 0%,rgba(33,31,31,1) 77%,rgba(33,31,31,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00211f1f', endColorstr='#211f1f',GradientType=0 ); /* IE6-9 */
+
 /*  -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
   -ms-transition: 0.3s;
@@ -182,12 +186,16 @@
 
 .hackSelectionButtonFollowedHacks {
   margin: 0;
-  top: 10%;
-  left: 10%;
-  position: relative;
-  width: 40%;
-  height: 10%;
-  background: $bgColour;
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+  height: 60%;
+
+  background: -moz-linear-gradient(top,  rgba(33,31,31,0) 0%, rgba(33,31,31,1) 77%, rgba(33,31,31,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  rgba(33,31,31,0) 0%,rgba(33,31,31,1) 77%,rgba(33,31,31,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  rgba(33,31,31,0) 0%,rgba(33,31,31,1) 77%,rgba(33,31,31,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00211f1f', endColorstr='#211f1f',GradientType=0 ); /* IE6-9 */
+
 /*  -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
   -ms-transition: 0.3s;
@@ -205,6 +213,7 @@
   opacity: 0;
   z-index: 1;
   overflow-y: scroll;
+  background: $bgColour;
 /*  -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
   -ms-transition: 0.3s;
@@ -222,6 +231,7 @@
   opacity: 0;
   z-index: 1;
   overflow-y: scroll;
+  background: $bgColour;
 /*  -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
   -ms-transition: 0.3s;
