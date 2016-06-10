@@ -104,32 +104,7 @@ $(window).load(function(){
 		$(".registerPage").show();
 	});
 
-	$(".hackSelectionButton").on('click', function() {
-		hackI = $(this).parent().attr('id');
-		function ihg (hackID) {
-			$(".hackSelectionFrame").css("overflowY", "scroll");
-			// $(".hackSelectionFrame").css("height", "100%");
-			$("#" + hackID + " .insframe").css("opacity", "1");
-			$("#" + hackID + " .insframe").css("height", "auto");
-			$("#" + hackID + " .hackButtonText").css("opacity", "0");
-			$("#" + hackID + " .close").css("opacity", "1");
-			$("#" + hackID + " .close").css("right", "0");
-			$("body").removeClass( "offset4" );
-			$(".newHackFrame").removeClass( "offset7" );
-			$("body").scrollTop($("#" + hackID).offset().top - parseInt($(".navbutton").css("height")));
-			console.log($("#" + hackID + " .close").css("right", "0"));
-			Cookies.set('followId', hackID);
-		}
-		ihg(hackI);
-		// ajaxurl = 'index.php';
-		// window.location.href = "#index.php?hackI=" + hackID;
-        // $.post(ajaxurl, hackID, function (response) {
-        //     // Response div goes here.
-        //     console.log(hackID);
-        // });
-    });
-
-    	$(".hackTitle").on('click', function() {
+	$(".hackSelectionButton .hackTitle hackButtonText").on('click', function() {
 		hackI = $(this).parent().attr('id');
 		function ihg (hackID) {
 			$(".hackSelectionFrame").css("overflowY", "scroll");
