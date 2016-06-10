@@ -139,9 +139,9 @@ $(window).load(function(){
 			$("#" + hackID + " .hackButtonText").css("opacity", "0");
 			$("#" + hackID + " .closeYourHacks").css("opacity", "1");
 			$("#" + hackID + " .closeYourHacks").css("right", "0");
-			$("body").removeClass( "offset4" );
+			$("yourHacksMade").css("overflow", "hidden");
 			$(".newHackFrame").removeClass( "offset7" );
-			$("body").scrollTop($("#" + hackID).offset().top - parseInt($(".navbutton").css("height")));
+			$("yourHacksMade").scrollTop($("#" + hackID).offset().top - parseInt($(".navbutton").css("height")));
 			console.log($("#" + hackID + " .closeYourHacks").css("right", "0"));
 			Cookies.set('followId', hackID);
 		}
@@ -180,6 +180,30 @@ $(window).load(function(){
     });
 
 	$(".close").on('click', function() {
+		$(".hackSelectionFrame").scrollTop(0);
+		$(".hackSelectionFrame").css("overflow", "hidden");
+		$(".hackSelectionFrame").css("height", "85%");
+		$(".insframe").css("opacity", "0");
+		$(".hackButtonText").css("opacity", "1");
+		$(".close").css("opacity", "0");
+		$(".close").css("right", "100%");
+		$("body").addClass( "offset4" );
+		$(".newHackFrame").addClass( "offset7" );
+	});
+
+	$(".closeYourHacks").on('click', function() {
+		$(".hackSelectionFrame").scrollTop(0);
+		$(".hackSelectionFrame").css("overflow", "hidden");
+		$(".hackSelectionFrame").css("height", "85%");
+		$(".insframe").css("opacity", "0");
+		$(".hackButtonText").css("opacity", "1");
+		$(".close").css("opacity", "0");
+		$(".close").css("right", "100%");
+		$("body").addClass( "offset4" );
+		$(".newHackFrame").addClass( "offset7" );
+	});
+
+	$(".closeFollowedHacks").on('click', function() {
 		$(".hackSelectionFrame").scrollTop(0);
 		$(".hackSelectionFrame").css("overflow", "hidden");
 		$(".hackSelectionFrame").css("height", "85%");
