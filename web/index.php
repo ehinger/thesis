@@ -278,7 +278,7 @@ Navigation Bar
             <?php
             for ($i = 0; $i < count($hacksGeneral['k']); $i++) {
                 if ($hacksGeneral['k'][$i]['userid'] == $_COOKIE["userId"]) {
-                    echo "<div class='hackSelectionFrameYourHacks' id='".$hacksGeneral['k'][$i]['hackid']."'>";
+                    echo "<div class='hackSelectionFrameYourHacks>";
                     echo "<img class='hackHeroImage' src='".$hacksGeneral['k'][$i]['heroimageurl']."'>";
                     echo '<div class="infoWrapperYourHacks"></div>';
                     echo '<h1 class="hackTitle">'.$hacksGeneral['k'][$i]['title'].'</h1>';
@@ -326,7 +326,7 @@ Navigation Bar
         <?php
             for ($i = 0; $i < count($hacksGeneral['k']); $i++) {
                 if ($userFollowing['k'][$i]['userid'] == $_COOKIE["userId"]) {
-                    echo "<div class='hackSelectionFrameFollowedHacks' id='".$hacksGeneral['k'][$i]['hackid']."'>";
+                    echo "<div class='hackSelectionFrameFollowedHacks'>";
                     echo "<img class='hackHeroImage' src='".$hacksGeneral['k'][$i]['heroimageurl']."'>";
                     echo '<div class="infoWrapperFollowedHacks"></div>';
                     echo '<h1 class="hackTitle">'.$hacksGeneral['k'][$i]['title'].'</h1>';
