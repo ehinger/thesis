@@ -107,7 +107,7 @@ $(window).load(function(){
 	$(".hackSelectionButton").on('click', function() {
 		hackI = $(this).parent().attr('id');
 		function ihg (hackID) {
-			$(".hackSelectionFrame").css("overflowY", "scroll");
+			$("#" + hackID + " .hackSelectionFrame").css("overflowY", "scroll");
 			// $(".hackSelectionFrame").css("height", "100%");
 			$("#" + hackID + " .insframe").css("opacity", "1");
 			$("#" + hackID + " .insframe").css("height", "auto");
@@ -128,6 +128,18 @@ $(window).load(function(){
         //     console.log(hackID);
         // });
     });
+
+	$(".close").on('click', function() {
+		$(".hackSelectionFrame").scrollTop(0);
+		$(".hackSelectionFrame").css("overflow", "hidden");
+		$(".hackSelectionFrame").css("height", "85%");
+		$(".insframe").css("opacity", "0");
+		$(".hackButtonText").css("opacity", "1");
+		$(".close").css("opacity", "0");
+		$(".close").css("right", "100%");
+		$("body").addClass( "offset4" );
+		$(".newHackFrame").addClass( "offset7" );
+	});
 
 	$(".hackSelectionButtonYourHacks").on('click', function() {
 		hackI = $(this).parent().attr('id');
@@ -178,18 +190,6 @@ $(window).load(function(){
         //     console.log(hackID);
         // });
     });
-
-	$(".close").on('click', function() {
-		$(".hackSelectionFrame").scrollTop(0);
-		$(".hackSelectionFrame").css("overflow", "hidden");
-		$(".hackSelectionFrame").css("height", "85%");
-		$(".insframe").css("opacity", "0");
-		$(".hackButtonText").css("opacity", "1");
-		$(".close").css("opacity", "0");
-		$(".close").css("right", "100%");
-		$("body").addClass( "offset4" );
-		$(".newHackFrame").addClass( "offset7" );
-	});
 
 	$(".closeYourHacks").on('click', function() {
 		$(".hackSelectionFrame").scrollTop(0);
