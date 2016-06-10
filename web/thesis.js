@@ -104,7 +104,7 @@ $(window).load(function(){
 		$(".registerPage").show();
 	});
 
-	$(".hackSelectionButton .hackTitle hackButtonText").on('click', function() {
+	$(".hackSelectionButton, .hackTitle, .hackButtonText").on('click', function() {
 		hackI = $(this).parent().attr('id');
 		function ihg (hackID) {
 			$(".hackSelectionFrame").css("overflowY", "scroll");
