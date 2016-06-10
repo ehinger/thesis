@@ -294,6 +294,7 @@ Navigation Bar
 
                     echo "<div class='hackSelectionButtonYourHacks'>";
                     echo "<h1 class='hackButtonText'>Enter</h1>";
+                    echo "<div class='hackArrow'></div>";
                     echo "</div>";
                     echo '<div class="closeYourHacks">';
                     echo '</div>';
