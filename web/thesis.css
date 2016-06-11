@@ -29,7 +29,8 @@ Navigation Bar
     transition: 0.3s; */ }
 
 .navText {
-  margin: 0 auto;
+  text-align: center;
+  vertical-align: middle;
   line-height: 10%;
   position: relative;
   font-size: 5rem;
