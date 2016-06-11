@@ -114,7 +114,9 @@ Navigation Bar
 <div class='navbutton'>
     <h1 class='navText'>Menu</h1>
 </div>
+
 <div class='menuBarYourHacks'>
+    <h1 class='menuBarYourHacksText'>Settings</h1>
 </div>
 <div class='menuBarProfile'>
     <h1 class='menuBarProfileText'>Profile</h1>
