@@ -45,6 +45,9 @@ $(window).load(function(){
 		$(".newHackFrame").removeClass( "offset5" );
 		$(".newHackFrame *").removeClass( "offset6" );
 		$("body").addClass( "offset4" );
+		$(".menuBarProfile").css("borderWidth", "2px");
+		$(".menuBarSettings").css("borderWidth", "2px");
+		$(".menuBarYourHacks").css("borderWidth", "8px");
 	});
 
 	$(".yourHacksYourHacks").on('click', function() {
@@ -87,6 +90,8 @@ $(window).load(function(){
 		$(".newHackFrame *").removeClass( "offset6" );
 		$("body").addClass( "offset4" );
 		$(".menuBarProfile").css("borderWidth", "8px");
+		$(".menuBarSettings").css("borderWidth", "2px");
+		$(".menuBarYourHacks").css("borderWidth", "2px");
 	});
 
 	$(".menuBarSettings").on('click', function() {
@@ -103,6 +108,9 @@ $(window).load(function(){
 		$(".newHackFrame").removeClass( "offset5" );
 		$(".newHackFrame *").removeClass( "offset6" );
 		$("body").addClass( "offset4" );
+		$(".menuBarProfile").css("borderWidth", "2px");
+		$(".menuBarSettings").css("borderWidth", "8px");
+		$(".menuBarYourHacks").css("borderWidth", "2px");
 	});
 
 	$(".startRegistration").on('click', function() {
