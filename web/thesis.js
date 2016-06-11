@@ -9,7 +9,7 @@ $(window).load(function(){
 	$(".navbutton").on('click', function() {
 		$("nav").toggleClass( "offset" );
 		$(".startRegistration").toggleClass( "offset" );
-		$(".menuBarYourHacks").toggleClass( "offsetm" );
+		$(".menuBarYourHacks").toggleClass( "offset" );
 		$(".menuBarProfile").toggleClass( "offset" );
 		$(".menuBarSettings").toggleClass( "offset" );
 		$(".hackSelectionFrame").toggleClass( "offset2" );
@@ -23,6 +23,11 @@ $(window).load(function(){
 		$(".newHackFrame").removeClass( "offset5" );
 		$(".newHackFrame *").removeClass( "offset6" );
 		$("body").addClass( "offset4" );
+		if ($(".navText").text() == "Browse") {
+			$(".navText").text("Menu");
+		} else {
+			$(".navText").text("Browse");
+		}
 	});
 
 	$(".menuBarYourHacks").on('click', function() {

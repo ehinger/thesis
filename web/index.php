@@ -112,7 +112,7 @@ Navigation Bar
 ************************************************************************************/ -->
 
 <div class='navbutton'>
-    <h1 class='navText'>Menu</h1>
+    <h1 class='navText'>Browse</h1>
 </div>
 
 <div class='menuBarYourHacks'>
