@@ -527,10 +527,17 @@ Hack selection
 
 .hackUnderline {
   width: 40%;
-  height: 2px;
-  background: #E16C5B;
+  height: 4px;
   position: relative;
-  margin: 0 auto; }
+  margin: 0 auto;
+  background: -moz-linear-gradient(left, rgba(225, 108, 91, 0) 0%, #e16c5b 19%, #e16c5b 50%, #e16c5b 81%, rgba(225, 108, 91, 0) 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, rgba(225, 108, 91, 0) 0%, #e16c5b 19%, #e16c5b 50%, #e16c5b 81%, rgba(225, 108, 91, 0) 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, rgba(225, 108, 91, 0) 0%, #e16c5b 19%, #e16c5b 50%, #e16c5b 81%, rgba(225, 108, 91, 0) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00e16c5b', endColorstr='#00e16c5b',GradientType=1 );
+  /* IE6-9 */ }
 
 .hackShortDesc {
   text-align: center;
@@ -596,10 +603,10 @@ Hack selection
     transition: 0.3s; */ }
 
 .hackArrow {
-  width: 137px;
-  height: 137px;
+  width: 40px;
+  height: 40px;
   position: relative;
-  margin: 58% auto;
+  margin: 56% auto;
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
