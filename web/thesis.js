@@ -86,6 +86,7 @@ $(window).load(function(){
 		$(".newHackFrame").removeClass( "offset5" );
 		$(".newHackFrame *").removeClass( "offset6" );
 		$("body").addClass( "offset4" );
+		$(".menuBarProfile").css("border-bottom", "8px solid $linkColour");
 	});
 
 	$(".menuBarSettings").on('click', function() {
