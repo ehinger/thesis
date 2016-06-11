@@ -116,7 +116,7 @@ Navigation Bar
 </div>
 
 <div class='menuBarYourHacks'>
-    <h1 class='menuBarYourHacksText'>Settings</h1>
+    <h1 class='menuBarYourHacksText'>Hacks</h1>
 </div>
 <div class='menuBarProfile'>
     <h1 class='menuBarProfileText'>Profile</h1>

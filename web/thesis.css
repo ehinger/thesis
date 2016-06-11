@@ -31,7 +31,6 @@ Navigation Bar
 .navText {
   text-align: center;
   vertical-align: middle;
-  line-height: 10%;
   position: relative;
   font-size: 5rem;
   color: #E16C5B;
@@ -58,7 +57,6 @@ Navigation Bar
 .menuBarProfileText {
   text-align: center;
   vertical-align: middle;
-  line-height: 10%;
   position: relative;
   font-size: 5rem;
   color: #E16C5B;
@@ -190,7 +188,6 @@ nav {
 .menuBarSettingsText {
   text-align: center;
   vertical-align: middle;
-  line-height: 10%;
   position: relative;
   font-size: 5rem;
   color: #E16C5B;
@@ -238,7 +235,6 @@ nav {
 .menuBarYourHacksText {
   text-align: center;
   vertical-align: middle;
-  line-height: 10%;
   position: relative;
   font-size: 5rem;
   color: #E16C5B;
