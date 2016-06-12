@@ -61,10 +61,10 @@ class profiles {
 		global $db;
 
 		$strUn = strtolower($un);
-		$un_ = pg_escape_string($un);
+		$un_ = pg_escape_string($strUn);
 
 		$strpwd = strtolower($pwd);
-		$pwd_ = pg_escape_string($pwd);
+		$pwd_ = pg_escape_string($strpwd);
 
 		$stmt = $db->query("SELECT * FROM userProfile WHERE username = '" . $un_ . "' AND password = '" . $pwd_ . "'"); 
 		$stmt->execute();
