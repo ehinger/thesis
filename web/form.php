@@ -153,7 +153,7 @@ if (isset($_POST['push'])){
         foreach ($_POST['hackUse'] as $k => $v) {
 
             $stepNo++;
-            // $stepNoU++;
+            $stepNoU++;
             // $stepImageURLU = htmlspecialchars($s3->getObjectUrl("thesis-tom-creagh", $_FILES['userfile']['name'][$stepNoU])); 
             // $hackDescU = $_POST['hackUse'][$k];
 
