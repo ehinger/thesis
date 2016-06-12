@@ -152,9 +152,9 @@ if (isset($_POST['push'])){
 
         foreach ($_POST['hackUse'] as $k => $v) {
 
-            $stepNo++;
+            // $stepNo++;
             $stepNoU++;
-            $stepImageURLU = htmlspecialchars($s3->getObjectUrl("thesis-tom-creagh", $_FILES['userfile']['name'][$stepNo])); 
+            $stepImageURLU = htmlspecialchars($s3->getObjectUrl("thesis-tom-creagh", $_FILES['userfile']['name'][$stepNoU])); 
             $hackDesc = $_POST['hackUse'][$k];
 
             $db->exec("INSERT INTO hackUse (hackID, stage, stepNumber, instructions) VALUES ('" . $string . $identification . "', '" . $stepImageURLU . "', '" . $stepNoU; . "', '" . $hackDesc . "')");
