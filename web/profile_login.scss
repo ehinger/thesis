@@ -14,6 +14,7 @@ Navigation Bar
   margin: 0;
   z-index: 2;
   border-bottom: 2px solid $linkColour;
+  border-top: 8px solid $linkColour;
 /*  -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
   -ms-transition: 0.3s;
@@ -43,7 +44,7 @@ Navigation Bar
   background: $bgColour;
   margin: 0;
   z-index: 2;
-  border-bottom: 2px solid $linkColour;
+  border-bottom: 8px solid $linkColour;
 /*  -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
   -ms-transition: 0.3s;
