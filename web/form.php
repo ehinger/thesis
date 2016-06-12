@@ -155,7 +155,7 @@ if (isset($_POST['push'])){
             $stepNo++;
             $stepNoU++;
             $stepImageURLU = htmlspecialchars($s3->getObjectUrl("thesis-tom-creagh", $_FILES['userfile']['name'][$stepNoU])); 
-            // $hackDescU = $_POST['hackUse'][$k];
+            $hackDescU = $_POST['hackUse'][$k];
 
             // $db->exec("INSERT INTO hackUse (hackID, stage, stepNumber, instructions) VALUES ('" . $string . $identification . "', '" . $stepImageURLU . "', '" . $stepNoU; . "', '" . $hackDescU . "')");
         }
