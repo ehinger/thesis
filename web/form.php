@@ -145,7 +145,7 @@ if (isset($_POST['push'])){
             $stepImageURL = htmlspecialchars($s3->getObjectUrl("thesis-tom-creagh", $_FILES['userfile']['name'][$stepNo])); 
             $hackDesc = $_POST['hackIns'][$k];
 
-            $db->exec("INSERT INTO hackInstructions (hackID, stage, stepNumber, instructions) VALUES ('" . $string . $identification . "', '" . $stepImageURL . "', '" . $stepNo . "', '" . $hackDesc . "')");
+            $db->exec("INSERT INTO hackImnstructions (hackID, stage, stepNumber, instructions) VALUES ('" . $string . $identification . "', '" . $stepImageURL . "', '" . $stepNo . "', '" . $hackDesc . "')");
         }
 
         $stepNoU = 0;
@@ -157,7 +157,7 @@ if (isset($_POST['push'])){
             $stepImageURLU = htmlspecialchars($s3->getObjectUrl("thesis-tom-creagh", $_FILES['userfile']['name'][$stepNoU])); 
             $hackDescU = $_POST['hackUse'][$k];
 
-            $db->exec("INSERT INTO hackUse (hackID, stage, stepNumber, instructions) VALUES ('" . $string . $identification . "', '" . $stepImageURLU . "', '" . $stepNoU; . "', '" . $hackDescU . "')");
+            // $db->exec("INSERT INTO hackUse (hackID, stage, stepNumber, instructions) VALUES ('" . $string . $identification . "', '" . $stepImageURLU . "', '" . $stepNoU; . "', '" . $hackDescU . "')");
         }
 
         // for ($i = 1; $i < count($_FILES['userfile']['name']); $i++) { 
