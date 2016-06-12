@@ -80,6 +80,7 @@ if (isset($_POST['push'])){
         }
 
         $stepNo = 0;
+        $sub = 0;
 
         foreach ($_POST['hackIns'] as $k => $v) {
 
