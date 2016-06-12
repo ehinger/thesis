@@ -301,7 +301,7 @@ function ingredientSelection() {
 }
 
 
-var i = 1;
+var i = 2;
 
 function hackStepsMake() {
 	var steps = "";
@@ -312,14 +312,16 @@ function hackStepsMake() {
 	$('.stepsMake').append(steps);
 }
 
-// function hackStepsUse() {
-// 	var steps = "";
-// 	steps += "<h1>step " + i++ + "</h1>";
-// 	steps += "<input name='userfile[]' type='file'>";
-// 	steps += "<label>Step description:</label>";
-// 	steps += "<textarea name='hackIns[]' rows='10' cols='30'></textarea>";
-// 	$('.stepsUse').append(steps);
-// }
+var n = 2;
+
+function hackStepsUse() {
+	var steps = "";
+	steps += "<h1>step " + n++ + "</h1>";
+	steps += "<input name='userfile[]' type='file'>";
+	steps += "<label>Step description:</label>";
+	steps += "<textarea name='hackIns[]' rows='10' cols='30'></textarea>";
+	$('.stepsUse').append(steps);
+}
 
 function textSize(v) {
 	$("html").css( "font-size", v + "px");

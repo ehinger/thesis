@@ -419,7 +419,7 @@ Post a hack
         <div class="ingredient">        
             <label>Resources:</label>
             <input type="number" name="ingredientsQuantity[]" min="1">
-            <input name="hackIngredients[]" type='text'>  
+            <input name="hackIngredients[]" type='text'>
         </div>
 
         <input type="button" onclick="ingredientSelection()" value="Add another resource">
@@ -432,15 +432,23 @@ Post a hack
         <label>Title image:</label>
         <input name="userfile[]" type="file">
         
-        <div class="stepsMake">     
+        <div class="stepsMake">  
+            <h1>step 1</h1>;
+            <input name='userfile[]' type='file'>;
+            <label>Step description:</label>;
+            <textarea name='hackIns[]' rows='10' cols='30'></textarea>;   
         </div>
         
         <input type="button" onclick="hackStepsMake()" value="Add new step">
 
-<!--         <div class="stepsUse">     
+        <div class="stepsUse">   
+            <h1>step 1</h1>;
+            <input name='userfile[]' type='file'>;
+            <label>Step description:</label>;
+            <textarea name='hackIns[]' rows='10' cols='30'></textarea>;     
         </div>
         
-        <input type="button" onclick="hackStepsUse()" value="Add new step"> -->
+        <input type="button" onclick="hackStepsUse()" value="Add new step">
 
         <input type="submit" value="Submit" name="push">
 
