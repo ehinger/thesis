@@ -319,7 +319,7 @@ function hackStepsUse() {
 	steps += "<h1>step " + n++ + "</h1>";
 	steps += "<input name='userfile[]' type='file'>";
 	steps += "<label>Step description:</label>";
-	steps += "<textarea name='hackIns[]' rows='10' cols='30'></textarea>";
+	steps += "<textarea name='hackUse[]' rows='10' cols='30'></textarea>";
 	$('.stepsUse').append(steps);
 }
 
