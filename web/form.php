@@ -59,7 +59,7 @@ if (isset($_POST['push'])){
         $string = preg_replace('/\s+/', '', $title);
         $type = pg_escape_string($_POST['hackType']); 
         $description = pg_escape_string($_POST['hackDesc']); 
-        $heroImageURL = htmlspecialchars($s3->getObjectUrl("thesis-tom-creagh", $_FILES['userfile']['name'][0])); 
+        $heroImageURL = htmlspecialchars($s3->getObjectUrl("thesis-tom-creagh", end($_FILES['userfile']['name']))); 
         $userID = pg_escape_string($_COOKIE["userId"]);
 
         $db->exec("INSERT INTO hacksGeneral (hackId, heroImageURL, title, type, description, userID) VALUES ('" . $string . $identification . "', '" . $heroImageURL . "', '" . $title . "', '" . $type . "', '" . $description . "', '" . $userID . "')");
@@ -84,7 +84,8 @@ if (isset($_POST['push'])){
         foreach ($_POST['hackIns'] as $k => $v) {
 
             $stepNo++;
-            $stepImageURL = htmlspecialchars($s3->getObjectUrl("thesis-tom-creagh", $_FILES['userfile']['name'][$stepNo])); 
+            $sub = $stepNo - 1;
+            $stepImageURL = htmlspecialchars($s3->getObjectUrl("thesis-tom-creagh", $_FILES['userfile']['name'][$sub])); 
             $hackDesc = $_POST['hackIns'][$k];
 
             $db->exec("INSERT INTO hackInstructions (hackID, stage, stepNumber, instructions) VALUES ('" . $string . $identification . "', '" . $stepImageURL . "', '" . $stepNo . "', '" . $hackDesc . "')");
@@ -95,8 +96,9 @@ if (isset($_POST['push'])){
         foreach ($_POST['hackUse'] as $k => $v) {
 
             $stepNo++;
+            $sub = $stepNo - 1;
             $stepNoU++;
-            $stepImageURL = htmlspecialchars($s3->getObjectUrl("thesis-tom-creagh", $_FILES['userfile']['name'][$stepNo])); 
+            $stepImageURL = htmlspecialchars($s3->getObjectUrl("thesis-tom-creagh", $_FILES['userfile']['name'][$sub])); 
             $hackDesc = $_POST['hackUse'][$k];
 
             $db->exec("INSERT INTO hackUse (hackID, stage, stepNumber, instructions) VALUES ('" . $string . $identification . "', '" . $stepImageURL . "', '" . $stepNoU; . "', '" . $hackDesc . "')");

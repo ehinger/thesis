@@ -396,9 +396,11 @@ Post a hack
 
     <div class='newHackClose'></div>
 
+    <h1 class="hackInsTitle">This is where you create a hack.</h1>
+
     <form enctype="multipart/form-data" id='recipeCreator' action="form.php" method="post">
 
-        <label>Title:</label>
+        <label>What's your hack called?</label>
         <input name="hackTitle" type='text'>
 
 <!--         <label>Ability:</label>
@@ -412,12 +414,12 @@ Post a hack
             <option value="communication">Communication</option>
         </select> -->
 
-        <label>Description:</label>
+        <label>Briefly describe it for me.</label>
         <textarea name="hackDesc" rows="4" cols="50">
         </textarea>
 
         <div class="ingredient">        
-            <label>Resources:</label>
+            <label>What things do you need to make it?</label>
             <input type="number" name="ingredientsQuantity[]" min="1">
             <input name="hackIngredients[]" type='text'>
         </div>
@@ -429,9 +431,8 @@ Post a hack
         <input name="hackTags[]" type='text'>
         <input name="hackTags[]" type='text'> -->
 
-        <label>Title image:</label>
-        <input name="userfile[]" type="file">
-        
+        <h1 class="hackInsTitle">How do you make it?</h1>
+
         <div class="stepsMake">  
             <h1>step 1</h1>;
             <input name='userfile[]' type='file'>;
@@ -441,14 +442,21 @@ Post a hack
         
         <input type="button" onclick="hackStepsMake()" value="Add new step">
 
+        <h1 class="hackInsTitle">How do you use it?</h1>
+
         <div class="stepsUse">   
             <h1>step 1</h1>;
             <input name='userfile[]' type='file'>;
             <label>Step description:</label>;
-            <textarea name='hackIns[]' rows='10' cols='30'></textarea>;     
+            <textarea name='hackUse[]' rows='10' cols='30'></textarea>;     
         </div>
         
         <input type="button" onclick="hackStepsUse()" value="Add new step">
+
+        <label>What does it look like finished?</label>
+        <input name="userfile[]" type="file">
+        
+        <h1 class="hackInsTitle">All done?</h1>
 
         <input type="submit" value="Submit" name="push">
 
@@ -552,6 +560,8 @@ CREATE TABLE
 heroku-postgres-dd0c9417::BLACK=> create table user (userID text, username text, password text);
 ERROR:  syntax error at or near "user"
 LINE 1: create table user (userID text, username text, password text...
+
+create table hackUse (hackID text, stage text, stepNumber integer, instructions text);
                      ^
 heroku-postgres-dd0c9417::BLACK=> create table userProfile (userID text, username text, password text);
 CREATE TABLE
