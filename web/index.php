@@ -431,6 +431,9 @@ Post a hack
         <input name="hackTags[]" type='text'>
         <input name="hackTags[]" type='text'> -->
 
+        <label>What does it look like finished?</label>
+        <input name="userfile[]" type="file">
+ 
         <h1 class="hackInsTitle">How do you make it?</h1>
 
         <div class="stepsMake">  
@@ -452,10 +455,7 @@ Post a hack
         </div>
         
         <input type="button" onclick="hackStepsUse()" value="Add new step">
-
-        <label>What does it look like finished?</label>
-        <input name="userfile[]" type="file">
-        
+       
         <h1 class="hackInsTitle">All done?</h1>
 
         <input type="submit" value="Submit" name="push">
