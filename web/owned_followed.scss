@@ -55,7 +55,9 @@
   margin: 20% 10%;
   width: 80%;
   height: 5%;
-  background: green;
+  background: $bgColour;
+  border-bottom: 2px solid $linkColour;
+  border-top: 2px solid $linkColour;
 }
 
 .yourHacksFollowedHacks {
@@ -63,7 +65,9 @@
   margin: 20% 10%;
   width: 80%;
   height: 5%;
-  background: green;
+  background: $bgColour;
+  border-bottom: 2px solid $linkColour;
+  border-top: 2px solid $linkColour;
 }
 
 .yourHacksCreateHacks {
@@ -71,7 +75,9 @@
   margin: 20% 10%;
   width: 80%;
   height: 5%;
-  background: green;
+  background: $bgColour;
+  border-bottom: 2px solid $linkColour;
+  border-top: 2px solid $linkColour;
 }
 
 .yourHacksMade {

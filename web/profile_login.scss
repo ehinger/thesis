@@ -98,10 +98,17 @@ nav {
 
   label {
     font-size: 2.3rem;
+  	font-family: $linkFont;
+  	color: $linkColour;
   }
 
   input[type=submit] {
     font-size: 1.5rem;
+  	font-family: $linkFont;
+  	color: $linkColour;
+    background: $bgColour;
+  	border-bottom: 2px solid $linkColour;
+  	border-top: 2px solid $linkColour;
   }
 }
 
@@ -115,17 +122,23 @@ nav {
     height: 15%;
     margin: 3% 0 3% 0;
     padding: .5em;
-    border: 0.2em solid black;
     outline: none;
     font-size: 2rem;
   }
 
   label {
     font-size: 2.3rem;
+  	font-family: $linkFont;
+  	color: $linkColour;
   }
 
   input[type=submit] {
     font-size: 1.5rem;
+  	font-family: $linkFont;
+  	color: $linkColour;
+    background: $bgColour;
+  	border-bottom: 2px solid $linkColour;
+  	border-top: 2px solid $linkColour;
   }
 }
 
@@ -146,10 +159,17 @@ nav {
 
   label {
     font-size: 2.3rem;
+  	font-family: $linkFont;
+  	color: $linkColour;
   }
 
   input[type=submit] {
     font-size: 1.5rem;
+  	font-family: $linkFont;
+  	color: $linkColour;
+    background: $bgColour;
+  	border-bottom: 2px solid $linkColour;
+  	border-top: 2px solid $linkColour;
   }
 }
 
@@ -167,7 +187,9 @@ nav {
   margin: 20% 10%;
   width: 80%;
   height: 5%;
-  background: green;
+	background: $bgColour;
+	border-bottom: 2px solid $linkColour;
+	border-top: 2px solid $linkColour;
 }
 
 .rangeOneUpper {
