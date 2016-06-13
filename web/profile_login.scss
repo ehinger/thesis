@@ -81,6 +81,26 @@ nav {
   transition: 0.3s; */
 }
 
+h1 {
+	margin-left: 10%;
+	margin-top: 12%;
+	position: relative;
+	font-size: 8rem;
+	color: $textColour;
+	font-family: $textFont;
+}
+
+p {
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-top: 12%;
+	position: a;
+	font-size: 5rem;
+	color: $textColour;
+	float: right;
+	font-family: $textFont;
+}
+
 #login {
   margin: 20% 10%;
   position: relative;

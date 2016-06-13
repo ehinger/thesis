@@ -82,6 +82,24 @@ nav {
     -o-transition: 0.3s;
     transition: 0.3s; */ }
 
+h1 {
+  margin-left: 10%;
+  margin-top: 12%;
+  position: relative;
+  font-size: 8rem;
+  color: #FFF8EE;
+  font-family: "Open Sans", sans-serif; }
+
+p {
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 12%;
+  position: a;
+  font-size: 5rem;
+  color: #FFF8EE;
+  float: right;
+  font-family: "Open Sans", sans-serif; }
+
 #login {
   margin: 20% 10%;
   position: relative;
