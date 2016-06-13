@@ -13,12 +13,11 @@ $(window).load(function(){
 			$(".menuBarYourHacks").css("top", "0");
 			$(".menuBarProfile").css("top", "0");
 			$(".menuBarSettings").css("top", "0");
-		} else (
+		} else {
 			$(".menuBarYourHacks").css("top", "-100%");
 			$(".menuBarProfile").css("top", "-100%");
 			$(".menuBarSettings").css("top", "-100%");
-		)
-
+		}
 		$(".hackSelectionFrame").toggleClass( "offset2" );
 		$("#instructions").toggleClass( "offset2" );
 		$(".insframe").toggleClass( "offset2" );
