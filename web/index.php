@@ -126,6 +126,8 @@ Navigation Bar
 </div>
 <nav>
     <div class="logInPage">
+    <h1>Welcome!</h1>
+    <p>BlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBla</p>
         <form id='login' action='' method='post'>
 
             <label>Username:</label>
