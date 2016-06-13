@@ -10,7 +10,7 @@ $(window).load(function(){
 		$("nav").toggleClass( "offset" );
 		console.log($(".menuBarProfile").css("top"));
 		$(".startRegistration").toggleClass( "offset" );
-		if ($(".menuBarProfile").css("top") == "0") {
+		if ($(".menuBarProfile").css("top") == "0px") {
 			$(".menuBarYourHacks").css("top", "-100%");
 			$(".menuBarProfile").css("top", "-100%");
 			$(".menuBarSettings").css("top", "-100%");
