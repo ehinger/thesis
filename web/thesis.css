@@ -102,7 +102,7 @@ nav {
     font-family: "Open Sans", sans-serif; }
 
 #login {
-  margin: 20% 10%;
+  margin: 3% 10%;
   position: relative;
   width: 80%; }
   #login input {
@@ -125,7 +125,7 @@ nav {
     border-top: 2px solid #E16C5B; }
 
 #logout {
-  margin: 20% 10%;
+  margin: 3% 10%;
   position: relative;
   width: 80%; }
   #logout input {
@@ -148,7 +148,7 @@ nav {
     border-top: 2px solid #E16C5B; }
 
 #register {
-  margin: 20% 10%;
+  margin: 3% 10%;
   position: relative;
   width: 80%; }
   #register input {
@@ -180,7 +180,7 @@ nav {
 
 .startRegistration {
   position: absolute;
-  margin: 20% 10%;
+  margin: 3% 10%;
   width: 80%;
   height: 5%;
   background: #211F1F;
