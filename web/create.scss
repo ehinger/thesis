@@ -59,21 +59,19 @@ Post a hack
   width: 80%;
 
   input {
-    width: 100%;
+    width: 96.5%;
     height: 15%;
     margin: 3% 0 3% 0;
     padding: .5em;
-    border: 0.2em solid black;
     outline: none;
     font-size: 2rem;
     font-family: $textFont;
   }
 
   textarea {
-    width: 100%;
+    width: 96.5%;
     margin: 3% 0 3% 0;
     padding: .5em;
-    border: 0.2em solid black;
     outline: none;
     font-size: 2rem;
     font-family: $textFont;
@@ -92,6 +90,7 @@ Post a hack
     background: $bgColour;
     border-bottom: 2px solid $linkColour;
     border-top: 2px solid $linkColour;
+    width: 100%;
   }
 }
 

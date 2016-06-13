@@ -106,7 +106,7 @@ nav {
   position: relative;
   width: 80%; }
   #login input {
-    width: 100%;
+    width: 96.5%;
     height: 15%;
     margin: 3% 0 3% 0;
     padding: .5em;
@@ -122,14 +122,15 @@ nav {
     color: #E16C5B;
     background: #211F1F;
     border-bottom: 2px solid #E16C5B;
-    border-top: 2px solid #E16C5B; }
+    border-top: 2px solid #E16C5B;
+    width: 100%; }
 
 #logout {
   margin: 20% 10%;
   position: relative;
   width: 80%; }
   #logout input {
-    width: 100%;
+    width: 96.5%;
     height: 15%;
     margin: 3% 0 3% 0;
     padding: .5em;
@@ -145,14 +146,15 @@ nav {
     color: #E16C5B;
     background: #211F1F;
     border-bottom: 2px solid #E16C5B;
-    border-top: 2px solid #E16C5B; }
+    border-top: 2px solid #E16C5B;
+    width: 100%; }
 
 #register {
   margin: 3% 10%;
   position: relative;
   width: 80%; }
   #register input {
-    width: 100%;
+    width: 96.5%;
     height: 15%;
     margin: 3% 0 3% 0;
     padding: .5em;
@@ -168,7 +170,8 @@ nav {
     color: #E16C5B;
     background: #211F1F;
     border-bottom: 2px solid #E16C5B;
-    border-top: 2px solid #E16C5B; }
+    border-top: 2px solid #E16C5B;
+    width: 100%; }
 
 .registerPage {
   overflow-y: scroll;
@@ -789,19 +792,17 @@ Post a hack
   position: relative;
   width: 80%; }
   #recipeCreator input {
-    width: 100%;
+    width: 96.5%;
     height: 15%;
     margin: 3% 0 3% 0;
     padding: .5em;
-    border: 0.2em solid black;
     outline: none;
     font-size: 2rem;
     font-family: "Open Sans", sans-serif; }
   #recipeCreator textarea {
-    width: 100%;
+    width: 96.5%;
     margin: 3% 0 3% 0;
     padding: .5em;
-    border: 0.2em solid black;
     outline: none;
     font-size: 2rem;
     font-family: "Open Sans", sans-serif; }
@@ -815,7 +816,8 @@ Post a hack
     color: #E16C5B;
     background: #211F1F;
     border-bottom: 2px solid #E16C5B;
-    border-top: 2px solid #E16C5B; }
+    border-top: 2px solid #E16C5B;
+    width: 100%; }
 
 .newHackClose {
   right: 0;
