@@ -239,7 +239,10 @@ nav {
 
     margin: 3% 10% 3% 3%;
     background: $textColour;
-    width: 25
+    width: 25%;
+    height: 2px;
+    position: relative;
+    float: right;
 }
 
 .or {

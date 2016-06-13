@@ -205,7 +205,10 @@ nav {
 .lineR {
   margin: 3% 10% 3% 3%;
   background: #FFF8EE;
-  width: 25; }
+  width: 25%;
+  height: 2px;
+  position: relative;
+  float: right; }
 
 .or {
   margin: -5% 5%;
