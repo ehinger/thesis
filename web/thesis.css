@@ -214,7 +214,10 @@ nav {
   margin: -5% 5%;
   display: inline;
   position: relative;
-  text-align: center; }
+  text-align: center;
+  font-size: 8rem;
+  color: #FFF8EE;
+  font-family: "Open Sans", sans-serif; }
 
 .rangeOneUpper {
   display: none; }
