@@ -9,9 +9,16 @@ $(window).load(function(){
 	$(".navbutton").on('click', function() {
 		$("nav").toggleClass( "offset" );
 		$(".startRegistration").toggleClass( "offset" );
-		$(".menuBarYourHacks").css("top", "-100%");
-		$(".menuBarProfile").css("top", "-100%");
-		$(".menuBarSettings").css("top", "-100%");
+		if ($(".menuBarProfile").css("top") == "0") {
+			$(".menuBarYourHacks").css("top", "0");
+			$(".menuBarProfile").css("top", "0");
+			$(".menuBarSettings").css("top", "0");
+		} else (
+			$(".menuBarYourHacks").css("top", "-100%");
+			$(".menuBarProfile").css("top", "-100%");
+			$(".menuBarSettings").css("top", "-100%");
+		)
+
 		$(".hackSelectionFrame").toggleClass( "offset2" );
 		$("#instructions").toggleClass( "offset2" );
 		$(".insframe").toggleClass( "offset2" );
