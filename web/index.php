@@ -142,9 +142,17 @@ Navigation Bar
 
         </form>
 
+        <div class="lineL"></div>
+        <h1 class="or">Or</h1>
+        <div class="lineR"></div>
+
         <div class="startRegistration">
-            <p class="startResgisterText"></p>
+            <p class="startResgisterText">Create account</p>
         </div>
+
+        <div class="lineL"></div>
+        <h1 class="or">Or</h1>
+        <div class="lineR"></div>
 
     </div>
 
@@ -277,13 +285,13 @@ Navigation Bar
     <div class="yourHacksPage">
         <div class="yourHacksButtons">
             <div class="yourHacksYourHacks">
-                <p class="yourHacksYourHacksText"></p>
+                <p class="yourHacksYourHacksText">Your hacks</p>
             </div>
             <div class="yourHacksFollowedHacks">
-                <p class="yourHacksFollowedHacksText"></p>
+                <p class="yourHacksFollowedHacksText">Followed hacks</p>
             </div>
             <div class="yourHacksCreateHacks">
-                <p class="yourHacksCreateHacksText"></p>
+                <p class="yourHacksCreateHacksText">Create</p>
             </div>
         </div>
 
