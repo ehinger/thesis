@@ -198,7 +198,7 @@ nav {
     font-family: "Merriweather", serif; }
 
 .lineL {
-  margin: 3% 3% 3% 10%;
+  margin: 7% 3% 3% 10%;
   background: #FFF8EE;
   width: 25%;
   height: 2px;
@@ -206,7 +206,7 @@ nav {
   float: left; }
 
 .lineR {
-  margin: 3% 10% 3% 3%;
+  margin: 7% 10% 3% 3%;
   background: #FFF8EE;
   width: 25%;
   height: 2px;
