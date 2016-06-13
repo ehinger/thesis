@@ -140,7 +140,9 @@ Navigation Bar
 
         </form>
 
-        <div class="startRegistration"></div>
+        <div class="startRegistration">
+            <p class="startResgisterText"></p>
+        </div>
 
     </div>
 
@@ -272,9 +274,15 @@ Navigation Bar
 
     <div class="yourHacksPage">
         <div class="yourHacksButtons">
-            <div class="yourHacksYourHacks"></div>
-            <div class="yourHacksFollowedHacks"></div>
-            <div class="yourHacksCreateHacks"></div>
+            <div class="yourHacksYourHacks">
+                <p class="yourHacksYourHacksText"></p>
+            </div>
+            <div class="yourHacksFollowedHacks">
+                <p class="yourHacksFollowedHacksText"></p>
+            </div>
+            <div class="yourHacksCreateHacks">
+                <p class="yourHacksCreateHacksText"></p>
+            </div>
         </div>
 
         <div class="yourHacksMade">

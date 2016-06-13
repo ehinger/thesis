@@ -91,12 +91,11 @@ nav {
     height: 15%;
     margin: 3% 0 3% 0;
     padding: .5em;
-    border: 0.2em solid black;
     outline: none;
     font-size: 2rem; }
   #login label {
     font-size: 2.3rem;
-    font-family: "Merriweather", serif;
+    font-family: "Open Sans", sans-serif;
     color: #E16C5B; }
   #login input[type=submit] {
     font-size: 1.5rem;
@@ -119,7 +118,7 @@ nav {
     font-size: 2rem; }
   #logout label {
     font-size: 2.3rem;
-    font-family: "Merriweather", serif;
+    font-family: "Open Sans", sans-serif;
     color: #E16C5B; }
   #logout input[type=submit] {
     font-size: 1.5rem;
@@ -138,12 +137,11 @@ nav {
     height: 15%;
     margin: 3% 0 3% 0;
     padding: .5em;
-    border: 0.2em solid black;
     outline: none;
     font-size: 2rem; }
   #register label {
     font-size: 2.3rem;
-    font-family: "Merriweather", serif;
+    font-family: "Open Sans", sans-serif;
     color: #E16C5B; }
   #register input[type=submit] {
     font-size: 1.5rem;
@@ -169,6 +167,13 @@ nav {
   background: #211F1F;
   border-bottom: 2px solid #E16C5B;
   border-top: 2px solid #E16C5B; }
+  .startRegistration .startResgisterText {
+    text-align: center;
+    vertical-align: middle;
+    position: relative;
+    font-size: 2.3rem;
+    color: #E16C5B;
+    font-family: "Open Sans", sans-serif; }
 
 .rangeOneUpper {
   display: none; }
@@ -300,6 +305,14 @@ nav {
   border-bottom: 2px solid #E16C5B;
   border-top: 2px solid #E16C5B; }
 
+.yourHacksYourHacksText {
+  text-align: center;
+  vertical-align: middle;
+  position: relative;
+  font-size: 4rem;
+  color: #E16C5B;
+  font-family: "Open Sans", sans-serif; }
+
 .yourHacksFollowedHacks {
   position: relative;
   margin: 20% 10%;
@@ -309,6 +322,14 @@ nav {
   border-bottom: 2px solid #E16C5B;
   border-top: 2px solid #E16C5B; }
 
+.yourHacksFollowedHacksText {
+  text-align: center;
+  vertical-align: middle;
+  position: relative;
+  font-size: 4rem;
+  color: #E16C5B;
+  font-family: "Open Sans", sans-serif; }
+
 .yourHacksCreateHacks {
   position: relative;
   margin: 20% 10%;
@@ -317,6 +338,14 @@ nav {
   background: #211F1F;
   border-bottom: 2px solid #E16C5B;
   border-top: 2px solid #E16C5B; }
+
+.yourHacksCreateHacksText {
+  text-align: center;
+  vertical-align: middle;
+  position: relative;
+  font-size: 4rem;
+  color: #E16C5B;
+  font-family: "Open Sans", sans-serif; }
 
 .yourHacksMade {
   display: none;

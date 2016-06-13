@@ -91,14 +91,13 @@ nav {
     height: 15%;
     margin: 3% 0 3% 0;
     padding: .5em;
-    border: 0.2em solid black;
     outline: none;
     font-size: 2rem;
   }
 
   label {
     font-size: 2.3rem;
-  	font-family: $linkFont;
+    font-family: $textFont;
   	color: $linkColour;
   }
 
@@ -128,7 +127,7 @@ nav {
 
   label {
     font-size: 2.3rem;
-  	font-family: $linkFont;
+    font-family: $textFont;
   	color: $linkColour;
   }
 
@@ -152,14 +151,13 @@ nav {
     height: 15%;
     margin: 3% 0 3% 0;
     padding: .5em;
-    border: 0.2em solid black;
     outline: none;
     font-size: 2rem;
   }
 
   label {
     font-size: 2.3rem;
-  	font-family: $linkFont;
+    font-family: $textFont;
   	color: $linkColour;
   }
 
@@ -183,13 +181,22 @@ nav {
 }
 
 .startRegistration {
-  position: absolute;
-  margin: 20% 10%;
-  width: 80%;
-  height: 5%;
+	position: absolute;
+	margin: 20% 10%;
+	width: 80%;
+	height: 5%;
 	background: $bgColour;
 	border-bottom: 2px solid $linkColour;
 	border-top: 2px solid $linkColour;
+
+	.startResgisterText {
+		text-align: center;
+		vertical-align: middle;
+		position: relative;
+    	font-size: 2.3rem;
+		color: $linkColour;
+    	font-family: $textFont;
+	}
 }
 
 .rangeOneUpper {
