@@ -194,6 +194,28 @@ nav {
     color: #E16C5B;
     font-family: "Merriweather", serif; }
 
+.lineL {
+  margin: 3% 3% 3% 10%;
+  background: #FFF8EE;
+  width: 25%;
+  height: 2px;
+  position: relative;
+  float: left; }
+
+.lineR {
+  margin: 3% 10% 3% 3%;
+  background: #FFF8EE;
+  width: 25%;
+  height: 2px;
+  position: relative;
+  float: right; }
+
+.or {
+  margin: -5% 5%;
+  display: inline;
+  position: relative;
+  text-align: center; }
+
 .rangeOneUpper {
   display: none; }
 
@@ -554,6 +576,13 @@ nav {
     -ms-transition: 0.3s;
     -o-transition: 0.3s;
     transition: 0.3s;*/ }
+
+lineL {
+  margin: 3% 10%;
+  background: #FFF8EE;
+  width: 25%;
+  height: 2px;
+  position: relative; }
 
 /************************************************************************************
 Hack selection
