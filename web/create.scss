@@ -5,13 +5,12 @@ Post a hack
 .newHackFrame {
   margin: 0;
   bottom: 100%; 
-  right: 10%;
+  right: 0;
   position: fixed;
   width: 250px;
   height: 250px;
   background: $bgColour;
   z-index: -1;
-  border-radius: 100%;
   overflow: hidden;
 /*  -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
