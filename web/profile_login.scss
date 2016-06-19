@@ -103,6 +103,7 @@ nav {
 		font-size: 5rem;
 		color: $textColour;
 		font-family: $textFont;
+    	text-align: justify;
 	}
 }
 
@@ -225,7 +226,7 @@ nav {
     	font-size: 2.3rem;
 		color: $linkColour;
     	font-family: $linkFont;
-  		top: 20%;
+  		top: -20%;
 	}
 }
 

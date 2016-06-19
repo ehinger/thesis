@@ -99,7 +99,8 @@ nav {
     position: relative;
     font-size: 5rem;
     color: #FFF8EE;
-    font-family: "Open Sans", sans-serif; }
+    font-family: "Open Sans", sans-serif;
+    text-align: justify; }
 
 #login {
   margin: 3% 10%;
@@ -197,7 +198,7 @@ nav {
     font-size: 2.3rem;
     color: #E16C5B;
     font-family: "Merriweather", serif;
-    top: 20%; }
+    top: -20%; }
 
 .lineL {
   margin: 7% 3% 3% 10%;
@@ -870,6 +871,12 @@ Instructions
     color: #FFF8EE;
     float: right;
     font-family: "Open Sans", sans-serif; }
+
+.Ibox {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  position: relative; }
 
 .follow {
   width: 100%;
