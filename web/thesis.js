@@ -138,6 +138,7 @@ $(window).load(function(){
 			$("body").removeClass( "offset4" );
 			$(".newHackFrame").removeClass( "offset7" );
 			$("body").scrollTop($("#" + hackID).offset().top - parseInt($(".navbutton").css("height")));
+			$(".hackSelectionButton").css("z-index", "0")
 			console.log(parseInt($(".navbutton").css("height")));
 			Cookies.set('followId', hackID);
 		}
@@ -160,6 +161,7 @@ $(window).load(function(){
 		$(".close").css("right", "100%");
 		$("body").addClass( "offset4" );
 		$(".newHackFrame").addClass( "offset7" );
+		$(".hackSelectionButton").css("z-index", "2")
 	});
 
 	$(".hackSelectionButtonYourHacks").on('click', function() {
