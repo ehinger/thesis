@@ -849,7 +849,7 @@ Instructions
 .insframe {
   width: 100%;
   height: 0;
-  position: relative;
+  position: static;
   top: 15%;
   left: 0;
   margin: 0;
