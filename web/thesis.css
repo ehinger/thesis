@@ -700,6 +700,16 @@ Hack selection
   color: #fcce00;
   font-family: "Open Sans", sans-serif; }
 
+.hackStepImage {
+  margin-left: 10%;
+  margin-right: 10%;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
 .hackSelectionButton {
   margin: 0;
   bottom: 0;

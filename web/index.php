@@ -522,7 +522,7 @@ for ($i = 0; $i < count($hacksGeneral['k']); $i++) {
     for ($ni = 0; $ni < count($hacksInstructions['k']); $ni++) {
         if ($hacksInstructions['k'][$ni]['hackid'] == $hacksGeneral['k'][$i]['hackid']) {
             echo "<h1 class='stepNumber'>Step ".$hacksInstructions['k'][$ni]['stepnumber']."</h1>";
-            echo "<img class='hackHeroImage' src='".$hacksInstructions['k'][$ni]['stage']."'>";
+            echo "<img class='hackStepImage' src='".$hacksInstructions['k'][$ni]['stage']."'>";
             echo "<p class='hackInstructions'>".$hacksInstructions['k'][$ni]['instructions']."</p>";
         }
     }
