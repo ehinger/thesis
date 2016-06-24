@@ -862,15 +862,6 @@ Instructions
     -ms-transition: 0.3s;
     -o-transition: 0.3s;
     transition: 0.3s;*/ }
-  .insframe p {
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-top: 12%;
-    position: relative;
-    font-size: 5rem;
-    color: #fcce00;
-    float: right;
-    font-family: "Open Sans", sans-serif; }
 
 .Ibox {
   width: 100%;
