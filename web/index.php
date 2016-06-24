@@ -127,7 +127,7 @@ Navigation Bar
 <nav>
     <div class="logInPage">
     <h1 class="welcome">Welcome!</h1> 
-    <p class="intro">Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla </p>
+    <p class="intro">Boy this colour palette is awful!</p>
         <form id='login' action='' method='post'>
 
             <label>Username:</label>
