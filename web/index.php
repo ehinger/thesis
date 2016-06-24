@@ -510,6 +510,7 @@ for ($i = 0; $i < count($hacksGeneral['k']); $i++) {
     echo "<div class='hackArrow'></div>";
     echo "</div>";
     echo '<div class="close">';
+    echo "<h1 class='menuBarProfileText'>Close</h1>";
     echo '</div>';
     echo '<div class="insframe">';
 
