@@ -56,7 +56,13 @@ $(window).load(function(){
 			$(".newHackFrame *").removeClass( "offset6" );
 			$("body").addClass( "offset4" );
 		} else {
-			$(".logInPage").show();
+			$(".hacksLogIn").show();
+			$(".logInPage").hide();
+			$(".loggedInPage").hide();
+			$(".registerPage").hide();
+			$(".yourSettingsPage").hide();
+			$(".yourHacksMade").hide();
+			$(".followedHacks").hide();
 		}
 
 	});
