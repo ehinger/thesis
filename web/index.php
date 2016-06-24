@@ -282,6 +282,31 @@ Navigation Bar
         </form>
     </div> -->
 
+    <div class="hacksLogIn">
+    <p class="intro">You need to log in or create an account to use this page.</p>
+        <form id='login' action='' method='post'>
+
+            <label>Username:</label>
+            <input name="username" type="text">
+
+            <label>Password:</label>
+            <input name="password" type="password">
+
+            <!--         <input type="checkbox" name="remainLoggedIn" value="remainLoggedIn"> Stay logged in?<br> -->
+
+            <input type="submit" value="login" name="login">
+
+        </form>
+
+        <div class="lineL"></div>
+        <h1 class="or">Or</h1>
+        <div class="lineR"></div>
+
+        <div class="startRegistration">
+            <p class="startResgisterText">Create account</p>
+        </div>
+    </div>
+
     <div class="yourHacksPage">
         <div class="yourHacksButtons">
             <div class="yourHacksYourHacks">
