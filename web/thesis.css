@@ -348,9 +348,9 @@ nav {
 
 .yourHacksYourHacks {
   position: relative;
-  margin: 20% 10%;
+  margin: 20% 10% 0;
   width: 80%;
-  height: 5%;
+  height: 20%;
   background: #191919;
   border-bottom: 2px solid #e5e5e5;
   border-top: 2px solid #e5e5e5; }
@@ -358,6 +358,7 @@ nav {
 .yourHacksYourHacksText {
   text-align: center;
   vertical-align: middle;
+  top: 50px;
   position: relative;
   font-size: 4rem;
   color: #e5e5e5;
@@ -365,9 +366,9 @@ nav {
 
 .yourHacksFollowedHacks {
   position: relative;
-  margin: 20% 10%;
+  margin: 5% 10% 0;
   width: 80%;
-  height: 5%;
+  height: 20%;
   background: #191919;
   border-bottom: 2px solid #e5e5e5;
   border-top: 2px solid #e5e5e5; }
@@ -375,6 +376,7 @@ nav {
 .yourHacksFollowedHacksText {
   text-align: center;
   vertical-align: middle;
+  top: 50px;
   position: relative;
   font-size: 4rem;
   color: #e5e5e5;
@@ -382,9 +384,9 @@ nav {
 
 .yourHacksCreateHacks {
   position: relative;
-  margin: 20% 10%;
+  margin: 20% 10% 0;
   width: 80%;
-  height: 5%;
+  height: 20%;
   background: #191919;
   border-bottom: 2px solid #e5e5e5;
   border-top: 2px solid #e5e5e5; }
@@ -392,6 +394,7 @@ nav {
 .yourHacksCreateHacksText {
   text-align: center;
   vertical-align: middle;
+  top: 50px;
   position: relative;
   font-size: 4rem;
   color: #e5e5e5;

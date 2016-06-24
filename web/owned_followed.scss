@@ -52,9 +52,9 @@
 
 .yourHacksYourHacks {
   position: relative;
-  margin: 20% 10%;
+  margin: 20% 10% 0;
   width: 80%;
-  height: 5%;
+  height: 20%;
   background: $bgColour;
   border-bottom: 2px solid $linkColour;
   border-top: 2px solid $linkColour;
@@ -63,6 +63,7 @@
 .yourHacksYourHacksText {
   text-align: center;
   vertical-align: middle;
+  top: 50px;
   position: relative;
   font-size: 4rem;
   color: $linkColour;
@@ -71,9 +72,9 @@
 
 .yourHacksFollowedHacks {
   position: relative;
-  margin: 20% 10%;
+  margin: 5% 10% 0;
   width: 80%;
-  height: 5%;
+  height: 20%;
   background: $bgColour;
   border-bottom: 2px solid $linkColour;
   border-top: 2px solid $linkColour;
@@ -82,6 +83,7 @@
 .yourHacksFollowedHacksText {
   text-align: center;
   vertical-align: middle;
+  top: 50px;
   position: relative;
   font-size: 4rem;
   color: $linkColour;
@@ -90,9 +92,9 @@
 
 .yourHacksCreateHacks {
   position: relative;
-  margin: 20% 10%;
+  margin: 20% 10% 0;
   width: 80%;
-  height: 5%;
+  height: 20%;
   background: $bgColour;
   border-bottom: 2px solid $linkColour;
   border-top: 2px solid $linkColour;
@@ -101,6 +103,7 @@
 .yourHacksCreateHacksText {
   text-align: center;
   vertical-align: middle;
+  top: 50px;
   position: relative;
   font-size: 4rem;
   color: $linkColour;
