@@ -38,23 +38,27 @@ $(window).load(function(){
 	});
 
 	$(".menuBarYourHacks").on('click', function() {
-		$(".logInPage").hide();
-		$(".loggedInPage").hide();
-		$(".registerPage").hide();
-		$(".yourSettingsPage").hide();
-		$(".yourHacksPage").show();
-		$(".yourHacksButtons").show();
-		$(".yourHacksMade").hide();
-		$(".followedHacks").hide();
-		$(".yourHacksButtons").css("left", "0");		
-		$(".newHackFrame").css("overflow", "hidden");
-		console.log("closing");
-		$(".newHackFrame").removeClass( "offset5" );
-		$(".newHackFrame *").removeClass( "offset6" );
-		$("body").addClass( "offset4" );
-		$(".menuBarProfile").css("borderWidth", "2px");
-		$(".menuBarSettings").css("borderWidth", "2px");
-		$(".menuBarYourHacks").css("borderWidth", "8px");
+		if (Cookies.get('userId')) {
+			$(".logInPage").show();
+		} else {
+			$(".logInPage").hide();
+			$(".loggedInPage").hide();
+			$(".registerPage").hide();
+			$(".yourSettingsPage").hide();
+			$(".yourHacksPage").show();
+			$(".yourHacksButtons").show();
+			$(".yourHacksMade").hide();
+			$(".followedHacks").hide();
+			$(".yourHacksButtons").css("left", "0");		
+			$(".newHackFrame").css("overflow", "hidden");
+			$(".newHackFrame").removeClass( "offset5" );
+			$(".newHackFrame *").removeClass( "offset6" );
+			$("body").addClass( "offset4" );
+			$(".menuBarProfile").css("borderWidth", "2px");
+			$(".menuBarSettings").css("borderWidth", "2px");
+			$(".menuBarYourHacks").css("borderWidth", "8px");
+		}
+
 	});
 
 	$(".yourHacksYourHacks").on('click', function() {
