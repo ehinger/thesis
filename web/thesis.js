@@ -38,6 +38,9 @@ $(window).load(function(){
 	});
 
 	$(".menuBarYourHacks").on('click', function() {
+			$(".menuBarProfile").css("borderWidth", "2px");
+			$(".menuBarSettings").css("borderWidth", "2px");
+			$(".menuBarYourHacks").css("borderWidth", "8px");
 		if (Cookies.get('userId')) {
 			$(".logInPage").hide();
 			$(".loggedInPage").hide();
@@ -52,9 +55,6 @@ $(window).load(function(){
 			$(".newHackFrame").removeClass( "offset5" );
 			$(".newHackFrame *").removeClass( "offset6" );
 			$("body").addClass( "offset4" );
-			$(".menuBarProfile").css("borderWidth", "2px");
-			$(".menuBarSettings").css("borderWidth", "2px");
-			$(".menuBarYourHacks").css("borderWidth", "8px");
 		} else {
 			$(".logInPage").show();
 		}
