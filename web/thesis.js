@@ -90,6 +90,7 @@ $(window).load(function(){
 	});
 
 	$(".menuBarProfile").on('click', function() {
+		$(".hacksLogIn").hide();
 		$(".registerPage").hide();
 		$(".yourHacksPage").hide();
 		$(".yourSettingsPage").hide();
@@ -112,6 +113,7 @@ $(window).load(function(){
 	});
 
 	$(".menuBarSettings").on('click', function() {
+		$(".hacksLogIn").hide();
 		$(".logInPage").hide();
 		$(".loggedInPage").hide();
 		$(".registerPage").hide();
