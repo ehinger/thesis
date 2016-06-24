@@ -102,6 +102,21 @@ nav {
     font-family: "Open Sans", sans-serif;
     text-align: justify; }
 
+.hacksLogIn {
+  display: none;
+  overflow-y: scroll;
+  position: fixed;
+  margin: 0;
+  width: 100%;
+  height: 90%; }
+  .hacksLogIn .intro {
+    margin: 3% 10%;
+    position: relative;
+    font-size: 5rem;
+    color: #fcce00;
+    font-family: "Open Sans", sans-serif;
+    text-align: justify; }
+
 #login {
   margin: 3% 10%;
   position: relative;
