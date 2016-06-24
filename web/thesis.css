@@ -612,8 +612,8 @@ Hack selection
   overflow: hidden; }
 
 .hackHeroImage {
-  width: auto;
-  height: 1024px;
+  width: 100%;
+  height: auto;
   top: 0;
   position: absolute;
   margin-left: auto;
@@ -708,7 +708,7 @@ Hack selection
   margin-right: 10%;
   position: relative;
   width: 80%;
-  height: 300px;
+  height: auto;
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover; }
