@@ -134,6 +134,7 @@ $(window).load(function(){
 			$("#" + hackID + " .insframe").css("height", "auto");
 			$("#" + hackID + " .infoWrapper").css("height", "90%");
 			$("#" + hackID + " .hackButtonText").text("Scroll down");
+			$("#" + hackID + " .hackButtonText").css("bottom", "-70%");
 			$("#" + hackID + " .hackSelectionButton").css("bottom", "10%");
 			$("#" + hackID + " .hackArrow").css("margin", "60% auto");
 			$("#" + hackID + " .close").css("opacity", "1");
@@ -161,6 +162,7 @@ $(window).load(function(){
 		$(".hackSelectionFrame").css("height", "85%");
 		$(".insframe").css("opacity", "0");
 		$(".hackButtonText").text("Enter");
+		$(".hackButtonText").css("bottom", "-75%");
 		$(".hackSelectionButton").css("bottom", "0");
 		$(".hackArrow").css("margin", "55% auto");
 		$(".close").css("opacity", "0");
