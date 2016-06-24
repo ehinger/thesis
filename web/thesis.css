@@ -18,11 +18,11 @@ Navigation Bar
   top: 90%;
   left: 0;
   position: fixed;
-  background: #ffffff;
+  background: #181b30;
   margin: 0;
   z-index: 2;
-  border-bottom: 2px solid #E2C044;
-  border-top: 2px solid #E2C044;
+  border-bottom: 2px solid #e5e5e5;
+  border-top: 2px solid #e5e5e5;
   /*  -webkit-transition: 0.3s;
     -moz-transition: 0.3s;
     -ms-transition: 0.3s;
@@ -34,7 +34,7 @@ Navigation Bar
   vertical-align: middle;
   position: relative;
   font-size: 5rem;
-  color: #E2C044;
+  color: #e5e5e5;
   font-family: "Merriweather", serif; }
 
 .offset3 {
@@ -46,10 +46,10 @@ Navigation Bar
   top: 0;
   left: 33.3%;
   position: fixed;
-  background: #ffffff;
+  background: #181b30;
   margin: 0;
   z-index: 2;
-  border-bottom: 8px solid #E2C044;
+  border-bottom: 8px solid #e5e5e5;
   /*  -webkit-transition: 0.3s;
     -moz-transition: 0.3s;
     -ms-transition: 0.3s;
@@ -61,7 +61,7 @@ Navigation Bar
   vertical-align: middle;
   position: relative;
   font-size: 5rem;
-  color: #E2C044;
+  color: #e5e5e5;
   font-family: "Merriweather", serif; }
 
 .offset {
@@ -71,7 +71,7 @@ nav {
   width: 100%;
   height: 100%;
   position: fixed;
-  background: #ffffff;
+  background: #181b30;
   margin: 0;
   top: 0;
   left: 0;
@@ -92,13 +92,13 @@ nav {
     margin: 20% 10% 3% 10%;
     position: relative;
     font-size: 8rem;
-    color: #2E5266;
+    color: #fcce00;
     font-family: "Open Sans", sans-serif; }
   .logInPage .intro {
     margin: 3% 10%;
     position: relative;
     font-size: 5rem;
-    color: #2E5266;
+    color: #fcce00;
     font-family: "Open Sans", sans-serif;
     text-align: justify; }
 
@@ -116,14 +116,14 @@ nav {
   #login label {
     font-size: 2.3rem;
     font-family: "Open Sans", sans-serif;
-    color: #E2C044; }
+    color: #e5e5e5; }
   #login input[type=submit] {
     font-size: 1.5rem;
     font-family: "Merriweather", serif;
-    color: #E2C044;
-    background: #ffffff;
-    border-bottom: 2px solid #E2C044;
-    border-top: 2px solid #E2C044;
+    color: #e5e5e5;
+    background: #181b30;
+    border-bottom: 2px solid #e5e5e5;
+    border-top: 2px solid #e5e5e5;
     width: 100%; }
 
 #logout {
@@ -140,14 +140,14 @@ nav {
   #logout label {
     font-size: 2.3rem;
     font-family: "Open Sans", sans-serif;
-    color: #E2C044; }
+    color: #e5e5e5; }
   #logout input[type=submit] {
     font-size: 1.5rem;
     font-family: "Merriweather", serif;
-    color: #E2C044;
-    background: #ffffff;
-    border-bottom: 2px solid #E2C044;
-    border-top: 2px solid #E2C044;
+    color: #e5e5e5;
+    background: #181b30;
+    border-bottom: 2px solid #e5e5e5;
+    border-top: 2px solid #e5e5e5;
     width: 100%; }
 
 #register {
@@ -164,14 +164,14 @@ nav {
   #register label {
     font-size: 2.3rem;
     font-family: "Open Sans", sans-serif;
-    color: #E2C044; }
+    color: #e5e5e5; }
   #register input[type=submit] {
     font-size: 1.5rem;
     font-family: "Merriweather", serif;
-    color: #E2C044;
-    background: #ffffff;
-    border-bottom: 2px solid #E2C044;
-    border-top: 2px solid #E2C044;
+    color: #e5e5e5;
+    background: #181b30;
+    border-bottom: 2px solid #e5e5e5;
+    border-top: 2px solid #e5e5e5;
     width: 100%; }
 
 .registerPage {
@@ -188,21 +188,21 @@ nav {
   margin: 3% 10%;
   width: 80%;
   height: 5%;
-  background: #ffffff;
-  border-bottom: 2px solid #E2C044;
-  border-top: 2px solid #E2C044; }
+  background: #181b30;
+  border-bottom: 2px solid #e5e5e5;
+  border-top: 2px solid #e5e5e5; }
   .startRegistration .startResgisterText {
     text-align: center;
     vertical-align: middle;
     position: relative;
     font-size: 2.3rem;
-    color: #E2C044;
+    color: #e5e5e5;
     font-family: "Merriweather", serif;
     top: -20%; }
 
 .lineL {
   margin: 7% 3% 3% 10%;
-  background: #2E5266;
+  background: #fcce00;
   width: 25%;
   height: 2px;
   position: relative;
@@ -210,7 +210,7 @@ nav {
 
 .lineR {
   margin: 7% 10% 3% 3%;
-  background: #2E5266;
+  background: #fcce00;
   width: 25%;
   height: 2px;
   position: relative;
@@ -222,7 +222,7 @@ nav {
   position: relative;
   text-align: center;
   font-size: 8rem;
-  color: #2E5266;
+  color: #fcce00;
   font-family: "Open Sans", sans-serif; }
 
 .rangeOneUpper {
@@ -255,10 +255,10 @@ nav {
   top: 0;
   left: 66.6%;
   position: fixed;
-  background: #ffffff;
+  background: #181b30;
   margin: 0;
   z-index: 2;
-  border-bottom: 2px solid #E2C044;
+  border-bottom: 2px solid #e5e5e5;
   /*  -webkit-transition: 0.3s;
     -moz-transition: 0.3s;
     -ms-transition: 0.3s;
@@ -270,7 +270,7 @@ nav {
   vertical-align: middle;
   position: relative;
   font-size: 5rem;
-  color: #E2C044;
+  color: #e5e5e5;
   font-family: "Merriweather", serif; }
 
 .yourSettingsPage {
@@ -296,7 +296,7 @@ nav {
     padding: .5em;
     font-size: 2rem;
     font-family: "Open Sans", sans-serif;
-    color: #E2C044; }
+    color: #e5e5e5; }
 
 .menuBarYourHacks {
   width: 33.3%;
@@ -304,10 +304,10 @@ nav {
   top: 0;
   left: 0;
   position: fixed;
-  background: #ffffff;
+  background: #181b30;
   margin: 0;
   z-index: 2;
-  border-bottom: 2px solid #E2C044;
+  border-bottom: 2px solid #e5e5e5;
   /*  -webkit-transition: 0.3s;
     -moz-transition: 0.3s;
     -ms-transition: 0.3s;
@@ -319,7 +319,7 @@ nav {
   vertical-align: middle;
   position: relative;
   font-size: 5rem;
-  color: #E2C044;
+  color: #e5e5e5;
   font-family: "Merriweather", serif; }
 
 .yourHacksPage {
@@ -351,16 +351,16 @@ nav {
   margin: 20% 10%;
   width: 80%;
   height: 5%;
-  background: #ffffff;
-  border-bottom: 2px solid #E2C044;
-  border-top: 2px solid #E2C044; }
+  background: #181b30;
+  border-bottom: 2px solid #e5e5e5;
+  border-top: 2px solid #e5e5e5; }
 
 .yourHacksYourHacksText {
   text-align: center;
   vertical-align: middle;
   position: relative;
   font-size: 4rem;
-  color: #E2C044;
+  color: #e5e5e5;
   font-family: "Merriweather", serif; }
 
 .yourHacksFollowedHacks {
@@ -368,16 +368,16 @@ nav {
   margin: 20% 10%;
   width: 80%;
   height: 5%;
-  background: #ffffff;
-  border-bottom: 2px solid #E2C044;
-  border-top: 2px solid #E2C044; }
+  background: #181b30;
+  border-bottom: 2px solid #e5e5e5;
+  border-top: 2px solid #e5e5e5; }
 
 .yourHacksFollowedHacksText {
   text-align: center;
   vertical-align: middle;
   position: relative;
   font-size: 4rem;
-  color: #E2C044;
+  color: #e5e5e5;
   font-family: "Merriweather", serif; }
 
 .yourHacksCreateHacks {
@@ -385,16 +385,16 @@ nav {
   margin: 20% 10%;
   width: 80%;
   height: 5%;
-  background: #ffffff;
-  border-bottom: 2px solid #E2C044;
-  border-top: 2px solid #E2C044; }
+  background: #181b30;
+  border-bottom: 2px solid #e5e5e5;
+  border-top: 2px solid #e5e5e5; }
 
 .yourHacksCreateHacksText {
   text-align: center;
   vertical-align: middle;
   position: relative;
   font-size: 4rem;
-  color: #E2C044;
+  color: #e5e5e5;
   font-family: "Merriweather", serif; }
 
 .yourHacksMade {
@@ -459,7 +459,7 @@ nav {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: #0E1537;
+  background: #191919;
   opacity: .4;
   /*  -webkit-transition: 0.3s;
     -moz-transition: 0.3s;
@@ -474,7 +474,7 @@ nav {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: #0E1537;
+  background: #191919;
   opacity: .4;
   /*  -webkit-transition: 0.3s;
     -moz-transition: 0.3s;
@@ -532,7 +532,7 @@ nav {
   opacity: 0;
   z-index: 1;
   overflow-y: scroll;
-  background: #ffffff;
+  background: #181b30;
   /*  -webkit-transition: 0.3s;
     -moz-transition: 0.3s;
     -ms-transition: 0.3s;
@@ -549,7 +549,7 @@ nav {
   opacity: 0;
   z-index: 1;
   overflow-y: scroll;
-  background: #ffffff;
+  background: #181b30;
   /*  -webkit-transition: 0.3s;
     -moz-transition: 0.3s;
     -ms-transition: 0.3s;
@@ -562,7 +562,7 @@ nav {
   width: 25%;
   height: 10%;
   position: fixed;
-  background: #ffffff;
+  background: #181b30;
   opacity: 1;
   z-index: 9;
   /*  -webkit-transition: 0.3s;
@@ -577,7 +577,7 @@ nav {
   width: 25%;
   height: 10%;
   position: fixed;
-  background: #ffffff;
+  background: #181b30;
   opacity: 1;
   z-index: 9;
   /*  -webkit-transition: 0.3s;
@@ -627,7 +627,7 @@ Hack selection
   position: absolute;
   width: 100%;
   height: 100%;
-  background: #0E1537;
+  background: #191919;
   opacity: .4;
   /*  -webkit-transition: 0.3s;
     -moz-transition: 0.3s;
@@ -640,7 +640,7 @@ Hack selection
   margin: 8% 0 3%;
   position: relative;
   font-size: 12rem;
-  color: #2E5266;
+  color: #fcce00;
   font-family: "Open Sans", sans-serif; }
 
 .hackUnderline {
@@ -662,7 +662,7 @@ Hack selection
   margin-top: 5%;
   position: relative;
   font-size: 5rem;
-  color: #2E5266;
+  color: #fcce00;
   font-family: "Open Sans", sans-serif; }
 
 .hackTags {
@@ -678,7 +678,7 @@ Hack selection
   margin-top: 12%;
   position: relative;
   font-size: 5rem;
-  color: #2E5266;
+  color: #fcce00;
   font-family: "Open Sans", sans-serif; }
 
 .stepNumber {
@@ -687,7 +687,7 @@ Hack selection
   margin-top: 12%;
   position: relative;
   font-size: 5rem;
-  color: #2E5266;
+  color: #fcce00;
   font-family: "Open Sans", sans-serif; }
 
 .hackInstructions {
@@ -696,7 +696,7 @@ Hack selection
   margin-top: 12%;
   position: relative;
   font-size: 5rem;
-  color: #2E5266;
+  color: #fcce00;
   font-family: "Open Sans", sans-serif; }
 
 .hackSelectionButton {
@@ -706,7 +706,7 @@ Hack selection
   width: 100%;
   height: 60%;
   z-index: 2;
-  border-bottom: 2px solid #E2C044;
+  border-bottom: 2px solid #e5e5e5;
   background: -moz-linear-gradient(top, rgba(33, 31, 31, 0) 0%, #211f1f 77%, #211f1f 100%);
   /* FF3.6-15 */
   background: -webkit-linear-gradient(top, rgba(33, 31, 31, 0) 0%, #211f1f 77%, #211f1f 100%);
@@ -731,8 +731,8 @@ Hack selection
   -moz-transform: rotate(45deg);
   -o-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
-  border-right: 4px solid #E2C044;
-  border-bottom: 4px solid #E2C044; }
+  border-right: 4px solid #e5e5e5;
+  border-bottom: 4px solid #e5e5e5; }
 
 .hackButtonText {
   text-align: center;
@@ -740,7 +740,7 @@ Hack selection
   line-height: 10%;
   position: relative;
   font-size: 5rem;
-  color: #E2C044;
+  color: #e5e5e5;
   font-family: "Merriweather", serif; }
 
 /************************************************************************************
@@ -753,7 +753,7 @@ Post a hack
   position: fixed;
   width: 250px;
   height: 250px;
-  background: #ffffff;
+  background: #181b30;
   z-index: -1;
   overflow: hidden;
   /*  -webkit-transition: 0.3s;
@@ -766,7 +766,7 @@ Post a hack
     margin-top: 12%;
     position: relative;
     font-size: 8rem;
-    color: #2E5266;
+    color: #fcce00;
     font-family: "Open Sans", sans-serif; }
   .newHackFrame * {
     opacity: 0;
@@ -811,14 +811,14 @@ Post a hack
   #recipeCreator label {
     font-size: 2.3rem;
     font-family: "Merriweather", serif;
-    color: #E2C044; }
+    color: #e5e5e5; }
   #recipeCreator input[type=submit] {
     font-size: 1.5rem;
     font-family: "Merriweather", serif;
-    color: #E2C044;
-    background: #ffffff;
-    border-bottom: 2px solid #E2C044;
-    border-top: 2px solid #E2C044;
+    color: #e5e5e5;
+    background: #181b30;
+    border-bottom: 2px solid #e5e5e5;
+    border-top: 2px solid #e5e5e5;
     width: 100%; }
 
 .newHackClose {
@@ -856,7 +856,7 @@ Instructions
   opacity: 0;
   z-index: 1;
   overflow-y: scroll;
-  background: #ffffff;
+  background: #181b30;
   /*  -webkit-transition: 0.3s;
     -moz-transition: 0.3s;
     -ms-transition: 0.3s;
@@ -868,7 +868,7 @@ Instructions
     margin-top: 12%;
     position: relative;
     font-size: 5rem;
-    color: #2E5266;
+    color: #fcce00;
     float: right;
     font-family: "Open Sans", sans-serif; }
 
@@ -884,7 +884,7 @@ Instructions
   position: absolute;
   margin: 90% 0 0 0;
   padding: 0;
-  background: #ffffff; }
+  background: #181b30; }
   .follow h1 {
     margin: auto;
     line-height: 10%;
@@ -892,7 +892,7 @@ Instructions
     text-align: center;
     position: relative;
     font-size: 5rem;
-    color: #E2C044;
+    color: #e5e5e5;
     font-family: "Merriweather", serif; }
 
 .close {
@@ -901,7 +901,7 @@ Instructions
   width: 25%;
   height: 10%;
   position: fixed;
-  background: #ffffff;
+  background: #181b30;
   opacity: 1;
   z-index: 9;
   /*  -webkit-transition: 0.3s;
