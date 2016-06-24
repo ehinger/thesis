@@ -694,7 +694,6 @@ Hack selection
 .hackInstructions {
   margin-left: 10%;
   margin-right: 10%;
-  border-bottom: 2px solid #e5e5e5;
   margin-top: 12%;
   position: relative;
   font-size: 5rem;
@@ -708,6 +707,7 @@ Hack selection
   width: 100%;
   height: 60%;
   z-index: 2;
+  border-bottom: 2px solid #e5e5e5;
   background: -moz-linear-gradient(top, rgba(33, 31, 31, 0) 0%, #211f1f 77%, #211f1f 100%);
   /* FF3.6-15 */
   background: -webkit-linear-gradient(top, rgba(33, 31, 31, 0) 0%, #211f1f 77%, #211f1f 100%);
