@@ -513,14 +513,11 @@ for ($i = 0; $i < count($hacksGeneral['k']); $i++) {
     echo '</div>';
     echo '<div class="insframe">';
 
-
-    echo '<div class="Ibox">';
     for ($in = 0; $in < count($hacksSupplies['k']); $in++) {
         if ($hacksSupplies['k'][$in]['hackid'] == $hacksGeneral['k'][$i]['hackid']) {
             echo "<p class='hackSupplies'>".$hacksSupplies['k'][$in]['supplyno']." X    ".$hacksSupplies['k'][$in]['item']."</p>";
         }
     }
-    echo '</div>';
 
     for ($ni = 0; $ni < count($hacksInstructions['k']); $ni++) {
         if ($hacksInstructions['k'][$ni]['hackid'] == $hacksGeneral['k'][$i]['hackid']) {
