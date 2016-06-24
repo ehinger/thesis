@@ -135,7 +135,7 @@ $(window).load(function(){
 			$("#" + hackID + " .hackButtonText").text("Scroll down");
 			$("#" + hackID + " .close").css("opacity", "1");
 			$("#" + hackID + " .close").css("right", "0");
-			$("#" + hackID + " .hackSelectionFrame").css("height", "100%");
+			$("#" + hackID).css("height", "100%");
 			$("body").removeClass( "offset4" );
 			$(".newHackFrame").removeClass( "offset7" );
 			$("body").scrollTop($("#" + hackID).offset().top - parseInt($(".navbutton").css("height")));
