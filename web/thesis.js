@@ -39,8 +39,6 @@ $(window).load(function(){
 
 	$(".menuBarYourHacks").on('click', function() {
 		if (Cookies.get('userId')) {
-			$(".logInPage").show();
-		} else {
 			$(".logInPage").hide();
 			$(".loggedInPage").hide();
 			$(".registerPage").hide();
@@ -57,6 +55,8 @@ $(window).load(function(){
 			$(".menuBarProfile").css("borderWidth", "2px");
 			$(".menuBarSettings").css("borderWidth", "2px");
 			$(".menuBarYourHacks").css("borderWidth", "8px");
+		} else {
+			$(".logInPage").show();
 		}
 
 	});
