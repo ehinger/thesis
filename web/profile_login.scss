@@ -107,24 +107,6 @@ nav {
 	}
 }
 
-.hacksLogIn {
-  display: none;
-  overflow-y: scroll;
-  position: fixed;
-  margin: 0;
-  width: 100%;
-  height: 90%;
-
-	.intro {
-	    margin: 3% 10%;
-		position: relative;
-		font-size: 5rem;
-		color: $textColour;
-		font-family: $textFont;
-    	text-align: justify;
-	}
-}
-
 #login {
   margin: 3% 10%;
   position: relative;
@@ -230,7 +212,7 @@ nav {
 
 .startRegistration {
 	position: relative;
-	margin: 3% 10%;
+	margin: 4% 10%;
 	width: 80%;
 	height: 5%;
 	background: $bgColour;
@@ -250,7 +232,7 @@ nav {
 
 .lineL {
 
-    margin: 7% 3% 3% 10%;
+    margin: 3% 3% 3% 10%;
     background: $textColour;
     width: 25%;
     height: 2px;
@@ -261,7 +243,7 @@ nav {
 
 .lineR {
 
-    margin: 7% 10% 3% 3%;
+    margin: 3% 10% 3% 3%;
     background: $textColour;
     width: 25%;
     height: 2px;
@@ -271,11 +253,11 @@ nav {
 
 .or {
 	
-    margin: -5% 5%;
+    margin: -5% 8%;
     display: inline;
     position: relative;
     text-align: center;
-	font-size: 4rem;
+	font-size: 5rem;
 	color: $textColour;
 	font-family: $textFont;
 
