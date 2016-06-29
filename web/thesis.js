@@ -340,7 +340,7 @@ var tip = "";
 function tipAdd() {
 	tip = "";
 	tip += "<input name='hackTips[]' type='text'>";
-	$('.tips').append(selection);
+	$('.tips').append(tip);
 }
 
 
