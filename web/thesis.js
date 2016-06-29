@@ -326,9 +326,21 @@ var selection = "";
 
 function ingredientSelection() {
 	selection = "";
+	selection += "<p class='ingTitle'>Amount:</p>";
 	selection += "<input type='number' name='ingredientsQuantity[]' min='1'>";
+	selection += "<p class='ingTitle'>Resource:</p>";
 	selection += "<input name='hackIngredients[]' type='text'>";
+	selection += "<p class='ingTitle'>Alternative:</p>";
+	selection += "<input name='hackIngredientsAlt[]' type='text'>";
 	$('.ingredient').append(selection);
+}
+
+var tip = "";
+
+function tipAdd() {
+	tip = "";
+	tip += "<input name='hackTips[]' type='text'>";
+	$('.tips').append(selection);
 }
 
 

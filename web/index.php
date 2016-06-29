@@ -463,8 +463,12 @@ Post a hack
 
         <div class="ingredient">        
             <label>What things do you need to make it?</label>
+            <p class="ingTitle">Amount:</p>
             <input type="number" name="ingredientsQuantity[]" min="1">
+            <p class="ingTitle" class="ingTitle">Resource:</p>
             <input name="hackIngredients[]" type='text'>
+            <p class="ingTitle">Alternatives:</p>
+            <input name="hackIngredientsAlt[]" type='text'>
         </div>
 
         <input type="button" onclick="ingredientSelection()" value="Add another resource">
@@ -473,6 +477,13 @@ Post a hack
         <input name="hackTags[]" type='text'>
         <input name="hackTags[]" type='text'>
         <input name="hackTags[]" type='text'> -->
+
+        <div class="tips">        
+            <label>What are some things you need to look out for while your making this?</label>
+            <input name="hackTips[]" type='text'>
+        </div>
+
+        <input type="button" onclick="tipAdd()" value="Add another resource">
 
         <label>What does it look like finished?</label>
         <input name="userfile[]" type="file">
