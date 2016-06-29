@@ -28,6 +28,7 @@ try {
     $results7 = $db->query('select * from userAnswersOne');
     $results8 = $db->query('select * from userQuestions');
     $results9 = $db->query('select * from userFollowing');
+    $results10 = $db->query('select * from hackTips');
     // echo '<pre>';
     // var_dump($results->fetchAll());
     // echo '</pre>';
@@ -45,7 +46,8 @@ $hacks5 = $results5->fetchAll(PDO::FETCH_ASSOC);
 $hacks6 = $results6->fetchAll(PDO::FETCH_ASSOC);
 $hacks7 = $results7->fetchAll(PDO::FETCH_ASSOC);
 $hacks8 = $results8->fetchAll(PDO::FETCH_ASSOC);
-$hacks9 = $results8->fetchAll(PDO::FETCH_ASSOC);
+$hacks9 = $results9->fetchAll(PDO::FETCH_ASSOC);
+$hacks10 = $results10->fetchAll(PDO::FETCH_ASSOC);
 
 $hacksGeneral = array("k" => $hacks1);
 $hacksTags = array("k" => $hacks2);
@@ -56,6 +58,7 @@ $userAbility = array("k" => $hacks6);
 $userAnswers = array("k" => $hacks7);
 $userQuestions = array("k" => $hacks8);
 $userFollowing = array("k" => $hacks9);
+$hackTips = array("k" => $hacks10);
 
 $profiles = new profiles;
 
@@ -553,6 +556,12 @@ for ($i = 0; $i < count($hacksGeneral['k']); $i++) {
     for ($in = 0; $in < count($hacksSupplies['k']); $in++) {
         if ($hacksSupplies['k'][$in]['hackid'] == $hacksGeneral['k'][$i]['hackid']) {
             echo "<p class='hackSupplies'>".$hacksSupplies['k'][$in]['supplyno']." X    ".$hacksSupplies['k'][$in]['item']."</p>";
+        }
+    }
+
+    for ($in = 0; $in < count($hackTips['k']); $in++) {
+        if ($hacksSupplies['k'][$in]['hackid'] == $hacksGeneral['k'][$i]['hackid']) {
+            echo "<p class='hackSupplies'>".$hackTips['k'][$in]['tip']."</p>";
         }
     }
 
