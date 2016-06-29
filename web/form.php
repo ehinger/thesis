@@ -158,15 +158,15 @@ if (isset($_POST['push'])){
 
         $stepNoU = 0;
 
-        foreach ($_POST['hackUse'] as $k => $v) {
+        // foreach ($_POST['hackUse'] as $k => $v) {
 
-            $stepNo++;
-            $stepNoU++;
-            $stepImageURLU = htmlspecialchars($s3->getObjectUrl("thesis-tom-creagh", $_FILES['userfile']['name'][$stepNo])); 
-            $hackDescU = $_POST['hackUse'][$k];
+        //     $stepNo++;
+        //     $stepNoU++;
+        //     $stepImageURLU = htmlspecialchars($s3->getObjectUrl("thesis-tom-creagh", $_FILES['userfile']['name'][$stepNo])); 
+        //     $hackDescU = $_POST['hackUse'][$k];
 
-            $db->exec("INSERT INTO hackUse (hackID, stage, stepNumber, instructions) VALUES ('" . $string . $identification . "', '" . $stepImageURLU . "', '" . $stepNoU; . "', '" . $hackDescU . "')");
-        }
+        //     $db->exec("INSERT INTO hackUse (hackID, stage, stepNumber, instructions) VALUES ('" . $string . $identification . "', '" . $stepImageURLU . "', '" . $stepNoU; . "', '" . $hackDescU . "')");
+        // }
 
         // for ($i = 1; $i < count($_FILES['userfile']['name']); $i++) { 
 
