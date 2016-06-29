@@ -483,7 +483,7 @@ Post a hack
             <input name="hackTips[]" type='text'>
         </div>
 
-        <input type="button" onclick="tipAdd()" value="Add another resource">
+        <input type="button" onclick="tipAdd()" value="Add another tip">
 
         <label>What does it look like finished?</label>
         <input name="userfile[]" type="file">
