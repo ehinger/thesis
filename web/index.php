@@ -488,8 +488,7 @@ Post a hack
 
         <input type="button" onclick="tipAdd()" value="Add another tip">
 
-        <label>What does it look like finished?</label>
-        <input name="userfile[]" type="file">
+
  
         <h1 class="hackInsTitle">How do you make it?</h1>
 
@@ -502,7 +501,10 @@ Post a hack
         
         <input type="button" onclick="hackStepsMake()" value="Add new step">
 
-        <h1 class="hackInsTitle">How do you use it?</h1>
+        <label>What does it look like finished?</label>
+        <input name="userfile[]" type="file">
+
+ <!--        <h1 class="hackInsTitle">How do you use it?</h1>
 
         <div class="stepsUse">   
             <h1>step 1</h1>;
@@ -511,7 +513,7 @@ Post a hack
             <textarea name='hackUse[]' rows='10' cols='30'></textarea>;     
         </div>
         
-        <input type="button" onclick="hackStepsUse()" value="Add new step">
+        <input type="button" onclick="hackStepsUse()" value="Add new step"> -->
        
         <h1 class="hackInsTitle">All done?</h1>
 
