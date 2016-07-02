@@ -123,12 +123,12 @@ if (isset($_POST['push'])){
 
         $db->exec("INSERT INTO hacksGeneral (hackId, heroImageURL, title, type, description, userID) VALUES ('" . $string . $identification . "', '" . $heroImageURL . "', '" . $title . "', '" . $type . "', '" . $description . "', '" . $userID . "')");
 
-        foreach ($_POST['hackTags'] as $k => $v) {
+        // foreach ($_POST['hackTags'] as $k => $v) {
 
-            $tags = $_POST['hackTags'][$k];
+        //     $tags = $_POST['hackTags'][$k];
 
-            $db->exec("INSERT INTO hacksTags (hackId, tags) VALUES ('" . $string . $identification . "', '" . $tags . "')");
-        }
+        //     $db->exec("INSERT INTO hacksTags (hackId, tags) VALUES ('" . $string . $identification . "', '" . $tags . "')");
+        // }
 
         foreach ($_POST['ingredientsQuantity'] as $k => $v) {
 
@@ -150,14 +150,14 @@ if (isset($_POST['push'])){
 
         foreach ($_POST['hackIns'] as $k => $v) {
 
-            $stepNo++;
-            $stepImageURL = htmlspecialchars($s3->getObjectUrl("thesis-tom-creagh", $_FILES['userfile']['name'][$stepNo])); 
+            $stepImageURL = htmlspecialchars($s3->getObjectUrl("thesis-tom-creagh", $_FILES['userfile']['name'][$stepNo]));
+            $stepNo++; 
             $hackDesc = $_POST['hackIns'][$k];
 
             $db->exec("INSERT INTO hackInstructions (hackID, stage, stepNumber, instructions) VALUES ('" . $string . $identification . "', '" . $stepImageURL . "', '" . $stepNo . "', '" . $hackDesc . "')");
         }
 
-        $stepNoU = 0;
+        // $stepNoU = 0;
 
         // foreach ($_POST['hackUse'] as $k => $v) {
 
