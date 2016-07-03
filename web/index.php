@@ -481,11 +481,6 @@ Post a hack
         <input name="hackTags[]" type='text'>
         <input name="hackTags[]" type='text'> -->
 
-        <div class="tips">        
-            <label>What are some things you need to look out for while your making this?</label>
-            <input name="hackTips[]" type='text'>
-        </div>
-
         <input type="button" onclick="tipAdd()" value="Add another tip">
 
 
@@ -500,6 +495,11 @@ Post a hack
         </div>
         
         <input type="button" onclick="hackStepsMake()" value="Add new step">
+
+        <div class="tips">        
+            <label>What are some things you need to look out for while your making this?</label>
+            <input name="hackTips[]" type='text'>
+        </div>
 
         <label>What does it look like finished?</label>
         <input name="userfile[]" type="file">
