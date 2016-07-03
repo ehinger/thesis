@@ -197,7 +197,7 @@ $(window).load(function(){
 			// $(".yourHacksMade").css("top", "10%");
 			$(".yourHacksMade").css("overflow", "hidden");
 			$(".yourHacksMade").scrollTop($("#" + hackID + " .hackHeroImageYourHacks").offset().top);
-			console.log(parseInt($("#" + hackID + " .hackHeroImageYourHacks").offset().top);
+			console.log($("#" + hackID + " .hackHeroImageYourHacks").offset().top);
 			Cookies.set('followId', hackID);
 
 		}
