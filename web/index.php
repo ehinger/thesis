@@ -343,7 +343,7 @@ Navigation Bar
 
                     echo "<div class='hackSelectionButtonYourHacks'>";
                     echo "<h1 class='hackButtonText'>Enter</h1>";
-                    echo "<div class='hackArrow'></div>";
+                    echo "<div class='hackArrowOther'></div>";
                     echo "</div>";
                     echo '<div class="closeYourHacks">';
                     echo '</div>';
@@ -359,7 +359,7 @@ Navigation Bar
                     for ($ni = 0; $ni < count($hacksInstructions['k']); $ni++) {
                         if ($hacksInstructions['k'][$ni]['hackid'] == $hacksGeneral['k'][$i]['hackid']) {
                             echo "<h1 class='stepNumber'>Step ".$hacksInstructions['k'][$ni]['stepnumber']."</h1>";
-                            echo "<img class='hackHeroImage' src='".$hacksInstructions['k'][$ni]['stage']."'>";
+                            echo "<img class='hackStepImage' src='".$hacksInstructions['k'][$ni]['stage']."'>";
                             echo "<p class='hackInstructions'>".$hacksInstructions['k'][$ni]['instructions']."</p>";
                         }
                     }
@@ -394,7 +394,7 @@ Navigation Bar
 
                     echo "<div class='hackSelectionButtonFollowedHacks'>";
                     echo "<h1 class='hackButtonText'>Enter</h1>";
-                    echo "<div class='hackArrow'></div>";
+                    echo "<div class='hackArrowOther'></div>";
                     echo "</div>";
                     echo '<div class="closeFollowedHacks">';
                     echo '</div>';
@@ -410,7 +410,7 @@ Navigation Bar
                     for ($ni = 0; $ni < count($hacksInstructions['k']); $ni++) {
                         if ($hacksInstructions['k'][$ni]['hackid'] == $hacksGeneral['k'][$i]['hackid']) {
                             echo "<h1 class='stepNumber'>Step ".$hacksInstructions['k'][$ni]['stepnumber']."</h1>";
-                            echo "<img class='hackHeroImage' src='".$hacksInstructions['k'][$ni]['stage']."'>";
+                            echo "<img class='hackStepImage' src='".$hacksInstructions['k'][$ni]['stage']."'>";
                             echo "<p class='hackInstructions'>".$hacksInstructions['k'][$ni]['instructions']."</p>";
                         }
                     }
