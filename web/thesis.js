@@ -219,6 +219,7 @@ $(window).load(function(){
 		$(".closeYourHacks").css("opacity", "0");
 		$(".closeYourHacks").css("right", "100%");
 		$(".yourHacksMade").css("overflow", "auto");
+		$(".yourHacksMade").css("top", "0");
 	});
 
 	$(".hackSelectionButtonFollowedHacks").on('click', function() {
