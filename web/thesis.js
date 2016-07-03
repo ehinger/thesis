@@ -71,7 +71,6 @@ $(window).load(function(){
 		$(".yourHacksButtons").hide();
 		$(".yourHacksButtons").css("left", "100%");
 		$(".yourHacksMade").show();
-		$(".yourHacksPage").css("overflowY", "hidden");
 	});	
 
 	$(".yourHacksFollowedHacks").on('click', function() {
@@ -195,7 +194,7 @@ $(window).load(function(){
 			$("#" + hackID + " .closeYourHacks").css("opacity", "1");
 			$("#" + hackID + " .closeYourHacks").css("right", "0");
 			$("#" + hackID + " .closeYourHacks").css("right", "0");
-			$("body").removeClass( "offset4" );
+			$(".yourHacksMade").css("overflow", "hidden");
 			$("body").scrollTop($("#" + hackID).offset().top - parseInt($(".navbutton").css("height")));
 			console.log($("#" + hackID + " .closeYourHacks").css("right", "0"));
 			Cookies.set('followId', hackID);
