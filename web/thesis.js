@@ -194,8 +194,9 @@ $(window).load(function(){
 			$("#" + hackID + " .closeYourHacks").css("opacity", "1");
 			$("#" + hackID + " .closeYourHacks").css("right", "0");
 			$("#" + hackID + " .closeYourHacks").css("right", "0");
+			$(".yourHacksMade").css("top", "100%");
 			$(".yourHacksMade").css("overflow", "hidden");
-			$("yourHacksMade").scrollTop($("#" + hackID + "YourHacks").offset().top - parseInt($(".navbutton").css("height")));
+			// $("yourHacksMade").scrollTop($("#" + hackID + "YourHacks").offset().top - parseInt($(".navbutton").css("height")));
 			console.log($("#" + hackID + " .closeYourHacks").css("right", "0"));
 			Cookies.set('followId', hackID);
 
