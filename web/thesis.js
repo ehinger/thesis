@@ -156,9 +156,10 @@ $(window).load(function(){
 			$("#" + hackID + " .close").css("opacity", "1");
 			$("#" + hackID + " .close").css("right", "0");
 			$("#" + hackID).css("height", "100%");
-			$("body").removeClass( "offset4" );
+			// $("body").removeClass( "offset4" );
 			$(".newHackFrame").removeClass( "offset7" );
-			$("body").scrollTop($("#" + hackID).offset().top - parseInt($(".navbutton").css("height")));
+			$("#wrapper").css("overflow", "hidden");
+			$("#wrapper").scrollTop($("#" + hackID ).position().top - parseInt($(".navbutton").css("height")));
 			$(".hackSelectionButton").css("z-index", "0")
 			console.log(parseInt($(".navbutton").css("height")));
 			Cookies.set('followId', hackID);
@@ -183,7 +184,7 @@ $(window).load(function(){
 		$(".hackArrow").css("margin", "55% auto");
 		$(".close").css("opacity", "0");
 		$(".close").css("right", "100%");
-		$("body").addClass( "offset4" );
+			$("#wrapper").css("overflow", "auto");
 		$(".newHackFrame").addClass( "offset7" );
 		$(".hackSelectionButton").css("z-index", "2")
 	});
