@@ -194,7 +194,7 @@ $(window).load(function(){
 			$("#" + hackID + " .closeYourHacks").css("opacity", "1");
 			$("#" + hackID + " .closeYourHacks").css("right", "0");
 			$("#" + hackID + " .closeYourHacks").css("right", "0");
-			$("#" + hackID).css("height", "100%");
+			$("#" + hackID).css("height", "90%");
 			$(".yourHacksMade").scrollTop($("#" + hackID ).position().top - parseInt($(".menuBarYourHacks").css("height")));
 			Cookies.set('followId', hackID);
 
@@ -230,7 +230,7 @@ $(window).load(function(){
 			$("#" + hackID + " .hackButtonText").text("Scroll down");
 			$("#" + hackID + " .closeFollowedHacks").css("opacity", "1");
 			$("#" + hackID + " .closeFollowedHacks").css("right", "0");
-			$("#" + hackID).css("height", "100%");
+			$("#" + hackID).css("height", "90%");
 			$(".followedHacks").scrollTop($("#" + hackID ).position().top - parseInt($(".menuBarYourHacks").css("height")));
 			Cookies.set('followId', hackID);
 		}
