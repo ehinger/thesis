@@ -106,7 +106,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
 <body>
-<div id="wrapper">
 
 <!-- /************************************************************************************
 
@@ -530,6 +529,7 @@ Content Page
 
 ************************************************************************************/ -->
 
+<div id="wrapper">
 <?php 
 for ($i = 0; $i < count($hacksGeneral['k']); $i++) {
     echo "<div class='hackSelectionFrame' id='".$hacksGeneral['k'][$i]['hackid']."'>";
@@ -585,6 +585,7 @@ for ($i = 0; $i < count($hacksGeneral['k']); $i++) {
 <form enctype="multipart/form-data" id='followForm' action="form.php" method="post">
 </form>
 
+</div>
 <!-- /************************************************************************************
 
 Instructions
@@ -608,7 +609,6 @@ Instructions
         <p>This is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thingThis is a thing</p>
     </div>
 </div> -->
-</div>
 <script src='thesis.js' type='text/javascript' ></script>
 </body>
 </html>
