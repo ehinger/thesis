@@ -6,7 +6,7 @@ html, body, #wrapper {
   font-size: 12px; }
 
 body {
-  overflow: hidden; }
+  overflow: auto; }
 
 /************************************************************************************
 Navigation Bar
