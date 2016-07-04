@@ -83,6 +83,7 @@ $(window).load(function(){
 	$(".yourHacksCreateHacks").on('click', function() {
 		console.log("opening");
 		$(".newHackFrame").css("overflowY", "scroll");
+		$(".newHackFrame").css("z-index", "2");
 		$(".newHackFrame").addClass( "offset5" );
 		$(".newHackFrame *").addClass( "offset6" );
 		$("body").removeClass( "offset4" );
