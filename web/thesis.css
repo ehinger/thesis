@@ -5,6 +5,13 @@ html, body, #wrapper {
   border: 0;
   font-size: 12px; }
 
+#wrapper {
+  position: relative;
+  top: 0;
+  left: 0;
+  overflow: auto;
+  float: left;  }
+
 body {
   overflow: hidden; }
 
