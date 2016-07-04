@@ -196,10 +196,9 @@ $(window).load(function(){
 			$("#" + hackID + " .closeYourHacks").css("right", "0");
 			// $(".yourHacksMade").css("top", "10%");
 			$(".yourHacksMade").css("overflow", "hidden");
-			console.log($("#" + hackID + " .hackHeroImageYourHacks").offset().top);
+			console.log(document.getElementById(hackID).scrollTop);
 			console.log("#" + hackID + " .hackHeroImageYourHacks");
-			document.getElementById(hackID).scrollTop;
-			// $(".yourHacksMade").scrollTop($("#" + hackID + " .hackHeroImageYourHacks").offset().top);
+			$(".yourHacksMade").scrollTop($("#" + hackID + " .hackHeroImageYourHacks").offset().top);
 			Cookies.set('followId', hackID);
 
 		}
