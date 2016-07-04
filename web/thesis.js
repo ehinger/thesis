@@ -196,9 +196,9 @@ $(window).load(function(){
 			$("#" + hackID + " .closeYourHacks").css("right", "0");
 			// $(".yourHacksMade").css("top", "10%");
 			$(".yourHacksMade").css("overflow", "hidden");
-			console.log($(".yourHacksMade").scrollTop() + $("#" + hackID ).position().top/10);
+			console.log($("#" + hackID ).position().top/10);
 			console.log("#" + hackID );
-			$(".yourHacksMade").scrollTop($(".yourHacksMade").scrollTop() + $("#" + hackID ).position().top/10);
+			$(".yourHacksMade").scrollTop($("#" + hackID ).position().top/10);
 			Cookies.set('followId', hackID);
 
 		}
