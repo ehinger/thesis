@@ -121,7 +121,7 @@ if (isset($_POST['push'])){
         $heroImageURL = htmlspecialchars($s3->getObjectUrl("thesis-tom-creagh", $lastEl)); 
         $userID = pg_escape_string($_COOKIE["userId"]);
 
-        $db->exec("INSERT INTO hacksGeneral (hackId, heroImageURL, title, type, description, userID) VALUES ('" . $string . $identification . "', '" . $heroImageURL . "', '" . $title . "', '" . $type . "', '" . $description . "', '" . $userID . "')");
+        $db->exec("INSERT INTO hacksGeneral (hackId, heroImageURL, title, type, description, userID) VALUES ('" . $string . $identification . "', '" . $heroImageURL . "', '" . $title . "', 'm', '" . $description . "', '" . $userID . "')");
 
         // foreach ($_POST['hackTags'] as $k => $v) {
 
