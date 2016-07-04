@@ -5,6 +5,10 @@ var ajaxurl;
 var fol = "";
 var h;
 
+$("html, body, #wrapper").css({
+    height: $(window).height()
+});
+
 $(window).load(function(){
 	$(".navbutton").on('click', function() {
 		$("nav").toggleClass( "offset" );
