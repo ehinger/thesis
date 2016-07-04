@@ -6,7 +6,7 @@ html, body, #wrapper {
   font-size: 12px; }
 
 body {
-  overflow: auto; }
+  overflow: hidden; }
 
 /************************************************************************************
 Navigation Bar
@@ -946,6 +946,6 @@ Instructions
     transition: 0.3s;*/ }
 
 .offset4 {
-  overflow: hidden; }
+  overflow: auto; }
 
 /*# sourceMappingURL=thesis.css.map */
