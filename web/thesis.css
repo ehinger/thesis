@@ -340,8 +340,7 @@ nav {
   padding: 0;
   width: 100%;
   height: 90%;
-  overflow-x: hidden;
-  overflow-y: scroll;
+  overflow: auto;
   float: left; }
 
 .yourHacksYourHacks {
