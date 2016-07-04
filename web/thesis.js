@@ -195,6 +195,7 @@ $(window).load(function(){
 			$("#" + hackID + " .closeYourHacks").css("right", "0");
 			$("#" + hackID + " .closeYourHacks").css("right", "0");
 			$("#" + hackID).css("height", "90%");
+			$(".yourHacksMade").css("overflow", "hidden");
 			$(".yourHacksMade").scrollTop($("#" + hackID ).position().top - parseInt($(".menuBarYourHacks").css("height")));
 			Cookies.set('followId', hackID);
 
@@ -231,6 +232,7 @@ $(window).load(function(){
 			$("#" + hackID + " .closeFollowedHacks").css("opacity", "1");
 			$("#" + hackID + " .closeFollowedHacks").css("right", "0");
 			$("#" + hackID).css("height", "90%");
+			$(".yourHacksMade").css("overflow", "hidden");
 			$(".followedHacks").scrollTop($("#" + hackID ).position().top - parseInt($(".menuBarYourHacks").css("height")));
 			Cookies.set('followId', hackID);
 		}
