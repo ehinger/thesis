@@ -711,7 +711,7 @@ Hack selection
 
   .hackTextUnderline {
   width: 85%;
-  height: 3px;
+  height: 2px;
   position: relative;
   margin: 5% auto 0; 
   background: #fcce00}
@@ -760,7 +760,7 @@ Hack selection
 .subtitle {
   margin-left: 10%;
   margin-right: 30%;
-  margin-top: 12%;
+  margin-top: 7%;
   position: relative;
   font-size: 7rem;
   color: #fcce00;
