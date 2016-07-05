@@ -69,14 +69,14 @@ Navigation Bar
   font-size: 5rem;
   color: #e5e5e5;
   font-family: "Merriweather", serif; }
-  
+
 .createText {
   text-align: center;
   vertical-align: middle;
   position: relative;
-  font-size: 5rem;
+  font-size: 4rem;
   color: #e5e5e5;
-  font-family: "Merriweather", serif; }
+  font-family: "Merriweather", serif !important;  }
 
 .offset {
   top: -100%; }
