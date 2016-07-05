@@ -88,7 +88,7 @@ if (isset($_POST['push'])){
     
     //Allow certain file formats
     if($imageFileType != "jpg" && $imageFileType != "JPG" && $imageFileType != "png" && $imageFileType != "PNG" && $imageFileType != "jpeg"
-    && $imageFileType != "gif" && $imageFileType != "gif" ) {
+    && $imageFileType != "gif" && $imageFileType != "GIF" ) {
         echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
         $uploadOk = 0;
     }
