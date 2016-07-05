@@ -49,7 +49,6 @@ class profiles {
 
 			setcookie("userId", $un_register . $identification);
 
-			header("Refresh:0");
 
 		} else {
 
@@ -82,7 +81,6 @@ class profiles {
 
 				setcookie("userId", $uId);
 
-				header("Refresh:0");
 
 			} else {
 
@@ -97,7 +95,6 @@ class profiles {
 
 				setcookie("userId", '', time() - 10000);
 
-				header("Refresh:0");
 
 		}
 	}
