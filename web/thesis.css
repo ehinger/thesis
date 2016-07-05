@@ -984,8 +984,7 @@ Instructions
     border-bottom: 2px solid #e5e5e5;
     border-top: 2px solid #e5e5e5;
     width: 100%;
-    height: 75px;
-    -webkit-appearance: none; }
+    height: 75px; }
 
 .close {
   right: 100%;
