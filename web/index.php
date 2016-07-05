@@ -373,10 +373,52 @@ Navigation Bar
             ?>
         </div>
 
+<!--         try {
+    $results1 = $db->query('select * from hacksGeneral');
+    $results2 = $db->query('select * from hacksTags');
+    $results3 = $db->query('select * from hacksSupplies');
+    $results4 = $db->query('select * from hackInstructions');
+    $results5 = $db->query('select * from userProfile');
+    $results6 = $db->query('select * from userAbility');
+    $results7 = $db->query('select * from userAnswersOne');
+    $results8 = $db->query('select * from userQuestions');
+    $results9 = $db->query('select * from userFollowing');
+    $results10 = $db->query('select * from hackTips');
+    // echo '<pre>';
+    // var_dump($results->fetchAll());
+    // echo '</pre>';
+    // die();
+} catch (Exception $e) {
+    echo $e->getMessage();
+    die();
+}
+
+$hacks1 = $results1->fetchAll(PDO::FETCH_ASSOC);
+$hacks2 = $results2->fetchAll(PDO::FETCH_ASSOC);
+$hacks3 = $results3->fetchAll(PDO::FETCH_ASSOC);
+$hacks4 = $results4->fetchAll(PDO::FETCH_ASSOC);
+$hacks5 = $results5->fetchAll(PDO::FETCH_ASSOC);
+$hacks6 = $results6->fetchAll(PDO::FETCH_ASSOC);
+$hacks7 = $results7->fetchAll(PDO::FETCH_ASSOC);
+$hacks8 = $results8->fetchAll(PDO::FETCH_ASSOC);
+$hacks9 = $results9->fetchAll(PDO::FETCH_ASSOC);
+$hacks10 = $results10->fetchAll(PDO::FETCH_ASSOC);
+
+$hacksGeneral = array("k" => $hacks1);
+$hacksTags = array("k" => $hacks2);
+$hacksSupplies = array("k" => $hacks3);
+$hacksInstructions = array("k" => $hacks4);
+$userProfile = array("k" => $hacks5);
+$userAbility = array("k" => $hacks6);
+$userAnswers = array("k" => $hacks7);
+$userQuestions = array("k" => $hacks8);
+$userFollowing = array("k" => $hacks9);
+$hackTips = array("k" => $hacks10); -->
+
          <div class="followedHacks">
         <?php
             for ($i = 0; $i < count($hacksGeneral['k']); $i++) {
-                if ($userFollowing['k'][$i]['userid'] == $_COOKIE["userId"] && $userFollowing['k'][$i]['following'] == $hacksGeneral['k'][$i]['hackid']) {
+                if ($hacksGeneral['k'][$i]['hackid'] == $userFollowing['k'][$i]['following']) {
                     echo "<div class='hackSelectionFrameFollowedHacks' id='".$hacksGeneral['k'][$i]['hackid']."FollowedHacks'>";
                     echo "<img class='hackHeroImage' src='".$hacksGeneral['k'][$i]['heroimageurl']."'>";
                     echo '<div class="infoWrapperFollowedHacks"></div>';
