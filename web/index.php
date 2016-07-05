@@ -574,8 +574,6 @@ for ($i = 0; $i < count($hacksGeneral['k']); $i++) {
     echo '</div>';
     echo '<div class="insframe">';
 
-
-    echo "<div class='hackTextUnderline'></div>";
         echo "<h1 class='subtitle'>This is what you'll need:</h1>";
     echo "<div class='hackTextUnderline'></div>";
     for ($in = 0; $in < count($hacksSupplies['k']); $in++) {
