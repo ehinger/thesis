@@ -63,19 +63,19 @@ Navigation Bar
     transition: 0.3s; */ }
 
 .menuBarProfileText {
-  text-align: center;
-  vertical-align: middle;
-  position: relative;
-  font-size: 5rem;
-  color: #e5e5e5;
-  font-family: "Merriweather", serif; }
+  text-align: center !important;
+  vertical-align: middle !important;
+  position: relative !important;
+  font-size: 5rem !important;
+  color: #e5e5e5 !important;
+  font-family: "Merriweather", serif !important; }
 
 .createText {
-  text-align: center;
-  vertical-align: middle;
-  position: relative;
-  font-size: 4rem;
-  color: #e5e5e5;
+  text-align: center !important;
+  vertical-align: middle !important;
+  position: relative !important;
+  font-size: 4rem !important;
+  color: #e5e5e5 !important;
   font-family: "Merriweather", serif !important;  }
 
 .offset {
