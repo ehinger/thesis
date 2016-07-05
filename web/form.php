@@ -115,13 +115,13 @@ if (isset($_POST['push'])){
         }
         $title = pg_escape_string($_POST['hackTitle']); 
         $string = preg_replace('/\s+/', '', $title);
-        $type = pg_escape_string($_POST['hackType']); 
+        $type = "pg_escape_string($_POST['hackType'])"; 
         $description = pg_escape_string($_POST['hackDesc']); 
         $lastEl = array_pop((array_slice($_FILES['userfile']['name'], -1)));
         $heroImageURL = htmlspecialchars($s3->getObjectUrl("thesis-tom-creagh", $lastEl)); 
         $userID = pg_escape_string($_COOKIE["userId"]);
 
-        $db->exec("INSERT INTO hacksGeneral (hackId, heroImageURL, title, type, description, userID) VALUES ('" . $string . $identification . "', '" . $heroImageURL . "', '" . $title . "', 'm', '" . $description . "', '" . $userID . "')");
+        $db->exec("INSERT INTO hacksGeneral (hackId, heroImageURL, title, type, description, userID) VALUES ('" . $string . $identification . "', '" . $heroImageURL . "', '" . $title . "', '" . $type . "', '" . $description . "', '" . $userID . "')");
 
         // foreach ($_POST['hackTags'] as $k => $v) {
 
