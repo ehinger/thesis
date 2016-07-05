@@ -930,7 +930,7 @@ Instructions
   left: 0;
   margin: 0;
   opacity: 0;
-  z-index: 1;
+  z-index: 2;
   overflow-y: scroll;
   background: #191919;
   /*  -webkit-transition: 0.3s;
