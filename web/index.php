@@ -575,7 +575,7 @@ for ($i = 0; $i < count($hacksGeneral['k']); $i++) {
         }
     }
     echo "<form class='follow' action='form.php' method='post'>";       
-    echo "<input class='follow' type='submit' value='Submit' name='follow'>";       
+    echo "<input type='submit' value='Submit' name='follow'>";       
     echo "</form>";   
     echo '</div>';
     echo "</div>";
