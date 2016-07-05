@@ -167,15 +167,18 @@ Navigation Bar
             echo '<div class="profilePage">';
             echo '<h1 class="welcome">'.$userProfile['k'][$i]['firstn'].' '.$userProfile['k'][$i]['lastn'].'</h1>';
             echo '</div>';
+            echo '<form id="logout" action="" method="post">';
+            echo '<input type="submit" value="logout" name="logout">';
+            echo '</form> ';
         }
         }
         ?>
 
-        <form id='logout' action='' method='post'>
+        
 
-            <input type="submit" value="logout" name="logout">
+            
 
-        </form> 
+        
     </div>
 
         <div class="registerPage">
