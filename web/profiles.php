@@ -49,7 +49,6 @@ class profiles {
 
 			setcookie("userId", $un_register . $identification);
 
-
 		} else {
 
 			echo "Field left empty" . $un . $fN . $lN;
@@ -81,7 +80,6 @@ class profiles {
 
 				setcookie("userId", $uId);
 
-
 			} else {
 
 				echo $un_, $pwd_;
@@ -94,7 +92,6 @@ class profiles {
 		if (isset($_COOKIE["userId"])) {
 
 				setcookie("userId", '', time() - 10000);
-
 
 		}
 	}
