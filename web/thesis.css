@@ -750,6 +750,15 @@ Hack selection
   color: #fcce00;
   font-family: "Open Sans", sans-serif; }
 
+.subtitle {
+  margin-left: 10%;
+  margin-right: 30%;
+  margin-top: 12%;
+  position: relative;
+  font-size: 7rem;
+  color: #fcce00;
+  font-family: "Open Sans", sans-serif; }
+
 .hackInstructions {
   margin-left: 10%;
   margin-right: 10%;

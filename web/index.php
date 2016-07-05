@@ -585,7 +585,7 @@ for ($i = 0; $i < count($hacksGeneral['k']); $i++) {
         echo "<h1 class='stepNumber'>Here are some tips:</h1>";
     for ($in = 0; $in < count($hackTips['k']); $in++) {
         if ($hacksSupplies['k'][$in]['hackid'] == $hacksGeneral['k'][$i]['hackid']) {
-            echo "<p class='hackSupplies'>".$hackTips['k'][$in]['tip']."</p>";
+            echo "<p class='hackSupplies'>- ".$hackTips['k'][$in]['tip']."</p>";
         }
     }
 
