@@ -574,16 +574,16 @@ for ($i = 0; $i < count($hacksGeneral['k']); $i++) {
     echo '</div>';
     echo '<div class="insframe">';
 
-    for ($in = 0; $in < count($hacksSupplies['k']); $in++) {
         echo "<h1 class='stepNumber'>This is what you'll need:</h1>";
+    for ($in = 0; $in < count($hacksSupplies['k']); $in++) {
         if ($hacksSupplies['k'][$in]['hackid'] == $hacksGeneral['k'][$i]['hackid']) {
             echo "<p class='hackSupplies'>".$hacksSupplies['k'][$in]['supplyno']." X    ".$hacksSupplies['k'][$in]['item']."</p>";
             echo "<p class='hackSupplies'>Alternative:".$hacksSupplies['k'][$in]['altingredient']."</p>";
         }
     }
 
-    for ($in = 0; $in < count($hackTips['k']); $in++) {
         echo "<h1 class='stepNumber'>Here are some tips:</h1>";
+    for ($in = 0; $in < count($hackTips['k']); $in++) {
         if ($hacksSupplies['k'][$in]['hackid'] == $hacksGeneral['k'][$i]['hackid']) {
             echo "<p class='hackSupplies'>".$hackTips['k'][$in]['tip']."</p>";
         }
