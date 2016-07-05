@@ -71,10 +71,11 @@ Navigation Bar
   font-family: "Merriweather", serif !important; }
 
 .createText {
+  margin: 0 !important;
   text-align: center !important;
   vertical-align: middle !important;
   position: relative !important;
-  font-size: 4rem !important;
+  font-size: 2rem !important;
   color: #e5e5e5 !important;
   font-family: "Merriweather", serif !important;  }
 
