@@ -574,7 +574,10 @@ for ($i = 0; $i < count($hacksGeneral['k']); $i++) {
     echo '</div>';
     echo '<div class="insframe">';
 
-        echo "<h1 class='stepNumber'>This is what you'll need:</h1>";
+
+    echo "<div class='hackTextUnderline'></div>";
+        echo "<h1 class='subtitle'>This is what you'll need:</h1>";
+    echo "<div class='hackTextUnderline'></div>";
     for ($in = 0; $in < count($hacksSupplies['k']); $in++) {
         if ($hacksSupplies['k'][$in]['hackid'] == $hacksGeneral['k'][$i]['hackid']) {
             echo "<p class='hackSupplies'>".$hacksSupplies['k'][$in]['supplyno']." X    ".$hacksSupplies['k'][$in]['item']."</p>";
@@ -582,7 +585,9 @@ for ($i = 0; $i < count($hacksGeneral['k']); $i++) {
         }
     }
 
-        echo "<h1 class='stepNumber'>Here are some tips:</h1>";
+    echo "<div class='hackTextUnderline'></div>";
+        echo "<h1 class='subtitle'>Here are some tips:</h1>";
+    echo "<div class='hackTextUnderline'></div>";
     for ($in = 0; $in < count($hackTips['k']); $in++) {
         if ($hacksSupplies['k'][$in]['hackid'] == $hacksGeneral['k'][$i]['hackid']) {
             echo "<p class='hackSupplies'>- ".$hackTips['k'][$in]['tip']."</p>";
@@ -591,6 +596,7 @@ for ($i = 0; $i < count($hacksGeneral['k']); $i++) {
 
     for ($ni = 0; $ni < count($hacksInstructions['k']); $ni++) {
         if ($hacksInstructions['k'][$ni]['hackid'] == $hacksGeneral['k'][$i]['hackid']) {
+            echo "<div class='hackTextUnderline'></div>";
             echo "<h1 class='stepNumber'>Step ".$hacksInstructions['k'][$ni]['stepnumber']."</h1>";
             echo "<img class='hackStepImage' src='".$hacksInstructions['k'][$ni]['stage']."'>";
             echo "<p class='hackInstructions'>".$hacksInstructions['k'][$ni]['instructions']."</p>";

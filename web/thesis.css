@@ -709,6 +709,13 @@ Hack selection
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00e16c5b', endColorstr='#00e16c5b',GradientType=1 );
   /* IE6-9 */ }
 
+  .hackTextUnderline {
+  width: 85%;
+  height: 3px;
+  position: relative;
+  margin: 0 auto; 
+  background: #fcce00}
+
 .hackShortDesc {
   text-align: center;
   margin-top: 5%;
@@ -755,7 +762,7 @@ Hack selection
   margin-right: 30%;
   margin-top: 12%;
   position: relative;
-  font-size: 7rem;
+  font-size: 9rem;
   color: #fcce00;
   font-family: "Open Sans", sans-serif; }
 
