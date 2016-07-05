@@ -77,7 +77,8 @@ Navigation Bar
   position: relative !important;
   font-size: 2rem !important;
   color: #e5e5e5 !important;
-  font-family: "Merriweather", serif !important;  }
+  font-family: "Merriweather", serif !important;
+  opacity: 1 !important;  }
 
 .offset {
   top: -100%; }
