@@ -49,6 +49,8 @@ class profiles {
 
 			setcookie("userId", $un_register . $identification);
 
+			header("Refresh:0");
+
 		} else {
 
 			echo "Field left empty" . $un . $fN . $lN;
@@ -80,6 +82,8 @@ class profiles {
 
 				setcookie("userId", $uId);
 
+				header("Refresh:0");
+
 			} else {
 
 				echo $un_, $pwd_;
@@ -92,6 +96,8 @@ class profiles {
 		if (isset($_COOKIE["userId"])) {
 
 				setcookie("userId", '', time() - 10000);
+
+				header("Refresh:0");
 
 		}
 	}
