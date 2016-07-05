@@ -574,7 +574,7 @@ for ($i = 0; $i < count($hacksGeneral['k']); $i++) {
             echo "<p class='hackInstructions'>".$hacksInstructions['k'][$ni]['instructions']."</p>";
         }
     }
-    echo "<form action='form.php' method='post'>";       
+    echo "<form class='follow' action='form.php' method='post'>";       
     echo "<input class='follow' type='submit' value='Submit' name='follow'>";       
     echo "</form>";   
     echo '</div>';
