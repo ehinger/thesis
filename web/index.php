@@ -363,12 +363,23 @@ Navigation Bar
                     echo '</div>';
                     echo '<div class="insframeYourHacks">';
 
-
-                    for ($in = 0; $in < count($hacksSupplies['k']); $in++) {
-                        if ($hacksSupplies['k'][$in]['hackid'] == $hacksGeneral['k'][$i]['hackid']) {
-                            echo "<p class='hackSupplies'>".$hacksSupplies['k'][$in]['supplyno']." X    ".$hacksSupplies['k'][$in]['item']."</p>";
+                        echo "<h1 class='subtitle'>This is what you'll need:</h1>";
+                        echo "<div class='hackTextUnderline'></div>";
+                        for ($in = 0; $in < count($hacksSupplies['k']); $in++) {
+                            if ($hacksSupplies['k'][$in]['hackid'] == $hacksGeneral['k'][$i]['hackid']) {
+                                echo "<p class='hackSupplies'>".$hacksSupplies['k'][$in]['supplyno']." X    ".$hacksSupplies['k'][$in]['item']."</p>";
+                                echo "<p class='hackSuppliesAlt'>Alternative: ".$hacksSupplies['k'][$in]['altingredient']."</p>";
+                            }
                         }
-                    }
+
+                        echo "<div class='hackTextUnderline'></div>";
+                        echo "<h1 class='subtitle'>Here are some tips:</h1>";
+                        echo "<div class='hackTextUnderline'></div>";
+                        for ($in = 0; $in < count($hackTips['k']); $in++) {
+                            if ($hacksSupplies['k'][$in]['hackid'] == $hacksGeneral['k'][$i]['hackid']) {
+                                echo "<p class='hackSupplies'>- ".$hackTips['k'][$in]['tip']."</p>";
+                            }
+                        }
 
                     for ($ni = 0; $ni < count($hacksInstructions['k']); $ni++) {
                         if ($hacksInstructions['k'][$ni]['hackid'] == $hacksGeneral['k'][$i]['hackid']) {
@@ -417,9 +428,21 @@ Navigation Bar
                         echo '<div class="insframeFollowedHacks">';
 
 
+                        echo "<h1 class='subtitle'>This is what you'll need:</h1>";
+                        echo "<div class='hackTextUnderline'></div>";
                         for ($in = 0; $in < count($hacksSupplies['k']); $in++) {
                             if ($hacksSupplies['k'][$in]['hackid'] == $hacksGeneral['k'][$i]['hackid']) {
                                 echo "<p class='hackSupplies'>".$hacksSupplies['k'][$in]['supplyno']." X    ".$hacksSupplies['k'][$in]['item']."</p>";
+                                echo "<p class='hackSuppliesAlt'>Alternative: ".$hacksSupplies['k'][$in]['altingredient']."</p>";
+                            }
+                        }
+
+                        echo "<div class='hackTextUnderline'></div>";
+                        echo "<h1 class='subtitle'>Here are some tips:</h1>";
+                        echo "<div class='hackTextUnderline'></div>";
+                        for ($in = 0; $in < count($hackTips['k']); $in++) {
+                            if ($hacksSupplies['k'][$in]['hackid'] == $hacksGeneral['k'][$i]['hackid']) {
+                                echo "<p class='hackSupplies'>- ".$hackTips['k'][$in]['tip']."</p>";
                             }
                         }
 
