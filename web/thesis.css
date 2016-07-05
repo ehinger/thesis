@@ -732,7 +732,18 @@ Hack selection
   position: relative;
   font-size: 5rem;
   color: #fcce00;
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Open Sans", sans-serif;
+  text-align: center; }
+
+.hackSuppliesAlt {
+  margin-left: 10%;
+  margin-right: 30%;
+  margin-top: 5%;
+  position: relative;
+  font-size: 2.5rem;
+  color: #fcce00;
+  font-family: "Open Sans", sans-serif;
+  text-align: center; }
 
 .stepNumber {
   margin-left: 10%;

@@ -578,7 +578,7 @@ for ($i = 0; $i < count($hacksGeneral['k']); $i++) {
     for ($in = 0; $in < count($hacksSupplies['k']); $in++) {
         if ($hacksSupplies['k'][$in]['hackid'] == $hacksGeneral['k'][$i]['hackid']) {
             echo "<p class='hackSupplies'>".$hacksSupplies['k'][$in]['supplyno']." X    ".$hacksSupplies['k'][$in]['item']."</p>";
-            echo "<p class='hackSupplies'>Alternative:".$hacksSupplies['k'][$in]['altingredient']."</p>";
+            echo "<p class='hackSuppliesAlt'>Alternative: ".$hacksSupplies['k'][$in]['altingredient']."</p>";
         }
     }
 
