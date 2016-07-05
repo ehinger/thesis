@@ -485,7 +485,9 @@ Post a hack
 
 <div class='newHackFrame'>
 
-    <div class='newHackClose'></div>
+    <div class='newHackClose'>
+        <h1 class='menuBarProfileText'>Close</h1>;
+    </div>
 
     <h1 class="hackInsTitle">This is where you create a hack.</h1>
 
