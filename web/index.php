@@ -164,7 +164,7 @@ Navigation Bar
         for ($i = 0; $i < count($userProfile['k']); $i++) {
             if ($userProfile['k'][$i]['userid'] == $_COOKIE["userId"]) {
             echo "<img class='hackHeroImage' src='".$userProfile['k'][$i]['propicurl']."'>";
-            echo '<div class="profilePage">'
+            echo '<div class="profilePage">';
             echo '<h1 class="welcome">'.$userProfile['k'][$i]['firstn'].' '.$userProfile['k'][$i]['lastn'].'</h1>';
             echo '</div>';
         }
