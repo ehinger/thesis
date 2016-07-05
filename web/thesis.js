@@ -269,6 +269,7 @@ $(window).load(function(){
 		$(".newHackFrame").addClass( "offset5" );
 		$(".newHackFrame *").addClass( "offset6" );
 		$("body").removeClass( "offset4" );
+		$("createText").hide();
 	});
 
 	$(".newHackClose").on('click', function(event) {
@@ -278,6 +279,7 @@ $(window).load(function(){
 		$(".newHackFrame").removeClass( "offset5" );
 		$(".newHackFrame *").removeClass( "offset6" );
 		$("body").addClass( "offset4" );
+		$("createText").show();
 	});
 
 	// $(".follow").on('click', function() {
