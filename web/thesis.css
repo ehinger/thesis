@@ -713,7 +713,7 @@ Hack selection
   width: 85%;
   height: 3px;
   position: relative;
-  margin: 0 auto; 
+  margin: 5% auto 0; 
   background: #fcce00}
 
 .hackShortDesc {
@@ -762,7 +762,7 @@ Hack selection
   margin-right: 30%;
   margin-top: 12%;
   position: relative;
-  font-size: 9rem;
+  font-size: 7rem;
   color: #fcce00;
   font-family: "Open Sans", sans-serif; }
 
