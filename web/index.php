@@ -383,6 +383,7 @@ Navigation Bar
 
                     for ($ni = 0; $ni < count($hacksInstructions['k']); $ni++) {
                         if ($hacksInstructions['k'][$ni]['hackid'] == $hacksGeneral['k'][$i]['hackid']) {
+                            echo "<div class='hackTextUnderline'></div>";
                             echo "<h1 class='stepNumber'>Step ".$hacksInstructions['k'][$ni]['stepnumber']."</h1>";
                             echo "<img class='hackStepImage' src='".$hacksInstructions['k'][$ni]['stage']."'>";
                             echo "<p class='hackInstructions'>".$hacksInstructions['k'][$ni]['instructions']."</p>";
@@ -448,6 +449,7 @@ Navigation Bar
 
                         for ($ni = 0; $ni < count($hacksInstructions['k']); $ni++) {
                             if ($hacksInstructions['k'][$ni]['hackid'] == $hacksGeneral['k'][$i]['hackid']) {
+                                echo "<div class='hackTextUnderline'></div>";
                                 echo "<h1 class='stepNumber'>Step ".$hacksInstructions['k'][$ni]['stepnumber']."</h1>";
                                 echo "<img class='hackStepImage' src='".$hacksInstructions['k'][$ni]['stage']."'>";
                                 echo "<p class='hackInstructions'>".$hacksInstructions['k'][$ni]['instructions']."</p>";
