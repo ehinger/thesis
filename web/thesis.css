@@ -88,6 +88,13 @@ nav {
     -o-transition: 0.3s;
     transition: 0.3s; */ }
 
+.proName {
+    margin: 5% 10% 5% 10%;
+    position: relative;
+    font-size: 8rem;
+    color: #fcce00;
+    font-family: "Open Sans", sans-serif; }
+
 .logInPage {
   overflow-y: scroll;
   position: fixed;

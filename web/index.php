@@ -165,7 +165,7 @@ Navigation Bar
             if ($userProfile['k'][$i]['userid'] == $_COOKIE["userId"]) {
             echo "<img class='hackHeroImage' src='".$userProfile['k'][$i]['propicurl']."'>";
             echo '<div class="profilePage">';
-            echo '<h1>'.$userProfile['k'][$i]['firstn'].' '.$userProfile['k'][$i]['lastn'].'</h1>';
+            echo '<h1 class="proName">'.$userProfile['k'][$i]['firstn'].' '.$userProfile['k'][$i]['lastn'].'</h1>';
             echo '</div>';
             echo '<form id="logout" action="" method="post">';
             echo '<input type="submit" value="logout" name="logout">';
