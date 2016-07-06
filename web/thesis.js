@@ -157,7 +157,7 @@ $(window).load(function(){
 			$("#" + hackID + " .close").css("right", "0");
 			$("#" + hackID).css("height", "100%");
 			// $("body").removeClass( "offset4" );
-			$(".newHackFrame").removeClass( "offset7" );
+			$(".newHackFrame").css("z-index", "0");
 			$("#wrapper").css("overflow", "hidden");
 			$("#wrapper").scrollTop($("#" + hackID ).position().top - parseInt($(".navbutton").css("height")));
 			$(".hackSelectionButton").css("z-index", "0")
@@ -185,7 +185,7 @@ $(window).load(function(){
 		$(".close").css("opacity", "0");
 		$(".close").css("right", "100%");
 			$("#wrapper").css("overflow", "auto");
-		$(".newHackFrame").addClass( "offset7" );
+			$(".newHackFrame").css("z-index", "2");
 		$(".hackSelectionButton").css("z-index", "2")
 	});
 
@@ -269,6 +269,7 @@ $(window).load(function(){
 		$(".newHackFrame").addClass( "offset5" );
 		$(".newHackFrame *").addClass( "offset6" );
 		$("body").removeClass( "offset4" );
+		$("createText").css("opacity", "0");
 	});
 
 	$(".newHackClose").on('click', function(event) {
@@ -278,6 +279,7 @@ $(window).load(function(){
 		$(".newHackFrame").removeClass( "offset5" );
 		$(".newHackFrame *").removeClass( "offset6" );
 		$("body").addClass( "offset4" );
+		$("createText").css("opacity", "1");
 	});
 
 	// $(".follow").on('click', function() {

@@ -63,12 +63,21 @@ Navigation Bar
     transition: 0.3s; */ }
 
 .menuBarProfileText {
-  text-align: center;
-  vertical-align: middle;
-  position: relative;
-  font-size: 5rem;
-  color: #e5e5e5;
-  font-family: "Merriweather", serif; }
+  text-align: center !important;
+  vertical-align: middle !important;
+  position: relative !important;
+  font-size: 5rem !important;
+  color: #e5e5e5 !important;
+  font-family: "Merriweather", serif !important; }
+
+.createText {
+  text-align: center !important;
+  vertical-align: middle !important;
+  position: relative !important;
+  font-size: 4rem !important;
+  color: #e5e5e5 !important;
+  font-family: "Merriweather", serif !important;
+  opacity: 1 !important;  }
 
 .offset {
   top: -100%; }
@@ -87,6 +96,14 @@ nav {
     -ms-transition: 0.3s;
     -o-transition: 0.3s;
     transition: 0.3s; */ }
+
+.proName {
+    margin: 5% 10% 5% 10%;
+    position: relative;
+    font-size: 8rem;
+    color: #fcce00;
+    text-align: center;
+    font-family: "Open Sans", sans-serif; }
 
 .logInPage {
   overflow-y: scroll;
@@ -133,7 +150,7 @@ nav {
     width: 100%; }
 
 #logout {
-  margin: 20% 10%;
+  margin: 80% 10%;
   position: relative;
   width: 80%; }
   #logout input {
@@ -624,6 +641,16 @@ Hack selection
     -o-transition: 0.3s;
     transition: 0.3s; */ }
 
+.profilePage {
+  position: absolute;
+  top: 40%;
+  left: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: #191919;
+}
+
 .offset2 {
   top: 10%;
   z-index: 1;
@@ -637,6 +664,7 @@ Hack selection
   margin-left: auto;
   margin-right: auto;
   overflow: hidden;
+  z-index: 0;
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover; }
@@ -690,6 +718,13 @@ Hack selection
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00e16c5b', endColorstr='#00e16c5b',GradientType=1 );
   /* IE6-9 */ }
 
+  .hackTextUnderline {
+  width: 85%;
+  height: 2px;
+  position: relative;
+  margin: 5% auto 0; 
+  background: #fcce00}
+
 .hackShortDesc {
   text-align: center;
   margin-top: 5%;
@@ -707,13 +742,20 @@ Hack selection
   color: black; }
 
 .hackSupplies {
-  margin-left: 10%;
-  margin-right: 30%;
-  margin-top: 12%;
+  margin: 12% 10% 0;
   position: relative;
   font-size: 5rem;
   color: #fcce00;
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Open Sans", sans-serif;
+  text-align: center; }
+
+.hackSuppliesAlt {
+  margin-left: 5% 10% 0;
+  position: relative;
+  font-size: 2.5rem;
+  color: #fcce00;
+  font-family: "Open Sans", sans-serif;
+  text-align: center; }
 
 .stepNumber {
   margin-left: 10%;
@@ -724,6 +766,15 @@ Hack selection
   color: #fcce00;
   font-family: "Open Sans", sans-serif; }
 
+.subtitle {
+  margin-left: 10%;
+  margin-right: 30%;
+  margin-top: 7%;
+  position: relative;
+  font-size: 7rem;
+  color: #fcce00;
+  font-family: "Open Sans", sans-serif; }
+
 .hackInstructions {
   margin-left: 10%;
   margin-right: 10%;
@@ -731,7 +782,8 @@ Hack selection
   position: relative;
   font-size: 5rem;
   color: #fcce00;
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Open Sans", sans-serif;
+  text-align: center; }
 
 .hackStepImage {
   margin-left: 10%;
@@ -884,7 +936,7 @@ Post a hack
   width: 25%;
   height: 10%;
   position: absolute;
-  background: blue; }
+  background: #191919; }
 
 .offset5 {
   bottom: 0;
@@ -911,7 +963,7 @@ Instructions
   left: 0;
   margin: 0;
   opacity: 0;
-  z-index: 1;
+  z-index: 2;
   overflow-y: scroll;
   background: #191919;
   /*  -webkit-transition: 0.3s;
@@ -921,21 +973,18 @@ Instructions
     transition: 0.3s;*/ }
 
 .follow {
-  width: 100%;
-  height: 10%;
-  position: absolute;
-  margin: 0;
-  padding: 0;
-  background: #191919; }
-  .follow h1 {
-    margin: auto;
-    line-height: 10%;
-    top: 50%;
-    text-align: center;
-    position: relative;
-    font-size: 5rem;
+  margin: 20% 10%;
+  position: relative;
+  width: 80%; }
+  .follow input[type=submit] {
+    font-size: 1.5rem;
+    font-family: "Merriweather", serif;
     color: #e5e5e5;
-    font-family: "Merriweather", serif; }
+    background: #191919;
+    border-bottom: 2px solid #e5e5e5;
+    border-top: 2px solid #e5e5e5;
+    width: 100%;
+    height: 75px; }
 
 .close {
   right: 100%;
