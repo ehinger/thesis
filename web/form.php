@@ -80,11 +80,7 @@ if (isset($_POST['push'])){
         $uploadOk = 0;
     }
 
-    //Check file size
-    // if ($target_file > 5000000000) {
-    //     echo "Sorry, your file is too large.";
-    //     $uploadOk = 0;
-    // }
+
     
     //Allow certain file formats
     if($imageFileType != "jpg" && $imageFileType != "JPG" && $imageFileType != "png" && $imageFileType != "PNG" && $imageFileType != "jpeg"
