@@ -95,17 +95,12 @@ if (isset($_POST['push'])){
             echo "Sorry, your file was not uploaded.";
             die();
         } else {
-                if (move_uploaded_file($_FILES["userfile"]["tmp_name"], $target_file)) {
-                    echo "The file ". basename( $_FILES["userfile"]["name"]). " has been uploaded.";
-                } else {
-                    echo "Sorry, there was an error uploading your file.";
-                }
-            // try {
-            //     $upload = $s3->upload($bucket, $_FILES['userfile']['name'][$i], fopen($_FILES['userfile']['tmp_name'][$i], 'rb'), 'public-read');
-            // } catch(Exception $e) { 
-            //     echo $e->getMessage();
-            //     die();
-            // } 
+            try {
+                $upload = $s3->upload($bucket, $_FILES['userfile']['name'][$i], fopen($_FILES['userfile']['tmp_name'][$i], 'rb'), 'public-read');
+            } catch(Exception $e) { 
+                echo $e->getMessage();
+                die();
+            } 
         }
     }
 
