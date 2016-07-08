@@ -70,7 +70,7 @@ if (isset($_POST['push'])){
     // $check = getimagesize($_FILES["userfile"]["tmp_name"][$i]);
     // $target_file = basename($_FILES["userfile"]["name"][$i]);
     $uploadOk = 1;
-    $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
+    // $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
     
     // if($check !== false) {
     //     echo "File is an image - " . $check["mime"] . ".";
@@ -85,13 +85,7 @@ if (isset($_POST['push'])){
     //     echo "Sorry, your file is too large.";
     //     $uploadOk = 0;
     // }
-    
-    //Allow certain file formats
-    if($imageFileType != "jpg" && $imageFileType != "JPG" && $imageFileType != "png" && $imageFileType != "PNG" && $imageFileType != "jpeg" && $imageFileType != "JPEG" && $imageFileType != "gif" && $imageFileType != "GIF" ) {
-        echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
-        $uploadOk = 0;
-    }
-        if ($uploadOk == 0) {
+            if ($uploadOk == 0) {
             echo "Sorry, your file was not uploaded.";
             die();
         } else {
@@ -102,6 +96,12 @@ if (isset($_POST['push'])){
                 die();
             } 
         }
+    //Allow certain file formats
+    // if($imageFileType != "jpg" && $imageFileType != "JPG" && $imageFileType != "png" && $imageFileType != "PNG" && $imageFileType != "jpeg" && $imageFileType != "JPEG" && $imageFileType != "gif" && $imageFileType != "GIF" ) {
+    //     echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+    //     $uploadOk = 0;
+    // }
+
     }
 
     try {
