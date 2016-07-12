@@ -145,7 +145,7 @@ Navigation Bar
         </form>
 
         <div class="lineL"></div>
-        <h1 class="or">Or you can...</h1>
+        <p class="or">Or</p>
         <div class="lineR"></div>
 
         <div class="startRegistration">
@@ -153,7 +153,7 @@ Navigation Bar
         </div>
 
         <div class="lineL"></div>
-        <h1 class="or">Or you can...</h1>
+        <p class="or">Or</p>
         <div class="lineR"></div>
 
     </div>
@@ -316,7 +316,7 @@ Navigation Bar
         </form>
 
         <div class="lineL"></div>
-        <h1 class="or">Or</h1>
+        <p class="or">Or</p>
         <div class="lineR"></div>
 
         <div class="startRegistration">
