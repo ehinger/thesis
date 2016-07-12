@@ -633,7 +633,15 @@ for ($i = 0; $i < count($hacksGeneral['k']); $i++) {
     }
     echo "<form class='follow' action='form.php' method='post'>";       
     echo "<input type='submit' value='Follow' name='follow'>";       
-    echo "</form>";   
+    echo "</form>";
+
+    for ($ui = 0; $ui < count($userProfile['k']); $ui++) {
+        if ($userProfile['k'][$ui]['userid'] == $_COOKIE["userId"]) {
+            echo "<img class='proPichack' src='".$userProfile['k'][$ui]['propicurl']."'>";
+            echo "<h1 class='stepNumber'>Step ".$userProfile['k'][$ui]['username']."</h1>";
+        }
+    }
+
     echo '</div>';
     echo "</div>";
 }

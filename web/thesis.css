@@ -852,6 +852,16 @@ Hack selection
   color: #e5e5e5;
   font-family: "Merriweather", serif; }
 
+.proPichack {
+  margin: 10%;
+  position: relative;
+  height: 50px;
+  width: 50px;
+  border-radius: 0;  
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;  }
+
 /************************************************************************************
 Post a hack
 ************************************************************************************/
