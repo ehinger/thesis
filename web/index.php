@@ -60,21 +60,21 @@ $userQuestions = array("k" => $hacks8);
 $userFollowing = array("k" => $hacks9);
 $hackTips = array("k" => $hacks10);
 
-// $profiles = new profiles;
+$profiles = new profiles;
 
 $hackId = array("k" => $hacks5);
 
-// if (isset($_POST['login'])) {
-//     $profiles->verify_username_password($_POST['username'], $_POST['password'], $hackId);
-// }
+if (isset($_POST['login'])) {
+    $profiles->verify_username_password($_POST['username'], $_POST['password'], $hackId);
+}
 
-// if (isset($_POST['register'])) {
-//     $profiles->register($_POST['usernameR'], $_POST['passwordR'], $_POST['password1R'], $_POST['fName'], $_POST['lName'], $_POST['lName'], $_FILES['proPic']['name'], $_FILES['proPic']['tmp_name']);
-// }
+if (isset($_POST['register'])) {
+    $profiles->register($_POST['usernameR'], $_POST['passwordR'], $_POST['password1R'], $_POST['fName'], $_POST['lName'], $_FILES['proPic'], $_FILES['proPic']['name'], $_FILES['proPic']['tmp_name']);
+}
 
-// if (isset($_POST['logout'])) {
-//     $profiles->log_user_out();
-// }
+if (isset($_POST['logout'])) {
+    $profiles->log_user_out();
+}
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     setcookie("u", $_POST['follow']);
@@ -130,7 +130,7 @@ Navigation Bar
     <div class="logInPage">
     <h1 class="welcome">Welcome!</h1> 
     <p class="intro">Boy this colour palette is awful!</p>
-        <form id='login' action='profiles.php' method='post'>
+        <form id='login' action='' method='post'>
 
             <label>Username:</label>
             <input name="username" type="text">
@@ -167,7 +167,7 @@ Navigation Bar
             echo '<div class="profilePage">';
             echo '<h1 class="proName">'.$userProfile['k'][$i]['firstn'].' '.$userProfile['k'][$i]['lastn'].'</h1>';
             echo '</div>';
-            echo '<form id="logout" action="profiles.php" method="post">';
+            echo '<form id="logout" action="" method="post">';
             echo '<input type="submit" value="logout" name="logout">';
             echo '</form> ';
         }
@@ -183,7 +183,7 @@ Navigation Bar
 
         <div class="registerPage">
 
-        <form enctype="multipart/form-data" id='register' action='profiles.php' method='post'>
+        <form enctype="multipart/form-data" id='register' action='' method='post'>
 
             <label>Username:</label>
             <input name="usernameR" type="text">
