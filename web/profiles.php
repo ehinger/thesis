@@ -143,6 +143,7 @@ if (isset($_POST['register'])) {
 				}
 
 				setcookie("userId", $uId);
+			header('Location: index.php');
 
 
 			} else {
@@ -158,6 +159,7 @@ if (isset($_POST['register'])) {
 		if (isset($_COOKIE["userId"])) {
 
 				setcookie("userId", '', time() - 10000);
+			header('Location: index.php');
 
 
 		}
