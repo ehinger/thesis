@@ -631,16 +631,17 @@ for ($i = 0; $i < count($hacksGeneral['k']); $i++) {
             echo "<p class='hackInstructions'>".$hacksInstructions['k'][$ni]['instructions']."</p>";
         }
     }
-    echo "<form class='follow' action='form.php' method='post'>";       
-    echo "<input type='submit' value='Follow' name='follow'>";       
-    echo "</form>";
-
+    
     for ($ui = 0; $ui < count($userProfile['k']); $ui++) {
         if ($userProfile['k'][$ui]['userid'] == $hacksGeneral['k'][$i]['userid']) {
             echo "<img class='proPichack' src='".$userProfile['k'][$ui]['propicurl']."'>";
             echo "<p class='usernameHack'>".$userProfile['k'][$ui]['username']."</p>";
         }
     }
+
+    echo "<form class='follow' action='form.php' method='post'>";       
+    echo "<input type='submit' value='Follow' name='follow'>";       
+    echo "</form>";
 
     echo '</div>';
     echo "</div>";
