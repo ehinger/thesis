@@ -135,7 +135,7 @@ if (isset($_POST['register'])) {
 
 		if ($stmt->fetch()) {
 			for ($i = 0; $i < count($hackId['k']); $i++) {
-					if ($un == $hackId'k'][$i]['username']) {
+					if ($un == $hackId['k'][$i]['username']) {
 
 						$uId = $hackId['k'][$i]['userid'];
 
