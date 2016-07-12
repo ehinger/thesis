@@ -636,7 +636,7 @@ for ($i = 0; $i < count($hacksGeneral['k']); $i++) {
     echo "</form>";
 
     for ($ui = 0; $ui < count($userProfile['k']); $ui++) {
-        if ($userProfile['k'][$ui]['userid'] == $_COOKIE["userId"]) {
+        if ($userProfile['k'][$i]['userid'] == $hacksGeneral['k'][$i]['userid']) {
             echo "<img class='proPichack' src='".$userProfile['k'][$ui]['propicurl']."'>";
             echo "<h1 class='stepNumber'>Step ".$userProfile['k'][$ui]['username']."</h1>";
         }
