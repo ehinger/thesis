@@ -114,11 +114,11 @@ Navigation Bar
 ************************************************************************************/ -->
 
 <div class='navbutton'>
-    <h1 class='navText'>Browse</h1>
+    <h1 class='navText'>Start browsing</h1>
 </div>
 
 <div class='menuBarYourHacks'>
-    <h1 class='menuBarYourHacksText'>Hacks</h1>
+    <h1 class='menuBarYourHacksText'>DIY</h1>
 </div>
 <div class='menuBarProfile'>
     <h1 class='menuBarProfileText'>Profile</h1>
@@ -129,7 +129,7 @@ Navigation Bar
 <nav>
     <div class="logInPage">
     <h1 class="welcome">Welcome!</h1> 
-    <p class="intro">Boy this colour palette is awful!</p>
+    <p class="intro">You can start by logging in below</p>
         <form id='login' action='' method='post'>
 
             <label>Username:</label>
@@ -147,6 +147,7 @@ Navigation Bar
         <div class="lineL"></div>
         <h1 class="or">Or</h1>
         <div class="lineR"></div>
+        <p class="intro">You can...</p>
 
         <div class="startRegistration">
             <p class="startResgisterText">Create account</p>
@@ -155,6 +156,7 @@ Navigation Bar
         <div class="lineL"></div>
         <h1 class="or">Or</h1>
         <div class="lineR"></div>
+        <p class="intro">You can...</p>
 
     </div>
 
@@ -327,13 +329,13 @@ Navigation Bar
     <div class="yourHacksPage">
         <div class="yourHacksButtons">
             <div class="yourHacksYourHacks">
-                <p class="yourHacksYourHacksText">Your hacks</p>
+                <p class="yourHacksYourHacksText">Your DIY</p>
             </div>
             <div class="yourHacksFollowedHacks">
-                <p class="yourHacksFollowedHacksText">Followed hacks</p>
+                <p class="yourHacksFollowedHacksText">Bookmarked DIY</p>
             </div>
             <div class="yourHacksCreateHacks">
-                <p class="yourHacksCreateHacksText">Create</p>
+                <p class="yourHacksCreateHacksText">Create DIY</p>
             </div>
         </div>
 
