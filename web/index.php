@@ -391,6 +391,7 @@ Navigation Bar
                         }
                     }
 
+                    echo "<div class='hackTextUnderline'></div>";
                     echo "<h1 class='subtitle'>Here's what it should look like:</h1>";
                     echo "<img class='hackStepImage' src='".$hacksGeneral['k'][$i]['heroimageurl']."'>";
 
@@ -469,6 +470,7 @@ Navigation Bar
                             }
                         }
 
+                        echo "<div class='hackTextUnderline'></div>";
                         echo "<h1 class='subtitle'>Here's what it should look like:</h1>";
                         echo "<img class='hackStepImage' src='".$hacksGeneral['k'][$i]['heroimageurl']."'>";
 
@@ -654,6 +656,7 @@ for ($i = 0; $i < count($hacksGeneral['k']); $i++) {
         }
     }
 
+    echo "<div class='hackTextUnderline'></div>";
     echo "<h1 class='subtitle'>Here's what it should look like:</h1>";
     echo "<img class='hackStepImage' src='".$hacksGeneral['k'][$i]['heroimageurl']."'>";
 
