@@ -60,7 +60,7 @@ $userQuestions = array("k" => $hacks8);
 $userFollowing = array("k" => $hacks9);
 $hackTips = array("k" => $hacks10);
 
-$profiles = new profiles;
+// $profiles = new profiles;
 
 $hackId = array("k" => $hacks5);
 
