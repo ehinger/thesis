@@ -129,7 +129,7 @@ Navigation Bar
 <nav>
     <div class="logInPage">
     <h1 class="welcome">Welcome!</h1> 
-    <p class="intro">You can start by logging in below</p>
+    <p class="intro">You either can start by logging in here...</p>
         <form id='login' action='' method='post'>
 
             <label>Username:</label>
@@ -145,18 +145,16 @@ Navigation Bar
         </form>
 
         <div class="lineL"></div>
-        <h1 class="or">Or</h1>
+        <h1 class="or">Or you can...</h1>
         <div class="lineR"></div>
-        <p class="intro">You can...</p>
 
         <div class="startRegistration">
-            <p class="startResgisterText">Create account</p>
+            <p class="startResgisterText">Create an account</p>
         </div>
 
         <div class="lineL"></div>
-        <h1 class="or">Or</h1>
+        <h1 class="or">Or you can...</h1>
         <div class="lineR"></div>
-        <p class="intro">You can...</p>
 
     </div>
 
