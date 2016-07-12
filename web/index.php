@@ -632,6 +632,7 @@ for ($i = 0; $i < count($hacksGeneral['k']); $i++) {
         }
     }
 
+    echo "<div class='hackTextUnderline'></div>";
     for ($ui = 0; $ui < count($userProfile['k']); $ui++) {
         if ($userProfile['k'][$ui]['userid'] == $hacksGeneral['k'][$i]['userid']) {
             echo "<img class='proPichack' src='".$userProfile['k'][$ui]['propicurl']."'>";
