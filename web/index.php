@@ -638,7 +638,7 @@ for ($i = 0; $i < count($hacksGeneral['k']); $i++) {
     for ($ui = 0; $ui < count($userProfile['k']); $ui++) {
         if ($userProfile['k'][$ui]['userid'] == $hacksGeneral['k'][$i]['userid']) {
             echo "<img class='proPichack' src='".$userProfile['k'][$ui]['propicurl']."'>";
-            echo "<h1 class='stepNumber'>Step ".$userProfile['k'][$ui]['username']."</h1>";
+            echo "<p class='usernameHack'>".$userProfile['k'][$ui]['username']."</p>";
         }
     }
 
