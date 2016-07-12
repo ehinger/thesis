@@ -390,6 +390,17 @@ Navigation Bar
                             echo "<p class='hackInstructions'>".$hacksInstructions['k'][$ni]['instructions']."</p>";
                         }
                     }
+
+                    echo "<h1 class='subtitle'>Here's what it should look like:</h1>";
+                    echo "<img class='hackStepImage' src='".$hacksGeneral['k'][$i]['heroimageurl']."'>";
+
+                    echo "<div class='hackTextUnderline'></div>";
+                    for ($ui = 0; $ui < count($userProfile['k']); $ui++) {
+                        if ($userProfile['k'][$ui]['userid'] == $hacksGeneral['k'][$i]['userid']) {
+                            echo "<img class='proPichack' src='".$userProfile['k'][$ui]['propicurl']."'>";
+                            echo "<p class='usernameHack'>".$userProfile['k'][$ui]['username']."</p>";
+                        }
+                    }
                 // echo "<div class='follow' id='".$hacksGeneral['k'][$i]['hackid']."'>";       
                 // echo "<h1>Follow</h1>";       
                 // echo "</div>";   
@@ -455,6 +466,17 @@ Navigation Bar
                                 echo "<h1 class='stepNumber'>Step ".$hacksInstructions['k'][$ni]['stepnumber']."</h1>";
                                 echo "<img class='hackStepImage' src='".$hacksInstructions['k'][$ni]['stage']."'>";
                                 echo "<p class='hackInstructions'>".$hacksInstructions['k'][$ni]['instructions']."</p>";
+                            }
+                        }
+
+                        echo "<h1 class='subtitle'>Here's what it should look like:</h1>";
+                        echo "<img class='hackStepImage' src='".$hacksGeneral['k'][$i]['heroimageurl']."'>";
+
+                        echo "<div class='hackTextUnderline'></div>";
+                        for ($ui = 0; $ui < count($userProfile['k']); $ui++) {
+                            if ($userProfile['k'][$ui]['userid'] == $hacksGeneral['k'][$i]['userid']) {
+                                echo "<img class='proPichack' src='".$userProfile['k'][$ui]['propicurl']."'>";
+                                echo "<p class='usernameHack'>".$userProfile['k'][$ui]['username']."</p>";
                             }
                         }
                     // echo "<div class='follow' id='".$hacksGeneral['k'][$i]['hackid']."'>";       
@@ -605,7 +627,7 @@ for ($i = 0; $i < count($hacksGeneral['k']); $i++) {
     echo '</div>';
     echo '<div class="insframe">';
 
-        echo "<h1 class='subtitle'>This is what you'll need:</h1>";
+    echo "<h1 class='subtitle'>This is what you'll need:</h1>";
     echo "<div class='hackTextUnderline'></div>";
     for ($in = 0; $in < count($hacksSupplies['k']); $in++) {
         if ($hacksSupplies['k'][$in]['hackid'] == $hacksGeneral['k'][$i]['hackid']) {
@@ -615,7 +637,7 @@ for ($i = 0; $i < count($hacksGeneral['k']); $i++) {
     }
 
     echo "<div class='hackTextUnderline'></div>";
-        echo "<h1 class='subtitle'>Here are some tips:</h1>";
+    echo "<h1 class='subtitle'>Here are some tips:</h1>";
     echo "<div class='hackTextUnderline'></div>";
     for ($in = 0; $in < count($hackTips['k']); $in++) {
         if ($hacksSupplies['k'][$in]['hackid'] == $hacksGeneral['k'][$i]['hackid']) {
@@ -632,15 +654,16 @@ for ($i = 0; $i < count($hacksGeneral['k']); $i++) {
         }
     }
 
+    echo "<h1 class='subtitle'>Here's what it should look like:</h1>";
+    echo "<img class='hackStepImage' src='".$hacksGeneral['k'][$i]['heroimageurl']."'>";
+
     echo "<div class='hackTextUnderline'></div>";
     for ($ui = 0; $ui < count($userProfile['k']); $ui++) {
         if ($userProfile['k'][$ui]['userid'] == $hacksGeneral['k'][$i]['userid']) {
             echo "<img class='proPichack' src='".$userProfile['k'][$ui]['propicurl']."'>";
             echo "<p class='usernameHack'>".$userProfile['k'][$ui]['username']."</p>";
-            echo "<div class='hackTextUnderline'></div>";
         }
     }
-    echo "<div class='hackTextUnderline'></div>";
 
     echo "<form class='follow' action='form.php' method='post'>";       
     echo "<input type='submit' value='Bookmark' name='follow'>";       
