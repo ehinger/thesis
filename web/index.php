@@ -404,7 +404,7 @@ Navigation Bar
          <div class="followedHacks">
         <?php
         for ($im = 0; $im < count($userFollowing['k']); $im++) { 
-            if ($userFollowing['k'][$im]['userid'] == $_COOKIE["userId"] && ) {
+            if ($userFollowing['k'][$im]['userid'] == $_COOKIE["userId"]) {
                 for ($i = 0; $i < count($hacksGeneral['k']); $i++) {
                     if ($userFollowing['k'][$im]['following'] == $hacksGeneral['k'][$i]['hackid']) {
                         echo "<div class='hackSelectionFrameFollowedHacks' id='".$hacksGeneral['k'][$i]['hackid']."FollowedHacks'>";
