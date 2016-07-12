@@ -853,21 +853,23 @@ Hack selection
   font-family: "Merriweather", serif; }
 
 .proPichack {
-  margin: 10%;
+  margin: 10% 5% 0 10%;
   position: relative;
   height: 50px;
   width: 50px;
-  border-radius: 0;  
+  border-radius: 100%; 
+  float: left; 
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;  }
 
 .usernameHack {
-  margin: 10% 10% 0;
+  margin: 10% 0;
   position: relative;
   font-size: 2.5rem;
   color: #fcce00;
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Open Sans", sans-serif;
+  float: left; }
 
 /************************************************************************************
 Post a hack
