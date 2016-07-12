@@ -639,6 +639,7 @@ for ($i = 0; $i < count($hacksGeneral['k']); $i++) {
             echo "<p class='usernameHack'>".$userProfile['k'][$ui]['username']."</p>";
         }
     }
+    echo "<div class='hackTextUnderline'></div>";
 
     echo "<form class='follow' action='form.php' method='post'>";       
     echo "<input type='submit' value='Bookmark' name='follow'>";       
