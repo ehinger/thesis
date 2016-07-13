@@ -129,7 +129,7 @@ Navigation Bar
 <nav>
     <div class="logInPage">
     <h1 class="welcome">Welcome!</h1> 
-    <p class="intro">You either can start by logging in here...</p>
+    <p class="intro">This website can help you with all your assistive diy needs. You either can start by logging in here...</p>
         <form id='login' action='' method='post'>
 
             <label>Username:</label>
