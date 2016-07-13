@@ -147,7 +147,8 @@ nav {
     background: #191919;
     border-bottom: 2px solid #fcce00;
     border-top: 2px solid #fcce00;
-    width: 100%; }
+    width: 100%;
+    -webkit-appearance: none; }
 
 #logout {
   margin: 80% 10%;
@@ -171,7 +172,8 @@ nav {
     background: #191919;
     border-bottom: 2px solid #fcce00;
     border-top: 2px solid #fcce00;
-    width: 100%; }
+    width: 100%;
+    -webkit-appearance: none; }
 
 #register {
   margin: 3% 10%;
@@ -195,7 +197,8 @@ nav {
     background: #191919;
     border-bottom: 2px solid #fcce00;
     border-top: 2px solid #fcce00;
-    width: 100%; }
+    width: 100%;
+    -webkit-appearance: none; }
 
 .registerPage {
   overflow-y: scroll;
@@ -709,14 +712,7 @@ Hack selection
   height: 3px;
   position: relative;
   margin: 0 auto;
-  background: -moz-linear-gradient(left, rgba(225, 108, 91, 0) 0%, #e16c5b 19%, #e16c5b 50%, #e16c5b 81%, rgba(225, 108, 91, 0) 100%);
-  /* FF3.6-15 */
-  background: -webkit-linear-gradient(left, rgba(225, 108, 91, 0) 0%, #e16c5b 19%, #e16c5b 50%, #e16c5b 81%, rgba(225, 108, 91, 0) 100%);
-  /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to right, rgba(225, 108, 91, 0) 0%, #e16c5b 19%, #e16c5b 50%, #e16c5b 81%, rgba(225, 108, 91, 0) 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00e16c5b', endColorstr='#00e16c5b',GradientType=1 );
-  /* IE6-9 */ }
+  background: #fcce00; }
 
 .hackTextUnderline {
   width: 25%;
@@ -947,7 +943,8 @@ Post a hack
     background: #191919;
     border-bottom: 2px solid #fcce00;
     border-top: 2px solid #fcce00;
-    width: 100%; }
+    width: 100%;
+    -webkit-appearance: none; }
 
 .newHackClose {
   right: 0;
@@ -1003,7 +1000,8 @@ Instructions
     border-bottom: 2px solid #fcce00;
     border-top: 2px solid #fcce00;
     width: 100%;
-    height: 75px; }
+    height: 75px;
+    -webkit-appearance: none; }
 
 .close {
   right: 100%;
