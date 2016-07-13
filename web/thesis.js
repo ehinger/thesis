@@ -34,10 +34,10 @@ $(window).load(function(){
 		$(".newHackFrame").removeClass( "offset5" );
 		$(".newHackFrame *").removeClass( "offset6" );
 		$("body").addClass( "offset4" );
-		if ($(".navText").text() == "Browse") {
+		if ($(".navText").text() == "Start browsing") {
 			$(".navText").text("Menu");
 		} else {
-			$(".navText").text("Browse");
+			$(".navText").text("Start browsing");
 		}
 	});
 
