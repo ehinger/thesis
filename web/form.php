@@ -80,17 +80,18 @@ if (isset($_POST['push'])){
         $uploadOk = 0;
     }
 
-    // Check file size
-    // if ($target_file > 5000000000) {
-    //     echo "Sorry, your file is too large.";
-    //     $uploadOk = 0;
-    // }
-    
     //Allow certain file formats
     if($imageFileType != "jpg" && $imageFileType != "JPG" && $imageFileType != "png" && $imageFileType != "PNG" && $imageFileType != "jpeg" && $imageFileType != "JPEG" && $imageFileType != "gif" && $imageFileType != "GIF" ) {
         echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
         $uploadOk = 0;
     }
+
+    // Check file size
+    // if ($target_file > 5000000000) {
+    //     echo "Sorry, your file is too large.";
+    //     $uploadOk = 0;
+    // }
+
         if ($uploadOk == 0) {
             echo "Sorry, your file was not uploaded.";
             die();
@@ -194,6 +195,34 @@ if (isset($_POST['follow'])) {
     try {
         $db->exec("INSERT INTO userFollowing (userID, following) VALUES ('" . $userID . "', '" . $followId . "')");  
     } catch (Exception $e) {
+        echo $e->getMessage();
+        die();
+    }
+}
+
+if (isset($_POST['del'])) {
+
+    $followId = pg_escape_string($_COOKIE["followId"]);
+    $userID = pg_escape_string($_COOKIE["userId"]);
+
+    try {
+
+        $db->beginTransaction();
+
+            $db->exec("DELETE FROM hacksGeneral WHERE hackId='" . $followId . "'");
+
+            $db->exec("DELETE FROM hacksSupplies WHERE hackID='" . $followID . "'");
+
+            $db->exec("DELETE FROM hackTips WHERE hackID='" . $followID . "'");
+
+            $db->exec("DELETE FROM hackInstructions WHERE hackID='" . $followID . "'");
+
+            $db->exec("DELETE FROM userFollowing WHERE following='" . $followID . "'");
+
+        $db->commit();
+
+    } catch (Exception $e) {
+        $db->rollback();
         echo $e->getMessage();
         die();
     }

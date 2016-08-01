@@ -404,9 +404,9 @@ Navigation Bar
                             echo "<p class='usernameHack'>".$userProfile['k'][$ui]['username']."</p>";
                         }
                     }
-                // echo "<div class='follow' id='".$hacksGeneral['k'][$i]['hackid']."'>";       
-                // echo "<h1>Follow</h1>";       
-                // echo "</div>";   
+                    echo "<form class='follow' action='form.php' method='post'>";       
+                    echo "<input type='submit' value='delete' name='del'>";       
+                    echo "</form>";  
                     echo '</div>';
                     echo "</div>";
                 }
