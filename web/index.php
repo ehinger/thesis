@@ -140,6 +140,8 @@ Navigation Bar
 
             <!--         <input type="checkbox" name="remainLoggedIn" value="remainLoggedIn"> Stay logged in?<br> -->
 
+            <input type="submit" value="login" name="login">
+
         </form>
 
         <div class="lineL"></div>
