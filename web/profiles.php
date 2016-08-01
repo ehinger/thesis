@@ -96,7 +96,7 @@ class profiles {
 		if (isset($_COOKIE["userId"])) {
 
 				setcookie("userId", '', time() - 10000);
-
+				header("Refresh:0");
 
 		}
 	}
