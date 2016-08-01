@@ -140,8 +140,6 @@ Navigation Bar
 
             <!--         <input type="checkbox" name="remainLoggedIn" value="remainLoggedIn"> Stay logged in?<br> -->
 
-            <input type="submit" value="login" name="login">
-
         </form>
 
         <div class="lineL"></div>
@@ -155,6 +153,8 @@ Navigation Bar
         <div class="lineL"></div>
         <p class="or">Or</p>
         <div class="lineR"></div>
+            <input type="submit" value="login" name="login">
+
 
     </div>
 
@@ -668,9 +668,13 @@ for ($i = 0; $i < count($hacksGeneral['k']); $i++) {
         }
     }
 
-    echo "<form class='follow' action='form.php' method='post'>";       
-    echo "<input type='submit' value='Bookmark' name='follow'>";       
-    echo "</form>";
+    for ($ci = 0; $ci < count($userProfile['k']); $ci++) {
+        if ($userProfile['k'][$ci]['userid'] == $_COOKIE["userId"]) {
+            echo "<form class='follow' action='form.php' method='post'>";       
+            echo "<input type='submit' value='Bookmark' name='follow'>";       
+            echo "</form>";
+        }
+    }
 
     echo '</div>';
     echo "</div>";
