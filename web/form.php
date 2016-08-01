@@ -209,13 +209,13 @@ if (isset($_POST['del'])) {
 
         $db->beginTransaction();
 
-            $db->exec("DELETE FROM hacksGeneral WHERE hackId='" . $followId . "'");
+            // $db->exec("DELETE FROM hacksGeneral WHERE hackId='" . $followId . "'");
 
-            $db->exec("DELETE FROM hacksSupplies WHERE hackID='" . $followID . "'");
+            // $db->exec("DELETE FROM hacksSupplies WHERE hackID='" . $followID . "'");
 
-            $db->exec("DELETE FROM hackTips WHERE hackID='" . $followID . "'");
+            // $db->exec("DELETE FROM hackTips WHERE hackID='" . $followID . "'");
 
-            $db->exec("DELETE FROM hackInstructions WHERE hackID='" . $followID . "'");
+            // $db->exec("DELETE FROM hackInstructions WHERE hackID='" . $followID . "'");
 
             $db->exec("DELETE FROM userFollowing WHERE following='" . $followID . "'");
 
