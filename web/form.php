@@ -219,8 +219,6 @@ if (isset($_POST['del'])) {
 
             $db->exec("DELETE FROM userFollowing WHERE following='" . $hackId . "'");
 
-        die();
-
         $db->commit();
 
     } catch (Exception $e) {
