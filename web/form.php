@@ -202,22 +202,22 @@ if (isset($_POST['follow'])) {
 
 if (isset($_POST['del'])) {
 
-    $followId = pg_escape_string($_COOKIE["followId"]);
+    $hackId = pg_escape_string($_COOKIE["followId"]);
     $userID = pg_escape_string($_COOKIE["userId"]);
 
     try {
 
         $db->beginTransaction();
 
-            // $db->exec("DELETE FROM hacksGeneral WHERE hackId='" . $followId . "'");
+            $db->exec("DELETE FROM hacksGeneral WHERE hackId='" . $hackId . "'");
 
-            // $db->exec("DELETE FROM hacksSupplies WHERE hackID='" . $followID . "'");
+            $db->exec("DELETE FROM hacksSupplies WHERE hackID='" . $hackId . "'");
 
-            // $db->exec("DELETE FROM hackTips WHERE hackID='" . $followID . "'");
+            $db->exec("DELETE FROM hackTips WHERE hackID='" . $hackId . "'");
 
-            // $db->exec("DELETE FROM hackInstructions WHERE hackID='" . $followID . "'");
+            $db->exec("DELETE FROM hackInstructions WHERE hackID='" . $hackId . "'");
 
-            $db->exec("DELETE FROM userFollowing WHERE following='" . $followID . "'");
+            $db->exec("DELETE FROM userFollowing WHERE following='" . $hackId . "'");
 
         die();
 
