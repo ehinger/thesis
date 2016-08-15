@@ -1,11 +1,10 @@
 /************************************************************************************
 Hack selection
 ************************************************************************************/
-
 .hackSelectionFrame {
   position: relative;
-  top: 100%; 
-  left: 0; 
+  top: 100%;
+  left: 0;
   padding: 0;
   width: 100%;
   height: 85%;
@@ -13,18 +12,26 @@ Hack selection
   overflow-y: hidden;
   float: left;
   z-index: -1;
-/*  -webkit-transition: 0.3s;
-  -moz-transition: 0.3s;
-  -ms-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s; */
+  /*  -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s; */ }
+
+.profilePage {
+  position: absolute;
+  top: 40%;
+  left: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: #191919;
 }
 
 .offset2 {
-  top: 10%; 
+  top: 10%;
   z-index: 1;
-  overflow: hidden;
-}
+  overflow: hidden; }
 
 .hackHeroImage {
   width: 100%;
@@ -34,10 +41,22 @@ Hack selection
   margin-left: auto;
   margin-right: auto;
   overflow: hidden;
+  z-index: -1;
   background-position: 50% 50%;
-  background-repeat:   no-repeat;
-  background-size:     cover;
-}
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.hackHeroImageYourHacks {
+  width: 100%;
+  height: auto;
+  top: 0;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover; }
 
 .infoWrapper {
   margin: 0;
@@ -46,35 +65,35 @@ Hack selection
   position: absolute;
   width: 100%;
   height: 100%;
-  background: $overlayColour;
+  background: #181b30;
   opacity: .4;
-/*  -webkit-transition: 0.3s;
-  -moz-transition: 0.3s;
-  -ms-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s; */
-}
+  /*  -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s; */ }
 
 .hackTitle {
   text-align: center;
   margin: 8% 0 3%;
   position: relative;
   font-size: 12rem;
-  color: $textColour;
-  font-family: $textFont;
-}
+  color: #e5e5e5;
+  font-family: "Open Sans", sans-serif; }
 
 .hackUnderline {
   width: 65%;
   height: 3px;
   position: relative;
-  margin: 0 auto; 
- 
-  background: -moz-linear-gradient(left,  rgba(225,108,91,0) 0%, rgba(225,108,91,1) 19%, rgba(225,108,91,1) 50%, rgba(225,108,91,1) 81%, rgba(225,108,91,0) 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(left,  rgba(225,108,91,0) 0%,rgba(225,108,91,1) 19%,rgba(225,108,91,1) 50%,rgba(225,108,91,1) 81%,rgba(225,108,91,0) 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to right,  rgba(225,108,91,0) 0%,rgba(225,108,91,1) 19%,rgba(225,108,91,1) 50%,rgba(225,108,91,1) 81%,rgba(225,108,91,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00e16c5b', endColorstr='#00e16c5b',GradientType=1 ); /* IE6-9 */
-}
+  margin: 0 auto;
+  background: #fcce00; }
+
+.hackTextUnderline {
+  width: 25%;
+  height: 2px;
+  position: relative;
+  margin: 5% auto 0; 
+  background: #e5e5e5}
 
 .hackShortDesc {
   text-align: center;
@@ -82,27 +101,31 @@ Hack selection
   margin-bottom: 60%;
   position: relative;
   font-size: 5rem;
-  color: $textColour;
-  font-family: $textFont;
-}
+  color: #e5e5e5;
+  font-family: "Open Sans", sans-serif; }
 
 .hackTags {
   margin-left: 10%;
   position: relative;
   float: left;
   font-size: 3rem;
-  color: black;
-}
+  color: black; }
 
 .hackSupplies {
-  margin-left: 10%;
-  margin-right: 30%;
-  margin-top: 12%;
+  margin: 12% 10% 0;
   position: relative;
   font-size: 5rem;
-  color: $textColour;
-  font-family: $textFont;
-}
+  color: #e5e5e5;
+  font-family: "Open Sans", sans-serif;
+  text-align: center; }
+
+.hackSuppliesAlt {
+  margin-left: 5% 10% 0;
+  position: relative;
+  font-size: 2.5rem;
+  color: #e5e5e5;
+  font-family: "Open Sans", sans-serif;
+  text-align: center; }
 
 .stepNumber {
   margin-left: 10%;
@@ -110,9 +133,17 @@ Hack selection
   margin-top: 12%;
   position: relative;
   font-size: 5rem;
-  color: $textColour;
-  font-family: $textFont;
-}
+  color: #e5e5e5;
+  font-family: "Open Sans", sans-serif; }
+
+.subtitle {
+  margin-left: 10%;
+  margin-right: 30%;
+  margin-top: 7%;
+  position: relative;
+  font-size: 7rem;
+  color: #e5e5e5;
+  font-family: "Open Sans", sans-serif; }
 
 .hackInstructions {
   margin-left: 10%;
@@ -120,20 +151,19 @@ Hack selection
   margin-top: 12%;
   position: relative;
   font-size: 5rem;
-  color: $textColour;
-  font-family: $textFont;
-}
+  color: #e5e5e5;
+  font-family: "Open Sans", sans-serif;
+  text-align: center; }
 
 .hackStepImage {
   margin-left: 10%;
   margin-right: 10%;
   position: relative;
-  width:  80%;
+  width: 80%;
   height: auto;
   background-position: 50% 50%;
-  background-repeat:   no-repeat;
-  background-size:     cover;
-}
+  background-repeat: no-repeat;
+  background-size: cover; }
 
 .hackSelectionButton {
   margin: 0;
@@ -142,33 +172,46 @@ Hack selection
   width: 100%;
   height: 60%;
   z-index: 2;
-  border-bottom: 2px solid $linkColour;
-
-  background: -moz-linear-gradient(top,  rgba(33,31,31,0) 0%, rgba(33,31,31,1) 77%, rgba(33,31,31,1) 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(top,  rgba(33,31,31,0) 0%,rgba(33,31,31,1) 77%,rgba(33,31,31,1) 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom,  rgba(33,31,31,0) 0%,rgba(33,31,31,1) 77%,rgba(33,31,31,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00211f1f', endColorstr='#211f1f',GradientType=0 ); /* IE6-9 */
-
-/*  -webkit-transition: 0.3s;
-  -moz-transition: 0.3s;
-  -ms-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s; */
-}
+  border-bottom: 2px solid #fcce00;
+  background: -moz-linear-gradient(top, rgba(33, 31, 31, 0) 0%, #211f1f 77%, #211f1f 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(33, 31, 31, 0) 0%, #211f1f 77%, #211f1f 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(33, 31, 31, 0) 0%, #211f1f 77%, #211f1f 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00211f1f', endColorstr='#211f1f',GradientType=0 );
+  /* IE6-9 */
+  /*  -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s; */ }
 
 .hackArrow {
   width: 40px;
   height: 40px;
   position: relative;
-  margin: 55% auto; 
+  margin: 55% auto;
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   -o-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
-  border-right: 4px solid $linkColour;
-  border-bottom: 4px solid $linkColour;
-}
+  border-right: 4px solid #fcce00;
+  border-bottom: 4px solid #fcce00; }
+
+.hackArrowOther {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  margin: 48% auto;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  border-right: 4px solid #fcce00;
+  border-bottom: 4px solid #fcce00; }
 
 .hackButtonText {
   text-align: center;
@@ -176,6 +219,24 @@ Hack selection
   line-height: 10%;
   position: relative;
   font-size: 5rem;
-  color: $linkColour;
-  font-family: $linkFont;
-}
+  color: #fcce00;
+  font-family: "Merriweather", serif; }
+
+.proPichack {
+  margin: 10% 5% 0 10%;
+  position: relative;
+  height: 50px;
+  width: 50px;
+  border-radius: 100%; 
+  float: left; 
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;  }
+
+.usernameHack {
+  margin: 10% 0;
+  position: relative;
+  font-size: 2.5rem;
+  color: #e5e5e5;
+  font-family: "Open Sans", sans-serif;
+  float: left; }

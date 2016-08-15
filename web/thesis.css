@@ -1,16 +1,10 @@
-html, body, #wrapper {
+html, body {
+  height: 100%;
   width: 100%;
   margin: 0;
   padding: 0;
   border: 0;
   font-size: 12px; }
-
-#wrapper {
-  position: relative;
-  top: 0;
-  left: 0;
-  overflow: auto;
-  float: left;  }
 
 body {
   overflow: hidden; }
@@ -77,7 +71,7 @@ Navigation Bar
   font-size: 4rem !important;
   color: #fcce00 !important;
   font-family: "Merriweather", serif !important;
-  opacity: 1 !important;  }
+  opacity: 1 !important; }
 
 .offset {
   top: -100%; }
@@ -98,12 +92,12 @@ nav {
     transition: 0.3s; */ }
 
 .proName {
-    margin: 5% 10% 5% 10%;
-    position: relative;
-    font-size: 8rem;
-    color: #e5e5e5;
-    text-align: center;
-    font-family: "Open Sans", sans-serif; }
+  margin: 5% 10% 5% 10%;
+  position: relative;
+  font-size: 8rem;
+  color: #e5e5e5;
+  text-align: center;
+  font-family: "Open Sans", sans-serif; }
 
 .logInPage {
   overflow-y: scroll;
@@ -111,94 +105,105 @@ nav {
   margin: 0;
   width: 100%;
   height: 90%; }
-  .logInPage .welcome {
-    margin: 20% 10% 3% 10%;
-    position: relative;
-    font-size: 8rem;
-    color: #e5e5e5;
-    font-family: "Open Sans", sans-serif; }
-  .logInPage .intro {
-    margin: 3% 10%;
-    position: relative;
-    font-size: 5rem;
-    color: #e5e5e5;
-    font-family: "Open Sans", sans-serif;
-    text-align: justify; }
+
+.logInPage .welcome {
+  margin: 20% 10% 3% 10%;
+  position: relative;
+  font-size: 8rem;
+  color: #e5e5e5;
+  font-family: "Open Sans", sans-serif; }
+
+.logInPage .intro {
+  margin: 3% 10%;
+  position: relative;
+  font-size: 5rem;
+  color: #e5e5e5;
+  font-family: "Open Sans", sans-serif;
+  text-align: justify; }
 
 #login {
   margin: 3% 10%;
   position: relative;
   width: 80%; }
-  #login input {
-    width: 96.5%;
-    height: 15%;
-    margin: 3% 0 3% 0;
-    padding: .5em;
-    outline: none;
-    font-size: 2rem; }
-  #login label {
-    font-size: 2.3rem;
-    font-family: "Open Sans", sans-serif;
-    color: #fcce00; }
-  #login input[type=submit] {
-    font-size: 1.5rem;
-    font-family: "Merriweather", serif;
-    color: #fcce00;
-    background: #191919;
-    border-bottom: 2px solid #fcce00;
-    border-top: 2px solid #fcce00;
-    width: 100%;
-    -webkit-appearance: none; }
+
+#login input {
+  width: 96.5%;
+  height: 15%;
+  margin: 3% 0 3% 0;
+  padding: .5em;
+  outline: none;
+  font-size: 2rem; }
+
+#login label {
+  font-size: 2.3rem;
+  font-family: "Open Sans", sans-serif;
+  color: #fcce00; }
+
+#login input[type=submit] {
+  font-size: 1.5rem;
+  font-family: "Merriweather", serif;
+  color: #fcce00;
+  background: #191919;
+  border-bottom: 2px solid #fcce00;
+  border-top: 2px solid #fcce00;
+  width: 100%;
+  -webkit-appearance: none; }
 
 #logout {
   margin: 80% 10%;
   position: relative;
   width: 80%; }
-  #logout input {
-    width: 96.5%;
-    height: 15%;
-    margin: 3% 0 3% 0;
-    padding: .5em;
-    outline: none;
-    font-size: 2rem; }
-  #logout label {
-    font-size: 2.3rem;
-    font-family: "Open Sans", sans-serif;
-    color: #fcce00; }
-  #logout input[type=submit] {
-    font-size: 1.5rem;
-    font-family: "Merriweather", serif;
-    color: #fcce00;
-    background: #191919;
-    border-bottom: 2px solid #fcce00;
-    border-top: 2px solid #fcce00;
-    width: 100%;
-    -webkit-appearance: none; }
+
+#logout input {
+  width: 96.5%;
+  height: 15%;
+  margin: 3% 0 3% 0;
+  padding: .5em;
+  outline: none;
+  font-size: 2rem; }
+
+#logout label {
+  font-size: 2.3rem;
+  font-family: "Open Sans", sans-serif;
+  color: #fcce00; }
+
+#logout input[type=submit] {
+  font-size: 1.5rem;
+  font-family: "Merriweather", serif;
+  color: #fcce00;
+  background: #191919;
+  border-bottom: 2px solid #fcce00;
+  border-top: 2px solid #fcce00;
+  width: 100%;
+  -webkit-appearance: none; }
 
 #register {
   margin: 3% 10% 25%;
   position: relative;
   width: 80%; }
-  #register input {
-    width: 96.5%;
-    height: 15%;
-    margin: 3% 0 3% 0;
-    padding: .5em;
-    outline: none;
-    font-size: 2rem; }
-  #register label {
-    font-size: 2.3rem;
-    font-family: "Open Sans", sans-serif;
-    color: #fcce00; }
-  #register input[type=submit] {
-    font-size: 1.5rem;
-    font-family: "Merriweather", serif;
-    color: #fcce00;
-    background: #191919;
-    border-bottom: 2px solid #fcce00;
-    border-top: 2px solid #fcce00;
-    width: 100%;
-    -webkit-appearance: none; }
+
+#register input {
+  width: 96.5%;
+  height: 15%;
+  margin: 3% 0 3% 0;
+  padding: .5em;
+  outline: none;
+  font-size: 2rem; }
+
+#register label {
+  font-size: 2.3rem;
+  font-family: "Open Sans", sans-serif;
+  color: #fcce00; }
+
+#register input[type=submit] {
+  font-size: 1.5rem;
+  font-family: "Merriweather", serif;
+  color: #fcce00;
+  background: #191919;
+  border-bottom: 2px solid #fcce00;
+  border-top: 2px solid #fcce00;
+  width: 100%;
+  -webkit-appearance: none; }
 
 .registerPage {
   overflow-y: scroll;
@@ -217,14 +222,15 @@ nav {
   background: #191919;
   border-bottom: 2px solid #fcce00;
   border-top: 2px solid #fcce00; }
-  .startRegistration .startResgisterText {
-    text-align: center;
-    vertical-align: middle;
-    position: relative;
-    font-size: 2.3rem;
-    color: #fcce00;
-    font-family: "Merriweather", serif;
-    top: -20%; }
+
+.startRegistration .startResgisterText {
+  text-align: center;
+  vertical-align: middle;
+  position: relative;
+  font-size: 2.3rem;
+  color: #fcce00;
+  font-family: "Merriweather", serif;
+  top: -20%; }
 
 .lineL {
   margin: 3% 3% 3% 10%;
@@ -309,20 +315,22 @@ nav {
   height: 100%;
   overflow-x: hidden;
   overflow-y: scroll; }
-  .yourSettingsPage input {
-    width: 80%;
-    height: 15%;
-    margin: 20% 10%;
-    padding: .5em;
-    outline: none;
-    font-size: 2rem; }
-  .yourSettingsPage label {
-    position: absolute;
-    margin: 20% 10%;
-    padding: .5em;
-    font-size: 2rem;
-    font-family: "Open Sans", sans-serif;
-    color: #fcce00; }
+
+.yourSettingsPage input {
+  width: 80%;
+  height: 15%;
+  margin: 20% 10%;
+  padding: .5em;
+  outline: none;
+  font-size: 2rem; }
+
+.yourSettingsPage label {
+  position: absolute;
+  margin: 20% 10%;
+  padding: .5em;
+  font-size: 2rem;
+  font-family: "Open Sans", sans-serif;
+  color: #fcce00; }
 
 .menuBarYourHacks {
   width: 33.3%;
@@ -616,13 +624,14 @@ nav {
   margin: 20% 0;
   width: 100%;
   height: 90%; }
-  .hacksLogIn .intro {
-    margin: 3% 10%;
-    position: relative;
-    font-size: 5rem;
-    color: #e5e5e5;
-    font-family: "Open Sans", sans-serif;
-    text-align: justify; }
+
+.hacksLogIn .intro {
+  margin: 3% 10%;
+  position: relative;
+  font-size: 5rem;
+  color: #e5e5e5;
+  font-family: "Open Sans", sans-serif;
+  text-align: justify; }
 
 /************************************************************************************
 Hack selection
@@ -651,8 +660,7 @@ Hack selection
   padding: 0;
   width: 100%;
   height: 100%;
-  background: #191919;
-}
+  background: #191919; }
 
 .offset2 {
   top: 10%;
@@ -718,8 +726,8 @@ Hack selection
   width: 25%;
   height: 2px;
   position: relative;
-  margin: 5% auto 0; 
-  background: #e5e5e5}
+  margin: 5% auto 0;
+  background: #e5e5e5; }
 
 .hackShortDesc {
   text-align: center;
@@ -853,11 +861,11 @@ Hack selection
   position: relative;
   height: 50px;
   width: 50px;
-  border-radius: 100%; 
-  float: left; 
+  border-radius: 100%;
+  float: left;
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  background-size: cover;  }
+  background-size: cover; }
 
 .usernameHack {
   margin: 10% 0;
@@ -890,7 +898,7 @@ Post a hack
     margin-top: 12%;
     position: relative;
     font-size: 8rem;
-    color: #e5e5e5;
+    color: #fcce00;
     font-family: "Open Sans", sans-serif; }
   .newHackFrame * {
     opacity: 0;
@@ -935,16 +943,15 @@ Post a hack
   #recipeCreator label {
     font-size: 2.3rem;
     font-family: "Merriweather", serif;
-    color: #fcce00; }
+    color: #e5e5e5; }
   #recipeCreator input[type=submit] {
     font-size: 1.5rem;
     font-family: "Merriweather", serif;
-    color: #fcce00;
+    color: #e5e5e5;
     background: #191919;
-    border-bottom: 2px solid #fcce00;
-    border-top: 2px solid #fcce00;
-    width: 100%;
-    -webkit-appearance: none; }
+    border-bottom: 2px solid #e5e5e5;
+    border-top: 2px solid #e5e5e5;
+    width: 100%; }
 
 .newHackClose {
   right: 0;
@@ -952,7 +959,7 @@ Post a hack
   width: 25%;
   height: 10%;
   position: absolute;
-  background: #191919; }
+  background: blue; }
 
 .offset5 {
   bottom: 0;
@@ -992,16 +999,17 @@ Instructions
   margin: 20% 10%;
   position: relative;
   width: 80%; }
-  .follow input[type=submit] {
-    font-size: 1.5rem;
-    font-family: "Merriweather", serif;
-    color: #fcce00;
-    background: #191919;
-    border-bottom: 2px solid #fcce00;
-    border-top: 2px solid #fcce00;
-    width: 100%;
-    height: 75px;
-    -webkit-appearance: none; }
+
+.follow input[type=submit] {
+  font-size: 1.5rem;
+  font-family: "Merriweather", serif;
+  color: #fcce00;
+  background: #191919;
+  border-bottom: 2px solid #fcce00;
+  border-top: 2px solid #fcce00;
+  width: 100%;
+  height: 75px;
+  -webkit-appearance: none; }
 
 .close {
   right: 100%;
@@ -1020,5 +1028,7 @@ Instructions
 
 .offset4 {
   overflow: auto; }
+
+/*# sourceMappingURL=thesis.css.map */
 
 /*# sourceMappingURL=thesis.css.map */

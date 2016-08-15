@@ -4,52 +4,45 @@
   top: 0;
   left: 66.6%;
   position: fixed;
-  background: $bgColour;
+  background: #191919;
   margin: 0;
   z-index: 2;
-  border-bottom: 2px solid $linkColour;
-/*  -webkit-transition: 0.3s;
-  -moz-transition: 0.3s;
-  -ms-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s; */
-}
+  border-bottom: 2px solid #fcce00;
+  /*  -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s; */ }
 
 .menuBarSettingsText {
   text-align: center;
   vertical-align: middle;
   position: relative;
   font-size: 5rem;
-  color: $linkColour;
-  font-family: $linkFont;
-}
+  color: #fcce00;
+  font-family: "Merriweather", serif; }
 
 .yourSettingsPage {
   display: none;
   position: relative;
-  top: 0; 
-  left: 0; 
+  top: 0;
+  left: 0;
   padding: 0;
   width: 100%;
   height: 100%;
   overflow-x: hidden;
-  overflow-y: scroll;
-
-  input {
+  overflow-y: scroll; }
+  .yourSettingsPage input {
     width: 80%;
     height: 15%;
     margin: 20% 10%;
     padding: .5em;
     outline: none;
-    font-size: 2rem;
-  }
-
-  label {
+    font-size: 2rem; }
+  .yourSettingsPage label {
     position: absolute;
     margin: 20% 10%;
     padding: .5em;
     font-size: 2rem;
-    font-family: $textFont;
-    color: $linkColour;
-  }
-}
+    font-family: "Open Sans", sans-serif;
+    color: #fcce00; }

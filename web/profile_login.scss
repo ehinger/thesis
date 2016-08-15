@@ -3,37 +3,33 @@
 /************************************************************************************
 Navigation Bar
 ************************************************************************************/
-
 .navbutton {
   width: 100%;
   height: 10%;
   top: 90%;
   left: 0;
   position: fixed;
-  background: $bgColour;
+  background: #191919;
   margin: 0;
   z-index: 2;
-  border-bottom: 2px solid $linkColour;
-  border-top: 2px solid $linkColour;
-/*  -webkit-transition: 0.3s;
-  -moz-transition: 0.3s;
-  -ms-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s; */
-}
+  border-bottom: 2px solid #fcce00;
+  border-top: 2px solid #fcce00;
+  /*  -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s; */ }
 
 .navText {
   text-align: center;
   vertical-align: middle;
   position: relative;
   font-size: 5rem;
-  color: $linkColour;
-  font-family: $linkFont;
-}
+  color: #fcce00;
+  font-family: "Merriweather", serif; }
 
 .offset3 {
-  top: 0; 
-}
+  top: 0; }
 
 .menuBarProfile {
   width: 33.4%;
@@ -41,164 +37,153 @@ Navigation Bar
   top: 0;
   left: 33.3%;
   position: fixed;
-  background: $bgColour;
+  background: #191919;
   margin: 0;
   z-index: 2;
-  border-bottom: 8px solid $linkColour;
-/*  -webkit-transition: 0.3s;
-  -moz-transition: 0.3s;
-  -ms-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s; */
-}
+  border-bottom: 8px solid #fcce00;
+  /*  -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s; */ }
 
 .menuBarProfileText {
-  text-align: center;
-  vertical-align: middle;
-  position: relative;
-  font-size: 5rem;
-  color: $linkColour;
-  font-family: $linkFont;
-}
+  text-align: center !important;
+  vertical-align: middle !important;
+  position: relative !important;
+  font-size: 5rem !important;
+  color: #fcce00 !important;
+  font-family: "Merriweather", serif !important; }
+
+.createText {
+  text-align: center !important;
+  vertical-align: middle !important;
+  position: relative !important;
+  font-size: 4rem !important;
+  color: #fcce00 !important;
+  font-family: "Merriweather", serif !important;
+  opacity: 1 !important;  }
 
 .offset {
-  top: -100%; 
-}
+  top: -100%; }
 
 nav {
   width: 100%;
   height: 100%;
   position: fixed;
-  background: $bgColour;
+  background: #191919;
   margin: 0;
   top: 0;
   left: 0;
   z-index: 1;
-/*  -webkit-transition: 0.3s;
-  -moz-transition: 0.3s;
-  -ms-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s; */
-}
+  /*  -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s; */ }
+
+.proName {
+    margin: 5% 10% 5% 10%;
+    position: relative;
+    font-size: 8rem;
+    color: #e5e5e5;
+    text-align: center;
+    font-family: "Open Sans", sans-serif; }
 
 .logInPage {
   overflow-y: scroll;
   position: fixed;
   margin: 0;
   width: 100%;
-  height: 90%;
-
-
- 	.welcome {
-	  	margin: 20% 10% 3% 10%;
-		position: relative;
-		font-size: 8rem;
-		color: $textColour;
-		font-family: $textFont;
-	}
-
-	.intro {
-	    margin: 3% 10%;
-		position: relative;
-		font-size: 5rem;
-		color: $textColour;
-		font-family: $textFont;
-    	text-align: justify;
-	}
-}
+  height: 90%; }
+  .logInPage .welcome {
+    margin: 20% 10% 3% 10%;
+    position: relative;
+    font-size: 8rem;
+    color: #e5e5e5;
+    font-family: "Open Sans", sans-serif; }
+  .logInPage .intro {
+    margin: 3% 10%;
+    position: relative;
+    font-size: 5rem;
+    color: #e5e5e5;
+    font-family: "Open Sans", sans-serif;
+    text-align: justify; }
 
 #login {
   margin: 3% 10%;
   position: relative;
-  width: 80%;
-
-  input {
+  width: 80%; }
+  #login input {
     width: 96.5%;
     height: 15%;
     margin: 3% 0 3% 0;
     padding: .5em;
     outline: none;
-    font-size: 2rem;
-  }
-
-  label {
+    font-size: 2rem; }
+  #login label {
     font-size: 2.3rem;
-    font-family: $textFont;
-  	color: $linkColour;
-  }
-
-  input[type=submit] {
+    font-family: "Open Sans", sans-serif;
+    color: #fcce00; }
+  #login input[type=submit] {
     font-size: 1.5rem;
-  	font-family: $linkFont;
-  	color: $linkColour;
-    background: $bgColour;
-  	border-bottom: 2px solid $linkColour;
-  	border-top: 2px solid $linkColour;
+    font-family: "Merriweather", serif;
+    color: #fcce00;
+    background: #191919;
+    border-bottom: 2px solid #fcce00;
+    border-top: 2px solid #fcce00;
     width: 100%;
-  }
-}
+    -webkit-appearance: none; }
 
 #logout {
-  margin: 20% 10%;
+  margin: 80% 10%;
   position: relative;
-  width: 80%;
-
-  input {
+  width: 80%; }
+  #logout input {
     width: 96.5%;
     height: 15%;
     margin: 3% 0 3% 0;
     padding: .5em;
     outline: none;
-    font-size: 2rem;
-  }
-
-  label {
+    font-size: 2rem; }
+  #logout label {
     font-size: 2.3rem;
-    font-family: $textFont;
-  	color: $linkColour;
-  }
-
-  input[type=submit] {
+    font-family: "Open Sans", sans-serif;
+    color: #fcce00; }
+  #logout input[type=submit] {
     font-size: 1.5rem;
-  	font-family: $linkFont;
-  	color: $linkColour;
-    background: $bgColour;
-  	border-bottom: 2px solid $linkColour;
-  	border-top: 2px solid $linkColour;
+    font-family: "Merriweather", serif;
+    color: #fcce00;
+    background: #191919;
+    border-bottom: 2px solid #fcce00;
+    border-top: 2px solid #fcce00;
     width: 100%;
-  }
-}
+    -webkit-appearance: none; }
 
 #register {
-  margin: 3% 10%;
+  margin: 3% 10% 25%;
   position: relative;
-  width: 80%;
-
-   input {
+  width: 80%; }
+  #register input {
     width: 96.5%;
     height: 15%;
     margin: 3% 0 3% 0;
     padding: .5em;
     outline: none;
-    font-size: 2rem;
-  }
-
-  label {
+    font-size: 2rem; }
+  #register label {
     font-size: 2.3rem;
-    font-family: $textFont;
-  	color: $linkColour;
-  }
-
-  input[type=submit] {
+    font-family: "Open Sans", sans-serif;
+    color: #fcce00; }
+  #register input[type=submit] {
     font-size: 1.5rem;
-  	font-family: $linkFont;
-  	color: $linkColour;
-    background: $bgColour;
-  	border-bottom: 2px solid $linkColour;
-  	border-top: 2px solid $linkColour;
+    font-family: "Merriweather", serif;
+    color: #fcce00;
+    background: #191919;
+    border-bottom: 2px solid #fcce00;
+    border-top: 2px solid #fcce00;
     width: 100%;
-  }
-}
+    -webkit-appearance: none; }
 
 .registerPage {
   overflow-y: scroll;
@@ -207,90 +192,70 @@ nav {
   width: 100%;
   height: 90%;
   display: none;
-  top: 15%;
-}
+  top: 15%; }
 
 .startRegistration {
-	position: relative;
-	margin: 4% 10%;
-	width: 80%;
-	height: 5%;
-	background: $bgColour;
-	border-bottom: 2px solid $linkColour;
-	border-top: 2px solid $linkColour;
-
-	.startResgisterText {
-		text-align: center;
-		vertical-align: middle;
-		position: relative;
-    	font-size: 2.3rem;
-		color: $linkColour;
-    	font-family: $linkFont;
-  		top: -20%;
-	}
-}
+  position: relative;
+  margin: 4% 10%;
+  width: 80%;
+  height: 5%;
+  background: #191919;
+  border-bottom: 2px solid #fcce00;
+  border-top: 2px solid #fcce00; }
+  .startRegistration .startResgisterText {
+    text-align: center;
+    vertical-align: middle;
+    position: relative;
+    font-size: 2.3rem;
+    color: #fcce00;
+    font-family: "Merriweather", serif;
+    top: -20%; }
 
 .lineL {
-
-    margin: 3% 3% 3% 10%;
-    background: $textColour;
-    width: 25%;
-    height: 2px;
-    position: relative;
-    float: left;
-
-}
+  margin: 3% 3% 3% 10%;
+  background: #e5e5e5;
+  width: 25%;
+  height: 2px;
+  position: relative;
+  float: left; }
 
 .lineR {
-
-    margin: 3% 10% 3% 3%;
-    background: $textColour;
-    width: 25%;
-    height: 2px;
-    position: relative;
-    float: right;
-}
+  margin: 3% 10% 3% 3%;
+  background: #e5e5e5;
+  width: 25%;
+  height: 2px;
+  position: relative;
+  float: right; }
 
 .or {
-	
-    margin: -5% 8%;
-    display: inline;
-    position: relative;
-    text-align: center;
-	font-size: 5rem;
-	color: $textColour;
-	font-family: $textFont;
-
-}
+  margin: -5% 8%;
+  display: inline;
+  position: relative;
+  text-align: center;
+  font-size: 5rem;
+  color: #e5e5e5;
+  font-family: "Open Sans", sans-serif; }
 
 .rangeOneUpper {
-  display: none;
-}
+  display: none; }
 
 .rangeTwoUpper {
-  display: none;
-}
+  display: none; }
 
 .rangeThreeUpper {
-  display: none;
-}
+  display: none; }
 
 .rangeOnelower {
-  display: none;
-}
+  display: none; }
 
 .rangeTwolower {
-  display: none;
-}
+  display: none; }
 
 .rangeThreelower {
-  display: none;
-}
+  display: none; }
 
 .nextThreeQuestions {
-  display: none;
-}
+  display: none; }
 
 .abilityRegister {
-  display: none;
-}
+  display: none; }

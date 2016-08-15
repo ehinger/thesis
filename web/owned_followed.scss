@@ -4,61 +4,53 @@
   top: 0;
   left: 0;
   position: fixed;
-  background: $bgColour;
+  background: #191919;
   margin: 0;
   z-index: 2;
-  border-bottom: 2px solid $linkColour;
-/*  -webkit-transition: 0.3s;
-  -moz-transition: 0.3s;
-  -ms-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s; */
-}
+  border-bottom: 2px solid #fcce00;
+  /*  -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s; */ }
 
 .menuBarYourHacksText {
   text-align: center;
   vertical-align: middle;
   position: relative;
   font-size: 5rem;
-  color: $linkColour;
-  font-family: $linkFont;
-}
+  color: #fcce00;
+  font-family: "Merriweather", serif; }
 
 .yourHacksPage {
   display: none;
   position: relative;
-  top: 0; 
-  left: 0; 
+  top: 0;
+  left: 0;
   padding: 0;
   width: 100%;
   height: 100%;
-  overflow-x: hidden;
-  overflow-y: scroll;
-  float: left;
-}
+  float: left; }
 
 .followedHacks {
   display: none;
   position: relative;
-  top: 0; 
-  left: 0; 
+  top: 0;
+  left: 0;
   padding: 0;
   width: 100%;
   height: 90%;
-  overflow-x: hidden;
-  overflow-y: scroll;
-  float: left;
-}
+  overflow: auto;
+  float: left; }
 
 .yourHacksYourHacks {
   position: relative;
   margin: 20% 10% 0;
   width: 80%;
   height: 20%;
-  background: $bgColour;
-  border-bottom: 2px solid $linkColour;
-  border-top: 2px solid $linkColour;
-}
+  background: #191919;
+  border-bottom: 2px solid #fcce00;
+  border-top: 2px solid #fcce00; }
 
 .yourHacksYourHacksText {
   text-align: center;
@@ -66,19 +58,17 @@
   top: 50px;
   position: relative;
   font-size: 4rem;
-  color: $linkColour;
-  font-family: $linkFont;
-}
+  color: #fcce00;
+  font-family: "Merriweather", serif; }
 
 .yourHacksFollowedHacks {
   position: relative;
   margin: 5% 10% 0;
   width: 80%;
   height: 20%;
-  background: $bgColour;
-  border-bottom: 2px solid $linkColour;
-  border-top: 2px solid $linkColour;
-}
+  background: #191919;
+  border-bottom: 2px solid #fcce00;
+  border-top: 2px solid #fcce00; }
 
 .yourHacksFollowedHacksText {
   text-align: center;
@@ -86,19 +76,17 @@
   top: 50px;
   position: relative;
   font-size: 4rem;
-  color: $linkColour;
-  font-family: $linkFont;
-}
+  color: #fcce00;
+  font-family: "Merriweather", serif; }
 
 .yourHacksCreateHacks {
   position: relative;
   margin: 5% 10% 0;
   width: 80%;
   height: 20%;
-  background: $bgColour;
-  border-bottom: 2px solid $linkColour;
-  border-top: 2px solid $linkColour;
-}
+  background: #191919;
+  border-bottom: 2px solid #fcce00;
+  border-top: 2px solid #fcce00; }
 
 .yourHacksCreateHacksText {
   text-align: center;
@@ -106,68 +94,60 @@
   top: 50px;
   position: relative;
   font-size: 4rem;
-  color: $linkColour;
-  font-family: $linkFont;
-}
+  color: #fcce00;
+  font-family: "Merriweather", serif; }
 
 .yourHacksMade {
   display: none;
   position: relative;
-  top: 0; 
-  left: 0; 
+  top: 0;
+  left: 0;
   padding: 0;
   width: 100%;
   height: 90%;
-  overflow-x: hidden;
-  overflow-y: scroll;
-  float: left;
-}
+  overflow: auto;
+  float: left; }
 
 .yourHacksButtons {
   position: relative;
-  top: 0; 
-  left: 0; 
+  top: 0;
+  left: 0;
   padding: 0;
   width: 100%;
   height: 100%;
-  overflow-x: hidden;
-  overflow-y: scroll;
-  float: left;
-}
+  float: left; }
 
 .hackSelectionFrameYourHacks {
   position: relative;
-  top: 100%; 
-  left: 0; 
+  top: 11%;
+  left: 0;
   padding: 0;
   width: 100%;
   height: 85%;
   overflow: hidden;
   overflow-y: hidden;
   float: left;
-/*  -webkit-transition: 0.3s;
-  -moz-transition: 0.3s;
-  -ms-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s; */
-}
+  /*  -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s; */ }
 
 .hackSelectionFrameFollowedHacks {
   position: relative;
-  top: 100%; 
-  left: 0; 
+  top: 11%;
+  left: 0;
   padding: 0;
   width: 100%;
   height: 85%;
   overflow: hidden;
   overflow-y: hidden;
   float: left;
-/*  -webkit-transition: 0.3s;
-  -moz-transition: 0.3s;
-  -ms-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s; */
-}
+  /*  -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s; */ }
 
 .infoWrapperYourHacks {
   margin: 0;
@@ -176,14 +156,13 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  background: $overlayColour;
+  background: #181b30;
   opacity: .4;
-/*  -webkit-transition: 0.3s;
-  -moz-transition: 0.3s;
-  -ms-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s; */
-}
+  /*  -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s; */ }
 
 .infoWrapperFollowedHacks {
   margin: 0;
@@ -192,14 +171,13 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  background: $overlayColour;
+  background: #181b30;
   opacity: .4;
-/*  -webkit-transition: 0.3s;
-  -moz-transition: 0.3s;
-  -ms-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s; */
-}
+  /*  -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s; */ }
 
 .hackSelectionButtonYourHacks {
   margin: 0;
@@ -207,18 +185,19 @@
   position: absolute;
   width: 100%;
   height: 60%;
-
-  background: -moz-linear-gradient(top,  rgba(33,31,31,0) 0%, rgba(33,31,31,1) 77%, rgba(33,31,31,1) 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(top,  rgba(33,31,31,0) 0%,rgba(33,31,31,1) 77%,rgba(33,31,31,1) 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom,  rgba(33,31,31,0) 0%,rgba(33,31,31,1) 77%,rgba(33,31,31,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00211f1f', endColorstr='#211f1f',GradientType=0 ); /* IE6-9 */
-
-/*  -webkit-transition: 0.3s;
-  -moz-transition: 0.3s;
-  -ms-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s; */
-}
+  background: -moz-linear-gradient(top, rgba(33, 31, 31, 0) 0%, #211f1f 77%, #211f1f 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(33, 31, 31, 0) 0%, #211f1f 77%, #211f1f 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(33, 31, 31, 0) 0%, #211f1f 77%, #211f1f 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00211f1f', endColorstr='#211f1f',GradientType=0 );
+  /* IE6-9 */
+  /*  -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s; */ }
 
 .hackSelectionButtonFollowedHacks {
   margin: 0;
@@ -226,18 +205,19 @@
   position: absolute;
   width: 100%;
   height: 60%;
-
-  background: -moz-linear-gradient(top,  rgba(33,31,31,0) 0%, rgba(33,31,31,1) 77%, rgba(33,31,31,1) 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(top,  rgba(33,31,31,0) 0%,rgba(33,31,31,1) 77%,rgba(33,31,31,1) 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom,  rgba(33,31,31,0) 0%,rgba(33,31,31,1) 77%,rgba(33,31,31,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00211f1f', endColorstr='#211f1f',GradientType=0 ); /* IE6-9 */
-
-/*  -webkit-transition: 0.3s;
-  -moz-transition: 0.3s;
-  -ms-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s; */
-}
+  background: -moz-linear-gradient(top, rgba(33, 31, 31, 0) 0%, #211f1f 77%, #211f1f 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(33, 31, 31, 0) 0%, #211f1f 77%, #211f1f 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(33, 31, 31, 0) 0%, #211f1f 77%, #211f1f 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00211f1f', endColorstr='#211f1f',GradientType=0 );
+  /* IE6-9 */
+  /*  -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s; */ }
 
 .insframeYourHacks {
   width: 100%;
@@ -249,13 +229,12 @@
   opacity: 0;
   z-index: 1;
   overflow-y: scroll;
-  background: $bgColour;
-/*  -webkit-transition: 0.3s;
-  -moz-transition: 0.3s;
-  -ms-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;*/
-}
+  background: #191919;
+  /*  -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;*/ }
 
 .insframeFollowedHacks {
   width: 100%;
@@ -267,13 +246,12 @@
   opacity: 0;
   z-index: 1;
   overflow-y: scroll;
-  background: $bgColour;
-/*  -webkit-transition: 0.3s;
-  -moz-transition: 0.3s;
-  -ms-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;*/
-}
+  background: #191919;
+  /*  -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;*/ }
 
 .closeYourHacks {
   right: 100%;
@@ -281,16 +259,14 @@
   width: 25%;
   height: 10%;
   position: fixed;
-  background: $bgColour;
+  background: #191919;
   opacity: 1;
   z-index: 9;
-/*  -webkit-transition: 0.3s;
-  -moz-transition: 0.3s;
-  -ms-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;*/
-}
-
+  /*  -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;*/ }
 
 .closeFollowedHacks {
   right: 100%;
@@ -298,15 +274,14 @@
   width: 25%;
   height: 10%;
   position: fixed;
-  background: $bgColour;
+  background: #191919;
   opacity: 1;
   z-index: 9;
-/*  -webkit-transition: 0.3s;
-  -moz-transition: 0.3s;
-  -ms-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;*/
-}
+  /*  -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;*/ }
 
 .hacksLogIn {
   display: none;
@@ -314,14 +289,11 @@
   position: fixed;
   margin: 20% 0;
   width: 100%;
-  height: 90%;
-
-  .intro {
-      margin: 3% 10%;
+  height: 90%; }
+  .hacksLogIn .intro {
+    margin: 3% 10%;
     position: relative;
     font-size: 5rem;
-    color: $textColour;
-    font-family: $textFont;
-      text-align: justify;
-  }
-}
+    color: #e5e5e5;
+    font-family: "Open Sans", sans-serif;
+    text-align: justify; }

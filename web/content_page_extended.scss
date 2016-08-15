@@ -1,7 +1,6 @@
 /************************************************************************************
 Instructions
 ************************************************************************************/
-
 .insframe {
   width: 100%;
   height: auto;
@@ -10,35 +9,29 @@ Instructions
   left: 0;
   margin: 0;
   opacity: 0;
-  z-index: 1;
+  z-index: 2;
   overflow-y: scroll;
-  background: $bgColour;
-/*  -webkit-transition: 0.3s;
-  -moz-transition: 0.3s;
-  -ms-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;*/
-}
+  background: #191919;
+  /*  -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;*/ }
 
 .follow {
-  width: 100%;
-  height: 10%;
-  position: absolute;
-  margin: 0;
-  padding: 0;
-  background: $bgColour;
-
-  h1 {
-    margin: auto;
-    line-height: 10%;
-    top: 50%;
-    text-align: center;
-    position: relative;
-    font-size: 5rem;
-    color: $linkColour;
-    font-family: $linkFont;
-  }
-}
+  margin: 20% 10%;
+  position: relative;
+  width: 80%; }
+  .follow input[type=submit] {
+    font-size: 1.5rem;
+    font-family: "Merriweather", serif;
+    color: #fcce00;
+    background: #191919;
+    border-bottom: 2px solid #fcce00;
+    border-top: 2px solid #fcce00;
+    width: 100%;
+    height: 75px;
+    -webkit-appearance: none; }
 
 .close {
   right: 100%;
@@ -46,16 +39,16 @@ Instructions
   width: 25%;
   height: 10%;
   position: fixed;
-  background: $bgColour;
+  background: #191919;
   opacity: 1;
   z-index: 9;
-/*  -webkit-transition: 0.3s;
-  -moz-transition: 0.3s;
-  -ms-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;*/
-}
+  /*  -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;*/ }
 
 .offset4 {
-  overflow: initial;
-}
+  overflow: auto; }
+
+/*# sourceMappingURL=thesis.css.map */
