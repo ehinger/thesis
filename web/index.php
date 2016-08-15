@@ -403,10 +403,6 @@ Post a hack
         </div>
 
         <input type="button" onclick="ingredientSelection()" value="Add another resource">
-
-        <input type="button" onclick="tipAdd()" value="Add another tip">
-
-
  
         <h1 class="hackInsTitle">How do you make it?</h1>
 
@@ -423,6 +419,8 @@ Post a hack
             <label>What are some things you need to look out for while your making this?</label>
             <input name="hackTips[]" type='text'>
         </div>
+
+        <input type="button" onclick="tipAdd()" value="Add another tip">
 
         <label>What does it look like finished?</label>
         <input name="userfile[]" type="file">

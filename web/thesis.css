@@ -879,7 +879,7 @@ Hack selection
 Post a hack
 ************************************************************************************/
 .newHackFrame {
-  margin: 0;
+  margin: 10%;
   bottom: 100%;
   right: 0;
   position: fixed;
@@ -893,20 +893,22 @@ Post a hack
     -ms-transition: 0.3s;
     -o-transition: 0.3s;
     transition: 0.3s; */ }
-  .newHackFrame h1 {
-    margin-left: 10%;
-    margin-top: 12%;
-    position: relative;
-    font-size: 8rem;
-    color: #fcce00;
-    font-family: "Open Sans", sans-serif; }
-  .newHackFrame * {
-    opacity: 0;
-    /*  -webkit-transition: 0.3s;
-      -moz-transition: 0.3s;
-      -ms-transition: 0.3s;
-      -o-transition: 0.3s;
-      transition: 0.3s;*/ }
+
+.newHackFrame h1 {
+  margin-left: 10%;
+  margin-top: 12%;
+  position: relative;
+  font-size: 8rem;
+  color: #e5e5e5;
+  font-family: "Open Sans", sans-serif; }
+
+.newHackFrame * {
+  opacity: 0;
+  /*  -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;*/ }
 
 .offset7 {
   z-index: 2;
@@ -925,33 +927,38 @@ Post a hack
   margin: 20% 10%;
   position: relative;
   width: 80%; }
-  #recipeCreator input {
-    width: 96.5%;
-    height: 15%;
-    margin: 3% 0 3% 0;
-    padding: .5em;
-    outline: none;
-    font-size: 2rem;
-    font-family: "Open Sans", sans-serif; }
-  #recipeCreator textarea {
-    width: 96.5%;
-    margin: 3% 0 3% 0;
-    padding: .5em;
-    outline: none;
-    font-size: 2rem;
-    font-family: "Open Sans", sans-serif; }
-  #recipeCreator label {
-    font-size: 2.3rem;
-    font-family: "Merriweather", serif;
-    color: #e5e5e5; }
-  #recipeCreator input[type=submit] {
-    font-size: 1.5rem;
-    font-family: "Merriweather", serif;
-    color: #e5e5e5;
-    background: #191919;
-    border-bottom: 2px solid #e5e5e5;
-    border-top: 2px solid #e5e5e5;
-    width: 100%; }
+
+#recipeCreator input {
+  width: 96.5%;
+  height: 15%;
+  margin: 3% 0 3% 0;
+  padding: .5em;
+  outline: none;
+  font-size: 2rem;
+  font-family: "Open Sans", sans-serif; }
+
+#recipeCreator textarea {
+  width: 96.5%;
+  margin: 3% 0 3% 0;
+  padding: .5em;
+  outline: none;
+  font-size: 2rem;
+  font-family: "Open Sans", sans-serif; }
+
+#recipeCreator label {
+  font-size: 2.3rem;
+  font-family: "Merriweather", serif;
+  color: #fcce00; }
+
+#recipeCreator input[type=submit] {
+  font-size: 1.5rem;
+  font-family: "Merriweather", serif;
+  color: #fcce00;
+  background: #191919;
+  border-bottom: 2px solid #fcce00;
+  border-top: 2px solid #fcce00;
+  width: 100%;
+  -webkit-appearance: none; }
 
 .newHackClose {
   right: 0;
@@ -959,7 +966,7 @@ Post a hack
   width: 25%;
   height: 10%;
   position: absolute;
-  background: blue; }
+  background: #191919; }
 
 .offset5 {
   bottom: 0;
@@ -974,6 +981,15 @@ Post a hack
     -ms-transition: 0.3s;
     -o-transition: 0.3s;
     transition: 0.3s;*/ }
+
+.ingTitle {
+  text-align: center;
+  vertical-align: middle;
+  position: relative;
+  font-size: 2.3rem;
+  color: #fcce00;
+  font-family: "Merriweather", serif;
+  top: -20%; }
 
 /************************************************************************************
 Instructions

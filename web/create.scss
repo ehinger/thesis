@@ -1,97 +1,81 @@
 /************************************************************************************
 Post a hack
 ************************************************************************************/
-
 .newHackFrame {
-  margin: 0;
-  bottom: 100%; 
+  margin: 10%;
+  bottom: 100%;
   right: 0;
   position: fixed;
   width: 250px;
   height: 250px;
-  background: $bgColour;
+  background: #191919;
   z-index: -1;
   overflow: hidden;
-/*  -webkit-transition: 0.3s;
-  -moz-transition: 0.3s;
-  -ms-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s; */
-
-  h1 {
-    margin-left: 10%;
-    margin-top: 12%;
-    position: relative;
-    font-size: 8rem;
-    color: $textColour;
-    font-family: $textFont;
-  }
-
-  * {
-    opacity: 0;
   /*  -webkit-transition: 0.3s;
     -moz-transition: 0.3s;
     -ms-transition: 0.3s;
     -o-transition: 0.3s;
-    transition: 0.3s;*/
-  }
-}
+    transition: 0.3s; */ }
+  .newHackFrame h1 {
+    margin-left: 10%;
+    margin-top: 12%;
+    position: relative;
+    font-size: 8rem;
+    color: #e5e5e5;
+    font-family: "Open Sans", sans-serif; }
+  .newHackFrame * {
+    opacity: 0;
+    /*  -webkit-transition: 0.3s;
+      -moz-transition: 0.3s;
+      -ms-transition: 0.3s;
+      -o-transition: 0.3s;
+      transition: 0.3s;*/ }
 
-.offset7 { 
+.offset7 {
   z-index: 2;
   overflow: hidden;
-  bottom: 5%;
-}
+  bottom: 5%; }
 
 .offset6 {
   opacity: 1;
-/*  -webkit-transition: 0.1s;
-  -moz-transition: 0.1s;
-  -ms-transition: 0.1s;
-  -o-transition: 0.1s;
-  transition: 0.1s;*/
-}
+  /*  -webkit-transition: 0.1s;
+    -moz-transition: 0.1s;
+    -ms-transition: 0.1s;
+    -o-transition: 0.1s;
+    transition: 0.1s;*/ }
 
 #recipeCreator {
   margin: 20% 10%;
   position: relative;
-  width: 80%;
-
-  input {
+  width: 80%; }
+  #recipeCreator input {
     width: 96.5%;
     height: 15%;
     margin: 3% 0 3% 0;
     padding: .5em;
     outline: none;
     font-size: 2rem;
-    font-family: $textFont;
-  }
-
-  textarea {
+    font-family: "Open Sans", sans-serif; }
+  #recipeCreator textarea {
     width: 96.5%;
     margin: 3% 0 3% 0;
     padding: .5em;
     outline: none;
     font-size: 2rem;
-    font-family: $textFont;
-  }
-
-  label {
+    font-family: "Open Sans", sans-serif; }
+  #recipeCreator label {
     font-size: 2.3rem;
-    font-family: $linkFont;
-    color: $linkColour;
-  }
-
-  input[type=submit] {
+    font-family: "Merriweather", serif;
+    color: #fcce00; }
+  #recipeCreator input[type=submit] {
     font-size: 1.5rem;
-    font-family: $linkFont;
-    color: $linkColour;
-    background: $bgColour;
-    border-bottom: 2px solid $linkColour;
-    border-top: 2px solid $linkColour;
+    font-family: "Merriweather", serif;
+    color: #fcce00;
+    background: #191919;
+    border-bottom: 2px solid #fcce00;
+    border-top: 2px solid #fcce00;
     width: 100%;
-  }
-}
+    -webkit-appearance: none; }
 
 .newHackClose {
   right: 0;
@@ -99,8 +83,7 @@ Post a hack
   width: 25%;
   height: 10%;
   position: absolute;
-  background: blue;
-}
+  background: #191919; }
 
 .offset5 {
   bottom: 0;
@@ -110,9 +93,17 @@ Post a hack
   width: 100%;
   margin: 0;
   border-radius: 0;
-/*  -webkit-transition: 0.3s;
-  -moz-transition: 0.3s;
-  -ms-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;*/
-}
+  /*  -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;*/ }
+
+.ingTitle {
+    text-align: center;
+    vertical-align: middle;
+    position: relative;
+    font-size: 2.3rem;
+    color: #fcce00;
+    font-family: "Merriweather", serif;
+    top: -20%; }
