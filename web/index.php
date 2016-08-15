@@ -404,7 +404,7 @@ Post a hack
 
         <input type="button" onclick="ingredientSelection()" value="Add another resource">
  
-        <h1 class="hackInsTitle">How do you make it?</h1>
+        <h1>How do you make it?</h1>
 
         <div class="stepsMake">  
             <h1>step 1</h1>;
